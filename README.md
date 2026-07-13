@@ -32,7 +32,7 @@ SRA-Bench 5 数据集 × 26,262 技能全库，本地 Qwen3.5-4B 生成、MiniLM
 
 ## 进度
 
-- [x] 文献调研与新颖性排查（查询侧 HyDE-on-skills 无人做，见 `docs/background.md` §5）
+- [x] 文献调研与新颖性排查（查询侧 HyDE-on-skills 无人做，见 `docs/01-background.md` §5）
 - [x] 方法设计与实现（`hyskill` 包，SR-Agents 插件零改动接入，23 单元测试 + 冒烟）
 - [x] **Phase 0 试点**：5 域 × 20 实例 × 8 方法，GO
 - [ ] Phase 1 全量（5,400 实例）+ 显著性 + 自适应/两阶段消融 + 生成器规模消融 + 补齐外部基线（SkillRouter 等）
