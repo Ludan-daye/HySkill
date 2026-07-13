@@ -5,3 +5,6 @@ __pycache__/
 .venv/
 *.egg-info/
 .cache/
+paper/latex/
+paper/latex-zh/
+.patrol_state.json
