@@ -40,15 +40,17 @@ def _generator(template, model="", api_base="", k_samples="4",
 
 @register("hyskill")
 def hyskill_factory(corpus_path, encoder_name="BAAI/bge-base-en-v1.5",
-                    rrf_k="60", **gen_kwargs):
+                    rrf_k="60", emb_cache_dir="", **gen_kwargs):
     return HySkillRetriever(
         corpus_path=corpus_path,
         generator=_generator(SKILL_TEMPLATE, **gen_kwargs),
-        encoder_name=encoder_name, rrf_k=int(rrf_k))
+        encoder_name=encoder_name, rrf_k=int(rrf_k),
+        emb_cache_dir=emb_cache_dir or None)
 
 
 @register("naive_hyde")
-def naive_hyde_factory(encoder_name="BAAI/bge-base-en-v1.5", **gen_kwargs):
+def naive_hyde_factory(encoder_name="BAAI/bge-base-en-v1.5",
+                       emb_cache_dir="", **gen_kwargs):
     return NaiveHydeRetriever(
         generator=_generator(PASSAGE_TEMPLATE, **gen_kwargs),
-        encoder_name=encoder_name)
+        encoder_name=encoder_name, emb_cache_dir=emb_cache_dir or None)

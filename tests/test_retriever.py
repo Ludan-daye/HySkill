@@ -81,3 +81,34 @@ def test_codeless_skills_survivable():
     r = _make(EchoGenerator())
     out = r.retrieve(["outline an argumentative essay thesis points"], top_k=6)
     assert "s_essay" in [sid for sid, _ in out[0]]
+
+
+class CountingST(FakeST):
+    def __init__(self):
+        self.calls = 0
+
+    def encode(self, texts, **kw):
+        self.calls += 1
+        return super().encode(texts, **kw)
+
+
+def test_corpus_embedding_cache_skips_reencoding(tmp_path):
+    corpus = json.loads(FIXTURE.read_text())
+    ids = [s["skill_id"] for s in corpus]
+    texts = ["\n".join([s["name"], s["description"], s["content"]]) for s in corpus]
+
+    st1 = CountingST()
+    r1 = HySkillRetriever(corpus_path=str(FIXTURE), generator=EchoGenerator(),
+                          st_model=st1, emb_cache_dir=tmp_path)
+    r1.build_index(ids, texts)
+    assert st1.calls == 4  # meta, body, code, full
+
+    st2 = CountingST()
+    r2 = HySkillRetriever(corpus_path=str(FIXTURE), generator=EchoGenerator(),
+                          st_model=st2, emb_cache_dir=tmp_path)
+    r2.build_index(ids, texts)
+    assert st2.calls == 0  # fully served from cache
+
+    # cached retriever still works end to end
+    out = r2.retrieve(["compute Lah numbers ordered partitions"], top_k=3)
+    assert "s_lah" in [sid for sid, _ in out[0]]

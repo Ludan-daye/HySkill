@@ -10,6 +10,7 @@ Pipeline per query:
 Fallback when generation fails: dense query -> full-text ranking fused with BM25.
 """
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -27,18 +28,41 @@ def _tok(text: str) -> list[str]:
     return text.lower().split()
 
 
+def corpus_cache_key(corpus_path: str, encoder_id: str, ids: list[str]) -> str:
+    """Cache key for corpus embeddings: corpus file identity + encoder + id set."""
+    p = Path(corpus_path)
+    st = p.stat()
+    raw = f"{p.resolve()}|{st.st_size}|{st.st_mtime_ns}|{encoder_id}|{len(ids)}"
+    return hashlib.sha256(raw.encode()).hexdigest()
+
+
 class HySkillRetriever:
     def __init__(self, corpus_path: str, generator, st_model=None,
-                 encoder_name: str = "BAAI/bge-base-en-v1.5", rrf_k: int = 60):
+                 encoder_name: str = "BAAI/bge-base-en-v1.5", rrf_k: int = 60,
+                 emb_cache_dir=None):
         self._corpus_path = corpus_path
         self._generator = generator
         self._embedder = Embedder(model=st_model, model_name=encoder_name)
+        self._encoder_id = encoder_name if st_model is None else "injected"
         self._rrf_k = rrf_k
+        self._emb_cache = Path(emb_cache_dir) if emb_cache_dir else None
 
     # ---------------------------------------------------------- indexing
     def build_index(self, corpus_ids: list[str], corpus_texts: list[str]) -> None:
-        raw = {s["skill_id"]: s for s in json.loads(Path(self._corpus_path).read_text())}
         self._ids = list(corpus_ids)
+        cache_file = None
+        if self._emb_cache:
+            key = corpus_cache_key(self._corpus_path, self._encoder_id, corpus_ids)
+            cache_file = self._emb_cache / f"hyskill-{key}.npz"
+            if cache_file.exists():
+                z = np.load(cache_file, allow_pickle=False)
+                self._meta_emb, self._body_emb = z["meta"], z["body"]
+                self._code_emb, self._full_emb = z["code"], z["full"]
+                self._code_ids = list(z["code_ids"])
+                self._bm25 = BM25Okapi([_tok(t) for t in corpus_texts])
+                return
+
+        raw = {s["skill_id"]: s for s in json.loads(Path(self._corpus_path).read_text())}
         fields = [parse_fields(raw[i].get("name", ""), raw[i].get("description", ""),
                                raw[i].get("content", "")) if i in raw
                   else {"meta": t[:200], "body": t, "code": ""}
@@ -51,6 +75,13 @@ class HySkillRetriever:
             [f["code"] for f in fields if f["code"]])
         self._full_emb = self._embedder.encode(list(corpus_texts))
         self._bm25 = BM25Okapi([_tok(t) for t in corpus_texts])
+
+        if cache_file is not None:
+            self._emb_cache.mkdir(parents=True, exist_ok=True)
+            np.savez_compressed(
+                cache_file, meta=self._meta_emb, body=self._body_emb,
+                code=self._code_emb, full=self._full_emb,
+                code_ids=np.array(self._code_ids, dtype=str))
 
     # ---------------------------------------------------------- helpers
     @staticmethod
