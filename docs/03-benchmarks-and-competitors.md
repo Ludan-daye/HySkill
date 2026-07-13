@@ -1,0 +1,62 @@
+# 基准与竞争对手数据
+
+> 更新：2026-07-13。分三部分：我们使用的基准、竞争方法在**它们自己论文**里报告的数据（不同基准，不可直接横比，仅作规模感与相关工作弹药）、以及我们**同场直测**的竞争数字。
+
+## 一、基准（Benchmark）
+
+### SRA-Bench（主基准，Phase 0/1/2 使用）
+
+来源：[Skill Retrieval Augmentation for Agentic AI（arXiv 2604.24594）](https://arxiv.org/abs/2604.24594)，官方代码 [SR-Agents](https://github.com/oneal2000/SR-Agents)（MIT）。三阶段解耦评测：检索（Recall@K/nDCG@K）→ 纳入（Skill Loading Rate + relevance/need-aware 诊断）→ 应用（accuracy/pass@1）。
+
+| 数据集 | 能力类型 | 实例数 | 金标技能 | 金标映射 | 判分 |
+|---|---|---|---|---|---|
+| TheoremQA | 定理应用 | 747 | 320 | 单 | 规则 |
+| LogicBench | 逻辑推理模式 | 760 | 19 | 单 | 规则 |
+| ToolQA | 工具流 | 1,430 | 14 | 单 | 规则（需外部语料，暂缓） |
+| MedCalc-Bench | 医学计算器 | 1,100 | 55 | 单 | 规则 |
+| CHAMP | 数学概念 | 223 | 89 | **多** | 规则 |
+| BigCodeBench | 代码库使用 | 1,140 | 139 | **多** | 执行 |
+
+语料共 26,262 技能（636 金标 + 25,626 网络干扰）。选用理由：唯一带三阶段解耦与金标/需求标注的技能基准；其标注恰为我们门控阈值的现成真值。
+
+### SkillsBench / Terminal-Bench（Phase 3 端到端备用）
+
+[SkillsBench](https://github.com/benchflow-ai/skillsbench)：gym 式端到端技能使用评测，docker 沙箱。Terminal-Bench：终端任务。用途：补程序型 SKILL.md 场景，避免结论被 SRA 的知识型技能限定。
+
+### 其他相关基准（不使用，相关工作引用）
+
+SkillRet（2605.05726，大规模检索基准+专训嵌入模型）、SkillResolve-Bench（2606.10388，同能力歧义）、SRA 之外的 CompSkillBench（2606.18051，组合检索）、ToolRet（工具检索，ToolDreamer 用）。
+
+## 二、竞争方法及其论文自报数据
+
+⚠️ 以下数字来自各论文**各自的基准与设置**，与我们的数字不可直接横比；直接可比的见第三部分。
+
+| 方法 | 状态 | 机制 | 论文自报关键数据 | 与我们的关系 |
+|---|---|---|---|---|
+| **HyDE**（ACL 2023） | 已发表 | 查询→假想文档→单向量检索 | TREC DL19 nDCG@10：Contriever 44.5 → **61.3**；生成器越大越好（11B 48.9 < 52B 53.8 < 175B 61.3） | 方法源头；其消融警示小生成器风险（我们 4B 实测已足够强） |
+| **ToolDreamer**（EACL 2026 口头） | 已接收 | 查询→假想**工具**描述→检索 API 工具 | ToolRet 上对稀疏/稠密检索器均有提升（未抽出具体数字） | 最直接前驱，对象限 API 工具 |
+| **SkillRouter**（2603.22455，在审） | 预印本 | 1.2B 专训"检索+重排"路由器，读技能全文 | 自建基准 Hit@1 **74.0%**；只读元数据掉 31–44pt；比基线快 5.8× | 待下载其 1.2B 模型后同场对比（Phase 1，需批准 ~2.5GB） |
+| **SkillFlow**（2504.06188，在审） | 预印本 | 四阶段：稠密→双重排→LLM 选择；显式查询生成 | SkillsBench Pass@1 9.2%→**16.4%**（+78.3%，达 oracle 上限 84.1%）；Terminal-Bench 无显著增益；发现 oracle 技能代码块占比 39% vs 24% | 查询生成路线的代表；其代码块发现启发了我们的完整技能模板 |
+| **SkillDAG**（2606.03056，在审） | 预印本 | 类型化技能图 + 库侧 e_needs（HyDE 式，索引期） | ALFWorld 成功率 **67.1%**（超 Graph-of-Skills +12.8）；SkillsBench 检索 65.5→78.2 | 库侧方向的代表；可作消融宿主与双向结合对象 |
+| **SkillsInjector**（2605.29794，在审） | 预印本 | 动态注入数量 + 邻居感知描述改写 | Tau2-bench +3.9pp / SkillsBench +6.1pp / ALFWorld +7.3pp | 注入优化路线（治"多"不治"选"） |
+| **SkillSmith**（2605.15215，在审） | 预印本 | 技能离线编译为最小接口 | SkillsBench：token −57.4%、迭代 −43.0%、提速 2.02× | 效率路线，与我们正交可叠加 |
+| **Re-Invoke**（EMNLP 2024 Findings） | 已发表 | 库侧合成查询（Doc2Query 方向）+ 意图抽取 | 零样本工具检索显著提升（ToolBench 系） | 反方向假想；全量阶段可低成本复现对比 |
+| **Graph-of-Skills**（2604.05333） | 预印本 | 技能图 PPR 扩散 | 被 SkillDAG 超越（作其基线） | 结构化检索路线 |
+
+**背景性数据**（动机弹药）：More Skills, Worse Agents（2605.24050）：202 技能下性能 −21%，选择错误（shadowing）是主因；Skills in the Wild（2604.04323）：34k 技能真实检索下收益逼近零；SRA：加载幻觉——Qwen3-4B 有/无金标加载率 21.8% vs 16.9%（Llama-70B 甚至倒挂），仅 235B/前沿模型有分离（57.8% vs 35.3%）。
+
+## 三、同场直测的竞争数字（我们的试点，直接可比）
+
+设置同 `05-results.md`：SRA-Bench 各集前 20 实例、MiniLM 编码、Qwen3.5-4B。SRA 原装基线 + 其论文最强者 LLM 重排：
+
+| 方法 | theoremqa | logicbench | medcalc | champ | bigcode |
+|---|---|---|---|---|---|
+| bm25 | 0.712 | 0.094 | 0.533 | 0.308 | 0.498 |
+| dense（同编码器纯查询） | 0.857 | 0.069 | 0.139 | 0.164 | 0.524 |
+| hybrid（bm25+dense 融合） | 0.842 | 0.063 | 0.422 | 待补 | 待补 |
+| **llm_rerank（SRA 最强基线，同 Qwen3.5-4B）** | 0.835 | 0.176 | 中断待补 | 待补 | 待补 |
+| **我们（各域最佳想象变体）** | **0.947** | **0.439** | **1.000** | **0.594** | **0.711** |
+
+（nDCG@10。"待补"单元格列入 Phase 1 清单：llm_rerank 补 3 域、hybrid 补 2 域、SkillRouter 全 5 域。）
+
+关键可比结论：**同一个 Qwen3.5-4B，做"想象"全面优于做"重排"**，且重排受 BM25 召回上限锁死（theoremqa R@50=0.90），想象改善的是召回本身。

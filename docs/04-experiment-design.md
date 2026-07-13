@@ -1,6 +1,6 @@
 # 实验思路：参照 SRA-Bench 的设计与我们的改造
 
-> 2026-07-13。配套文档：方法规格见 `docs/superpowers/specs/2026-07-13-hyskill-design.md`，实现计划见 `docs/superpowers/plans/2026-07-13-hyskill-phase0.md`，HyDE 原文精读见 `docs/hyde-method.md`。
+> 2026-07-13。配套文档：方法规格见 `docs/superpowers/specs/2026-07-13-hyskill-design.md`，实现计划见 `docs/superpowers/plans/2026-07-13-hyskill-phase0.md`，HyDE 原文精读见 `docs/07-hyde-method.md`。
 
 ## 1. 参照实验：SRA 论文是怎么做的
 
@@ -73,7 +73,7 @@
 | 全量 Phase 0 | 5 数据集全部实例 | 约 6.5M token 生成，数十美元 | go/no-go 正式数字 |
 | Phase 1 消融 | 按需 | 生成缓存后只付增量 | K、生成器规模、逐路贡献、查询锚、编码器 |
 
-**试点已完成（2026-07-13）**：5 数据集 × 各 20 实例 × 26,262 技能全库，真实生成器（Qwen3.5-4B 本地 vLLM）。**GO 判定**——想象类方法五域全冠军，冠军组合平均 nDCG@10 为最强基线的 1.7 倍，并超过 SRA 报告的最强基线 LLM 重排。完整大表、三条经验规律（映射×金标结构、粒度×抽象度、鸿沟×增益）与下一步计划见 **`phase0-results.md`**；原始全表见 `phase0-full-tables.md`。
+**试点已完成（2026-07-13）**：5 数据集 × 各 20 实例 × 26,262 技能全库，真实生成器（Qwen3.5-4B 本地 vLLM）。**GO 判定**——想象类方法五域全冠军，冠军组合平均 nDCG@10 为最强基线的 1.7 倍，并超过 SRA 报告的最强基线 LLM 重排。完整大表、三条经验规律（映射×金标结构、粒度×抽象度、鸿沟×增益）与下一步计划见 **`05-results.md`**；原始全表见 `05-results.md`。
 
 **工程教训**：CPU 编码 2.6 万技能单矩阵约 27 分钟 → 语料嵌入磁盘缓存（`emb_cache_dir`）为全量实验硬前提（A100 上约 1 分钟/矩阵）；远程长任务必须 nohup + 落盘日志（SSH 会话中断会杀子进程）；Qwen3/3.5 系需 `no_think` 关思考模式，生成的外层 markdown 围栏需解析器剥壳。
 

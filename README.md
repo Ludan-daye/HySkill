@@ -5,7 +5,7 @@
 
 ## Phase 0 试点结果（2026-07-13）：GO ✅
 
-SRA-Bench 5 数据集 × 26,262 技能全库，本地 Qwen3.5-4B 生成、MiniLM 编码（详见 [docs/phase0-results.md](docs/phase0-results.md)）：
+SRA-Bench 5 数据集 × 26,262 技能全库，本地 Qwen3.5-4B 生成、MiniLM 编码（全部数据见 [docs/05-results.md](docs/05-results.md)）：
 
 | 方法 | 平均 nDCG@10 | 备注 |
 |---|---|---|
@@ -39,17 +39,18 @@ SRA-Bench 5 数据集 × 26,262 技能全库，本地 Qwen3.5-4B 生成、MiniLM
 - [ ] Phase 2 加载门控（S1 覆盖 / S2 增益）
 - [ ] arXiv 占位稿
 
-## 仓库结构
+## 仓库结构（阅读顺序即编号顺序）
 
 ```
 docs/
-  background.md          研究背景：退化现象、加载方法版图、顶会状态、新颖性逐篇排查
-  idea.md                研究 idea：动机链条、三层创新、新颖性防御、决策记录
-  hyde-method.md         HyDE 原文精读：公式链、消融、到 HySkill 的映射
-  experiment-design.md   实验思路：SRA-Bench 协议、借鉴与改造、归因设计
-  phase0-results.md      Phase 0 结果分析：大表、三规律、GO 判定
-  phase0-full-tables.md  Phase 0 原始全表（5 域 × 8 方法 × 全部 R@K）
-  superpowers/           设计规格与实现计划
+  01-background.md                研究背景：退化现象、加载方法版图、新颖性逐篇排查
+  02-innovations.md               创新点详述：三层创新 × 最近邻区分 × 证据 × 论文章节映射
+  03-benchmarks-and-competitors.md 基准介绍 + 竞争方法论文自报数据 + 同场直测对比
+  04-experiment-design.md         实验思路：SRA-Bench 协议、借鉴与改造、归因设计
+  05-results.md                   实验结果全记录：运行台账、主表、分域全表、三规律、待补清单
+  06-idea-and-decisions.md        idea 演化与决策记录（含新颖性防御问答）
+  07-hyde-method.md               HyDE 原文精读：公式链、消融、到 HySkill 的映射
+  superpowers/                    设计规格与实现计划
 hyskill/                 实现：parser / generator(+缓存) / embedder / fusion /
                          retriever(四路) / naive_hyde(单路三粒度) / plugin
 scripts/                 smoke.sh 冒烟自检 · run_phase0.sh 批跑 · analyze.py 汇总
