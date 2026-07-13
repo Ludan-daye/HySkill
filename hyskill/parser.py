@@ -4,6 +4,8 @@ import re
 
 _FENCE = re.compile(r"```[a-zA-Z0-9_+-]*\n(.*?)```", re.DOTALL)
 _FRONTMATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
+# LLMs often wrap the whole document in an outer ```markdown fence — unwrap it.
+_OUTER_WRAP = re.compile(r"\A```[a-zA-Z0-9_+-]*\s*\n(.*)\n```\s*\Z", re.DOTALL)
 
 
 def _split_code(content: str) -> tuple[str, str]:
@@ -28,7 +30,10 @@ def parse_fields(name: str, description: str, content: str) -> dict:
 
 def parse_generated(md: str) -> dict:
     """Fields for a generated hypothetical SKILL.md (frontmatter optional)."""
-    md = md or ""
+    md = (md or "").strip()
+    m = _OUTER_WRAP.match(md)
+    if m:
+        md = m.group(1)
     name, description = "", ""
     m = _FRONTMATTER.match(md)
     rest = md
