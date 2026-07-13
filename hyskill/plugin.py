@@ -74,3 +74,15 @@ def dense_factory(model_path="sentence-transformers/all-MiniLM-L6-v2",
     from sragents.retrieve.dense import DenseRetriever
     return DenseRetriever(model_name_or_path=model_path,
                          batch_size=int(batch_size))
+
+
+@register("two_stage")
+def two_stage_factory(corpus_path, encoder_name="BAAI/bge-base-en-v1.5",
+                      rrf_k="60", recall_k="50", emb_cache_dir="", **gen_kwargs):
+    """Fusion recall (stage 1) + whole-hypothetical single-vector rerank (stage 2)."""
+    from hyskill.two_stage import TwoStageRetriever
+    return TwoStageRetriever(
+        corpus_path=corpus_path,
+        generator=_generator(SKILL_TEMPLATE, **gen_kwargs),
+        encoder_name=encoder_name, rrf_k=int(rrf_k),
+        emb_cache_dir=emb_cache_dir or None, recall_k=int(recall_k))
