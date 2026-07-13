@@ -1,0 +1,20 @@
+[project]
+name = "hyskill"
+version = "0.1.0"
+description = "Hypothetical skill generation for agent skill retrieval (HyDE for Skills)"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "rank-bm25>=0.2.2",
+]
+
+[project.optional-dependencies]
+full = ["sentence-transformers>=2.2", "openai>=1.0"]
+dev = ["pytest>=7.0"]
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["hyskill"]
