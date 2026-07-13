@@ -14,8 +14,14 @@
 
 ```
 docs/
-  background.md   研究背景：退化现象、加载方法版图、顶会接收状态、HyDE 谱系与新颖性排查
-  idea.md         研究 idea：动机链条、方法三方案、新颖性防御、评测计划、风险
+  background.md          研究背景：退化现象、加载方法版图、顶会接收状态、HyDE 谱系与新颖性排查
+  idea.md                研究 idea：动机链条、方法三方案、新颖性防御、评测计划、风险
+  hyde-method.md         HyDE 原文方法精读：相似度机制、公式链、消融、到 HySkill 的映射
+  experiment-design.md   实验思路：SRA-Bench 的做法、我们借鉴什么、两个实验的设计与判据
+  superpowers/           正式设计文档与实现计划
+hyskill/                 方法实现（SR-Agents 插件：解析/生成/嵌入/融合/检索/门控）
+scripts/                 smoke.sh 冒烟自检；run_phase0.sh 批跑；analyze.py 汇总表
+tests/                   21 个单元测试 + 微型语料
 ```
 
 ## 关键结论速览
