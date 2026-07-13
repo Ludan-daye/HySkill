@@ -1,0 +1,8 @@
+[
+  {"skill_id": "s_pdf", "name": "PDF to Markdown", "description": "Convert scanned PDFs to Markdown with tables.", "content": "# PDF to Markdown\n\nOCR pages then rebuild tables.\n\n```python\nocr(pdf)\n```"},
+  {"skill_id": "s_csv", "name": "CSV Cleaner", "description": "Clean malformed CSV files.", "content": "# CSV Cleaner\n\nFix quoting and delimiters.\n\n```python\nclean(csv)\n```"},
+  {"skill_id": "s_lah", "name": "Lah Numbers", "description": "Compute Lah numbers for ordered partitions.", "content": "# Lah Numbers\n\nUse L(n,k) = C(n-1,k-1) * n!/k!.\n\n```python\nlah(n, k)\n```"},
+  {"skill_id": "s_web", "name": "Web Scraper", "description": "Scrape pages politely.", "content": "# Web Scraper\n\nRespect robots.txt.\n\n```python\nscrape(url)\n```"},
+  {"skill_id": "s_essay", "name": "Essay Outline", "description": "Outline argumentative essays.", "content": "# Essay Outline\n\nThesis, points, conclusion. No code needed."},
+  {"skill_id": "s_meet", "name": "Meeting Notes", "description": "Summarize meetings.", "content": "# Meeting Notes\n\nCapture decisions and owners."}
+]
