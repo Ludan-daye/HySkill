@@ -52,9 +52,14 @@ def hyskill_factory(corpus_path, encoder_name="BAAI/bge-base-en-v1.5",
 
 @register("naive_hyde")
 def naive_hyde_factory(encoder_name="BAAI/bge-base-en-v1.5",
-                       emb_cache_dir="", **gen_kwargs):
+                       emb_cache_dir="", template="passage", **gen_kwargs):
+    """template=passage: imagine an answer-like passage (HyDE-faithful).
+    template=skill: imagine a full SKILL.md but match it as ONE vector against
+    full-text skill embeddings — isolates "imagine a skill" from field fusion.
+    Skill-template generations share the hyskill cache (same model_tag prefix)."""
+    tpl = SKILL_TEMPLATE if template == "skill" else PASSAGE_TEMPLATE
     return NaiveHydeRetriever(
-        generator=_generator(PASSAGE_TEMPLATE, **gen_kwargs),
+        generator=_generator(tpl, **gen_kwargs),
         encoder_name=encoder_name, emb_cache_dir=emb_cache_dir or None)
 
 
