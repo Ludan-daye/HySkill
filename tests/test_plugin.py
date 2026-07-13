@@ -6,7 +6,7 @@ sragents_base = pytest.importorskip("sragents.retrieve.base")
 def test_factories_registered():
     import hyskill.plugin  # noqa: F401  (import side-effect registers)
     names = sragents_base.list_retrievers()
-    assert "hyskill" in names and "naive_hyde" in names
+    assert "hyskill" in names and "naive_hyde" in names and "dense" in names
 
 
 def test_hyskill_factory_accepts_string_kwargs(tmp_path):

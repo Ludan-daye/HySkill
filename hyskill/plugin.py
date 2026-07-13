@@ -54,3 +54,13 @@ def naive_hyde_factory(encoder_name="BAAI/bge-base-en-v1.5",
     return NaiveHydeRetriever(
         generator=_generator(PASSAGE_TEMPLATE, **gen_kwargs),
         encoder_name=encoder_name, emb_cache_dir=emb_cache_dir or None)
+
+
+@register("dense")
+def dense_factory(model_path="sentence-transformers/all-MiniLM-L6-v2",
+                  batch_size="256"):
+    """Plain dense retriever with NO query prefix — encoder-matched query-only
+    baseline for hyskill/naive_hyde attribution."""
+    from sragents.retrieve.dense import DenseRetriever
+    return DenseRetriever(model_name_or_path=model_path,
+                         batch_size=int(batch_size))
