@@ -38,4 +38,6 @@ def test_failure_returns_empty(tmp_path):
 
 
 def test_templates_mention_task():
+    from hyskill.generator import SENTENCE_TEMPLATE
     assert "{q}" in SKILL_TEMPLATE and "{q}" in PASSAGE_TEMPLATE
+    assert "{q}" in SENTENCE_TEMPLATE

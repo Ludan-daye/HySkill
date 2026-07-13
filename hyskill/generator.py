@@ -22,6 +22,12 @@ PASSAGE_TEMPLATE = (
     "Factual precision is not required.\n\nTask: {q}"
 )
 
+SENTENCE_TEMPLATE = (
+    "In ONE sentence, describe the skill an agent would need to solve the task "
+    "below: give the skill a short name, then state what it does. "
+    "Output only that sentence.\n\nTask: {q}"
+)
+
 
 class OpenAIClient:
     """Thin wrapper; requires `openai` and OPENAI_API_KEY (any value for local servers).

@@ -15,7 +15,8 @@ All --retriever-arg values arrive as strings; factories coerce types.
 from sragents.retrieve.base import register
 
 from hyskill.generator import (HypotheticalGenerator, OpenAIClient,
-                               PASSAGE_TEMPLATE, SKILL_TEMPLATE)
+                               PASSAGE_TEMPLATE, SENTENCE_TEMPLATE,
+                               SKILL_TEMPLATE)
 from hyskill.naive_hyde import NaiveHydeRetriever
 from hyskill.retriever import HySkillRetriever
 
@@ -54,10 +55,12 @@ def hyskill_factory(corpus_path, encoder_name="BAAI/bge-base-en-v1.5",
 def naive_hyde_factory(encoder_name="BAAI/bge-base-en-v1.5",
                        emb_cache_dir="", template="passage", **gen_kwargs):
     """template=passage: imagine an answer-like passage (HyDE-faithful).
-    template=skill: imagine a full SKILL.md but match it as ONE vector against
-    full-text skill embeddings — isolates "imagine a skill" from field fusion.
+    template=skill: imagine a full SKILL.md, matched as ONE vector.
+    template=sentence: imagine a one-sentence skill (name + what it does) —
+    the imagination-granularity ablation, ~10x cheaper than full skill.
     Skill-template generations share the hyskill cache (same model_tag prefix)."""
-    tpl = SKILL_TEMPLATE if template == "skill" else PASSAGE_TEMPLATE
+    tpl = {"skill": SKILL_TEMPLATE, "sentence": SENTENCE_TEMPLATE}.get(
+        template, PASSAGE_TEMPLATE)
     return NaiveHydeRetriever(
         generator=_generator(tpl, **gen_kwargs),
         encoder_name=encoder_name, emb_cache_dir=emb_cache_dir or None)
