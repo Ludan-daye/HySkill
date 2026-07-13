@@ -9,11 +9,13 @@ METRICS = ["Recall@1", "Recall@5", "Recall@10", "Recall@50", "nDCG@10"]
 
 
 def main(result_dir: str) -> None:
-    table = defaultdict(dict)  # (dataset, retriever) -> metrics
+    table = defaultdict(dict)  # (dataset, variant) -> metrics
     for p in sorted(Path(result_dir).glob("*.json")):
         d = json.loads(p.read_text())
-        meta, metrics = d.get("metadata", {}), d.get("metrics") or {}
-        table[(meta.get("dataset", p.stem), meta.get("retriever", "?"))] = metrics
+        metrics = d.get("metrics") or {}
+        # filename convention: <dataset>-<variant>.json (variant may contain -)
+        ds, _, variant = p.stem.partition("-")
+        table[(ds, variant or "?")] = metrics
     datasets = sorted({k[0] for k in table})
     retrievers = sorted({k[1] for k in table})
     for ds in datasets:
