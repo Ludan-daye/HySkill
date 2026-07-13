@@ -24,13 +24,19 @@ PASSAGE_TEMPLATE = (
 
 
 class OpenAIClient:
-    """Thin wrapper; requires `openai` and OPENAI_API_KEY (any value for local servers)."""
+    """Thin wrapper; requires `openai` and OPENAI_API_KEY (any value for local servers).
 
-    def __init__(self, model: str, api_base: str):
+    no_think=True disables hybrid-thinking output on Qwen3/3.5-style models
+    served by vLLM (via chat_template_kwargs), keeping generations clean.
+    """
+
+    def __init__(self, model: str, api_base: str, no_think: bool = False):
         from openai import OpenAI
         self._client = OpenAI(base_url=api_base,
                               api_key=os.environ.get("OPENAI_API_KEY", "EMPTY"))
         self._model = model
+        self._extra = ({"chat_template_kwargs": {"enable_thinking": False}}
+                       if no_think else None)
 
     def complete(self, prompt: str, temperature: float) -> str:
         resp = self._client.chat.completions.create(
@@ -38,6 +44,7 @@ class OpenAIClient:
             messages=[{"role": "user", "content": prompt}],
             temperature=temperature,
             max_tokens=400,
+            extra_body=self._extra,
         )
         return resp.choices[0].message.content or ""
 

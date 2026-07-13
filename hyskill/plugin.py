@@ -29,9 +29,11 @@ class _MockClient:
 
 
 def _generator(template, model="", api_base="", k_samples="4",
-               temperature="0.7", cache_dir="", mock_generator="0"):
+               temperature="0.7", cache_dir="", mock_generator="0",
+               no_think="0"):
     client = (_MockClient() if str(mock_generator) == "1"
-              else OpenAIClient(model=model, api_base=api_base))
+              else OpenAIClient(model=model, api_base=api_base,
+                                no_think=str(no_think) == "1"))
     return HypotheticalGenerator(
         client=client, k_samples=int(k_samples), temperature=float(temperature),
         template=template, cache_dir=cache_dir or None,
