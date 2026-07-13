@@ -14,6 +14,25 @@ All --retriever-arg values arrive as strings; factories coerce types.
 
 from sragents.retrieve.base import register
 
+# --- upstream bugfix (versioned here so fresh clones reproduce it) ---------
+# SR-Agents' llm_rerank hardcodes max_tokens=4096; with an 8192-ctx server,
+# any rerank prompt >4096 input tokens gets a hard 400 (long queries in
+# logicbench/medcalc/bigcode). The ranking output is ~150 tokens, so cap it.
+# Applied when this plugin module is imported (sragents --plugin hyskill.plugin).
+import sragents.retrieve.llm_rerank as _lr
+
+_orig_chat = _lr.chat
+
+
+def _capped_chat(*args, **kwargs):
+    if kwargs.get("max_tokens", 0) > 1024:
+        kwargs["max_tokens"] = 1024
+    return _orig_chat(*args, **kwargs)
+
+
+_lr.chat = _capped_chat
+# ---------------------------------------------------------------------------
+
 from hyskill.generator import (HypotheticalGenerator, OpenAIClient,
                                PASSAGE_TEMPLATE, SENTENCE_TEMPLATE,
                                SKILL_TEMPLATE)
