@@ -1,0 +1,4 @@
+[
+  {"instance_id": "t_000", "dataset": "theoremqa", "question": "How many ways to split 8 items into 5 ordered lists?", "skill_annotations": ["s_lah"], "eval_data": {"answer": "11760", "answer_type": "integer"}},
+  {"instance_id": "t_001", "dataset": "theoremqa", "question": "Convert this scanned PDF report into a Markdown table.", "skill_annotations": ["s_pdf"], "eval_data": {"answer": "n/a", "answer_type": "string"}}
+]
