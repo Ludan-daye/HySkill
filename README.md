@@ -82,3 +82,14 @@ MODEL=<模型> API_BASE=<OpenAI兼容地址> PILOT=1 ./scripts/run_phase0.sh   #
 ```
 
 想象粒度变体：`--retriever naive_hyde --retriever-arg template={passage|skill|sentence}`；四路融合：`--retriever hyskill`；Qwen3/3.5 系加 `--retriever-arg no_think=1`。
+
+## 🤝 多模型协作实验（招募中）
+
+现有结果均出自 Qwen3.5-4B 单一生成模型——我们正在把想象检索 + 门控在 **Llama / Mistral / GLM / Gemma / Yi** 等家族上众包复跑，证明方法与模型无关。**认领一个模型 + 一张 24GB 显卡 + 一条命令**：
+
+```bash
+(TAG=<模型tag> MODEL=<模型tag> API_BASE=http://localhost:8000/v1 TRACKB=1 \
+  nohup ./scripts/run_multimodel.sh > run.log 2>&1 &)
+```
+
+全流程多线程（生成 32 并发 / 做题 48 并发）、断点续跑；跑完自动生成 `community-results/<TAG>/summary.json`，提 PR 即完成回传。**认领表、环境步骤、耗时估算、常见坑见 [docs/08-multimodel-plan.md](docs/08-multimodel-plan.md)。**
