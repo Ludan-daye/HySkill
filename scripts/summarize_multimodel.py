@@ -39,7 +39,10 @@ def cost_audit(model: str, sample_n: int = 150):
         return hashlib.sha256(raw.encode()).hexdigest()
 
     queries = []
-    for p in Path("external/SR-Agents/data/bench/instances").glob("*.json"):
+    for ds in ["theoremqa", "logicbench", "medcalcbench", "champ", "bigcodebench"]:
+        p = Path(f"external/SR-Agents/data/bench/instances/{ds}.json")
+        if not p.exists():
+            continue
         for inst in json.loads(p.read_text()):
             if inst.get("skill_annotations"):
                 queries.append(_build_query(inst))
