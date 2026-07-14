@@ -36,7 +36,9 @@ export OPENAI_API_KEY=${OPENAI_API_KEY:-EMPTY}
 
 SRA=external/SR-Agents
 CORPUS=$SRA/data/bench/corpus/corpus.json
-ENC=sentence-transformers/all-MiniLM-L6-v2
+# Encoder: HF id by default; override with ENC=/local/path when the box
+# cannot reach HF (e.g. use a ModelScope-downloaded copy).
+ENC=${ENC:-sentence-transformers/all-MiniLM-L6-v2}
 OUT=results/multimodel/$TAG
 LOGS=$OUT/logs
 mkdir -p "$OUT" "$LOGS" results/hyp_cache results/emb_cache
@@ -95,7 +97,7 @@ trackb_stream() {  # one rule domain, arms serial (data dependencies)
   echo "### $DS signals+calibrate+apply"
   .venv/bin/python scripts/gate.py signals --retrieval "$OUT/$DS-routed.json" \
     --corpus $CORPUS --instances "$INST" --cache-dir results/hyp_cache \
-    --model "$MODEL" --k 4 --out "$OUT/$DS-signals.json" || return 1
+    --model "$MODEL" --k 4 --encoder "$ENC" --out "$OUT/$DS-signals.json" || return 1
   .venv/bin/python scripts/gate.py calibrate --signals "$OUT/$DS-signals.json" \
     --bare-eval "$OUT/$DS-bare.eval.json" --out "$OUT/$DS-taus.json" || return 1
   .venv/bin/python scripts/gate.py apply --signals "$OUT/$DS-signals.json" \
