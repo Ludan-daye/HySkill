@@ -15,8 +15,8 @@ import json
 from pathlib import Path
 
 import numpy as np
-from rank_bm25 import BM25Okapi
 
+from hyskill.bm25 import FastBM25
 from hyskill.embedder import Embedder
 from hyskill.fusion import rrf
 from hyskill.parser import parse_fields, parse_generated
@@ -59,7 +59,7 @@ class HySkillRetriever:
                 self._meta_emb, self._body_emb = z["meta"], z["body"]
                 self._code_emb, self._full_emb = z["code"], z["full"]
                 self._code_ids = list(z["code_ids"])
-                self._bm25 = BM25Okapi([_tok(t) for t in corpus_texts])
+                self._bm25 = FastBM25([_tok(t) for t in corpus_texts])
                 return
 
         raw = {s["skill_id"]: s for s in json.loads(Path(self._corpus_path).read_text())}
@@ -74,7 +74,7 @@ class HySkillRetriever:
         self._code_emb = self._embedder.encode(
             [f["code"] for f in fields if f["code"]])
         self._full_emb = self._embedder.encode(list(corpus_texts))
-        self._bm25 = BM25Okapi([_tok(t) for t in corpus_texts])
+        self._bm25 = FastBM25([_tok(t) for t in corpus_texts])
 
         if cache_file is not None:
             self._emb_cache.mkdir(parents=True, exist_ok=True)

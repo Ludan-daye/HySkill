@@ -11,17 +11,28 @@ import json
 import sys
 from pathlib import Path
 
+VARIANTS = ["naive_sentence", "naive_passage", "naive_skill",
+            "hyskill", "two_stage", "bm25", "llm_rerank", "routed"]
+
+
 def main() -> None:
     tag = sys.argv[1]
     model = sys.argv[2] if len(sys.argv) > 2 else tag
     src = Path("results/multimodel") / tag
     out = {"tag": tag, "generator": model,
            "encoder": "sentence-transformers/all-MiniLM-L6-v2",
-           "k_samples": 4, "template": "skill", "retrieval": {}, "gating": {}}
+           "k_samples": 4, "retrieval": {}, "router": {}, "gating": {}}
 
-    for p in sorted(src.glob("*-naive_skill.json")):
-        ds = p.stem.partition("-")[0]
-        out["retrieval"][ds] = json.loads(p.read_text()).get("metrics", {})
+    for p in sorted(src.glob("*.json")):
+        if p.name.endswith(".eval.json"):
+            continue
+        ds, _, variant = p.stem.partition("-")
+        if variant not in VARIANTS:
+            continue
+        d = json.loads(p.read_text())
+        out["retrieval"].setdefault(ds, {})[variant] = d.get("metrics", {})
+        if variant == "routed":
+            out["router"][ds] = d.get("metadata", {}).get("router", {})
 
     for p in sorted(src.glob("*.eval.json")):
         ds, _, arm = p.stem.removesuffix(".eval").partition("-")

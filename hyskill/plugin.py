@@ -95,6 +95,14 @@ def dense_factory(model_path="sentence-transformers/all-MiniLM-L6-v2",
                          batch_size=int(batch_size))
 
 
+@register("fast_bm25")
+def fast_bm25_factory():
+    """BM25 on the bm25s backend — rank-identical to the builtin bm25
+    retriever, minutes instead of hours at 26k docs. Feeds llm_rerank."""
+    from hyskill.bm25 import FastBM25Retriever
+    return FastBM25Retriever()
+
+
 @register("two_stage")
 def two_stage_factory(corpus_path, encoder_name="BAAI/bge-base-en-v1.5",
                       rrf_k="60", recall_k="50", emb_cache_dir="", **gen_kwargs):

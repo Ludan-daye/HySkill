@@ -1,104 +1,105 @@
-# 多模型协作实验计划（众包版）
+# 多模型协作实验计划 v2（众包版）
 
-> **目的**：现有全部结果出自单一生成模型（Qwen3.5-4B），这是投稿最大软肋——审稿人会问"这是 HySkill 的性质还是 Qwen 的性质？"。本计划把想象检索（Track A）和加载门控（Track B）在 **5–6 个不同家族的开源模型**上复跑，证明方法与模型无关。
-> **形式**：每人认领一个模型 + 一张 ≥24GB 显卡，跑一条命令，回传一个小 JSON。全流程断点续跑，中断重启无损失。
+> **目的**：现有全部结果出自单一生成模型（Qwen3.5-4B）。本计划把完整对比矩阵——**想象检索（5 变体）vs LLM 重排、粒度路由、加载门控做题**——在 5–6 个不同家族的开源模型上复跑，证明方法与模型无关。
+> **形式**：每人认领一个模型 + 一张 ≥24GB 显卡，跑一条命令，回传一个几 KB 的 JSON。全流程断点续跑。
+> v1→v2 变化：新增 llm_rerank 对比臂、5 变体全跑、验证集粒度路由（离线验证 5/5 域选中真冠军）、BM25 换 bm25s 后端（快约百倍，四路/两阶段不再有"BM25 税"）。
 
-## 1. 两条轨道：每个模型跑什么
+## 1. 跑什么：一条命令里的六个阶段
 
-| 轨道 | 内容 | 产出 | 单卡耗时（4090 级） |
+| 阶段 | 内容 | 回答什么 | 单卡耗时（4090 级） |
 |---|---|---|---|
-| **Track A（必跑）想象检索** | 用认领模型给 3,970 个任务各想象 4 份技能文档（15,880 次短生成，多线程），然后在 26,262 技能全库上跑 naive_skill 检索 × 5 域 | 每域 Recall@1/5/10/50 + nDCG@10 | 预热 2–4 h + 检索 ~1 h |
-| **Track B（选跑）加载门控** | 同一模型兼任做题模型：裸考 → 用它自己的想象算 S1/S2 信号 → 保守标定 → always / gated 两臂做题（4 规则域 × 2,830 题 × 3 臂，48 线程并发） | 每域 bare/always/gated 准确率 + 门控统计 | 3–5 h |
+| 1 预热 | 3 想象模板 × 3,970 题 × K=4（≈4.8 万次短生成，32 并发） | （备料，断点续跑） | 4–8 h |
+| 2 想象检索 | **5 变体**（一句话/一段话/完整技能/四路/两阶段）× 5 域 | 想象优于基线、粒度规律是否跨模型成立 | 2–3 h |
+| 3 重排对比 | fast_bm25 出候选 → **llm_rerank**（默认 3 争议域，`RERANK_DOMAINS=all` 开全量） | "想象 vs 重排"用你的模型自己排自己比 | 2.5–7 h |
+| 4 粒度路由 | 20% 验证集给每域选冠军变体（纯打分，零生成） | 路由机制是否跨模型有效 | 分钟级 |
+| 5 门控做题* | bare / always(路由 top-1) / gated(路由+门控) 三臂 × 4 规则域（`SELECT=1` 加跑模型自选臂） | 遮蔽伤害与"门控永不受伤"是否跨模型成立 | 2–4 h |
+| 6 汇总 | 自动生成 summary.json | — | 秒级 |
 
-判读标准（写进论文的口径）：
-- Track A 复现成功 = 该模型的 naive_skill 在多数域仍显著高于冻结基线（hybrid 五域均值 0.456，各域基线数字见 `docs/05-results.md` §2，**不需要重跑基线**——BM25/dense/hybrid 与生成模型无关）；
-- Track B 复现成功 = gated ≥ always 的"永不受伤"性质在该模型上保持。
+\* 阶段 5 需 `TRACKB=1`；只跑 1–4 也有效（检索面结论），但强烈建议跑满。
+总计 ≈ 11–22 h，全程无人值守、可随时断点重跑。
 
-## 2. 模型认领表
+## 2. 数据集（脚本自动使用，无需手动下载）
 
-| TAG（运行时用） | HuggingFace ID | 家族 | 显存需求 | 备注 |
+SRA-Bench（arXiv 2604.24594）：**26,262 技能全库** + 5 域 3,970 个带标注实例
+（theoremqa 747 / logicbench 760 / medcalcbench 1,100 / champ 223 / bigcodebench 1,140；做题阶段用前 4 个规则可评域）。数据随 SR-Agents 仓库分发，克隆即得（见 §4 第①步）。
+
+## 3. 模型认领表
+
+| TAG（运行时用） | HuggingFace ID | 家族 | 显存 | 备注 |
 |---|---|---|---|---|
 | `llama31-8b` | meta-llama/Llama-3.1-8B-Instruct | Meta | ~20GB | 仓库 gated，需 HF token |
 | `mistral7b` | mistralai/Mistral-7B-Instruct-v0.3 | Mistral | ~18GB | |
 | `glm4-9b` | THUDM/glm-4-9b-chat | 智谱 | ~22GB | |
 | `gemma2-9b` | google/gemma-2-9b-it | Google | ~22GB | 仓库 gated，需 HF token |
 | `yi15-9b` | 01-ai/Yi-1.5-9B-Chat | 01.AI | ~22GB | |
-| `qwen35-9b` | Qwen/Qwen3.5-9B | 阿里 | ~22GB | **我们自己服务器跑**（规模阶梯），需 `NO_THINK=1` |
+| `qwen35-9b` | Qwen/Qwen3.5-9B | 阿里 | ~22GB | 项目方自跑；需 `NO_THINK=1` |
 
-任何 OpenAI 兼容端点都能接入——上表只是建议；换成你手头已有的模型也行，起个新 TAG 即可。思考型模型（Qwen3/3.5、GLM-Z1 等带 `<think>` 的）必须加 `NO_THINK=1`。
+任何 OpenAI 兼容端点都可接入,换成你手头的模型起个新 TAG 即可。思考型模型（Qwen3/3.5、GLM-Z1 等输出 `<think>` 的）必须加 `NO_THINK=1`。
 
-## 3. 环境准备（约 20 分钟）
+## 4. 环境准备（约 20 分钟）
 
 ```bash
-# ① 代码（external/ 不入库，需单独克隆 SR-Agents 基准）
+# ① 代码 + 基准数据（external/ 不入库，单独克隆）
 git clone https://github.com/Ludan-daye/HySkill && cd HySkill
 git clone https://github.com/oneal2000/SR-Agents external/SR-Agents
-#    （版本用 master 最新即可；已知的 llm_rerank max_tokens 上游 bug
-#      由我们插件在运行时修补，不依赖特定版本）
 
 # ② Python 环境（3.10+）
 python3 -m venv .venv
 .venv/bin/pip install -e ".[dev]" -e external/SR-Agents sentence-transformers openai
-.venv/bin/pytest -q        # 应为 34 passed，验证环境完好
+.venv/bin/pytest -q        # 应为 41 passed，验证环境完好
 
-# ③ 起模型端点（vLLM，独立 conda/venv 皆可；国内加 HF_ENDPOINT 镜像）
+# ③ 起模型端点（vLLM；国内加 HF_ENDPOINT 镜像）
 pip install vllm
 HF_ENDPOINT=https://hf-mirror.com vllm serve <HuggingFace-ID> \
   --served-model-name <TAG> --port 8000 \
   --max-model-len 8192 --gpu-memory-utilization 0.85
-# 编码器 MiniLM(~90MB) 首次运行自动下载；国内同样可用 HF_ENDPOINT 镜像
 ```
 
-## 4. 一键运行（多线程内置）
+## 5. 一键运行
 
 ```bash
-# Track A（必跑）
-(TAG=<TAG> MODEL=<TAG> API_BASE=http://localhost:8000/v1 \
-  nohup ./scripts/run_multimodel.sh > run.log 2>&1 &)
-
-# Track A + Track B
+# 推荐：全菜单（检索 + 重排 + 路由 + 门控做题）
 (TAG=<TAG> MODEL=<TAG> API_BASE=http://localhost:8000/v1 TRACKB=1 \
   nohup ./scripts/run_multimodel.sh > run.log 2>&1 &)
 
-tail -f run.log     # 阶段标记：TRACKA-DONE / TRACKB-DONE / ALL-DONE
+tail -f run.log
+# 阶段标记: TRACKA-VARIANTS-DONE / TRACKA-RERANK-DONE / ROUTE-DONE / TRACKB-DONE / ALL-DONE
 ```
 
-要点：
-- **并发**：生成阶段 `WORKERS=32` 线程、做题阶段 `INFER_WORKERS=48` 线程同时打端点，vLLM 连续批处理会把 GPU 打满；显存吃紧就调低这两个值和 `--gpu-memory-utilization`；
-- **断点续跑**：直接重跑同一条命令——已生成的想象在 `results/hyp_cache` 按内容寻址缓存、已完成的检索/做题文件自动跳过，重启零浪费；
-- **MODEL 字符串 = TAG 且全程不变**（它进缓存键，中途改名等于全部重来）;
-- SSH 掉线安全：命令模板里的 `(nohup ... &)` 子壳写法保证进程不随会话退出。
+可选开关：`SELECT=1`（加跑模型自选臂）、`RERANK_DOMAINS=all`（重排开满 5 域）、`WORKERS`/`INFER_WORKERS`/`RERANK_WORKERS`（默认 32/48/8，显存吃紧调低）。
 
-## 5. 冻结参数面板（保证跨模型可比，勿改）
+要点：
+- **断点续跑**：中断后重跑同一条命令即可——生成按内容寻址缓存、已完成文件自动跳过；
+- **MODEL 字符串 = TAG 且全程不变**（进缓存键，中途改名等于重来）；
+- `(nohup ... &)` 子壳写法保证 SSH 掉线进程不死。
+
+## 6. 冻结参数面板（跨模型可比的前提，勿改）
 
 | 参数 | 值 |
 |---|---|
-| 想象模板 / 采样数 / 温度 | skill（完整 SKILL.md）/ K=4 / 0.7 |
-| 编码器 | sentence-transformers/all-MiniLM-L6-v2 |
+| 想象模板 / K / 温度 | sentence+passage+skill / 4 / 0.7 |
+| 编码器 | all-MiniLM-L6-v2 |
 | 检索 top-k / 做题 max-tokens | 50 / 2048 |
-| 门控标定 | 20% 验证集、拦截精度 ≥0.9、seed 0（gate.py 默认） |
+| 路由与门控标定 | 同一 20% 验证集、seed 0；路由按 val nDCG@10 argmax；门控拦截精度 ≥0.9 |
+| BM25 后端 | bm25s（method=robertson，与 rank_bm25 排序一致，已单测锁定） |
 
-以上全部已硬编码在 `scripts/run_multimodel.sh`，正常使用不会碰到。
+全部硬编码在脚本里，正常使用碰不到。
 
-## 6. 结果回传
+## 7. 结果回传
 
-跑完后脚本自动生成 **`community-results/<TAG>/summary.json`**（几 KB：各域检索指标 + 三臂准确率 + 门控统计）。回传方式二选一：
+跑完自动生成 **`community-results/<TAG>/summary.json`**（各域 × 各变体检索指标、路由选择及比分、三臂准确率、门控统计）。回传：fork 后把 `community-results/<TAG>/` 提 PR（推荐），或直接把文件发给维护者。原始 jsonl **不要**提交,本地留存备显著性复核。
 
-1. **提 PR**（推荐）：fork 本仓库，把 `community-results/<TAG>/` 提交上来；
-2. 直接把 summary.json 发给项目维护者。
-
-大文件（results/multimodel/ 下的原始 jsonl）**不要**提交，先在本地留存，万一需要显著性复核再传。
-
-## 7. 常见坑
+## 8. 常见坑
 
 | 症状 | 处理 |
 |---|---|
-| 生成阶段大量 `empty` | 端点挂了或模板不兼容：`curl $API_BASE/models` 检查；思考型模型忘加 `NO_THINK=1` |
-| vLLM OOM | 降 `--gpu-memory-utilization` 到 0.7 或 `WORKERS=16` |
+| 预热大量 empty | 端点挂了或思考型模型忘加 `NO_THINK=1`；`curl $API_BASE/models` 自查 |
+| vLLM OOM | `--gpu-memory-utilization` 降到 0.7 或 `WORKERS=16` |
 | HF 下载超时 | `export HF_ENDPOINT=https://hf-mirror.com` |
-| Llama/Gemma 403 | 先在 HF 网页接受协议，`huggingface-cli login` |
-| logicbench gated 跑得飞快 | 正常——门控大量拦截时该域退化为裸考，是预期行为 |
+| Llama/Gemma 403 | HF 网页接受协议 + `huggingface-cli login` |
+| rerank 报 400/超长 | 已由插件运行时修补（max_tokens 封顶 1024），确认命令带 `--plugin hyskill.plugin` |
+| logicbench gated 臂飞快 | 正常——门控大量拦截时该域退化为裸考 |
 
-## 8. 汇总方式（维护者侧）
+## 9. 汇总方式（维护者侧）
 
-收齐 N 个 summary.json 后：主表按"模型 × 域"矩阵呈现 nDCG@10 与 gated−always 差值；论文主张从"Qwen 上成立"升级为"跨 N 个家族成立"。显著性复核用各自留存的原始文件按 `scripts/significance.py`（检索）与 `scripts/phase2_significance.py` 逻辑（做题）补算。
+收齐 N 份 summary.json 后产出三张跨模型矩阵：①"模型 × 域 × 变体"检索 nDCG（验证粒度规律）；②"模型 × 域"想象最优 vs llm_rerank（验证成本-效果结论）；③"模型 × 域"bare/always/gated（验证遮蔽与门控性质）。显著性用各自留存的原始文件按 `scripts/significance.py` / `scripts/phase2_significance.py` 补算。
