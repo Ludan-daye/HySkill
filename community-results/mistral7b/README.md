@@ -1,22 +1,35 @@
 # mistral7b 数据档案（外部协作者）
 
-**模型**：mistralai/Mistral-7B-Instruct-v0.3（Mistral）｜ 跑批方：外部协作者自备机器 ｜ 特殊配置：无 no_think；长上下文可跑重排臂（建议默认三争议域）。
+**模型**：mistralai/Mistral-7B-Instruct-v0.3（Mistral）｜ 跑批方：外部协作者自备机器 ｜ 特殊配置：BF16、8K 上下文、五域重排；无需 `NO_THINK`。
 
-## 本文件夹应存放（协作者提 PR）
+## 本次回传文件
 
 | 文件 | 内容 | 状态 |
 |---|---|---|
-| `summary.json` | 由 `scripts/summarize_multimodel.py` 自动生成（跑完 `run_multimodel.sh` 即有），含检索/路由/门控/成本审计 | ⏳ 等待协作者回传 |
-| `retrieval_top10.jsonl.gz` | 匹配明细：（实例 × 变体）金标 + top-10 + 逐题 nDCG@10 | ⏳ ALL-DONE 后由 `scripts/export_analysis_pack.py` 生成 |
-| `gating_per_instance.jsonl.gz` | 门控逐题：S1/S2、τ、拦截决定、各臂逐题对错 | ⏳ 同上 |
-| `imagination_samples.jsonl.gz` | 想象原文样本：每域固定 10 题（seed 0，跨模型同题）× K=4 份想象 + top-3 匹配 | ⏳ 同上 |
-| `MANIFEST.md` | 自动清单 + pandas 读取示例 | ⏳ 同上 |
+| `summary.json` | 检索、路由、门控与成本审计汇总 | ✅ 完成 |
+| `retrieval_top10.jsonl.gz` | 27,790 行实例×变体明细：金标、top-10、逐题 nDCG@10 | ✅ 完成 |
+| `gating_per_instance.jsonl.gz` | 2,830 行门控逐题数据：S1/S2、τ、拦截决定及五臂对错 | ✅ 完成 |
+| `imagination_samples.jsonl.gz` | 每域固定 10 题，三模板 × K=4 的非空想象文本及各变体 top-3 | ✅ 完成 |
+| `router_decisions.json` | 五域验证集路由选择及候选变体比分 | ✅ 完成 |
+| `metrics_flat.jsonl.gz` | 360 行域×方法×指标的扁平表 | ✅ 完成 |
+| `MANIFEST.md` | 自动生成的数据包清单与 pandas 读取示例 | ✅ 完成 |
 
-## 协作者注意
+## 协议与验证
 
-- 原始大文件（results/multimodel/mistral7b/ 下的 *.json / *.jsonl / logs/）**不要**提交，请本地留存备显著性复核；
-- 运行方式与常见坑见 [docs/08-multimodel-plan.md](../../docs/08-multimodel-plan.md)（重点：国内机器用 ModelScope/清华源；驱动 550 类机器需 vllm cu12x 构建 + --enforce-eager）。
+- HySkill 实验快照：`c8f732c5378c4c5ebe99766917e8b7351ad39331`；
+- 模型 revision：`c170c708c41dac9275d15a8fff4eca08d52bab71`；
+- 冻结参数：K=4、temperature=0.7、all-MiniLM-L6-v2、top-k=50、20% 标定集 / seed 0；
+- Track A 覆盖五域 3,970 题，`RERANK_DOMAINS=all`；Track B 覆盖四个规则域 2,830 题；
+- bare / always / gated / select / oracle 五臂齐全；SELECT 与 oracle 使用相同冻结模型 revision 和端点补跑；
+- 官方 analysis pack 逐行复核通过：JSON/gzip 均可解析、无空想象样本、signals `cache_misses=0`。
+
+## 注意
+
+- 原始 top-50 榜单、答题 JSONL、日志及完整想象缓存按协作协议留在跑批服务器，不提交入库；
+- `summary.json` 的 routed/gating 聚合仍包含标定集；独立 held-out 重算和配对显著性审计已通过，复核件留存服务器；
+- rerank 成本沿用项目统一的 `chars/3.8` 字符估算口径；
+- 运行方式与数据流说明见 [docs/08-multimodel-plan.md](../../docs/08-multimodel-plan.md)。
 
 ## 数据去向
 
-- docs/09-summary.md §〇 跨模型矩阵「mistral7b」列（回传后由维护者填入）
+- `docs/09-summary.md` 的跨模型矩阵由维护者在合并后统一更新。
