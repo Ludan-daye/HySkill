@@ -58,16 +58,16 @@ HF_ENDPOINT=https://hf-mirror.com vllm serve <HuggingFace-ID> \
 
 ```bash
 # 推荐：全菜单（检索 + 重排 + 路由 + 门控做题）
-(TAG=<TAG> MODEL=<TAG> API_BASE=http://localhost:8000/v1 TRACKB=1 \
+(TAG=<TAG> MODEL=<TAG> API_BASE=http://localhost:8000/v1 TRACKB=1 SELECT=1 RERANK_DOMAINS=all \
   nohup ./scripts/run_multimodel.sh > run.log 2>&1 &)
 
 tail -f run.log
 # 阶段标记: TRACKA-VARIANTS-DONE / TRACKA-RERANK-DONE / ROUTE-DONE / TRACKB-DONE / ALL-DONE
 ```
 
-可选开关：`SELECT=1`（加跑模型自选臂）、`WORKERS`/`INFER_WORKERS`/`RERANK_WORKERS`（默认 32/48/8，显存吃紧调低）。
+调参开关：`WORKERS`/`INFER_WORKERS`/`RERANK_WORKERS`（默认 32/48/8，显存吃紧调低）。
 
-**重排臂规则（2026-07-15 起）**：上下文 ≥8K 的模型一律 `RERANK_DOMAINS=all`（五域全跑）；4K 上下文模型设 `RERANK_DOMAINS=""` 整臂跳过（50 候选 prompt 塞不进，硬跑会 400）。能跑就全跑，跑不了要在回传备注里写明原因。
+**对比臂规则（2026-07-15 起，select 与 rerank 上下文允许即必跑）**：上下文 ≥8K 的模型一律 `RERANK_DOMAINS=all SELECT=1`（重排五域全跑 + 模型自选臂全跑）；4K 上下文模型两臂都跳过（`RERANK_DOMAINS=""`、不加 SELECT——50 候选 prompt 物理塞不进，硬跑会 400），并在回传备注里写明原因。
 
 要点：
 - **断点续跑**：中断后重跑同一条命令即可——生成按内容寻址缓存、已完成文件自动跳过；
