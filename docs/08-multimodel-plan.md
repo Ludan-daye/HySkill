@@ -65,7 +65,9 @@ tail -f run.log
 # 阶段标记: TRACKA-VARIANTS-DONE / TRACKA-RERANK-DONE / ROUTE-DONE / TRACKB-DONE / ALL-DONE
 ```
 
-可选开关：`SELECT=1`（加跑模型自选臂）、`RERANK_DOMAINS=all`（重排开满 5 域）、`WORKERS`/`INFER_WORKERS`/`RERANK_WORKERS`（默认 32/48/8，显存吃紧调低）。
+可选开关：`SELECT=1`（加跑模型自选臂）、`WORKERS`/`INFER_WORKERS`/`RERANK_WORKERS`（默认 32/48/8，显存吃紧调低）。
+
+**重排臂规则（2026-07-15 起）**：上下文 ≥8K 的模型一律 `RERANK_DOMAINS=all`（五域全跑）；4K 上下文模型设 `RERANK_DOMAINS=""` 整臂跳过（50 候选 prompt 塞不进，硬跑会 400）。能跑就全跑，跑不了要在回传备注里写明原因。
 
 要点：
 - **断点续跑**：中断后重跑同一条命令即可——生成按内容寻址缓存、已完成文件自动跳过；
