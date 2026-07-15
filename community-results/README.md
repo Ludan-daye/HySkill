@@ -9,7 +9,7 @@
 
 | TAG | 家族 | 跑批方 | summary.json | 重排臂 |
 |---|---|---|---|---|
-| [qwen35-9b](qwen35-9b/) | 阿里 | 实验室主服务器 | ✅ 已入库 | ✅（带思考截断疑点待复核） |
+| [qwen35-9b](qwen35-9b/) | 阿里 | 实验室主服务器 | ✅ 满配入库（base+select+五域 rerank） | ✅ 五域全跑（带思考截断疑点待复核） |
 | [glm4-9b](glm4-9b/) | 智谱 | 服务器 A | ✅ 全套分析包已入库 | ✅ |
 | [llama31-8b](llama31-8b/) | Meta | 服务器 A | ✅ 满配入库（base+select+五域 rerank） | ✅ 五域全跑 |
 | [deepseek7b](deepseek7b/) | 深度求索 | 服务器 B | ✅ 全套分析包已入库 | ➖ 跳过（4K 上下文） |
