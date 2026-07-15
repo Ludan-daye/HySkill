@@ -7,6 +7,10 @@
 | 文件 | 内容 | 状态 |
 |---|---|---|
 | `summary.json` | v2.1 全菜单汇总（检索/路由/门控/成本） | ⏳ 跑批中（此槽位原计划即 llama，中途曾由 internlm2.5 代打后换回——internlm 与 vllm 0.19.1 不兼容，见 docs/08 坑表） |
+| `retrieval_top10.jsonl.gz` | 匹配明细：（实例 × 变体）金标 + top-10 + 逐题 nDCG@10 | ⏳ ALL-DONE 后由 `scripts/export_analysis_pack.py` 生成 |
+| `gating_per_instance.jsonl.gz` | 门控逐题：S1/S2、τ、拦截决定、各臂逐题对错 | ⏳ 同上 |
+| `imagination_samples.jsonl.gz` | 想象原文样本：每域固定 10 题（seed 0，跨模型同题）× K=4 份想象 + top-3 匹配 | ⏳ 同上 |
+| `MANIFEST.md` | 自动清单 + pandas 读取示例 | ⏳ 同上 |
 
 ## 留在跑批服务器不入库的原始件
 
