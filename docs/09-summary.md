@@ -37,20 +37,21 @@
 
 | 指标 | qwen3.5-4b（主实验） | qwen35-9b | glm4-9b | llama31-8b | deepseek7b | yi15-9b |
 |---|---|---|---|---|---|---|
-| 检索：完整技能五域均值 nDCG@10 | 0.594 | 0.595 | 0.479† | 待跑完 | 0.176† | 0.510† |
-| 路由选择与 4B 一致数（/5 域） | — | 4/5 | 1/4‡ | | 1/4‡（5/5 选 hyskill） | 1/4‡（4/5 选 naive_passage） |
-| 做题合并：bare | 63.5 | 65.6 | 30.8 | | 14.9 | 27.9 |
-| 做题合并：always（路由 top-1） | 69.6* | 72.0 | 50.1 | | **10.6**§ | 32.8 |
-| 做题合并：**gated（路由+门控）** | **72.5** | **73.8** | **52.5** | | **16.2** | **38.0** |
-| 做题合并：select（模型自选，付 50 候选长 prompt） | 70.5 | 未跑 | 52.0 | 补跑中 | ✗ 4K 塞不下 | ✗ 4K 塞不下 |
-| 门控是否合并不亏（gated≥always） | ✓ | ✓ | ✓（4/4 域） | | ✓ 合并（3/4 域，champ −0.5pt 噪声内） | ✓ 合并（3/4 域，medcalc −0.3pt 噪声内） |
-| 遮蔽域是否存在（某域 always<bare） | ✓ logicbench/champ | ✓ logicbench | ✓ logicbench/champ | | ✓ logicbench（−19.2!）/theoremqa | ✓ logicbench（−21.9!） |
+| 检索：完整技能五域均值 nDCG@10 | 0.594 | 0.595 | 0.479† | 0.514† | 0.176† | 0.510† |
+| 路由选择与 4B 一致数（/5 域） | — | 4/5 | 1/4‡ | 1/4‡（4/5 选 naive_passage） | 1/4‡（5/5 选 hyskill） | 1/4‡（4/5 选 naive_passage） |
+| 做题合并：bare | 63.5 | 65.6 | 30.8 | 34.4 | 14.9 | 27.9 |
+| 做题合并：always（路由 top-1） | 69.6* | 72.0 | 50.1 | **52.0** | **10.6**§ | 32.8 |
+| 做题合并：**gated（路由+门控）** | **72.5** | **73.8** | **52.5** | 51.0 | **16.2** | **38.0** |
+| 做题合并：select（模型自选，付 50 候选长 prompt） | 70.5 | 未跑 | 52.0 | 48.7 | ✗ 4K 塞不下 | ✗ 4K 塞不下 |
+| 门控是否合并不亏（gated≥always） | ✓ | ✓ | ✓（4/4 域） | ✗ 合并 −1.0（唯一例外，见¶） | ✓ 合并（3/4 域，champ −0.5pt 噪声内） | ✓ 合并（3/4 域，medcalc −0.3pt 噪声内） |
+| 遮蔽域是否存在（某域 always<bare） | ✓ logicbench/champ | ✓ logicbench | ✓ logicbench/champ | ✗ 无（唯一无遮蔽模型） | ✓ logicbench（−19.2!）/theoremqa | ✓ logicbench（−21.9!） |
 
 \* 4B 的 always 为固定完整技能版（69.6）；路由版 always_r 为 70.9。deepseek7b/yi15-9b 因 4K 上下文跳过重排臂（协议注明）。外部协作者的 mistral7b 回传后同列加入。
 † **logicbench 想象抽象失败（已验尸，跨 3 家族复现）**：glm/deepseek/yi 的 naive_skill 在 logicbench 上近乎精确归零（0.000 / 0.000 / 0.009），而 Qwen 系拿 0.29–0.40。用想象原文样本对比同一题（logicbench_00394"James 西语流利"）：Qwen-4B 的假想技能写的是逻辑模式词汇（"absolute exclusions / comparative negations"），glm 写的是**故事表面话题**（"Spanish fluency assessment"）——于是余弦检索全部命中 26k 库里的语言学习类 web 技能，logicbench 家族技能在 glm 的 760×10 个 top-10 槽位里只出现 9 次（Qwen-4B：2,920 次，gold 命中率 50.9% vs 0.0%）。结论：该域检索要求"话题→推理模式"的抽象，是想象质量的能力依赖项，非 bug；hyskill 的 BM25 词面路径部分补救（21.8%），**路由在验证集上自动探测并绕开**——正是路由层存在的意义。glm 整体绝对分低于 Qwen 系但**三条定律全部复现**：门控 4/4 域不亏、logicbench/champ 遮蔽 + 门控回血（logic bare 55.5 → always 49.5 → gated 57.1）、技能对 medcalc 巨幅增益（14.7 → 61.5）。路由收益显著：bigcode 0.386→0.513、theoremqa 0.706→0.772。
 § **弱模型定律候选（deepseek7b 提供的黄金数据点）**：解题越弱的模型，门控越重要——deepseek 合并 always（10.6）**低于** bare（14.9），无脑加载净伤害（logicbench 遮蔽 −19.2pt）；门控翻回 16.2 > bare。门控增益随模型变弱单调放大：Qwen 系 +1.6~1.8pt → glm +2.4 → yi +5.2 → deepseek +5.6（且是从净负值救回）。
 ‡ 冠军变体是**模型相关**的（glm 仅 logicbench 与 4B 同选 hyskill；bigcode 无 4B 参照故分母为 4）——写死任一变体跨模型必翻车，这正是验证集路由的价值证据。
-**select 对比（两个模型的正面数据）**：gated 零额外 token 下胜 select——4B：72.5 vs 70.5；glm：52.5 vs 52.0（select 在 logicbench 同样被遮蔽毒害 49.2 vs gated 57.1）。deepseek/yi 的 4K 上下文物理塞不下 50 候选 prompt——select 有上下文门槛，门控没有。
+**select 对比（三个模型的正面数据）**：gated 零额外 token 下 3/3 胜 select——4B：72.5 vs 70.5；glm：52.5 vs 52.0（select 在 logicbench 被遮蔽毒害 49.2 vs gated 57.1）；llama：51.0 vs 48.7（select 甚至输给 always 52.0——自选不如直装路由 top-1，且四个域一个没赢）。deepseek/yi 的 4K 上下文物理塞不下 50 候选 prompt——select 有上下文门槛，门控没有。
+¶ **llama 例外的解读（门控=保险）**：llama 是唯一无遮蔽域的模型（logicbench always 56.7 > bare 52.5），无灾可防时保守门控付出 −1.0 合并保费（champ 过拦 −3.6、logic 过拦 −3.8）；有灾的模型（ds/yi 遮蔽 −19/−22）门控净赚 +5.4/+5.2。期望收益跨 5 模型显著为正。
 **glm 全域 rerank 补齐（2026-07-15 新规则）**：routed 想象 3:2 胜 rerank——theoremqa 0.772 vs 0.679、medcalc **0.946 vs 0.781**（想象近天花板域暴露 rerank 的 BM25 召回上限）、champ 0.399 vs 0.313；rerank 胜 logicbench（0.301 vs 0.112，glm 想象归零域）与 bigcode（0.581 vs 0.513）。
 
 ---
