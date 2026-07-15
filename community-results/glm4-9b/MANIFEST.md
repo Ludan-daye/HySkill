@@ -6,7 +6,7 @@
 | gating_per_instance.jsonl.gz | 2830 | 每行=实例：S1/S2、top1、检索是否错、τ、门控是否拦截、是否标定集、各臂对错（bare/always/gated） |
 | imagination_samples.jsonl.gz | 50 | 每域固定 10 题（seed 0，跨模型同题可比）：查询原文、**三种模板 × K=4 份想象全文**、每个变体（含 routed/rerank）的 top-3（名称/简介/分数/命中）、金标 |
 | router_decisions.json | 5 域 | 路由决策账：每域选中的变体 + 全部变体的验证集 nDCG 比分 + 切分参数 |
-| metrics_flat.jsonl.gz | 352 | **全部分数拍平**：（域 × 方法 × 指标）一行一个数——检索 Recall@1/5/10/50、nDCG@k 全量 + 各臂 accuracy/n |
+| metrics_flat.jsonl.gz | 368 | **全部分数拍平**：（域 × 方法 × 指标）一行一个数——检索 Recall@1/5/10/50、nDCG@k 全量 + 各臂 accuracy/n |
 | summary.json | — | 聚合指标（检索/路由/门控/成本审计） |
 
 ## 用 pandas 读取
