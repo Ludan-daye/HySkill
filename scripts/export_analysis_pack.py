@@ -108,7 +108,7 @@ def main() -> None:
         taus = json.loads((res / f"{ds}-taus.json").read_text())
         val_ids = set(taus.get("val_ids", []))
         arms = {}
-        for arm in ["bare", "always", "gated", "select", "oracle"]:
+        for arm in ["bare", "always", "gated", "select", "oracle", "always_rerank", "select_bm25"]:
             p = res / f"{ds}-{arm}.eval.json"
             if p.exists():
                 arms[arm] = {d["instance_id"]: bool(d["correct"])
@@ -199,7 +199,7 @@ def main() -> None:
                 for metric, val in (json.loads(p.read_text()).get("metrics") or {}).items():
                     rows.append({"domain": ds, "method": v, "metric": metric,
                                  "value": round(float(val), 5)})
-        for arm in ["bare", "always", "gated", "select", "oracle"]:
+        for arm in ["bare", "always", "gated", "select", "oracle", "always_rerank", "select_bm25"]:
             p = res / f"{ds}-{arm}.eval.json"
             if p.exists():
                 m = json.loads(p.read_text())["metrics"]

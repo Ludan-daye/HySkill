@@ -116,7 +116,9 @@ trackb_stream() {  # one rule domain, arms serial (data dependencies)
     .venv/bin/sragents evaluate --input "$OUT/$DS-$ARM.jsonl" --instances "$INST" \
       --output "$OUT/$DS-$ARM.eval.json" || return 1
   done
-  if [[ "$SELECT" == "1" ]]; then
+  if [[ "$SELECT" == "1" && ! -s $OUT/$DS-select.eval.json ]]; then
+    # NOTE (no-mixing rule, docs/05 §5.5): this arm feeds OUR routed candidates
+    # to the official selector — it is the SAME-SOURCE ABLATION, not a baseline.
     echo "### $DS select"
     .venv/bin/sragents infer --instances "$INST" --output "$OUT/$DS-select.jsonl" \
       --model "$MODEL" --api-base "$API_BASE" \
@@ -126,6 +128,27 @@ trackb_stream() {  # one rule domain, arms serial (data dependencies)
       --engine direct --workers "$INFER_WORKERS" --max-tokens 2048 --label select || return 1
     .venv/bin/sragents evaluate --input "$OUT/$DS-select.jsonl" --instances "$INST" \
       --output "$OUT/$DS-select.eval.json" || return 1
+  fi
+  # Pure-baseline arms (no-mixing rule): the baseline's ENTIRE native stack.
+  if [[ -s $OUT/$DS-llm_rerank.json && ! -s $OUT/$DS-always_rerank.eval.json ]]; then
+    echo "### $DS always_rerank"
+    .venv/bin/sragents infer --instances "$INST" --output "$OUT/$DS-always_rerank.jsonl" \
+      --model "$MODEL" --api-base "$API_BASE" \
+      --provider topk --provider-arg source="$OUT/$DS-llm_rerank.json" --provider-arg k=1 \
+      --engine direct --workers "$INFER_WORKERS" --max-tokens 2048 --label always_rerank || return 1
+    .venv/bin/sragents evaluate --input "$OUT/$DS-always_rerank.jsonl" --instances "$INST" \
+      --output "$OUT/$DS-always_rerank.eval.json" || return 1
+  fi
+  if [[ "$SELECT" == "1" && -s $OUT/$DS-bm25.json && ! -s $OUT/$DS-select_bm25.eval.json ]]; then
+    echo "### $DS select_bm25"
+    .venv/bin/sragents infer --instances "$INST" --output "$OUT/$DS-select_bm25.jsonl" \
+      --model "$MODEL" --api-base "$API_BASE" \
+      --provider llm_select --provider-arg source="$OUT/$DS-bm25.json" \
+      --provider-arg model="$MODEL" --provider-arg api_base="$API_BASE" \
+      --provider-arg pool=50 \
+      --engine direct --workers "$INFER_WORKERS" --max-tokens 2048 --label select_bm25 || return 1
+    .venv/bin/sragents evaluate --input "$OUT/$DS-select_bm25.jsonl" --instances "$INST" \
+      --output "$OUT/$DS-select_bm25.eval.json" || return 1
   fi
 }
 

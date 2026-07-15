@@ -11,7 +11,7 @@
 | 1 预热 **∥** 重排 | 预热：3 模板 × 3,970 题 × K=4（32 并发）；**重排流与预热同时跑**（重排不需要想象，只吃端点：fast_bm25 出候选 → llm_rerank，默认 3 争议域） | 预热 32 线程 + 重排 8 线程共打端点 | max(4–8h, 2.5–6h) ≈ **4–8 h** |
 | 2 想象检索 | 5 变体 × 5 域 | **5 个域并行流**（生成全缓存命中，只剩向量计算） | ~**1 h**（=最慢的域） |
 | 3 粒度路由 | 20% 验证集选各域冠军（纯打分） | — | 分钟级 |
-| 4 门控做题* | bare / always(路由) / gated(路由+门控) × 4 规则域 | **4 个域并行流**（域内按依赖串行），每流 24 并发 | ~**1.5–2.5 h** |
+| 4 门控做题* | **6 臂** × 4 规则域：bare / always(路由) / gated(路由+门控) / select(同源消融) / **always_rerank(原装重排基线)** / **select_bm25(原装自选基线)** | **4 个域并行流**（域内按依赖串行），每流 24 并发 | ~**3–5 h** |
 | 5 汇总 | summary.json（含成本审计块） | — | 秒级 |
 
 \* 需 `TRACKB=1`；只跑 1–3 也有效（检索面结论），但强烈建议跑满。
@@ -47,6 +47,10 @@ python3 -m venv .venv
 .venv/bin/pip install -e ".[dev]" -e external/SR-Agents sentence-transformers openai
 .venv/bin/pytest -q        # 应为 41 passed，验证环境完好
 
+# ②.5 【必做】验证 torch 能用 GPU——cu13 版 torch 在 CUDA 12.x 驱动上会静默回落 CPU，
+#      嵌入慢 10 倍以上且极易被 OOM-killer 杀（我们在两台 A100 上都踩过）：
+.venv/bin/python -c "import torch; assert torch.cuda.is_available(), 'CUDA 不可用！装 cu12x 版：pip install torch==2.11.0+cu126 -f https://mirrors.aliyun.com/pytorch-wheels/cu126/'"
+
 # ③ 起模型端点（vLLM；国内加 HF_ENDPOINT 镜像）
 pip install vllm
 HF_ENDPOINT=https://hf-mirror.com vllm serve <HuggingFace-ID> \
@@ -67,7 +71,9 @@ tail -f run.log
 
 调参开关：`WORKERS`/`INFER_WORKERS`/`RERANK_WORKERS`（默认 32/48/8，显存吃紧调低）。
 
-**对比臂规则（2026-07-15 起，select 与 rerank 上下文允许即必跑）**：上下文 ≥8K 的模型一律 `RERANK_DOMAINS=all SELECT=1`（重排五域全跑 + 模型自选臂全跑）；4K 上下文模型两臂都跳过（`RERANK_DOMAINS=""`、不加 SELECT——50 候选 prompt 物理塞不进，硬跑会 400），并在回传备注里写明原因。
+**对比臂规则（2026-07-15 起，select 与 rerank 上下文允许即必跑）**：上下文 ≥8K 的模型一律 `RERANK_DOMAINS=all SELECT=1`（重排五域全跑 + 自选臂全跑）；4K 上下文模型两臂都跳过（`RERANK_DOMAINS=""`、不加 SELECT——50 候选 prompt 物理塞不进，硬跑会 400），并在回传备注里写明原因。
+
+**基线不混搭规则（2026-07-15 起，脚本已自动执行）**：基线必须整栈原装。脚本会自动跑齐两个纯原装基线臂——`always_rerank`（bm25→重排→top-1 直装）与 `select_bm25`（bm25 候选→官方自选）；`select` 臂（我们的检索 + 官方自选）是**同源消融**，只用于隔离装载层，回传与引用时严禁当基线。正版/被取代版对照表见 `docs/05-results.md` §5.5。
 
 要点：
 - **断点续跑**：中断后重跑同一条命令即可——生成按内容寻址缓存、已完成文件自动跳过；
@@ -96,7 +102,7 @@ tail -f run.log
 ```bash
 .venv/bin/python scripts/export_analysis_pack.py <TAG> <TAG>
 ```
-在 `community-results/<TAG>/` 下生成四个可入库的小文件：`retrieval_top10.jsonl.gz`（每题×每变体的金标+top10+逐题 nDCG）、`gating_per_instance.jsonl.gz`（每题 S1/S2/τ/拦截/各臂对错）、`imagination_samples.jsonl.gz`（每域固定 10 题的想象原文,3 模板×K=4,全模型同题可比）、`MANIFEST.md`。
+在 `community-results/<TAG>/` 下生成四个可入库的小文件：`retrieval_top10.jsonl.gz`（每题×每变体的金标+top10+逐题 nDCG）、`gating_per_instance.jsonl.gz`（每题 S1/S2/τ/拦截/**全部六臂**对错——含 always_rerank 与 select_bm25 两个原装基线臂）、`imagination_samples.jsonl.gz`（每域固定 10 题的想象原文,3 模板×K=4,全模型同题可比）、`MANIFEST.md`。
 
 **③ 提交**：fork 本仓库,把整个 `community-results/<TAG>/` 文件夹提 PR（推荐）,或打包发维护者。你的 TAG 文件夹里已有 README 写明每个文件的意义与状态,照着核对。原始大件（top-50 榜单、做题 jsonl、日志、想象缓存）**不要**提交,本地留存备显著性复核。
 
@@ -104,11 +110,17 @@ tail -f run.log
 
 | 症状 | 处理 |
 |---|---|
-| 预热大量 empty | 端点挂了或思考型模型忘加 `NO_THINK=1`；`curl $API_BASE/models` 自查 |
-| vLLM OOM | `--gpu-memory-utilization` 降到 0.7 或 `WORKERS=16` |
-| HF 下载超时 | `export HF_ENDPOINT=https://hf-mirror.com` |
-| Llama/Gemma 403 | HF 网页接受协议 + `huggingface-cli login` |
-| rerank 报 400/超长 | 已由插件运行时修补（max_tokens 封顶 1024），确认命令带 `--plugin hyskill.plugin` |
+| 预热大量 empty | 端点挂了或思考型模型忘加 `NO_THINK=1`；`curl $API_BASE/models` 自查；**跑完核对日志里 `WARMUP-DONE jobs=N empty=M` 的 empty 数，不能只看标记** |
+| 嵌入奇慢 / 变体阶段进程被杀 | 十有八九是 torch 静默回落 CPU（cu13 wheel 配 12.x 驱动）——跑 §4 ②.5 的断言自查；装 cu12x 版修复 |
+| vLLM OOM | `--gpu-memory-utilization` 降到 0.7 或 `WORKERS=16`；40G 卡上 vLLM 0.85 + 多路嵌入流不可共存，0.70 是配方 |
+| vLLM 起不来："Engine core initialization failed" | 先查 `nvidia-smi` 有无**孤儿 EngineCore 进程**占着显存（上一代死亡实例的残留），按 PID 杀掉再启动 |
+| vLLM JIT "compilation terminated" | `apt install build-essential python3.10-dev` + 启动加 `--enforce-eager` |
+| HF 下载超时 / Xet 报 AccessDenied | `export HF_ENDPOINT=https://hf-mirror.com`；仍不行换 ModelScope（`modelscope download`，路径用 `.../snapshots/master`） |
+| Llama/Gemma 403 | HF 网页接受协议 + `huggingface-cli login`；或 ModelScope 上找 LLM-Research 等非 gated 镜像仓 |
+| rerank 报 400/超长 | 已由插件运行时修补（max_tokens 封顶 1024），确认命令带 `--plugin hyskill.plugin`；**4K 上下文模型请直接跳过重排与自选臂** |
+| always_rerank 少量 400 | 已知现象并请如实回传：rerank 偏好长技能，全文+题目偶超 8K（我们实测 6–7%），这些题按错计——本身是"装载税"数据 |
+| 双卡跑双模型互相饿死 | 每模型 `CUDA_VISIBLE_DEVICES` 绑独立 GPU（嵌入进程默认全挤 cuda:0） |
+| 远程后台启动"没反应" | **点火必须回查**：launch 后 sleep 10 再 `pgrep`/看日志有新行；SSH 抖动会让启动静默失败 |
 | logicbench gated 臂飞快 | 正常——门控大量拦截时该域退化为裸考 |
 
 ## 9. 汇总方式（维护者侧）
