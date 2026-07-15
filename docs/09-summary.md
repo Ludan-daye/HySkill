@@ -33,6 +33,20 @@
 
 完整方案是唯一显著超过全部可部署对手的臂，且路由/门控零新增推理。Qwen3.5-9B 复刻同序：bare 65.6 < always 72.0 < gated 73.8（`community-results/qwen35-9b/summary.json`）。
 
+**跨模型复刻矩阵**（每个模型跑完 v2.1 全菜单后填入；数据源 `community-results/<TAG>/summary.json`）：
+
+| 指标 | qwen3.5-4b（主实验） | qwen35-9b | glm4-9b | llama31-8b | deepseek7b | yi15-9b |
+|---|---|---|---|---|---|---|
+| 检索：完整技能五域均值 nDCG@10 | 0.594 | 0.595 | 待跑完 | 待跑完 | 待跑完 | 待跑完 |
+| 路由选择与 4B 一致数（/5 域） | — | 4/5 | | | | |
+| 做题合并：bare | 63.5 | 65.6 | | | | |
+| 做题合并：always（路由 top-1） | 69.6* | 72.0 | | | | |
+| 做题合并：**gated（路由+门控）** | **72.5** | **73.8** | | | | |
+| 门控是否合并不亏（gated≥always） | ✓ | ✓ | | | | |
+| 遮蔽域是否存在（某域 always<bare） | ✓ logicbench/champ | ✓ logicbench | | | | |
+
+\* 4B 的 always 为固定完整技能版（69.6）；路由版 always_r 为 70.9。deepseek7b/yi15-9b 因 4K 上下文跳过重排臂（协议注明）。外部协作者的 mistral7b 回传后同列加入。
+
 ---
 
 ## ① Idea：研究想法的来源与三层创新点
