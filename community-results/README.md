@@ -14,5 +14,5 @@
 | [llama31-8b](llama31-8b/) | Meta | 服务器 A | ✅ 满配入库（base+select+五域 rerank） | ✅ 五域全跑 |
 | [deepseek7b](deepseek7b/) | 深度求索 | 服务器 B | ✅ 全套分析包已入库 | ➖ 跳过（4K 上下文） |
 | [yi15-9b](yi15-9b/) | 零一万物 | 服务器 B | ✅ 全套分析包已入库 | ➖ 跳过（4K 上下文) |
-| [mistral7b](mistral7b/) | Mistral | 外部协作者（EXPLORER41，PR #1） | ✅ 全套分析包已入库 | ✅ 五域全跑 |
+| [mistral7b](mistral7b/) | Mistral | 外部协作者（EXPLORER41，PR #1） | ✅ 全套分析包已入库（v2.2 新增三臂待补：select/select_bm25/always_rerank，git pull 后原命令续跑即可） | ✅ 五域全跑 |
 | [qwen3.5-4b-reference](qwen3.5-4b-reference/) | 阿里（主实验基准列） | 实验室主服务器 | ✅ 全套参考包已入库（9 方法检索明细 + 7 臂逐题 + 双门信号 + 显著性） | ✅ |

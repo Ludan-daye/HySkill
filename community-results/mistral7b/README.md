@@ -33,3 +33,8 @@
 ## 数据去向
 
 - `docs/09-summary.md` 的跨模型矩阵由维护者在合并后统一更新。
+
+
+## v2.2 协议补跑提示（2026-07-15）
+
+本包缺三个新增做题臂：`select`（同源消融）、`select_bm25`（原装自选基线）、`always_rerank`（原装重排基线）。补跑方式：`git pull` 后用原命令重跑（断点逻辑自动只补缺臂，约 3–4 小时），再 `export_analysis_pack.py mistral7b mistral7b` 重导并提 PR 覆盖。规则见 docs/08 §5「基线不混搭」。
