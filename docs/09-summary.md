@@ -33,6 +33,23 @@
 
 完整方案是唯一显著超过全部可部署对手的臂，且路由/门控零新增推理。Qwen3.5-9B 复刻同序：bare 65.6 < always 72.0 < gated 73.8（`community-results/qwen35-9b/summary.json`）。
 
+**检索质量总排行榜**（五域均值 nDCG@10；`n` = 该方法有五域全量数据的模型数；数据源各模型 summary.json）：
+
+| 排名 | 方法 | 五域均值 | n 模型 | 备注 |
+|---|---|---|---|---|
+| 1 | **routed（验证集路由想象）** | **0.535** | 6 | 每个有它的模型上都是第 1 或并列第 1 |
+| 2 | llm_rerank（重排基线） | 0.535 | 5 | 池含最强的 4B、不含最弱的 4K 模型——见下方同池对比 |
+| 3 | naive_passage（段落想象） | 0.501 | 7 | 固定变体中最稳 |
+| 4 | hyskill（四路融合） | 0.497 | 7 | 弱模型救星（deepseek 全域冠军） |
+| 5 | two_stage（两阶段） | 0.496 | 7 | |
+| 6 | naive_skill（完整技能） | 0.482 | 7 | Qwen 系最强、非 Qwen 受 logicbench 归零拖累 |
+| 7 | hybrid | 0.456 | 1（仅 4B） | |
+| 8 | naive_sentence（句子想象） | 0.434 | 7 | |
+| 9 | dense | 0.388 | 1（仅 4B） | |
+| 10 | bm25 | 0.377 | 5 | 一切重排的召回天花板 |
+
+**routed vs rerank 同池公平对比**（双方法五域全量的 4 个模型）：routed **0.567** vs rerank **0.516**，**Δ=+5.1 个 nDCG 点**，逐模型全胜（9B +5.8 / glm +1.7 / llama +8.0 / mistral +5.1）。混池排名中两者打平是口径假象——rerank 的池子恰好含最强的 4B 且不含 4K 弱模型。
+
 **跨模型复刻矩阵**（每个模型跑完 v2.1 全菜单后填入；数据源 `community-results/<TAG>/summary.json`）：
 
 | 指标 | qwen3.5-4b（主实验） | qwen35-9b | glm4-9b | llama31-8b | deepseek7b | yi15-9b | mistral7b（外部回传） |
