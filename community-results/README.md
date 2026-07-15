@@ -5,8 +5,15 @@
 原始 jsonl 请自行留存备查）。认领表与完整操作步骤见
 [docs/08-multimodel-plan.md](../docs/08-multimodel-plan.md)。
 
-## 已收录
+## 档案索引（每个模型一个文件夹，夹内 README 说明应存放的文件与服务器端原始件位置）
 
-| TAG | 家族 | Track A | Track B | 提交者 |
+| TAG | 家族 | 跑批方 | summary.json | 重排臂 |
 |---|---|---|---|---|
-| （虚位以待） | | | | |
+| [qwen35-9b](qwen35-9b/) | 阿里 | 实验室主服务器 | ✅ 已入库 | ✅（带思考截断疑点待复核） |
+| [glm4-9b](glm4-9b/) | 智谱 | 服务器 A | ⏳ 跑批中 | ✅ |
+| [llama31-8b](llama31-8b/) | Meta | 服务器 A | ⏳ 跑批中 | ✅ |
+| [deepseek7b](deepseek7b/) | 深度求索 | 服务器 B | ⏳ 跑批中 | ➖ 跳过（4K 上下文） |
+| [yi15-9b](yi15-9b/) | 零一万物 | 服务器 B | ⏳ 跑批中 | ➖ 跳过（4K 上下文) |
+| [mistral7b](mistral7b/) | Mistral | 外部协作者 | ⏳ 等待回传 | 建议跑 |
+
+主实验参考列（qwen3.5-4b）不设文件夹——其全部数据在 docs/05-results.md 与服务器 results/phase1|phase2。
