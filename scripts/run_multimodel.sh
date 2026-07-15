@@ -31,7 +31,9 @@ RERANK_WORKERS=${RERANK_WORKERS:-8}
 NO_THINK=${NO_THINK:-0}
 TRACKB=${TRACKB:-0}
 SELECT=${SELECT:-0}
-RERANK_DOMAINS=${RERANK_DOMAINS:-"theoremqa logicbench bigcodebench"}
+# NOTE: no colon — an explicitly empty RERANK_DOMAINS="" must skip the rerank
+# arm entirely (4K-context models 400 on the 50-candidate prompt).
+RERANK_DOMAINS=${RERANK_DOMAINS-"theoremqa logicbench bigcodebench"}
 export OPENAI_API_KEY=${OPENAI_API_KEY:-EMPTY}
 
 SRA=external/SR-Agents
