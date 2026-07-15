@@ -86,9 +86,17 @@ tail -f run.log
 
 **补充规则：成本随行。** 汇总脚本会从你这次运行的真实产物里实测每方法的 token 成本（各想象模板的 prompt/生成长度 × K、重排的 50 候选长 prompt；估算器统一为 chars/3.8），自动写进 summary.json 的 `cost` 块。**任何进入论文的方法对比必须携带同批次实测成本**——效果和账单永远一起报，禁止只报精度不报开销。
 
-## 7. 结果回传
+## 7. 结果回传（三步）
 
-跑完自动生成 **`community-results/<TAG>/summary.json`**（各域 × 各变体检索指标、路由选择及比分、三臂准确率、门控统计）。回传：fork 后把 `community-results/<TAG>/` 提 PR（推荐），或直接把文件发给维护者。原始 jsonl **不要**提交,本地留存备显著性复核。
+**① 自动汇总**：跑完 `run_multimodel.sh` 即有 `community-results/<TAG>/summary.json`（各域 × 各变体检索指标、路由选择及比分、三臂准确率、门控统计、成本审计）。
+
+**② 生成分析数据包**（一条命令）：
+```bash
+.venv/bin/python scripts/export_analysis_pack.py <TAG> <TAG>
+```
+在 `community-results/<TAG>/` 下生成四个可入库的小文件：`retrieval_top10.jsonl.gz`（每题×每变体的金标+top10+逐题 nDCG）、`gating_per_instance.jsonl.gz`（每题 S1/S2/τ/拦截/各臂对错）、`imagination_samples.jsonl.gz`（每域固定 10 题的想象原文,3 模板×K=4,全模型同题可比）、`MANIFEST.md`。
+
+**③ 提交**：fork 本仓库,把整个 `community-results/<TAG>/` 文件夹提 PR（推荐）,或打包发维护者。你的 TAG 文件夹里已有 README 写明每个文件的意义与状态,照着核对。原始大件（top-50 榜单、做题 jsonl、日志、想象缓存）**不要**提交,本地留存备显著性复核。
 
 ## 8. 常见坑
 
