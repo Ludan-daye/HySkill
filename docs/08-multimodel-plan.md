@@ -104,6 +104,12 @@ tail -f run.log
 ```
 在 `community-results/<TAG>/` 下生成四个可入库的小文件：`retrieval_top10.jsonl.gz`（每题×每变体的金标+top10+逐题 nDCG）、`gating_per_instance.jsonl.gz`（每题 S1/S2/τ/拦截/**全部六臂**对错——含 always_rerank 与 select_bm25 两个原装基线臂）、`imagination_samples.jsonl.gz`（每域固定 10 题的想象原文,3 模板×K=4,全模型同题可比）、`MANIFEST.md`。
 
+**②.5 完整 top-50 榜单**（2026-07-15 起入库要求）：
+```bash
+.venv/bin/python scripts/export_top50.py <TAG>
+```
+生成 `retrieval_top50.jsonl.gz`（每题×每方法的全量 50 深榜单，[skill_id, 分数, 是否金标] 三元组；书名按 id 从语料库反查，不重复存，单模型约 6–8MB）。
+
 **③ 提交**：fork 本仓库,把整个 `community-results/<TAG>/` 文件夹提 PR（推荐）,或打包发维护者。你的 TAG 文件夹里已有 README 写明每个文件的意义与状态,照着核对。原始大件（top-50 榜单、做题 jsonl、日志、想象缓存）**不要**提交,本地留存备显著性复核。
 
 ## 8. 常见坑
