@@ -16,4 +16,4 @@
 | [yi15-9b](yi15-9b/) | 零一万物 | 服务器 B | ⏳ 跑批中 | ➖ 跳过（4K 上下文) |
 | [mistral7b](mistral7b/) | Mistral | 外部协作者 | ⏳ 等待回传 | 建议跑 |
 
-主实验参考列（qwen3.5-4b）不设文件夹——其全部数据在 docs/05-results.md 与服务器 results/phase1|phase2。
+| [qwen3.5-4b-reference](qwen3.5-4b-reference/) | 阿里（主实验基准列） | 实验室主服务器 | ✅ 全套参考包已入库（9 方法检索明细 + 7 臂逐题 + 双门信号 + 显著性） | ✅ |

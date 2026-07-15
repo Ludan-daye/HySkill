@@ -59,7 +59,8 @@ def main() -> None:
 
     from sragents.cli.retrieve import _build_query
     from sragents.corpus import load_corpus_dict
-    from hyskill.generator import HypotheticalGenerator, SKILL_TEMPLATE
+    from hyskill.generator import (HypotheticalGenerator, PASSAGE_TEMPLATE,
+                                   SENTENCE_TEMPLATE, SKILL_TEMPLATE)
 
     class _NoNet:
         def complete(self, *_a, **_k):
@@ -107,7 +108,7 @@ def main() -> None:
         taus = json.loads((res / f"{ds}-taus.json").read_text())
         val_ids = set(taus.get("val_ids", []))
         arms = {}
-        for arm in ["bare", "always", "gated", "select"]:
+        for arm in ["bare", "always", "gated", "select", "oracle"]:
             p = res / f"{ds}-{arm}.eval.json"
             if p.exists():
                 arms[arm] = {d["instance_id"]: bool(d["correct"])
@@ -127,11 +128,14 @@ def main() -> None:
     counts["gating_per_instance.jsonl.gz"] = jl(
         out / "gating_per_instance.jsonl.gz", rows)
 
-    # ---------- imagination_samples ----------
-    gen = HypotheticalGenerator(client=_NoNet(), k_samples=4,
-                                template=SKILL_TEMPLATE,
-                                cache_dir="results/hyp_cache",
-                                model_tag=f"{model}|{SKILL_TEMPLATE[:20]}")
+    # ---------- imagination_samples (ALL 3 templates) ----------
+    gens = {name: HypotheticalGenerator(
+                client=_NoNet(), k_samples=4, template=tpl,
+                cache_dir="results/hyp_cache",
+                model_tag=f"{model}|{tpl[:20]}")
+            for name, tpl in [("sentence", SENTENCE_TEMPLATE),
+                              ("passage", PASSAGE_TEMPLATE),
+                              ("skill", SKILL_TEMPLATE)]}
     rows = []
     for ds in DOMAINS:
         if ds not in common_by_domain:
@@ -141,30 +145,69 @@ def main() -> None:
         ids = common_by_domain[ds]
         rng = random.Random(0)                      # fixed across ALL models
         picks = rng.sample(ids, min(SAMPLES_PER_DOMAIN, len(ids)))
-        ns_p = res / f"{ds}-naive_skill.json"
-        ns = {r["instance_id"]: r for r in
-              json.loads(ns_p.read_text())["results"]} if ns_p.exists() else {}
+        variant_recs = {}
+        for v in VARIANTS:
+            p = res / f"{ds}-{v}.json"
+            if p.exists():
+                variant_recs[v] = {r["instance_id"]: r for r in
+                                   json.loads(p.read_text())["results"]}
         for iid in picks:
             q = _build_query(instances[iid])
-            try:
-                docs = gen.generate(q)
-            except RuntimeError:
-                docs = []
-            rec = ns.get(iid, {})
-            gold = set(rec.get("gold_skill_ids", []))
-            top3 = []
-            for x in rec.get("retrieved", [])[:3]:
-                sk = corpus.get(x["skill_id"], {})
-                top3.append({"skill_id": x["skill_id"],
-                             "name": sk.get("name", ""),
-                             "description": (sk.get("description", "") or "")[:300],
-                             "score": round(float(x["score"]), 5),
-                             "is_gold": x["skill_id"] in gold})
+            imag = {}
+            for name, g in gens.items():
+                try:
+                    imag[name] = g.generate(q)
+                except RuntimeError:
+                    imag[name] = []
+            gold = set()
+            tops = {}
+            for v, recs in variant_recs.items():
+                rec = recs.get(iid)
+                if not rec:
+                    continue
+                gold = set(rec["gold_skill_ids"])
+                tops[v] = []
+                for x in rec["retrieved"][:3]:
+                    sk = corpus.get(x["skill_id"], {})
+                    tops[v].append({"skill_id": x["skill_id"],
+                                    "name": sk.get("name", ""),
+                                    "description": (sk.get("description", "") or "")[:300],
+                                    "score": round(float(x["score"]), 5),
+                                    "is_gold": x["skill_id"] in gold})
             rows.append({"instance_id": iid, "domain": ds, "query": q,
-                         "imaginations_skill_template": docs,
-                         "naive_skill_top3": top3, "gold": sorted(gold)})
+                         "imaginations": imag,           # {sentence|passage|skill: [4 texts]}
+                         "top3_per_variant": tops,       # incl. routed/rerank when present
+                         "gold": sorted(gold)})
     counts["imagination_samples.jsonl.gz"] = jl(
         out / "imagination_samples.jsonl.gz", rows)
+
+    # ---------- router_decisions + metrics_flat ----------
+    router = {}
+    for ds in DOMAINS:
+        p = res / f"{ds}-routed.json"
+        if p.exists():
+            router[ds] = json.loads(p.read_text()).get("metadata", {}).get("router", {})
+    (out / "router_decisions.json").write_text(
+        json.dumps(router, ensure_ascii=False, indent=1))
+    counts["router_decisions.json"] = len(router)
+
+    rows = []
+    for ds in DOMAINS:
+        for v in VARIANTS + ["bm25"]:
+            p = res / f"{ds}-{v}.json"
+            if p.exists():
+                for metric, val in (json.loads(p.read_text()).get("metrics") or {}).items():
+                    rows.append({"domain": ds, "method": v, "metric": metric,
+                                 "value": round(float(val), 5)})
+        for arm in ["bare", "always", "gated", "select", "oracle"]:
+            p = res / f"{ds}-{arm}.eval.json"
+            if p.exists():
+                m = json.loads(p.read_text())["metrics"]
+                rows.append({"domain": ds, "method": f"arm:{arm}",
+                             "metric": "accuracy", "value": round(m["accuracy"], 5)})
+                rows.append({"domain": ds, "method": f"arm:{arm}",
+                             "metric": "n", "value": m["total"]})
+    counts["metrics_flat.jsonl.gz"] = jl(out / "metrics_flat.jsonl.gz", rows)
 
     # ---------- MANIFEST ----------
     manifest = f"""# {tag} 分析数据包清单（自动生成）
@@ -173,7 +216,9 @@ def main() -> None:
 |---|---|---|
 | retrieval_top10.jsonl.gz | {counts['retrieval_top10.jsonl.gz']} | 每行=（实例×变体）：金标、top-10（id/分数/是否金标）、逐题 nDCG@10。变体含 5 想象变体 + routed{'+llm_rerank' if any((res / f'{d}-llm_rerank.json').exists() for d in DOMAINS) else '（本模型无重排臂）'} |
 | gating_per_instance.jsonl.gz | {counts['gating_per_instance.jsonl.gz']} | 每行=实例：S1/S2、top1、检索是否错、τ、门控是否拦截、是否标定集、各臂对错（bare/always/gated{'/select' if counts['gating_per_instance.jsonl.gz'] and 'select' in str(rows[:1]) else ''}） |
-| imagination_samples.jsonl.gz | {counts['imagination_samples.jsonl.gz']} | 每域固定 10 题（seed 0，跨模型同题可比）：查询原文、K=4 份想象 SKILL.md 全文、naive_skill top-3（含名称/简介/分数/命中）、金标 |
+| imagination_samples.jsonl.gz | {counts['imagination_samples.jsonl.gz']} | 每域固定 10 题（seed 0，跨模型同题可比）：查询原文、**三种模板 × K=4 份想象全文**、每个变体（含 routed/rerank）的 top-3（名称/简介/分数/命中）、金标 |
+| router_decisions.json | {counts['router_decisions.json']} 域 | 路由决策账：每域选中的变体 + 全部变体的验证集 nDCG 比分 + 切分参数 |
+| metrics_flat.jsonl.gz | {counts['metrics_flat.jsonl.gz']} | **全部分数拍平**：（域 × 方法 × 指标）一行一个数——检索 Recall@1/5/10/50、nDCG@k 全量 + 各臂 accuracy/n |
 | summary.json | — | 聚合指标（检索/路由/门控/成本审计） |
 
 ## 用 pandas 读取

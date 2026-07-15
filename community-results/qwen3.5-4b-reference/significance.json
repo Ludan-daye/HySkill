@@ -1,0 +1,216 @@
+{
+ "theoremqa": {
+  "n": 747,
+  "n_test": 598,
+  "gated-vs-always": {
+   "delta": 0.0027,
+   "p": 0.8894,
+   "delta_test": 0.0033,
+   "p_test": 0.8534
+  },
+  "gated-vs-select": {
+   "delta": -0.0201,
+   "p": 0.132,
+   "delta_test": -0.0268,
+   "p_test": 0.0772
+  },
+  "always-vs-bare": {
+   "delta": 0.0696,
+   "p": 0.0,
+   "delta_test": 0.0635,
+   "p_test": 0.0012
+  },
+  "gated-vs-bare": {
+   "delta": 0.0723,
+   "p": 0.0,
+   "delta_test": 0.0669,
+   "p_test": 0.0002
+  },
+  "select-vs-always": {
+   "delta": 0.0228,
+   "p": 0.111,
+   "delta_test": 0.0301,
+   "p_test": 0.059
+  },
+  "acc": {
+   "bare": 0.6078,
+   "always": 0.6774,
+   "gated": 0.6801,
+   "select": 0.7001,
+   "oracle": 0.7403
+  },
+  "acc_test": {
+   "bare": 0.6087,
+   "always": 0.6722,
+   "gated": 0.6756,
+   "select": 0.7023,
+   "oracle": 0.7408
+  }
+ },
+ "logicbench": {
+  "n": 760,
+  "n_test": 608,
+  "gated-vs-always": {
+   "delta": 0.0316,
+   "p": 0.1128,
+   "delta_test": 0.0312,
+   "p_test": 0.1526
+  },
+  "gated-vs-select": {
+   "delta": 0.0118,
+   "p": 0.5842,
+   "delta_test": 0.0016,
+   "p_test": 0.9792
+  },
+  "always-vs-bare": {
+   "delta": -0.0461,
+   "p": 0.0122,
+   "delta_test": -0.0543,
+   "p_test": 0.0062
+  },
+  "gated-vs-bare": {
+   "delta": -0.0145,
+   "p": 0.3014,
+   "delta_test": -0.023,
+   "p_test": 0.1328
+  },
+  "select-vs-always": {
+   "delta": 0.0197,
+   "p": 0.3552,
+   "delta_test": 0.0296,
+   "p_test": 0.2134
+  },
+  "acc": {
+   "bare": 0.7211,
+   "always": 0.675,
+   "gated": 0.7066,
+   "select": 0.6947,
+   "oracle": 0.8421
+  },
+  "acc_test": {
+   "bare": 0.7401,
+   "always": 0.6859,
+   "gated": 0.7171,
+   "select": 0.7155,
+   "oracle": 0.8421
+  }
+ },
+ "medcalcbench": {
+  "n": 1100,
+  "n_test": 880,
+  "gated-vs-always": {
+   "delta": 0.0073,
+   "p": 0.4656,
+   "delta_test": -0.0023,
+   "p_test": 0.7688
+  },
+  "gated-vs-select": {
+   "delta": 0.0273,
+   "p": 0.0138,
+   "delta_test": 0.0159,
+   "p_test": 0.2196
+  },
+  "always-vs-bare": {
+   "delta": 0.1509,
+   "p": 0.0,
+   "delta_test": 0.1568,
+   "p_test": 0.0
+  },
+  "gated-vs-bare": {
+   "delta": 0.1582,
+   "p": 0.0,
+   "delta_test": 0.1545,
+   "p_test": 0.0
+  },
+  "select-vs-always": {
+   "delta": -0.02,
+   "p": 0.0682,
+   "delta_test": -0.0182,
+   "p_test": 0.1224
+  },
+  "acc": {
+   "bare": 0.6236,
+   "always": 0.7745,
+   "gated": 0.7818,
+   "select": 0.7545,
+   "oracle": 0.7964
+  },
+  "acc_test": {
+   "bare": 0.625,
+   "always": 0.7818,
+   "gated": 0.7795,
+   "select": 0.7636,
+   "oracle": 0.7989
+  }
+ },
+ "champ": {
+  "n": 223,
+  "n_test": 179,
+  "gated-vs-always": {
+   "delta": 0.0179,
+   "p": 0.5394,
+   "delta_test": 0.0279,
+   "p_test": 0.4018
+  },
+  "gated-vs-select": {
+   "delta": -0.0583,
+   "p": 0.047,
+   "delta_test": -0.0838,
+   "p_test": 0.009
+  },
+  "always-vs-bare": {
+   "delta": -0.0493,
+   "p": 0.0924,
+   "delta_test": -0.0503,
+   "p_test": 0.123
+  },
+  "gated-vs-bare": {
+   "delta": -0.0314,
+   "p": 0.2896,
+   "delta_test": -0.0223,
+   "p_test": 0.5136
+  },
+  "select-vs-always": {
+   "delta": 0.0762,
+   "p": 0.012,
+   "delta_test": 0.1117,
+   "p_test": 0.0004
+  },
+  "acc": {
+   "bare": 0.4888,
+   "always": 0.4395,
+   "gated": 0.4574,
+   "select": 0.5157,
+   "oracle": 0.565
+  },
+  "acc_test": {
+   "bare": 0.5084,
+   "always": 0.4581,
+   "gated": 0.486,
+   "select": 0.5698,
+   "oracle": 0.5922
+  }
+ },
+ "pooled_n2830": {
+  "gated-vs-always": {
+   "delta": 0.0134,
+   "p": 0.066
+  },
+  "gated-vs-select": {
+   "delta": 0.0039,
+   "p": 0.6546
+  },
+  "always-vs-bare": {
+   "delta": 0.0608,
+   "p": 0.0
+  },
+  "gated-vs-bare": {
+   "delta": 0.0742,
+   "p": 0.0
+  },
+  "select-vs-bare": {
+   "delta": 0.0703,
+   "p": 0.0
+  }
+ }
+}

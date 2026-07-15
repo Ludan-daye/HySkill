@@ -1,0 +1,58 @@
+{
+ "theoremqa": {
+  "pick": "two_stage",
+  "val_ndcg": {
+   "naive_skill": 0.8345,
+   "naive_passage": 0.8158,
+   "naive_sentence": 0.7648,
+   "hyskill": 0.7542,
+   "two_stage": 0.8352
+  },
+  "n_val": 149,
+  "val_frac": 0.2,
+  "seed": 0,
+  "degenerate": false
+ },
+ "logicbench": {
+  "pick": "hyskill",
+  "val_ndcg": {
+   "naive_skill": 0.2616,
+   "naive_passage": 0.1914,
+   "naive_sentence": 0.2332,
+   "hyskill": 0.3738,
+   "two_stage": 0.2948
+  },
+  "n_val": 152,
+  "val_frac": 0.2,
+  "seed": 0,
+  "degenerate": false
+ },
+ "medcalcbench": {
+  "pick": "naive_passage",
+  "val_ndcg": {
+   "naive_skill": 0.981,
+   "naive_passage": 0.9966,
+   "naive_sentence": 0.9873,
+   "hyskill": 0.8197,
+   "two_stage": 0.981
+  },
+  "n_val": 220,
+  "val_frac": 0.2,
+  "seed": 0,
+  "degenerate": false
+ },
+ "champ": {
+  "pick": "two_stage",
+  "val_ndcg": {
+   "naive_skill": 0.4804,
+   "naive_passage": 0.4678,
+   "naive_sentence": 0.4397,
+   "hyskill": 0.4776,
+   "two_stage": 0.4846
+  },
+  "n_val": 44,
+  "val_frac": 0.2,
+  "seed": 0,
+  "degenerate": false
+ }
+}
