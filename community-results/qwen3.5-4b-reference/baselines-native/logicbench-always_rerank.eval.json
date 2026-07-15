@@ -1,0 +1,7612 @@
+{
+  "dataset": "logicbench",
+  "method": "always_rerank",
+  "model": "qwen35-4b",
+  "metrics": {
+    "accuracy": 0.7105263157894737,
+    "correct": 540,
+    "total": 760
+  },
+  "details": [
+    {
+      "instance_id": "logicbench_00010",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00004",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00012",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00007",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00005",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00006",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00008",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00000",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00003",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00002",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00001",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00011",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00009",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00015",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00014",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00013",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00022",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00023",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00020",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00016",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00017",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00019",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00018",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00021",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00024",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00026",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00028",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00030",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00025",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00027",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "4.  consequently, the statement \"either i don't have enough energy or i don't eat unhealthy food\" covers all possible valid reality. if you *did* eat unhealthy food, you *must* not have enough energy. if you *did* have enough energy, you *must not* have eaten unhealthy food.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00032",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00031",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00043",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00037",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00045",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00035",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00033",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00042",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00029",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00041",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00038",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00052",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00034",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00050",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00049",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00056",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00051",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00036",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00048",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00039",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_006"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00046",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00047",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00057",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00061",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00040",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00053",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00055",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00065",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00058",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00054",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00044",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00066",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00073",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00062",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00067",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00068",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00059",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00072",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00069",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00070",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00076",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00064",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00074",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00077",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00060",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00078",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00080",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00085",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00063",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00079",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00071",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00082",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00086",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00081",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00083",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00075",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_007"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00087",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00084",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00092",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00091",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00089",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00093",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00090",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00095",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00096",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00088",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00100",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00101",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00102",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00094",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00103",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00099",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00104",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00098",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00097",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00109",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00108",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00106",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00111",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00112",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00110",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00114",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00105",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00115",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00107",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00123",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00119",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00120",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00122",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00121",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00127",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00125",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00118",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00130",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00131",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00124",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00126",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00113",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00128",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "the inference is **supported**. the logic dictates that because chris is the specific exception, david, being a typical member of the group without a stated exception, is expected to enjoy cycling. the default rule remains active for him.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00132",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00134",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00117",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00133",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "the only way john would *not* lift weights is if the text explicitly stated he was an exception, which it does not. to claim he doesn't would be a \"real-world override\" error or a misidentification of the exception scope.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00138",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00135",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00129",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00116",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_004"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00139",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00137",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00145",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00140",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00147",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00141",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00148",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00143",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00144",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00136",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "this is **invalid**. the move from premise 2 to a conclusion about tigers is a logical leap. the text identifies cats as an exception but does not define tigers. therefore, the conclusion that \"tigers stay in the jungle\" is not derived from the logic of the passage.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00154",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00149",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00146",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00151",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00155",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00157",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00156",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00150",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00142",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00152",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00153",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00162",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00159",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00158",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_015"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00161",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00164",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00170",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00166",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00172",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00168",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00173",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00174",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00175",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00178",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00169",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00176",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00165",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00171",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00167",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00163",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00187",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00182",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00186",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00179",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00181",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "any choice or conclusion suggesting buses are *not* used for transportation would represent **error 1 (real-world override)** or **error 3 (misidentifying the exception)** by misinterpreting the scope of the exception.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00177",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00185",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00184",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00183",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00180",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00192",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00191",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00193",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00190",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00189",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00160",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00188",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00197",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00195",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00194",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00196",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00198",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00205",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00200",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00202",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00201",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00208",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00199",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_016"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00216",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00206",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00209",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00204",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00207",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "the inability of ostriches to fly only sets them apart from their counterparts; it does not negate the typical capability of the rest of the class.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00221",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00203",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00215",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00210",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00223",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00214",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00219",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00222",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00224",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00211",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00220",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00213",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00227",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00226",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00212",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00225",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00231",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00218",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00217",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00234",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00236",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00238",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00229",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00228",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00237",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00233",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "**correct inference:** we know tigers typically have sharp claws and have soft fur. we do **not** know anything about whether other carnivorous animals have sharp claws or soft fur.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00235",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00230",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "the premises entail: \"all other quadruped mammals (than horses) walk, and they do not gallop (in the context of the contrast made).\"",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00241",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00244",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00232",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00248",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00245",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00242",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00243",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00247",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00240",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00246",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "the text suggests that friendship alone is not enough; **active, daily behaviors** (like the 5 positive interactions per negative one) are required to maintain that support and loyalty. since both are failing these specific behaviors, their relationship is in the \"dangerous territory\" described in the \"magic ratio\" section.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00249",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00239",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_017"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00251",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00252",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00255",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00258",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "the text uses john and jane as an **example of a challenge** (likely regarding family pressure or lifestyle differences) to teach the reader about the importance of the \"we consciousness.\" it does not confirm that their current living arrangement or division of labor is permanent or correct; rather, it implies that *if* these issues exist, the couple needs to work on them using the principles outlined in the guide (such as creating shared meaning and resolving gridlock).",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00250",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00256",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00260",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00257",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00265",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00262",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00263",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00264",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00259",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "*   elephant's location is **unknown** (default holds unless stated otherwise, but cannot be asserted as a conclusion).",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00266",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00268",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "the logic confirms that for any animal that is **neither** a bird **nor** a fish, the animal would be expected to have four legs and be an omnivore. however, it does not invert the properties of the named exceptions themselves.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00267",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "the prompt's structure relies on the default rule persisting for any entity **not** named in the specific exception clause. since neither jill nor jack are named as failing their intelligence or school attributes respectively (only jack is named for failing school), the defaults hold for both.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00270",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00274",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00269",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00273",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00275",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00253",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00272",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00254",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00285",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00276",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00277",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00271",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00261",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00278",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00281",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00288",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00286",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00282",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00292",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00283",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00279",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_018"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00284",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "the premise describes a failure of **consequences**, whereas the conclusion describes a failure of **actions**. furthermore, the conclusion involves propositions that are not simply a commuted version of the premise's components; they are distinct propositions (related to the causes rather than the effects), and negating the actions does not guarantee the negation of the outcomes.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00290",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00289",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00297",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00280",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00296",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00291",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00287",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00294",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00307",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00298",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00303",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00302",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00306",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00300",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00295",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00293",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00301",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00305",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00299",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00312",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00308",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "since both options are logically consistent with the given premises, we cannot deduce that she *must* take the bus. the conclusion does not follow necessarily.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00315",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00310",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00320",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00311",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00318",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00304",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00321",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00322",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00317",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00316",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00325",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00324",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00309",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00323",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00328",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00327",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00329",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00314",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00331",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00339",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00313",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00332",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00334",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00340",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00333",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00330",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00336",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00326",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00348",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00337",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00335",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00344",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00341",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00338",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00343",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00349",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00345",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00346",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00347",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00319",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_005"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00360",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00361",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00351",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00352",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00342",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00353",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00354",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00364",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00363",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00357",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00368",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00358",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00362",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00366",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00356",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00367",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00365",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00373",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00372",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00374",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00380",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00370",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00369",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00350",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00359",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "the premise only guarantees that **at least one person** (somewhere, possibly not sara) can satisfy the condition. sara's inability to play football does not logically compel her to go swimming; she could be the person who does neither (as long as someone else does one of them), or she could be the person who does both, or she could be the person who does neither and someone else swims. the specific attribution of the default property to the named individual is not supported.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00382",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00381",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00385",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00371",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00379",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00376",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00378",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00375",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00384",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00389",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00390",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00377",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "are we not all, in our own ways, seeking that same excellence in living?",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00391",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00386",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00383",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00392",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00393",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00402",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00403",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00404",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00394",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00398",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00388",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00397",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00396",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00387",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00395",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00400",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00409",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00405",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "*note: this logic follows the text provided. the \"relevant skill\" section about building promotion cases (ian mcallister, jeffrey pfeffer, etc.) suggests that promotions are based on impact, visibility, and solving business problems, not on punctuality. the office arrival rule is a unique constraint specific to your scenario.*",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00355",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_002"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00399",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_009"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00408",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00415",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "merely purchasing supplies addresses a logistical requirement but ignores the critical factors of estimation accuracy, phase management, and unexpected obstacles. lily still faces the risk of underestimating the time required for discovery, building, and iterating.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00410",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00411",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00401",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00413",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "*(note: a destructive dilemma could only be used to prove that alice won't get good grades if we had additional information stating that she **did not** improve her understanding or she **is not likely** to get good grades. without that \"negative premise,\" the rule cannot be applied to derive a negative conclusion.)*",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00412",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00407",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00406",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00418",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00422",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "therefore, avoiding the mountain removes only one specific trigger (physical exertion) for needing rest, but it does not eliminate the potential for needing rest due to other factors mentioned in the text.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00428",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00420",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00416",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00414",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00419",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00421",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "3.  even if he does not drink coffee, he might still experience insomnia due to other factors, or he might focus well for other reasons. the premises do not provide enough information to deduce his ability to concentrate.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00427",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "the text sets up a hypothetical rule where **the assigned person** gets rewarded for finishing their specific workload. since jill is not responsible for *all* the tasks (and presumably only has a subset), the system implies she would only be rewarded if she completes **her specific assigned portion** by her designated time limit. the text does not state she is automatically rewarded regardless of her workload.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00435",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00425",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00426",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "*(note: as per the \"critical distinction\" in your guidelines, this conclusion holds strictly within the problem's logical framework. in the real world, buying a car does not guarantee financial improvement or vacation affordability, but based on the hypothetical premises you provided, the implication is valid.)*",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00424",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00437",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00429",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "the framework suggests that steven should only feel stressed if he is making the decision based on the **\"ego monster\"** (trying to please others or chase status) rather than his **\"inner scorecard\"**.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00431",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00423",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00434",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00444",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00432",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "therefore, the failure to study ($\\neg p$) leaves the possibility of taking a nap ($s$) open.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00439",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00436",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00438",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00443",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00447",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00451",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00440",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00417",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00441",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00452",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00449",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00448",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00433",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00442",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "3.  it describes a situation that does not cover the case where jane is at home but still picks up the phone.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00430",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_003"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00450",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00454",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00457",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00455",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00459",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00464",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00445",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00446",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00465",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00467",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00469",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00461",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00472",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00458",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00453",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00470",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00468",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00478",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00456",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00473",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00462",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00481",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00476",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00484",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00475",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00482",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00460",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00486",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00463",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00485",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00491",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00477",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00490",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00480",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00487",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00496",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00479",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "this is logically equivalent to the original premise, but it is **not** equivalent to the conclusion provided in your question.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00497",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00471",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00488",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00483",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00489",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00493",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "the phrase \"won't plan a trip\" contradicts the conditional statement given in the first sentence of your query. the text establishes a positive correlation between excitement/exhilaration and the initiation of travel plans.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00466",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00492",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00505",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00500",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00498",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00502",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00501",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00495",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00499",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00508",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00494",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00504",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00515",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00517",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00511",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00507",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00506",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00503",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00474",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_008"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00520",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00514",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00509",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00513",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00518",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00524",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00516",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00512",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "without these steps, her diligence remains an internal trait rather than external proof of readiness for advancement.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00519",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00526",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00525",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00533",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00510",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_000"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00528",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00530",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "according to the \"common pitfalls\" section in your guidelines, you must avoid concluding that the named individual lacks the condition (going to the beach) based solely on the exception to the property (not bringing sunscreen).",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00522",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00535",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00534",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00539",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00542",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00523",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "the argument presents a default rule (\"if she finished... she would receive\") and an observed exception (she did not receive the bonus). however, in non-monotonic reasoning and strict logic, the absence of an expected consequence does not **entail** the absence of the cause. there may be other reasons why isabella did not receive the bonus (e.g., company policy changes, administrative errors, or other conditions required for the bonus that were not mentioned). therefore, while it is a plausible explanation, the premises do not strictly prove that she didn't finish on time.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00527",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00540",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00531",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00541",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00548",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00521",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00538",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00546",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00551",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00532",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00550",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00544",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00547",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00545",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00529",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00549",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00554",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00552",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "4.  **final answer:** the conclusion that john does not visit the park follows directly from the premises.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00536",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00557",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00537",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00555",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00553",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00543",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00561",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00565",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "*   we do not know specifically if sam is absent, suzan is absent, or both are absent.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00562",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00566",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00559",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00569",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00564",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00567",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00563",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00570",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00560",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00576",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00571",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00575",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00577",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00556",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00558",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_001"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00573",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00580",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00579",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00583",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00584",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00581",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00578",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "the proposed conclusion contradicts the default reasoning rule: exceptions are strictly local. since rabbits are not the exception, they retain the default property (fur).",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00586",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00587",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00574",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00582",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00585",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00568",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00590",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00572",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00588",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00591",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00589",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "\"peter enjoys spending time together, and **at least one** of john or mike does not enjoy spending time together.\"",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00593",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "*   we do not know which specific animal(s) broke the rule.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00594",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00592",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00596",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00597",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00599",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00595",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00607",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00606",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00605",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00600",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00609",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00601",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00604",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "3.  therefore, the number of sleeping cats equals the total number of cats minus one. unless the total group size is exactly 2 cats (felix + 1 other), the number of sleeping cats is greater than one. in standard reading comprehension and logical inference, a \"group\" implies more than one member, and the description of \"the others\" sleeping confirms that multiple cats are sleeping.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00610",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00603",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00608",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00615",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00612",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00618",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00617",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00619",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00614",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00611",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00616",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00620",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00598",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_011"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00624",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00628",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00626",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00625",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00621",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00627",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00623",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00629",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00631",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00613",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00636",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00602",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00637",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00632",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00644",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00634",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00635",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00633",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00646",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00640",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00641",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00645",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00647",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00653",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00642",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00638",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00656",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00622",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00648",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00654",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00652",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00649",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00650",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00661",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00658",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00662",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00630",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00659",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00660",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "3.  **logical direction**: the text establishes that dolphins *do* make the sea their home. it does not provide sufficient evidence to conclude a universal prohibition on dolphins living on land, nor does the mention of one mammal change the default rule for the rest of the dolphin population.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00664",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00670",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00666",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00667",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00665",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00639",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_012"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00672",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00663",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00671",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00668",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00643",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00674",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00673",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00669",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00678",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "if you are trying to use this story to argue that cows in reality don't live in groups, the story itself contradicts that argument by stating the herd behavior as an \"undisputed truth\" of that world.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00675",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00676",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "**therefore, the conclusion \"apples aren't juicy\" is a non-sequitur based on the provided text.** the correct inference is that *some* apples (at least one) are not juicy, while the general rule for apples remains that they are typically juicy.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00651",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00687",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00655",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00679",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00682",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00657",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00685",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00683",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00686",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00690",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00691",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00692",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00694",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00697",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00695",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00701",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00680",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "*   **logical error**: concluding the sky is blue based on the premise would require inverting the reliability logic or ignoring suzie's superior evidence, which constitutes a logical fallacy.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00699",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00681",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00696",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00700",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00702",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00698",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00705",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00693",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00707",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00712",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00704",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00708",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00677",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_013"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00703",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "the moon is **not** made of cheese. even if john's evidence is \"more reliable\" than emily's in a hypothetical debate, the **methodology** required to prove the moon is made of cheese is so distinct from established scientific norms that such evidence would likely be dismissed as an error, fraud, or a misunderstanding of terminology by any rigorous peer review process. the claim fails the **evidence quality framework** due to a lack of primary source verification from credible, independent domains.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00715",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00684",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00709",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "**decision:** skeptical of laura's claim. **reject** the claim that the cat is in the garden in favor of john's assertion (with a confidence level likely between 50-80%, depending on the primacy of john's evidence).",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00714",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "4.  **evaluate question:** since we concluded the car is in the garage, it logically follows that the car is **not** in the driveway. therefore, the statement \"the car isn't parked in the driveway\" is entailed.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00688",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00710",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00689",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00721",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00706",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "the premises establish a **probability shift** favoring steve's position, but they do not **entail** any specific location of the car with 100% certainty. the argument commits a logical error if it concludes \"therefore, the car is outside\" based solely on the lower reliability of jill's evidence.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00723",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00719",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00720",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00725",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00727",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00726",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "the text describes a **dependency** for regular drinkers, but dean's consumption is **occasional**. therefore, while he likely enjoys coffee and may rely on it occasionally, the provided text **does not support the conclusion that he is addicted**. the distinction between \"regular\" and \"occasional\" is the key factor missing from the evidence of addiction.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00728",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00733",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00731",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "*disclaimer: this is a summary of the provided text and does not constitute legal advice.*",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00724",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "**⚠️ legal disclaimer:** this is not legal advice. if mohammed claims disability, requests a permanent schedule change, or if there is a union contract involved, please consult qualified local legal counsel before enforcing the 5-day mandate.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00717",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00722",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00711",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "**result:** the premise does not entail the conclusion; it arguably entails the negation of the conclusion (that the cat is likely *not* in the garden), though even that is probabilistic, not a strict logical entailment. regardless, it definitely does **not** entail that the cat *is* in the garden.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00730",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00732",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00729",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": false,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00739",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00737",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "yes",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00716",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00713",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00741",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00745",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00735",
+      "ground_truth": "choice_2",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "choice_2",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00749",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00748",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00738",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00746",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00718",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_014"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00734",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "**recommendation:** keep the yarn accessible! it is a low-friction, high-reward activity that perfectly exemplifies the \"fun equation\" you've built for your game.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00740",
+      "ground_truth": "choice_4",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "choice_4",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00755",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00757",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00742",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "no",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00744",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00751",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00743",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00754",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "https://www.amazon.com/dp/1782551905/?tag=borisfyi0f-20",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00747",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "as your opening instruction reminds us, when minds meet, we are co-creating understanding. the most honest answer is not to fear the giant or to villainize him, but to recognize him as a being of genuine stature—both in size and in soul. he is a figure to be met with curiosity and warmth, not suspicion.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00752",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00758",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "no",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00736",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "**correct logical conclusion:** john's cat **is** a pet.",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00753",
+      "ground_truth": "choice_3",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "choice_3",
+      "correct": true,
+      "task_type": "MCQA"
+    },
+    {
+      "instance_id": "logicbench_00750",
+      "ground_truth": "yes",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "yes",
+      "correct": true,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00756",
+      "ground_truth": "no",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "所以，请放心：她的内心依然燃烧着对宇宙奥秘的火焰，只是现在，她学会了如何安全地、系统地让那火焰照亮整个森林。",
+      "correct": false,
+      "task_type": "BQA"
+    },
+    {
+      "instance_id": "logicbench_00759",
+      "ground_truth": "choice_1",
+      "skill_annotations": [
+        "logicbench_010"
+      ],
+      "extracted_answer": "choice_1",
+      "correct": true,
+      "task_type": "MCQA"
+    }
+  ]
+}

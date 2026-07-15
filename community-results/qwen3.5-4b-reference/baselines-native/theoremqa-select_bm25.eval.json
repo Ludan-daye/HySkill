@@ -1,0 +1,7482 @@
+{
+  "dataset": "theoremqa",
+  "method": "select_bm25",
+  "model": "qwen35-4b",
+  "metrics": {
+    "accuracy": 0.678714859437751,
+    "correct": 507,
+    "total": 747
+  },
+  "details": [
+    {
+      "instance_id": "theoremqa_00000",
+      "ground_truth": "11760",
+      "skill_annotations": [
+        "theoremqa_000"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "11760"
+    },
+    {
+      "instance_id": "theoremqa_00011",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_177"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00009",
+      "ground_truth": "0",
+      "skill_annotations": [
+        "theoremqa_176"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00003",
+      "ground_truth": "4200",
+      "skill_annotations": [
+        "theoremqa_000"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "4200"
+    },
+    {
+      "instance_id": "theoremqa_00007",
+      "ground_truth": "0.955",
+      "skill_annotations": [
+        "theoremqa_048"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.955"
+    },
+    {
+      "instance_id": "theoremqa_00004",
+      "ground_truth": "[0, 5]",
+      "skill_annotations": [
+        "theoremqa_220"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[0, 5]"
+    },
+    {
+      "instance_id": "theoremqa_00010",
+      "ground_truth": "1.12",
+      "skill_annotations": [
+        "theoremqa_034"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.12"
+    },
+    {
+      "instance_id": "theoremqa_00001",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_195"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00006",
+      "ground_truth": "-1.047",
+      "skill_annotations": [
+        "theoremqa_101"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "-1.0472"
+    },
+    {
+      "instance_id": "theoremqa_00014",
+      "ground_truth": "[4, 2]",
+      "skill_annotations": [
+        "theoremqa_180"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[4, 2]"
+    },
+    {
+      "instance_id": "theoremqa_00013",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_226"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00016",
+      "ground_truth": "1",
+      "skill_annotations": [
+        "theoremqa_294"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00012",
+      "ground_truth": "[0.333, 0.25]",
+      "skill_annotations": [
+        "theoremqa_069"
+      ],
+      "correct": false,
+      "answer_type": "list of float",
+      "extracted_answer": "[0.3333, 0.25]"
+    },
+    {
+      "instance_id": "theoremqa_00017",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_185"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00015",
+      "ground_truth": "50000",
+      "skill_annotations": [
+        "theoremqa_219"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "50000"
+    },
+    {
+      "instance_id": "theoremqa_00020",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_114"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00018",
+      "ground_truth": "1.3733",
+      "skill_annotations": [
+        "theoremqa_076"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "e^(5/4) - e^(3/4)"
+    },
+    {
+      "instance_id": "theoremqa_00023",
+      "ground_truth": "[-1, 6]",
+      "skill_annotations": [
+        "theoremqa_288"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[-1, 6]"
+    },
+    {
+      "instance_id": "theoremqa_00025",
+      "ground_truth": "(c)",
+      "skill_annotations": [
+        "theoremqa_131"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(c)"
+    },
+    {
+      "instance_id": "theoremqa_00022",
+      "ground_truth": "59",
+      "skill_annotations": [
+        "theoremqa_232"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "59"
+    },
+    {
+      "instance_id": "theoremqa_00029",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_160"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00026",
+      "ground_truth": "1.3",
+      "skill_annotations": [
+        "theoremqa_027"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.3038"
+    },
+    {
+      "instance_id": "theoremqa_00008",
+      "ground_truth": "[1, 1]",
+      "skill_annotations": [
+        "theoremqa_142"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "[0, 1]"
+    },
+    {
+      "instance_id": "theoremqa_00002",
+      "ground_truth": "1.42",
+      "skill_annotations": [
+        "theoremqa_086"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.4286"
+    },
+    {
+      "instance_id": "theoremqa_00028",
+      "ground_truth": "15",
+      "skill_annotations": [
+        "theoremqa_241"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "15"
+    },
+    {
+      "instance_id": "theoremqa_00030",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_216"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00005",
+      "ground_truth": "[4, 1, 2, 0]",
+      "skill_annotations": [
+        "theoremqa_220"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00027",
+      "ground_truth": "345.0",
+      "skill_annotations": [
+        "theoremqa_048"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "344.84"
+    },
+    {
+      "instance_id": "theoremqa_00024",
+      "ground_truth": "1898.27",
+      "skill_annotations": [
+        "theoremqa_311"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1908.88"
+    },
+    {
+      "instance_id": "theoremqa_00037",
+      "ground_truth": "9.616",
+      "skill_annotations": [
+        "theoremqa_047"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "9.6158"
+    },
+    {
+      "instance_id": "theoremqa_00034",
+      "ground_truth": "132",
+      "skill_annotations": [
+        "theoremqa_265"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "132"
+    },
+    {
+      "instance_id": "theoremqa_00039",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_293"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00019",
+      "ground_truth": "1.094",
+      "skill_annotations": [
+        "theoremqa_102"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00036",
+      "ground_truth": "3025",
+      "skill_annotations": [
+        "theoremqa_241"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "3025"
+    },
+    {
+      "instance_id": "theoremqa_00032",
+      "ground_truth": "5.333",
+      "skill_annotations": [
+        "theoremqa_292"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "5.333333333333333"
+    },
+    {
+      "instance_id": "theoremqa_00042",
+      "ground_truth": "1.0472",
+      "skill_annotations": [
+        "theoremqa_292"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.05"
+    },
+    {
+      "instance_id": "theoremqa_00038",
+      "ground_truth": "-0.023669",
+      "skill_annotations": [
+        "theoremqa_313"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "-0.0234"
+    },
+    {
+      "instance_id": "theoremqa_00021",
+      "ground_truth": "0.9",
+      "skill_annotations": [
+        "theoremqa_019"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.9"
+    },
+    {
+      "instance_id": "theoremqa_00033",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_147"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00047",
+      "ground_truth": "0.33",
+      "skill_annotations": [
+        "theoremqa_002"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.33"
+    },
+    {
+      "instance_id": "theoremqa_00043",
+      "ground_truth": "81",
+      "skill_annotations": [
+        "theoremqa_253"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "81"
+    },
+    {
+      "instance_id": "theoremqa_00046",
+      "ground_truth": "0.4",
+      "skill_annotations": [
+        "theoremqa_015"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "[0.46, 0.4]"
+    },
+    {
+      "instance_id": "theoremqa_00041",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_293"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00035",
+      "ground_truth": "4e-05",
+      "skill_annotations": [
+        "theoremqa_304"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "4.1e-5"
+    },
+    {
+      "instance_id": "theoremqa_00031",
+      "ground_truth": "1.9",
+      "skill_annotations": [
+        "theoremqa_156"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00053",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_179"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00052",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_085"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00058",
+      "ground_truth": "5.667",
+      "skill_annotations": [
+        "theoremqa_292"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00054",
+      "ground_truth": "18",
+      "skill_annotations": [
+        "theoremqa_246"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "18"
+    },
+    {
+      "instance_id": "theoremqa_00055",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_173"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00061",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_158"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00050",
+      "ground_truth": "1111.97",
+      "skill_annotations": [
+        "theoremqa_267"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1111.98"
+    },
+    {
+      "instance_id": "theoremqa_00056",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_186"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00048",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_292"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00044",
+      "ground_truth": "[0, 1]",
+      "skill_annotations": [
+        "theoremqa_133"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[0, 1]"
+    },
+    {
+      "instance_id": "theoremqa_00062",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_201"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00049",
+      "ground_truth": "25",
+      "skill_annotations": [
+        "theoremqa_037"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "25"
+    },
+    {
+      "instance_id": "theoremqa_00059",
+      "ground_truth": "[-1, 4]",
+      "skill_annotations": [
+        "theoremqa_172"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[-1, 4]"
+    },
+    {
+      "instance_id": "theoremqa_00065",
+      "ground_truth": "25",
+      "skill_annotations": [
+        "theoremqa_251"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "25"
+    },
+    {
+      "instance_id": "theoremqa_00057",
+      "ground_truth": "[2.0, 1.32]",
+      "skill_annotations": [
+        "theoremqa_024"
+      ],
+      "correct": false,
+      "answer_type": "list of float",
+      "extracted_answer": "[1.32, 2]"
+    },
+    {
+      "instance_id": "theoremqa_00040",
+      "ground_truth": "3",
+      "skill_annotations": [
+        "theoremqa_202"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00064",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_221"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00045",
+      "ground_truth": "0.28125",
+      "skill_annotations": [
+        "theoremqa_197"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.28125"
+    },
+    {
+      "instance_id": "theoremqa_00060",
+      "ground_truth": "26335",
+      "skill_annotations": [
+        "theoremqa_241"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "34105"
+    },
+    {
+      "instance_id": "theoremqa_00070",
+      "ground_truth": "-36",
+      "skill_annotations": [
+        "theoremqa_150"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "-36"
+    },
+    {
+      "instance_id": "theoremqa_00068",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_074"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00073",
+      "ground_truth": "1",
+      "skill_annotations": [
+        "theoremqa_117"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00067",
+      "ground_truth": "163",
+      "skill_annotations": [
+        "theoremqa_128"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "163"
+    },
+    {
+      "instance_id": "theoremqa_00074",
+      "ground_truth": "-0.3",
+      "skill_annotations": [
+        "theoremqa_013"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "-0.3"
+    },
+    {
+      "instance_id": "theoremqa_00051",
+      "ground_truth": "30",
+      "skill_annotations": [
+        "theoremqa_290"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "30"
+    },
+    {
+      "instance_id": "theoremqa_00071",
+      "ground_truth": "[1, 2]",
+      "skill_annotations": [
+        "theoremqa_218"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[1, 2]"
+    },
+    {
+      "instance_id": "theoremqa_00076",
+      "ground_truth": "1.667",
+      "skill_annotations": [
+        "theoremqa_277"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.67"
+    },
+    {
+      "instance_id": "theoremqa_00069",
+      "ground_truth": "0.2",
+      "skill_annotations": [
+        "theoremqa_301"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0.18"
+    },
+    {
+      "instance_id": "theoremqa_00075",
+      "ground_truth": "7.77778",
+      "skill_annotations": [
+        "theoremqa_119"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "7.778"
+    },
+    {
+      "instance_id": "theoremqa_00072",
+      "ground_truth": "1",
+      "skill_annotations": [
+        "theoremqa_202"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00077",
+      "ground_truth": "3e-36",
+      "skill_annotations": [
+        "theoremqa_319"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "1.51e-36"
+    },
+    {
+      "instance_id": "theoremqa_00086",
+      "ground_truth": "0.0304",
+      "skill_annotations": [
+        "theoremqa_266"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.0304"
+    },
+    {
+      "instance_id": "theoremqa_00085",
+      "ground_truth": "0.1925",
+      "skill_annotations": [
+        "theoremqa_266"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.1925"
+    },
+    {
+      "instance_id": "theoremqa_00083",
+      "ground_truth": "18",
+      "skill_annotations": [
+        "theoremqa_251"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "18"
+    },
+    {
+      "instance_id": "theoremqa_00090",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_167"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00082",
+      "ground_truth": "[1, 6]",
+      "skill_annotations": [
+        "theoremqa_147"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[1, 6]"
+    },
+    {
+      "instance_id": "theoremqa_00063",
+      "ground_truth": "[1, 0, 1]",
+      "skill_annotations": [
+        "theoremqa_081"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[1, 0, 1]"
+    },
+    {
+      "instance_id": "theoremqa_00087",
+      "ground_truth": "(a)",
+      "skill_annotations": [
+        "theoremqa_205"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(a)"
+    },
+    {
+      "instance_id": "theoremqa_00078",
+      "ground_truth": "0.6",
+      "skill_annotations": [
+        "theoremqa_102"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.6"
+    },
+    {
+      "instance_id": "theoremqa_00066",
+      "ground_truth": "1.372",
+      "skill_annotations": [
+        "theoremqa_272"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00088",
+      "ground_truth": "88.33",
+      "skill_annotations": [
+        "theoremqa_257"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "88.33"
+    },
+    {
+      "instance_id": "theoremqa_00097",
+      "ground_truth": "2.7182818",
+      "skill_annotations": [
+        "theoremqa_297"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00084",
+      "ground_truth": "22.5",
+      "skill_annotations": [
+        "theoremqa_235"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "22.5"
+    },
+    {
+      "instance_id": "theoremqa_00080",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_158"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00094",
+      "ground_truth": "(b)",
+      "skill_annotations": [
+        "theoremqa_141"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(b)"
+    },
+    {
+      "instance_id": "theoremqa_00091",
+      "ground_truth": "[3, 1]",
+      "skill_annotations": [
+        "theoremqa_191"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[3, 1]"
+    },
+    {
+      "instance_id": "theoremqa_00096",
+      "ground_truth": "2.37",
+      "skill_annotations": [
+        "theoremqa_046"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "2.37"
+    },
+    {
+      "instance_id": "theoremqa_00089",
+      "ground_truth": "54.8",
+      "skill_annotations": [
+        "theoremqa_021"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "29.3"
+    },
+    {
+      "instance_id": "theoremqa_00095",
+      "ground_truth": "[1.0, 0.25]",
+      "skill_annotations": [
+        "theoremqa_076"
+      ],
+      "correct": false,
+      "answer_type": "list of float",
+      "extracted_answer": "[1, 0.25]"
+    },
+    {
+      "instance_id": "theoremqa_00100",
+      "ground_truth": "0",
+      "skill_annotations": [
+        "theoremqa_061"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00101",
+      "ground_truth": "362880",
+      "skill_annotations": [
+        "theoremqa_014"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "362880"
+    },
+    {
+      "instance_id": "theoremqa_00099",
+      "ground_truth": "0.098",
+      "skill_annotations": [
+        "theoremqa_032"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.098"
+    },
+    {
+      "instance_id": "theoremqa_00102",
+      "ground_truth": "(b)",
+      "skill_annotations": [
+        "theoremqa_141"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(b)"
+    },
+    {
+      "instance_id": "theoremqa_00103",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_298"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00098",
+      "ground_truth": "[8, 0, 2, -2]",
+      "skill_annotations": [
+        "theoremqa_175"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[8, 0, 2, -2]"
+    },
+    {
+      "instance_id": "theoremqa_00079",
+      "ground_truth": "1.132",
+      "skill_annotations": [
+        "theoremqa_060"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00104",
+      "ground_truth": "900",
+      "skill_annotations": [
+        "theoremqa_222"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "100"
+    },
+    {
+      "instance_id": "theoremqa_00081",
+      "ground_truth": "0.034",
+      "skill_annotations": [
+        "theoremqa_283"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00106",
+      "ground_truth": "9.184",
+      "skill_annotations": [
+        "theoremqa_047"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "9.184"
+    },
+    {
+      "instance_id": "theoremqa_00105",
+      "ground_truth": "133496",
+      "skill_annotations": [
+        "theoremqa_025"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "133496"
+    },
+    {
+      "instance_id": "theoremqa_00108",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_150"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00109",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_171"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00113",
+      "ground_truth": "0",
+      "skill_annotations": [
+        "theoremqa_103"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00107",
+      "ground_truth": "225",
+      "skill_annotations": [
+        "theoremqa_014"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "274"
+    },
+    {
+      "instance_id": "theoremqa_00110",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_210"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00092",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_216"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00093",
+      "ground_truth": "344",
+      "skill_annotations": [
+        "theoremqa_213"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00112",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_079"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00116",
+      "ground_truth": "-6e+25",
+      "skill_annotations": [
+        "theoremqa_303"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "-6e25"
+    },
+    {
+      "instance_id": "theoremqa_00117",
+      "ground_truth": "63",
+      "skill_annotations": [
+        "theoremqa_241"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "63"
+    },
+    {
+      "instance_id": "theoremqa_00118",
+      "ground_truth": "4638.83",
+      "skill_annotations": [
+        "theoremqa_252"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "384.04"
+    },
+    {
+      "instance_id": "theoremqa_00115",
+      "ground_truth": "28.3",
+      "skill_annotations": [
+        "theoremqa_300"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "28.3"
+    },
+    {
+      "instance_id": "theoremqa_00120",
+      "ground_truth": "5.65",
+      "skill_annotations": [
+        "theoremqa_032"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "5.65"
+    },
+    {
+      "instance_id": "theoremqa_00122",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_245"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00125",
+      "ground_truth": "140",
+      "skill_annotations": [
+        "theoremqa_215"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "140"
+    },
+    {
+      "instance_id": "theoremqa_00119",
+      "ground_truth": "3.5e-08",
+      "skill_annotations": [
+        "theoremqa_318"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "3.5e-8"
+    },
+    {
+      "instance_id": "theoremqa_00129",
+      "ground_truth": "50",
+      "skill_annotations": [
+        "theoremqa_160"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "50"
+    },
+    {
+      "instance_id": "theoremqa_00121",
+      "ground_truth": "30",
+      "skill_annotations": [
+        "theoremqa_235"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "30"
+    },
+    {
+      "instance_id": "theoremqa_00133",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_155"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00130",
+      "ground_truth": "0.02",
+      "skill_annotations": [
+        "theoremqa_256"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.02"
+    },
+    {
+      "instance_id": "theoremqa_00123",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_171"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00132",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_297"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00111",
+      "ground_truth": "3.46621207",
+      "skill_annotations": [
+        "theoremqa_088"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00128",
+      "ground_truth": "88.3",
+      "skill_annotations": [
+        "theoremqa_305"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "88"
+    },
+    {
+      "instance_id": "theoremqa_00124",
+      "ground_truth": "6",
+      "skill_annotations": [
+        "theoremqa_238"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "6"
+    },
+    {
+      "instance_id": "theoremqa_00114",
+      "ground_truth": "[1, 2, 6, 9, 11, 14]",
+      "skill_annotations": [
+        "theoremqa_220"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00127",
+      "ground_truth": "7.333",
+      "skill_annotations": [
+        "theoremqa_069"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "1.667"
+    },
+    {
+      "instance_id": "theoremqa_00136",
+      "ground_truth": "(a)",
+      "skill_annotations": [
+        "theoremqa_243"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(a)"
+    },
+    {
+      "instance_id": "theoremqa_00140",
+      "ground_truth": "7.1",
+      "skill_annotations": [
+        "theoremqa_046"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "7.1"
+    },
+    {
+      "instance_id": "theoremqa_00137",
+      "ground_truth": "2.0",
+      "skill_annotations": [
+        "theoremqa_193"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "2"
+    },
+    {
+      "instance_id": "theoremqa_00135",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_196"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00144",
+      "ground_truth": "8",
+      "skill_annotations": [
+        "theoremqa_160"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "8"
+    },
+    {
+      "instance_id": "theoremqa_00143",
+      "ground_truth": "26",
+      "skill_annotations": [
+        "theoremqa_108"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00145",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_216"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00139",
+      "ground_truth": "8.9",
+      "skill_annotations": [
+        "theoremqa_306"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "8.85"
+    },
+    {
+      "instance_id": "theoremqa_00148",
+      "ground_truth": "78.3526",
+      "skill_annotations": [
+        "theoremqa_315"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "78.35"
+    },
+    {
+      "instance_id": "theoremqa_00126",
+      "ground_truth": "6",
+      "skill_annotations": [
+        "theoremqa_065"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00142",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_083"
+      ],
+      "correct": false,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00154",
+      "ground_truth": "0.63662",
+      "skill_annotations": [
+        "theoremqa_196"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00147",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_187"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00152",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_216"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00131",
+      "ground_truth": "-1",
+      "skill_annotations": [
+        "theoremqa_111"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00156",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_158"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00146",
+      "ground_truth": "0.038",
+      "skill_annotations": [
+        "theoremqa_302"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.039"
+    },
+    {
+      "instance_id": "theoremqa_00149",
+      "ground_truth": "0.78539815",
+      "skill_annotations": [
+        "theoremqa_292"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00134",
+      "ground_truth": "6.2831852",
+      "skill_annotations": [
+        "theoremqa_286"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00151",
+      "ground_truth": "-0.8",
+      "skill_annotations": [
+        "theoremqa_029"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "8"
+    },
+    {
+      "instance_id": "theoremqa_00138",
+      "ground_truth": "25.3",
+      "skill_annotations": [
+        "theoremqa_233"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00141",
+      "ground_truth": "108610",
+      "skill_annotations": [
+        "theoremqa_011"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00162",
+      "ground_truth": "3.7",
+      "skill_annotations": [
+        "theoremqa_149"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "3.7"
+    },
+    {
+      "instance_id": "theoremqa_00161",
+      "ground_truth": "60",
+      "skill_annotations": [
+        "theoremqa_291"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "60"
+    },
+    {
+      "instance_id": "theoremqa_00157",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_198"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00163",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_106"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00164",
+      "ground_truth": "(a)",
+      "skill_annotations": [
+        "theoremqa_169"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(a)"
+    },
+    {
+      "instance_id": "theoremqa_00150",
+      "ground_truth": "15",
+      "skill_annotations": [
+        "theoremqa_223"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00160",
+      "ground_truth": "1.57",
+      "skill_annotations": [
+        "theoremqa_103"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.5708"
+    },
+    {
+      "instance_id": "theoremqa_00166",
+      "ground_truth": "15",
+      "skill_annotations": [
+        "theoremqa_231"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "15"
+    },
+    {
+      "instance_id": "theoremqa_00153",
+      "ground_truth": "[4, 5, 7, 11, 19]",
+      "skill_annotations": [
+        "theoremqa_214"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00155",
+      "ground_truth": "2.37",
+      "skill_annotations": [
+        "theoremqa_099"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00169",
+      "ground_truth": "200",
+      "skill_annotations": [
+        "theoremqa_049"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "200"
+    },
+    {
+      "instance_id": "theoremqa_00158",
+      "ground_truth": "0.16",
+      "skill_annotations": [
+        "theoremqa_276"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00167",
+      "ground_truth": "14",
+      "skill_annotations": [
+        "theoremqa_300"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "[-3.9, 14.4]"
+    },
+    {
+      "instance_id": "theoremqa_00174",
+      "ground_truth": "0.0758",
+      "skill_annotations": [
+        "theoremqa_010"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.0758"
+    },
+    {
+      "instance_id": "theoremqa_00159",
+      "ground_truth": "87",
+      "skill_annotations": [
+        "theoremqa_230"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00180",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_289"
+      ],
+      "correct": false,
+      "answer_type": "bool",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00168",
+      "ground_truth": "0.4295",
+      "skill_annotations": [
+        "theoremqa_283"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.42957"
+    },
+    {
+      "instance_id": "theoremqa_00170",
+      "ground_truth": "70",
+      "skill_annotations": [
+        "theoremqa_055"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "69.6"
+    },
+    {
+      "instance_id": "theoremqa_00173",
+      "ground_truth": "2.0",
+      "skill_annotations": [
+        "theoremqa_184"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "2"
+    },
+    {
+      "instance_id": "theoremqa_00177",
+      "ground_truth": "4.2",
+      "skill_annotations": [
+        "theoremqa_019"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "4.2"
+    },
+    {
+      "instance_id": "theoremqa_00179",
+      "ground_truth": "60.0",
+      "skill_annotations": [
+        "theoremqa_018"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "60"
+    },
+    {
+      "instance_id": "theoremqa_00176",
+      "ground_truth": "7.5",
+      "skill_annotations": [
+        "theoremqa_235"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "7.5"
+    },
+    {
+      "instance_id": "theoremqa_00182",
+      "ground_truth": "(d)",
+      "skill_annotations": [
+        "theoremqa_131"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(d)"
+    },
+    {
+      "instance_id": "theoremqa_00175",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_278"
+      ],
+      "correct": false,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00165",
+      "ground_truth": "918",
+      "skill_annotations": [
+        "theoremqa_213"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00190",
+      "ground_truth": "0.891",
+      "skill_annotations": [
+        "theoremqa_303"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00186",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_102"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00181",
+      "ground_truth": "0.25",
+      "skill_annotations": [
+        "theoremqa_268"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.25"
+    },
+    {
+      "instance_id": "theoremqa_00193",
+      "ground_truth": "56",
+      "skill_annotations": [
+        "theoremqa_226"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "56"
+    },
+    {
+      "instance_id": "theoremqa_00171",
+      "ground_truth": "52",
+      "skill_annotations": [
+        "theoremqa_234"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "52"
+    },
+    {
+      "instance_id": "theoremqa_00184",
+      "ground_truth": "167.0",
+      "skill_annotations": [
+        "theoremqa_302"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "168"
+    },
+    {
+      "instance_id": "theoremqa_00185",
+      "ground_truth": "10",
+      "skill_annotations": [
+        "theoremqa_273"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "10"
+    },
+    {
+      "instance_id": "theoremqa_00194",
+      "ground_truth": "51.0",
+      "skill_annotations": [
+        "theoremqa_271"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "51.01"
+    },
+    {
+      "instance_id": "theoremqa_00195",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_093"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00191",
+      "ground_truth": "0.5",
+      "skill_annotations": [
+        "theoremqa_196"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.5"
+    },
+    {
+      "instance_id": "theoremqa_00172",
+      "ground_truth": "-252",
+      "skill_annotations": [
+        "theoremqa_150"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00183",
+      "ground_truth": "33389.35",
+      "skill_annotations": [
+        "theoremqa_311"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "33389.66"
+    },
+    {
+      "instance_id": "theoremqa_00188",
+      "ground_truth": "0.000544",
+      "skill_annotations": [
+        "theoremqa_018"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.000544"
+    },
+    {
+      "instance_id": "theoremqa_00196",
+      "ground_truth": "-3",
+      "skill_annotations": [
+        "theoremqa_202"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "-3"
+    },
+    {
+      "instance_id": "theoremqa_00201",
+      "ground_truth": "64",
+      "skill_annotations": [
+        "theoremqa_222"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "64"
+    },
+    {
+      "instance_id": "theoremqa_00178",
+      "ground_truth": "3",
+      "skill_annotations": [
+        "theoremqa_202"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "7"
+    },
+    {
+      "instance_id": "theoremqa_00189",
+      "ground_truth": "0.6667",
+      "skill_annotations": [
+        "theoremqa_286"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.6666666666666666"
+    },
+    {
+      "instance_id": "theoremqa_00202",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_160"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00208",
+      "ground_truth": "3628800",
+      "skill_annotations": [
+        "theoremqa_136"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "3628800"
+    },
+    {
+      "instance_id": "theoremqa_00198",
+      "ground_truth": "66.0",
+      "skill_annotations": [
+        "theoremqa_055"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "66"
+    },
+    {
+      "instance_id": "theoremqa_00207",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_126"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00203",
+      "ground_truth": "26",
+      "skill_annotations": [
+        "theoremqa_161"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "26"
+    },
+    {
+      "instance_id": "theoremqa_00187",
+      "ground_truth": "3.0",
+      "skill_annotations": [
+        "theoremqa_209"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00209",
+      "ground_truth": "-1.0",
+      "skill_annotations": [
+        "theoremqa_109"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "-1"
+    },
+    {
+      "instance_id": "theoremqa_00192",
+      "ground_truth": "30",
+      "skill_annotations": [
+        "theoremqa_001"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00199",
+      "ground_truth": "[-1, 3, 1]",
+      "skill_annotations": [
+        "theoremqa_172"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[-1, 3, 1]"
+    },
+    {
+      "instance_id": "theoremqa_00197",
+      "ground_truth": "[1, 1, 1]",
+      "skill_annotations": [
+        "theoremqa_081"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[1, 1, 1]"
+    },
+    {
+      "instance_id": "theoremqa_00214",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_277"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00200",
+      "ground_truth": "0.29744254",
+      "skill_annotations": [
+        "theoremqa_066"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00204",
+      "ground_truth": "-19.875",
+      "skill_annotations": [
+        "theoremqa_089"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "-19.875"
+    },
+    {
+      "instance_id": "theoremqa_00212",
+      "ground_truth": "[0, 4]",
+      "skill_annotations": [
+        "theoremqa_218"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[0, 4]"
+    },
+    {
+      "instance_id": "theoremqa_00215",
+      "ground_truth": "(d)",
+      "skill_annotations": [
+        "theoremqa_131"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(d)"
+    },
+    {
+      "instance_id": "theoremqa_00205",
+      "ground_truth": "0.000198",
+      "skill_annotations": [
+        "theoremqa_066"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0.00139"
+    },
+    {
+      "instance_id": "theoremqa_00206",
+      "ground_truth": "0.5",
+      "skill_annotations": [
+        "theoremqa_196"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00210",
+      "ground_truth": "2.92",
+      "skill_annotations": [
+        "theoremqa_261"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00219",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_183"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00223",
+      "ground_truth": "[1, 1]",
+      "skill_annotations": [
+        "theoremqa_207"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[1, 1]"
+    },
+    {
+      "instance_id": "theoremqa_00222",
+      "ground_truth": "0.075",
+      "skill_annotations": [
+        "theoremqa_115"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.075"
+    },
+    {
+      "instance_id": "theoremqa_00211",
+      "ground_truth": "442.02",
+      "skill_annotations": [
+        "theoremqa_271"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00221",
+      "ground_truth": "0.5235987667",
+      "skill_annotations": [
+        "theoremqa_200"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.5236"
+    },
+    {
+      "instance_id": "theoremqa_00213",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_155"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00225",
+      "ground_truth": "0",
+      "skill_annotations": [
+        "theoremqa_296"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00227",
+      "ground_truth": "105",
+      "skill_annotations": [
+        "theoremqa_253"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "105"
+    },
+    {
+      "instance_id": "theoremqa_00218",
+      "ground_truth": "-0.166",
+      "skill_annotations": [
+        "theoremqa_100"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "5.5625"
+    },
+    {
+      "instance_id": "theoremqa_00216",
+      "ground_truth": "0.322",
+      "skill_annotations": [
+        "theoremqa_149"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00217",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_155"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00234",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_091"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00220",
+      "ground_truth": "0.8356488482647211",
+      "skill_annotations": [
+        "theoremqa_194"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00230",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_051"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00235",
+      "ground_truth": "840",
+      "skill_annotations": [
+        "theoremqa_291"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "840"
+    },
+    {
+      "instance_id": "theoremqa_00226",
+      "ground_truth": "3.958",
+      "skill_annotations": [
+        "theoremqa_108"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "3.9577"
+    },
+    {
+      "instance_id": "theoremqa_00233",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_163"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00224",
+      "ground_truth": "1020",
+      "skill_annotations": [
+        "theoremqa_030"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00236",
+      "ground_truth": "-1.5",
+      "skill_annotations": [
+        "theoremqa_035"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "-1"
+    },
+    {
+      "instance_id": "theoremqa_00238",
+      "ground_truth": "1152",
+      "skill_annotations": [
+        "theoremqa_063"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "1152"
+    },
+    {
+      "instance_id": "theoremqa_00243",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_221"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00242",
+      "ground_truth": "[8, 4]",
+      "skill_annotations": [
+        "theoremqa_215"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[8, 4]"
+    },
+    {
+      "instance_id": "theoremqa_00237",
+      "ground_truth": "11",
+      "skill_annotations": [
+        "theoremqa_054"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "11"
+    },
+    {
+      "instance_id": "theoremqa_00232",
+      "ground_truth": "10.75",
+      "skill_annotations": [
+        "theoremqa_310"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "11.59"
+    },
+    {
+      "instance_id": "theoremqa_00228",
+      "ground_truth": "124",
+      "skill_annotations": [
+        "theoremqa_249"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00239",
+      "ground_truth": "3.6",
+      "skill_annotations": [
+        "theoremqa_259"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "3.63"
+    },
+    {
+      "instance_id": "theoremqa_00229",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_112"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00231",
+      "ground_truth": "2.0",
+      "skill_annotations": [
+        "theoremqa_193"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00240",
+      "ground_truth": "999.998976",
+      "skill_annotations": [
+        "theoremqa_271"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "899.63"
+    },
+    {
+      "instance_id": "theoremqa_00248",
+      "ground_truth": "0.17",
+      "skill_annotations": [
+        "theoremqa_307"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.17"
+    },
+    {
+      "instance_id": "theoremqa_00241",
+      "ground_truth": "[2, 2]",
+      "skill_annotations": [
+        "theoremqa_159"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[2, 2]"
+    },
+    {
+      "instance_id": "theoremqa_00249",
+      "ground_truth": "0.31",
+      "skill_annotations": [
+        "theoremqa_019"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.31"
+    },
+    {
+      "instance_id": "theoremqa_00255",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_093"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00246",
+      "ground_truth": "4600.0",
+      "skill_annotations": [
+        "theoremqa_019"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "4640"
+    },
+    {
+      "instance_id": "theoremqa_00254",
+      "ground_truth": "14",
+      "skill_annotations": [
+        "theoremqa_279"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "14"
+    },
+    {
+      "instance_id": "theoremqa_00250",
+      "ground_truth": "18",
+      "skill_annotations": [
+        "theoremqa_251"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "18"
+    },
+    {
+      "instance_id": "theoremqa_00251",
+      "ground_truth": "3.9",
+      "skill_annotations": [
+        "theoremqa_304"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "3.91"
+    },
+    {
+      "instance_id": "theoremqa_00253",
+      "ground_truth": "0.52",
+      "skill_annotations": [
+        "theoremqa_310"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.516"
+    },
+    {
+      "instance_id": "theoremqa_00247",
+      "ground_truth": "273.0",
+      "skill_annotations": [
+        "theoremqa_257"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "272.95"
+    },
+    {
+      "instance_id": "theoremqa_00245",
+      "ground_truth": "2.99",
+      "skill_annotations": [
+        "theoremqa_019"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "2.99"
+    },
+    {
+      "instance_id": "theoremqa_00256",
+      "ground_truth": "3.67",
+      "skill_annotations": [
+        "theoremqa_050"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "3.67"
+    },
+    {
+      "instance_id": "theoremqa_00252",
+      "ground_truth": "-0.459",
+      "skill_annotations": [
+        "theoremqa_196"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "-0.4597"
+    },
+    {
+      "instance_id": "theoremqa_00260",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_269"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00259",
+      "ground_truth": "0.322",
+      "skill_annotations": [
+        "theoremqa_071"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.3224"
+    },
+    {
+      "instance_id": "theoremqa_00244",
+      "ground_truth": "1.856",
+      "skill_annotations": [
+        "theoremqa_123"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.855"
+    },
+    {
+      "instance_id": "theoremqa_00262",
+      "ground_truth": "2.5",
+      "skill_annotations": [
+        "theoremqa_023"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0.2"
+    },
+    {
+      "instance_id": "theoremqa_00269",
+      "ground_truth": "12",
+      "skill_annotations": [
+        "theoremqa_246"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "12"
+    },
+    {
+      "instance_id": "theoremqa_00270",
+      "ground_truth": "0.05",
+      "skill_annotations": [
+        "theoremqa_003"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.05"
+    },
+    {
+      "instance_id": "theoremqa_00261",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_281"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00257",
+      "ground_truth": "0.75",
+      "skill_annotations": [
+        "theoremqa_242"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.75"
+    },
+    {
+      "instance_id": "theoremqa_00267",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_164"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00268",
+      "ground_truth": "1130.0",
+      "skill_annotations": [
+        "theoremqa_303"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1130"
+    },
+    {
+      "instance_id": "theoremqa_00272",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_182"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00271",
+      "ground_truth": "[8, -14]",
+      "skill_annotations": [
+        "theoremqa_203"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[8, -14]"
+    },
+    {
+      "instance_id": "theoremqa_00276",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_162"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00264",
+      "ground_truth": "3660000",
+      "skill_annotations": [
+        "theoremqa_292"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "3660000"
+    },
+    {
+      "instance_id": "theoremqa_00279",
+      "ground_truth": "0.0828",
+      "skill_annotations": [
+        "theoremqa_311"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0.087"
+    },
+    {
+      "instance_id": "theoremqa_00278",
+      "ground_truth": "1",
+      "skill_annotations": [
+        "theoremqa_169"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00258",
+      "ground_truth": "0.5167",
+      "skill_annotations": [
+        "theoremqa_078"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00265",
+      "ground_truth": "1.570796",
+      "skill_annotations": [
+        "theoremqa_108"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.570796"
+    },
+    {
+      "instance_id": "theoremqa_00263",
+      "ground_truth": "1",
+      "skill_annotations": [
+        "theoremqa_111"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00274",
+      "ground_truth": "0.4",
+      "skill_annotations": [
+        "theoremqa_019"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.4"
+    },
+    {
+      "instance_id": "theoremqa_00280",
+      "ground_truth": "9330",
+      "skill_annotations": [
+        "theoremqa_241"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "9330"
+    },
+    {
+      "instance_id": "theoremqa_00266",
+      "ground_truth": "0.42857",
+      "skill_annotations": [
+        "theoremqa_197"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00275",
+      "ground_truth": "28.75",
+      "skill_annotations": [
+        "theoremqa_260"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "28.26"
+    },
+    {
+      "instance_id": "theoremqa_00282",
+      "ground_truth": "4.15",
+      "skill_annotations": [
+        "theoremqa_305"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "4.15"
+    },
+    {
+      "instance_id": "theoremqa_00283",
+      "ground_truth": "7142",
+      "skill_annotations": [
+        "theoremqa_057"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "7092"
+    },
+    {
+      "instance_id": "theoremqa_00292",
+      "ground_truth": "65.333",
+      "skill_annotations": [
+        "theoremqa_292"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00284",
+      "ground_truth": "0.01234567",
+      "skill_annotations": [
+        "theoremqa_102"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0.004"
+    },
+    {
+      "instance_id": "theoremqa_00277",
+      "ground_truth": "104761.48",
+      "skill_annotations": [
+        "theoremqa_262"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "106514.66"
+    },
+    {
+      "instance_id": "theoremqa_00288",
+      "ground_truth": "0",
+      "skill_annotations": [
+        "theoremqa_158"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00289",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_197"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00281",
+      "ground_truth": "500",
+      "skill_annotations": [
+        "theoremqa_227"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "500"
+    },
+    {
+      "instance_id": "theoremqa_00294",
+      "ground_truth": "3650.0",
+      "skill_annotations": [
+        "theoremqa_302"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "3654"
+    },
+    {
+      "instance_id": "theoremqa_00287",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_080"
+      ],
+      "correct": false,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00273",
+      "ground_truth": "(b)",
+      "skill_annotations": [
+        "theoremqa_154"
+      ],
+      "correct": false,
+      "answer_type": "option",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00296",
+      "ground_truth": "0",
+      "skill_annotations": [
+        "theoremqa_219"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00290",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_139"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00297",
+      "ground_truth": "2",
+      "skill_annotations": [
+        "theoremqa_246"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "2"
+    },
+    {
+      "instance_id": "theoremqa_00291",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_247"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00300",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_147"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00299",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_208"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00304",
+      "ground_truth": "[4, 1]",
+      "skill_annotations": [
+        "theoremqa_236"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "[1, 4]"
+    },
+    {
+      "instance_id": "theoremqa_00301",
+      "ground_truth": "550.0",
+      "skill_annotations": [
+        "theoremqa_301"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "33749"
+    },
+    {
+      "instance_id": "theoremqa_00307",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_223"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00285",
+      "ground_truth": "4",
+      "skill_annotations": [
+        "theoremqa_212"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00286",
+      "ground_truth": "0.6705",
+      "skill_annotations": [
+        "theoremqa_088"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "-1.4878742"
+    },
+    {
+      "instance_id": "theoremqa_00308",
+      "ground_truth": "0.075",
+      "skill_annotations": [
+        "theoremqa_258"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.075"
+    },
+    {
+      "instance_id": "theoremqa_00305",
+      "ground_truth": "31.0",
+      "skill_annotations": [
+        "theoremqa_021"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "15.49"
+    },
+    {
+      "instance_id": "theoremqa_00298",
+      "ground_truth": "19",
+      "skill_annotations": [
+        "theoremqa_135"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "18"
+    },
+    {
+      "instance_id": "theoremqa_00293",
+      "ground_truth": "5.9",
+      "skill_annotations": [
+        "theoremqa_041"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00310",
+      "ground_truth": "4.2",
+      "skill_annotations": [
+        "theoremqa_300"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "4.21"
+    },
+    {
+      "instance_id": "theoremqa_00312",
+      "ground_truth": "89.4",
+      "skill_annotations": [
+        "theoremqa_030"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "89.4"
+    },
+    {
+      "instance_id": "theoremqa_00295",
+      "ground_truth": "-1.0",
+      "skill_annotations": [
+        "theoremqa_292"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00314",
+      "ground_truth": "5.93",
+      "skill_annotations": [
+        "theoremqa_168"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "5.93"
+    },
+    {
+      "instance_id": "theoremqa_00303",
+      "ground_truth": "-0.166",
+      "skill_annotations": [
+        "theoremqa_062"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "-0.16666666666666666"
+    },
+    {
+      "instance_id": "theoremqa_00309",
+      "ground_truth": "0.5",
+      "skill_annotations": [
+        "theoremqa_131"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.5"
+    },
+    {
+      "instance_id": "theoremqa_00306",
+      "ground_truth": "560",
+      "skill_annotations": [
+        "theoremqa_026"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "21.88"
+    },
+    {
+      "instance_id": "theoremqa_00317",
+      "ground_truth": "0.070095",
+      "skill_annotations": [
+        "theoremqa_258"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.07"
+    },
+    {
+      "instance_id": "theoremqa_00321",
+      "ground_truth": "0",
+      "skill_annotations": [
+        "theoremqa_105"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00311",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_134"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00302",
+      "ground_truth": "81600.0",
+      "skill_annotations": [
+        "theoremqa_302"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00318",
+      "ground_truth": "1.8",
+      "skill_annotations": [
+        "theoremqa_050"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0.692"
+    },
+    {
+      "instance_id": "theoremqa_00320",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_197"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00319",
+      "ground_truth": "2002.0781",
+      "skill_annotations": [
+        "theoremqa_315"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "2002.13"
+    },
+    {
+      "instance_id": "theoremqa_00323",
+      "ground_truth": "0.37",
+      "skill_annotations": [
+        "theoremqa_082"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "e^(-10)"
+    },
+    {
+      "instance_id": "theoremqa_00329",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_167"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00316",
+      "ground_truth": "0",
+      "skill_annotations": [
+        "theoremqa_162"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "[0, 0]"
+    },
+    {
+      "instance_id": "theoremqa_00328",
+      "ground_truth": "180",
+      "skill_annotations": [
+        "theoremqa_274"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "180"
+    },
+    {
+      "instance_id": "theoremqa_00313",
+      "ground_truth": "937",
+      "skill_annotations": [
+        "theoremqa_212"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "376"
+    },
+    {
+      "instance_id": "theoremqa_00330",
+      "ground_truth": "4.7e-34",
+      "skill_annotations": [
+        "theoremqa_032"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "4.65e-34"
+    },
+    {
+      "instance_id": "theoremqa_00322",
+      "ground_truth": "420",
+      "skill_annotations": [
+        "theoremqa_253"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "420"
+    },
+    {
+      "instance_id": "theoremqa_00331",
+      "ground_truth": "26.0",
+      "skill_annotations": [
+        "theoremqa_173"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "26"
+    },
+    {
+      "instance_id": "theoremqa_00327",
+      "ground_truth": "0.08",
+      "skill_annotations": [
+        "theoremqa_304"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0.32"
+    },
+    {
+      "instance_id": "theoremqa_00336",
+      "ground_truth": "18",
+      "skill_annotations": [
+        "theoremqa_251"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "18"
+    },
+    {
+      "instance_id": "theoremqa_00324",
+      "ground_truth": "0.99996",
+      "skill_annotations": [
+        "theoremqa_318"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.99996"
+    },
+    {
+      "instance_id": "theoremqa_00337",
+      "ground_truth": "1.4",
+      "skill_annotations": [
+        "theoremqa_016"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.4"
+    },
+    {
+      "instance_id": "theoremqa_00315",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_197"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00325",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_121"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00326",
+      "ground_truth": "175",
+      "skill_annotations": [
+        "theoremqa_014"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "175"
+    },
+    {
+      "instance_id": "theoremqa_00335",
+      "ground_truth": "64",
+      "skill_annotations": [
+        "theoremqa_227"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "64"
+    },
+    {
+      "instance_id": "theoremqa_00343",
+      "ground_truth": "[1, -1]",
+      "skill_annotations": [
+        "theoremqa_237"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[1, -1]"
+    },
+    {
+      "instance_id": "theoremqa_00333",
+      "ground_truth": "3",
+      "skill_annotations": [
+        "theoremqa_251"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "3"
+    },
+    {
+      "instance_id": "theoremqa_00332",
+      "ground_truth": "3.70358145",
+      "skill_annotations": [
+        "theoremqa_060"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "3.7036"
+    },
+    {
+      "instance_id": "theoremqa_00342",
+      "ground_truth": "15",
+      "skill_annotations": [
+        "theoremqa_235"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "15"
+    },
+    {
+      "instance_id": "theoremqa_00350",
+      "ground_truth": "0.367879441",
+      "skill_annotations": [
+        "theoremqa_196"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00334",
+      "ground_truth": "13",
+      "skill_annotations": [
+        "theoremqa_202"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "17"
+    },
+    {
+      "instance_id": "theoremqa_00340",
+      "ground_truth": "0.16667",
+      "skill_annotations": [
+        "theoremqa_283"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.16666666666666666"
+    },
+    {
+      "instance_id": "theoremqa_00344",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_200"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00338",
+      "ground_truth": "35",
+      "skill_annotations": [
+        "theoremqa_230"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "35"
+    },
+    {
+      "instance_id": "theoremqa_00349",
+      "ground_truth": "1",
+      "skill_annotations": [
+        "theoremqa_277"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00345",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_112"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00348",
+      "ground_truth": "22.0",
+      "skill_annotations": [
+        "theoremqa_153"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "22"
+    },
+    {
+      "instance_id": "theoremqa_00346",
+      "ground_truth": "(b)",
+      "skill_annotations": [
+        "theoremqa_154"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(b)"
+    },
+    {
+      "instance_id": "theoremqa_00352",
+      "ground_truth": "5630.0",
+      "skill_annotations": [
+        "theoremqa_318"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "5630"
+    },
+    {
+      "instance_id": "theoremqa_00360",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_189"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00351",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_129"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00358",
+      "ground_truth": "200",
+      "skill_annotations": [
+        "theoremqa_049"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "200"
+    },
+    {
+      "instance_id": "theoremqa_00339",
+      "ground_truth": "5.113",
+      "skill_annotations": [
+        "theoremqa_098"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0.045649"
+    },
+    {
+      "instance_id": "theoremqa_00362",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_130"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00341",
+      "ground_truth": "1.53978589",
+      "skill_annotations": [
+        "theoremqa_053"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00363",
+      "ground_truth": "26",
+      "skill_annotations": [
+        "theoremqa_231"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "26"
+    },
+    {
+      "instance_id": "theoremqa_00367",
+      "ground_truth": "18.25",
+      "skill_annotations": [
+        "theoremqa_018"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00354",
+      "ground_truth": "0.47",
+      "skill_annotations": [
+        "theoremqa_052"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.464"
+    },
+    {
+      "instance_id": "theoremqa_00353",
+      "ground_truth": "[3, 5]",
+      "skill_annotations": [
+        "theoremqa_174"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[3, 5]"
+    },
+    {
+      "instance_id": "theoremqa_00356",
+      "ground_truth": "2",
+      "skill_annotations": [
+        "theoremqa_251"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "2"
+    },
+    {
+      "instance_id": "theoremqa_00355",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_121"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00368",
+      "ground_truth": "6",
+      "skill_annotations": [
+        "theoremqa_251"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "6"
+    },
+    {
+      "instance_id": "theoremqa_00372",
+      "ground_truth": "22.11",
+      "skill_annotations": [
+        "theoremqa_257"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "21.11"
+    },
+    {
+      "instance_id": "theoremqa_00347",
+      "ground_truth": "0.75",
+      "skill_annotations": [
+        "theoremqa_102"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00361",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_163"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00369",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_162"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00374",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_228"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00365",
+      "ground_truth": "417",
+      "skill_annotations": [
+        "theoremqa_168"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "448"
+    },
+    {
+      "instance_id": "theoremqa_00366",
+      "ground_truth": "8232",
+      "skill_annotations": [
+        "theoremqa_230"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "8232"
+    },
+    {
+      "instance_id": "theoremqa_00370",
+      "ground_truth": "2.0",
+      "skill_annotations": [
+        "theoremqa_098"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "2"
+    },
+    {
+      "instance_id": "theoremqa_00378",
+      "ground_truth": "1200",
+      "skill_annotations": [
+        "theoremqa_000"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "1200"
+    },
+    {
+      "instance_id": "theoremqa_00371",
+      "ground_truth": "2.83",
+      "skill_annotations": [
+        "theoremqa_033"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "2.83"
+    },
+    {
+      "instance_id": "theoremqa_00376",
+      "ground_truth": "250",
+      "skill_annotations": [
+        "theoremqa_047"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "250"
+    },
+    {
+      "instance_id": "theoremqa_00357",
+      "ground_truth": "517",
+      "skill_annotations": [
+        "theoremqa_020"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00375",
+      "ground_truth": "1e-24",
+      "skill_annotations": [
+        "theoremqa_319"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "5.0e-25"
+    },
+    {
+      "instance_id": "theoremqa_00373",
+      "ground_truth": "0.00587",
+      "skill_annotations": [
+        "theoremqa_140"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.00587"
+    },
+    {
+      "instance_id": "theoremqa_00377",
+      "ground_truth": "25",
+      "skill_annotations": [
+        "theoremqa_314"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "25"
+    },
+    {
+      "instance_id": "theoremqa_00380",
+      "ground_truth": "60.0",
+      "skill_annotations": [
+        "theoremqa_108"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "60"
+    },
+    {
+      "instance_id": "theoremqa_00359",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_156"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00383",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_166"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00384",
+      "ground_truth": "11.25",
+      "skill_annotations": [
+        "theoremqa_108"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "11.25"
+    },
+    {
+      "instance_id": "theoremqa_00382",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_278"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00386",
+      "ground_truth": "4",
+      "skill_annotations": [
+        "theoremqa_295"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "4"
+    },
+    {
+      "instance_id": "theoremqa_00391",
+      "ground_truth": "(c)",
+      "skill_annotations": [
+        "theoremqa_206"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(c)"
+    },
+    {
+      "instance_id": "theoremqa_00364",
+      "ground_truth": "2",
+      "skill_annotations": [
+        "theoremqa_212"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00387",
+      "ground_truth": "-376",
+      "skill_annotations": [
+        "theoremqa_150"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "224"
+    },
+    {
+      "instance_id": "theoremqa_00388",
+      "ground_truth": "3",
+      "skill_annotations": [
+        "theoremqa_273"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "3"
+    },
+    {
+      "instance_id": "theoremqa_00389",
+      "ground_truth": "56",
+      "skill_annotations": [
+        "theoremqa_291"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "56"
+    },
+    {
+      "instance_id": "theoremqa_00390",
+      "ground_truth": "51200",
+      "skill_annotations": [
+        "theoremqa_217"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "51200"
+    },
+    {
+      "instance_id": "theoremqa_00394",
+      "ground_truth": "1",
+      "skill_annotations": [
+        "theoremqa_077"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00392",
+      "ground_truth": "0.125",
+      "skill_annotations": [
+        "theoremqa_104"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.125"
+    },
+    {
+      "instance_id": "theoremqa_00396",
+      "ground_truth": "0",
+      "skill_annotations": [
+        "theoremqa_105"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00385",
+      "ground_truth": "3",
+      "skill_annotations": [
+        "theoremqa_219"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "3"
+    },
+    {
+      "instance_id": "theoremqa_00398",
+      "ground_truth": "8.95",
+      "skill_annotations": [
+        "theoremqa_301"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "9"
+    },
+    {
+      "instance_id": "theoremqa_00401",
+      "ground_truth": "11.0",
+      "skill_annotations": [
+        "theoremqa_107"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "11"
+    },
+    {
+      "instance_id": "theoremqa_00379",
+      "ground_truth": "6.25",
+      "skill_annotations": [
+        "theoremqa_166"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00406",
+      "ground_truth": "15.0",
+      "skill_annotations": [
+        "theoremqa_260"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "15"
+    },
+    {
+      "instance_id": "theoremqa_00397",
+      "ground_truth": "-75.396",
+      "skill_annotations": [
+        "theoremqa_286"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00381",
+      "ground_truth": "500",
+      "skill_annotations": [
+        "theoremqa_160"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00395",
+      "ground_truth": "[3, 4]",
+      "skill_annotations": [
+        "theoremqa_218"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[3, 4]"
+    },
+    {
+      "instance_id": "theoremqa_00405",
+      "ground_truth": "4.0",
+      "skill_annotations": [
+        "theoremqa_301"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "4"
+    },
+    {
+      "instance_id": "theoremqa_00399",
+      "ground_truth": "10.0",
+      "skill_annotations": [
+        "theoremqa_144"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "5.31"
+    },
+    {
+      "instance_id": "theoremqa_00407",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_066"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00410",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_278"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00411",
+      "ground_truth": "25",
+      "skill_annotations": [
+        "theoremqa_241"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "25"
+    },
+    {
+      "instance_id": "theoremqa_00412",
+      "ground_truth": "1750.0",
+      "skill_annotations": [
+        "theoremqa_302"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "1753"
+    },
+    {
+      "instance_id": "theoremqa_00404",
+      "ground_truth": "600",
+      "skill_annotations": [
+        "theoremqa_072"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "600"
+    },
+    {
+      "instance_id": "theoremqa_00393",
+      "ground_truth": "2",
+      "skill_annotations": [
+        "theoremqa_127"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00414",
+      "ground_truth": "1",
+      "skill_annotations": [
+        "theoremqa_105"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00400",
+      "ground_truth": "18.0",
+      "skill_annotations": [
+        "theoremqa_153"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00413",
+      "ground_truth": "59",
+      "skill_annotations": [
+        "theoremqa_232"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "59"
+    },
+    {
+      "instance_id": "theoremqa_00402",
+      "ground_truth": "0.7929",
+      "skill_annotations": [
+        "theoremqa_118"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00403",
+      "ground_truth": "0.602",
+      "skill_annotations": [
+        "theoremqa_018"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00418",
+      "ground_truth": "0.34",
+      "skill_annotations": [
+        "theoremqa_017"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.34"
+    },
+    {
+      "instance_id": "theoremqa_00416",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_212"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00417",
+      "ground_truth": "91.17",
+      "skill_annotations": [
+        "theoremqa_263"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "912.04"
+    },
+    {
+      "instance_id": "theoremqa_00426",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_146"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00408",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_200"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00409",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_215"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00425",
+      "ground_truth": "660",
+      "skill_annotations": [
+        "theoremqa_068"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "660"
+    },
+    {
+      "instance_id": "theoremqa_00419",
+      "ground_truth": "2.812",
+      "skill_annotations": [
+        "theoremqa_087"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "2.8125"
+    },
+    {
+      "instance_id": "theoremqa_00420",
+      "ground_truth": "0.1814",
+      "skill_annotations": [
+        "theoremqa_317"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.1814"
+    },
+    {
+      "instance_id": "theoremqa_00422",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_264"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00424",
+      "ground_truth": "-64.62",
+      "skill_annotations": [
+        "theoremqa_199"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "-64.62"
+    },
+    {
+      "instance_id": "theoremqa_00430",
+      "ground_truth": "21.3",
+      "skill_annotations": [
+        "theoremqa_305"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "21.3"
+    },
+    {
+      "instance_id": "theoremqa_00415",
+      "ground_truth": "[-2, 3, 1, 0]",
+      "skill_annotations": [
+        "theoremqa_165"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[-2, 3, 1, 0]"
+    },
+    {
+      "instance_id": "theoremqa_00427",
+      "ground_truth": "0",
+      "skill_annotations": [
+        "theoremqa_105"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00432",
+      "ground_truth": "1.67",
+      "skill_annotations": [
+        "theoremqa_100"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "1.25"
+    },
+    {
+      "instance_id": "theoremqa_00428",
+      "ground_truth": "0.4444",
+      "skill_annotations": [
+        "theoremqa_082"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.4444444444444444"
+    },
+    {
+      "instance_id": "theoremqa_00437",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_147"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00433",
+      "ground_truth": "[1, 2, 4, 5, 6]",
+      "skill_annotations": [
+        "theoremqa_220"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[1, 2, 4, 5, 6]"
+    },
+    {
+      "instance_id": "theoremqa_00434",
+      "ground_truth": "[0, 3, 5]",
+      "skill_annotations": [
+        "theoremqa_220"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[0, 3, 5]"
+    },
+    {
+      "instance_id": "theoremqa_00421",
+      "ground_truth": "2.843",
+      "skill_annotations": [
+        "theoremqa_292"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00442",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_125"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00438",
+      "ground_truth": "3.1",
+      "skill_annotations": [
+        "theoremqa_307"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "3.1"
+    },
+    {
+      "instance_id": "theoremqa_00445",
+      "ground_truth": "100",
+      "skill_annotations": [
+        "theoremqa_221"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "100"
+    },
+    {
+      "instance_id": "theoremqa_00435",
+      "ground_truth": "[3, 2]",
+      "skill_annotations": [
+        "theoremqa_159"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[3, 2]"
+    },
+    {
+      "instance_id": "theoremqa_00423",
+      "ground_truth": "17.95",
+      "skill_annotations": [
+        "theoremqa_095"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00439",
+      "ground_truth": "1.51",
+      "skill_annotations": [
+        "theoremqa_259"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.51"
+    },
+    {
+      "instance_id": "theoremqa_00436",
+      "ground_truth": "-1.7",
+      "skill_annotations": [
+        "theoremqa_028"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "1.6422"
+    },
+    {
+      "instance_id": "theoremqa_00444",
+      "ground_truth": "3.7",
+      "skill_annotations": [
+        "theoremqa_272"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "3.69"
+    },
+    {
+      "instance_id": "theoremqa_00429",
+      "ground_truth": "49",
+      "skill_annotations": [
+        "theoremqa_233"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "49"
+    },
+    {
+      "instance_id": "theoremqa_00431",
+      "ground_truth": "3.2",
+      "skill_annotations": [
+        "theoremqa_118"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00449",
+      "ground_truth": "-0.375",
+      "skill_annotations": [
+        "theoremqa_280"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "-0.375"
+    },
+    {
+      "instance_id": "theoremqa_00451",
+      "ground_truth": "3",
+      "skill_annotations": [
+        "theoremqa_273"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "3"
+    },
+    {
+      "instance_id": "theoremqa_00454",
+      "ground_truth": "[0, 0]",
+      "skill_annotations": [
+        "theoremqa_211"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[0, 0]"
+    },
+    {
+      "instance_id": "theoremqa_00452",
+      "ground_truth": "1.414",
+      "skill_annotations": [
+        "theoremqa_077"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.4142"
+    },
+    {
+      "instance_id": "theoremqa_00458",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_121"
+      ],
+      "correct": false,
+      "answer_type": "bool",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00450",
+      "ground_truth": "[2, 3]",
+      "skill_annotations": [
+        "theoremqa_147"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[2, 3]"
+    },
+    {
+      "instance_id": "theoremqa_00459",
+      "ground_truth": "3448.1",
+      "skill_annotations": [
+        "theoremqa_312"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "3448.1"
+    },
+    {
+      "instance_id": "theoremqa_00460",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_190"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00440",
+      "ground_truth": "0.00153609831",
+      "skill_annotations": [
+        "theoremqa_115"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0.9323467230443975"
+    },
+    {
+      "instance_id": "theoremqa_00456",
+      "ground_truth": "220",
+      "skill_annotations": [
+        "theoremqa_274"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "220"
+    },
+    {
+      "instance_id": "theoremqa_00441",
+      "ground_truth": "241",
+      "skill_annotations": [
+        "theoremqa_230"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00455",
+      "ground_truth": "-0.5",
+      "skill_annotations": [
+        "theoremqa_114"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "-0.5"
+    },
+    {
+      "instance_id": "theoremqa_00457",
+      "ground_truth": "65.9",
+      "skill_annotations": [
+        "theoremqa_258"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "65.9"
+    },
+    {
+      "instance_id": "theoremqa_00453",
+      "ground_truth": "0.186",
+      "skill_annotations": [
+        "theoremqa_076"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.19"
+    },
+    {
+      "instance_id": "theoremqa_00443",
+      "ground_truth": "386.4158898",
+      "skill_annotations": [
+        "theoremqa_292"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00446",
+      "ground_truth": "114.28",
+      "skill_annotations": [
+        "theoremqa_213"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "121.13"
+    },
+    {
+      "instance_id": "theoremqa_00468",
+      "ground_truth": "13",
+      "skill_annotations": [
+        "theoremqa_273"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "13"
+    },
+    {
+      "instance_id": "theoremqa_00447",
+      "ground_truth": "20",
+      "skill_annotations": [
+        "theoremqa_202"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00448",
+      "ground_truth": "0.73575888",
+      "skill_annotations": [
+        "theoremqa_196"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00462",
+      "ground_truth": "33.36",
+      "skill_annotations": [
+        "theoremqa_113"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "33.36"
+    },
+    {
+      "instance_id": "theoremqa_00470",
+      "ground_truth": "0.5",
+      "skill_annotations": [
+        "theoremqa_151"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.5"
+    },
+    {
+      "instance_id": "theoremqa_00464",
+      "ground_truth": "205",
+      "skill_annotations": [
+        "theoremqa_232"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "205"
+    },
+    {
+      "instance_id": "theoremqa_00465",
+      "ground_truth": "17",
+      "skill_annotations": [
+        "theoremqa_232"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "5"
+    },
+    {
+      "instance_id": "theoremqa_00475",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_149"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00461",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_148"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00466",
+      "ground_truth": "0.572",
+      "skill_annotations": [
+        "theoremqa_225"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.57"
+    },
+    {
+      "instance_id": "theoremqa_00469",
+      "ground_truth": "25",
+      "skill_annotations": [
+        "theoremqa_222"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "900"
+    },
+    {
+      "instance_id": "theoremqa_00473",
+      "ground_truth": "[3]",
+      "skill_annotations": [
+        "theoremqa_218"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "3"
+    },
+    {
+      "instance_id": "theoremqa_00472",
+      "ground_truth": "[0.0259, 0.00505]",
+      "skill_annotations": [
+        "theoremqa_017"
+      ],
+      "correct": false,
+      "answer_type": "list of float",
+      "extracted_answer": "[0.026, 0.0051]"
+    },
+    {
+      "instance_id": "theoremqa_00471",
+      "ground_truth": "0.08",
+      "skill_annotations": [
+        "theoremqa_318"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0.81"
+    },
+    {
+      "instance_id": "theoremqa_00478",
+      "ground_truth": "320",
+      "skill_annotations": [
+        "theoremqa_219"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "320"
+    },
+    {
+      "instance_id": "theoremqa_00485",
+      "ground_truth": "4.32",
+      "skill_annotations": [
+        "theoremqa_300"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00483",
+      "ground_truth": "4",
+      "skill_annotations": [
+        "theoremqa_273"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "4"
+    },
+    {
+      "instance_id": "theoremqa_00481",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_125"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00477",
+      "ground_truth": "0.5",
+      "skill_annotations": [
+        "theoremqa_199"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.5"
+    },
+    {
+      "instance_id": "theoremqa_00488",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_155"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00476",
+      "ground_truth": "0.5",
+      "skill_annotations": [
+        "theoremqa_276"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.5"
+    },
+    {
+      "instance_id": "theoremqa_00463",
+      "ground_truth": "0.258",
+      "skill_annotations": [
+        "theoremqa_197"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00489",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_138"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00474",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_145"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00479",
+      "ground_truth": "-0.3926",
+      "skill_annotations": [
+        "theoremqa_101"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00467",
+      "ground_truth": "240",
+      "skill_annotations": [
+        "theoremqa_000"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00484",
+      "ground_truth": "280",
+      "skill_annotations": [
+        "theoremqa_253"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "280"
+    },
+    {
+      "instance_id": "theoremqa_00480",
+      "ground_truth": "14",
+      "skill_annotations": [
+        "theoremqa_248"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "14"
+    },
+    {
+      "instance_id": "theoremqa_00498",
+      "ground_truth": "2",
+      "skill_annotations": [
+        "theoremqa_174"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00486",
+      "ground_truth": "4",
+      "skill_annotations": [
+        "theoremqa_166"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "4"
+    },
+    {
+      "instance_id": "theoremqa_00494",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_282"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00501",
+      "ground_truth": "8",
+      "skill_annotations": [
+        "theoremqa_154"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00502",
+      "ground_truth": "1.18",
+      "skill_annotations": [
+        "theoremqa_064"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00491",
+      "ground_truth": "(a)",
+      "skill_annotations": [
+        "theoremqa_157"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(a)"
+    },
+    {
+      "instance_id": "theoremqa_00495",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_116"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00493",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_091"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00504",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_149"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00499",
+      "ground_truth": "1850.0",
+      "skill_annotations": [
+        "theoremqa_303"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1850"
+    },
+    {
+      "instance_id": "theoremqa_00487",
+      "ground_truth": "0.525",
+      "skill_annotations": [
+        "theoremqa_047"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.53"
+    },
+    {
+      "instance_id": "theoremqa_00490",
+      "ground_truth": "13068",
+      "skill_annotations": [
+        "theoremqa_014"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "13068"
+    },
+    {
+      "instance_id": "theoremqa_00503",
+      "ground_truth": "(b)",
+      "skill_annotations": [
+        "theoremqa_184"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(b)"
+    },
+    {
+      "instance_id": "theoremqa_00505",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_170"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00492",
+      "ground_truth": "[2, 6]",
+      "skill_annotations": [
+        "theoremqa_147"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "[2, 2, 6]"
+    },
+    {
+      "instance_id": "theoremqa_00482",
+      "ground_truth": "80",
+      "skill_annotations": [
+        "theoremqa_212"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00510",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_193"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00509",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_066"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00515",
+      "ground_truth": "250",
+      "skill_annotations": [
+        "theoremqa_225"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "250"
+    },
+    {
+      "instance_id": "theoremqa_00512",
+      "ground_truth": "-3",
+      "skill_annotations": [
+        "theoremqa_150"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00508",
+      "ground_truth": "36983.35",
+      "skill_annotations": [
+        "theoremqa_309"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "36983.34"
+    },
+    {
+      "instance_id": "theoremqa_00514",
+      "ground_truth": "74",
+      "skill_annotations": [
+        "theoremqa_290"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "74"
+    },
+    {
+      "instance_id": "theoremqa_00500",
+      "ground_truth": "490.0",
+      "skill_annotations": [
+        "theoremqa_304"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "487"
+    },
+    {
+      "instance_id": "theoremqa_00520",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_222"
+      ],
+      "correct": false,
+      "answer_type": "bool",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00496",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_097"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00497",
+      "ground_truth": "3.464",
+      "skill_annotations": [
+        "theoremqa_278"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00516",
+      "ground_truth": "0.1",
+      "skill_annotations": [
+        "theoremqa_301"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0.65"
+    },
+    {
+      "instance_id": "theoremqa_00517",
+      "ground_truth": "3",
+      "skill_annotations": [
+        "theoremqa_224"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "3"
+    },
+    {
+      "instance_id": "theoremqa_00506",
+      "ground_truth": "3",
+      "skill_annotations": [
+        "theoremqa_235"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00518",
+      "ground_truth": "320000000.0",
+      "skill_annotations": [
+        "theoremqa_301"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "33749"
+    },
+    {
+      "instance_id": "theoremqa_00507",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_040"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00511",
+      "ground_truth": "8",
+      "skill_annotations": [
+        "theoremqa_212"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00526",
+      "ground_truth": "16796",
+      "skill_annotations": [
+        "theoremqa_265"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "16796"
+    },
+    {
+      "instance_id": "theoremqa_00521",
+      "ground_truth": "1.8474",
+      "skill_annotations": [
+        "theoremqa_086"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.8476"
+    },
+    {
+      "instance_id": "theoremqa_00513",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_178"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00525",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_114"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00529",
+      "ground_truth": "4200",
+      "skill_annotations": [
+        "theoremqa_253"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "4200"
+    },
+    {
+      "instance_id": "theoremqa_00532",
+      "ground_truth": "[2, 3, 5, 9, 17, 33]",
+      "skill_annotations": [
+        "theoremqa_214"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[2, 3, 5, 9, 17, 33]"
+    },
+    {
+      "instance_id": "theoremqa_00519",
+      "ground_truth": "[1, 1, 1, 1]",
+      "skill_annotations": [
+        "theoremqa_081"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00528",
+      "ground_truth": "9.2",
+      "skill_annotations": [
+        "theoremqa_020"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "9.2"
+    },
+    {
+      "instance_id": "theoremqa_00527",
+      "ground_truth": "1.15",
+      "skill_annotations": [
+        "theoremqa_260"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.13"
+    },
+    {
+      "instance_id": "theoremqa_00524",
+      "ground_truth": "13.609",
+      "skill_annotations": [
+        "theoremqa_279"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "13.609375"
+    },
+    {
+      "instance_id": "theoremqa_00522",
+      "ground_truth": "4",
+      "skill_annotations": [
+        "theoremqa_042"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00533",
+      "ground_truth": "924.0",
+      "skill_annotations": [
+        "theoremqa_300"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "929"
+    },
+    {
+      "instance_id": "theoremqa_00523",
+      "ground_truth": "12.0",
+      "skill_annotations": [
+        "theoremqa_018"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00536",
+      "ground_truth": "15",
+      "skill_annotations": [
+        "theoremqa_222"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "15"
+    },
+    {
+      "instance_id": "theoremqa_00531",
+      "ground_truth": "[2, 8, 10]",
+      "skill_annotations": [
+        "theoremqa_220"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "[2, 6, 10]"
+    },
+    {
+      "instance_id": "theoremqa_00542",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_124"
+      ],
+      "correct": false,
+      "answer_type": "bool",
+      "extracted_answer": "3"
+    },
+    {
+      "instance_id": "theoremqa_00538",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_204"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00541",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_132"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00543",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_201"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1"
+    },
+    {
+      "instance_id": "theoremqa_00546",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_137"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00539",
+      "ground_truth": "100.0",
+      "skill_annotations": [
+        "theoremqa_188"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "100"
+    },
+    {
+      "instance_id": "theoremqa_00530",
+      "ground_truth": "3",
+      "skill_annotations": [
+        "theoremqa_110"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "3"
+    },
+    {
+      "instance_id": "theoremqa_00540",
+      "ground_truth": "8",
+      "skill_annotations": [
+        "theoremqa_082"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "8"
+    },
+    {
+      "instance_id": "theoremqa_00551",
+      "ground_truth": "0",
+      "skill_annotations": [
+        "theoremqa_299"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00547",
+      "ground_truth": "[1, 1, 1]",
+      "skill_annotations": [
+        "theoremqa_112"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[1, 1, 1]"
+    },
+    {
+      "instance_id": "theoremqa_00550",
+      "ground_truth": "(a)",
+      "skill_annotations": [
+        "theoremqa_169"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(a)"
+    },
+    {
+      "instance_id": "theoremqa_00544",
+      "ground_truth": "2.58",
+      "skill_annotations": [
+        "theoremqa_071"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "2.6"
+    },
+    {
+      "instance_id": "theoremqa_00545",
+      "ground_truth": "[0.6667, -0.6667]",
+      "skill_annotations": [
+        "theoremqa_296"
+      ],
+      "correct": false,
+      "answer_type": "list of float",
+      "extracted_answer": "[0.6666666666666666, -0.6666666666666666]"
+    },
+    {
+      "instance_id": "theoremqa_00552",
+      "ground_truth": "66.67",
+      "skill_annotations": [
+        "theoremqa_270"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "66.67"
+    },
+    {
+      "instance_id": "theoremqa_00537",
+      "ground_truth": "[1, 0]",
+      "skill_annotations": [
+        "theoremqa_107"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00534",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_062"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00561",
+      "ground_truth": "0.656",
+      "skill_annotations": [
+        "theoremqa_303"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00556",
+      "ground_truth": "[-1, 2, -1]",
+      "skill_annotations": [
+        "theoremqa_114"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[-1, 2, -1]"
+    },
+    {
+      "instance_id": "theoremqa_00535",
+      "ground_truth": "19.095",
+      "skill_annotations": [
+        "theoremqa_071"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00558",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_284"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00555",
+      "ground_truth": "5.63",
+      "skill_annotations": [
+        "theoremqa_308"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "5.63"
+    },
+    {
+      "instance_id": "theoremqa_00560",
+      "ground_truth": "39.4",
+      "skill_annotations": [
+        "theoremqa_318"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0.2"
+    },
+    {
+      "instance_id": "theoremqa_00553",
+      "ground_truth": "53.94",
+      "skill_annotations": [
+        "theoremqa_038"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "0.0539"
+    },
+    {
+      "instance_id": "theoremqa_00565",
+      "ground_truth": "9.05",
+      "skill_annotations": [
+        "theoremqa_050"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "9.05"
+    },
+    {
+      "instance_id": "theoremqa_00563",
+      "ground_truth": "60",
+      "skill_annotations": [
+        "theoremqa_291"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "60"
+    },
+    {
+      "instance_id": "theoremqa_00562",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_158"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00564",
+      "ground_truth": "1.33",
+      "skill_annotations": [
+        "theoremqa_039"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.3348"
+    },
+    {
+      "instance_id": "theoremqa_00548",
+      "ground_truth": "0.567",
+      "skill_annotations": [
+        "theoremqa_122"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.567"
+    },
+    {
+      "instance_id": "theoremqa_00569",
+      "ground_truth": "6",
+      "skill_annotations": [
+        "theoremqa_297"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "6"
+    },
+    {
+      "instance_id": "theoremqa_00567",
+      "ground_truth": "1.32",
+      "skill_annotations": [
+        "theoremqa_168"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.32"
+    },
+    {
+      "instance_id": "theoremqa_00549",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_197"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00566",
+      "ground_truth": "35",
+      "skill_annotations": [
+        "theoremqa_014"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "35"
+    },
+    {
+      "instance_id": "theoremqa_00554",
+      "ground_truth": "30.15928896",
+      "skill_annotations": [
+        "theoremqa_062"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00557",
+      "ground_truth": "0.1705",
+      "skill_annotations": [
+        "theoremqa_212"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00571",
+      "ground_truth": "31.4",
+      "skill_annotations": [
+        "theoremqa_101"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "10pi"
+    },
+    {
+      "instance_id": "theoremqa_00559",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_181"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00572",
+      "ground_truth": "2.301",
+      "skill_annotations": [
+        "theoremqa_275"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "1.984"
+    },
+    {
+      "instance_id": "theoremqa_00575",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_204"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00570",
+      "ground_truth": "-2.47160136",
+      "skill_annotations": [
+        "theoremqa_060"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "-2.2988"
+    },
+    {
+      "instance_id": "theoremqa_00583",
+      "ground_truth": "[0.8, 0.0, 0.6]",
+      "skill_annotations": [
+        "theoremqa_276"
+      ],
+      "correct": false,
+      "answer_type": "list of float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00579",
+      "ground_truth": "[2, 0]",
+      "skill_annotations": [
+        "theoremqa_161"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[2, 0]"
+    },
+    {
+      "instance_id": "theoremqa_00580",
+      "ground_truth": "[1, 2]",
+      "skill_annotations": [
+        "theoremqa_125"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[1, 2]"
+    },
+    {
+      "instance_id": "theoremqa_00578",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_164"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00581",
+      "ground_truth": "7.6",
+      "skill_annotations": [
+        "theoremqa_059"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "7.6"
+    },
+    {
+      "instance_id": "theoremqa_00568",
+      "ground_truth": "[4, 16, 65536]",
+      "skill_annotations": [
+        "theoremqa_090"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00582",
+      "ground_truth": "12",
+      "skill_annotations": [
+        "theoremqa_231"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "12"
+    },
+    {
+      "instance_id": "theoremqa_00584",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_170"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00588",
+      "ground_truth": "16807",
+      "skill_annotations": [
+        "theoremqa_219"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "16807"
+    },
+    {
+      "instance_id": "theoremqa_00591",
+      "ground_truth": "12.5",
+      "skill_annotations": [
+        "theoremqa_250"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "12.5"
+    },
+    {
+      "instance_id": "theoremqa_00589",
+      "ground_truth": "12600",
+      "skill_annotations": [
+        "theoremqa_000"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "12600"
+    },
+    {
+      "instance_id": "theoremqa_00573",
+      "ground_truth": "0.757",
+      "skill_annotations": [
+        "theoremqa_198"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00574",
+      "ground_truth": "1.4",
+      "skill_annotations": [
+        "theoremqa_107"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00593",
+      "ground_truth": "1259.71",
+      "skill_annotations": [
+        "theoremqa_312"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1259.71"
+    },
+    {
+      "instance_id": "theoremqa_00586",
+      "ground_truth": "[3, 4, 5, 6, 8, 10, 12, 15, 16, 17, 20]",
+      "skill_annotations": [
+        "theoremqa_239"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[3, 4, 5, 6, 8, 10, 12, 15, 16, 17, 20]"
+    },
+    {
+      "instance_id": "theoremqa_00576",
+      "ground_truth": "60.23",
+      "skill_annotations": [
+        "theoremqa_257"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00592",
+      "ground_truth": "132",
+      "skill_annotations": [
+        "theoremqa_265"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "132"
+    },
+    {
+      "instance_id": "theoremqa_00585",
+      "ground_truth": "87",
+      "skill_annotations": [
+        "theoremqa_230"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "87"
+    },
+    {
+      "instance_id": "theoremqa_00597",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_084"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00603",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_163"
+      ],
+      "correct": false,
+      "answer_type": "bool",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00577",
+      "ground_truth": "0.08",
+      "skill_annotations": [
+        "theoremqa_254"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00594",
+      "ground_truth": "28830",
+      "skill_annotations": [
+        "theoremqa_230"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "28830"
+    },
+    {
+      "instance_id": "theoremqa_00595",
+      "ground_truth": "-0.9375",
+      "skill_annotations": [
+        "theoremqa_153"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "-0.9375"
+    },
+    {
+      "instance_id": "theoremqa_00601",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_158"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00598",
+      "ground_truth": "14666.67",
+      "skill_annotations": [
+        "theoremqa_045"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "14667"
+    },
+    {
+      "instance_id": "theoremqa_00600",
+      "ground_truth": "-3",
+      "skill_annotations": [
+        "theoremqa_117"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "-3"
+    },
+    {
+      "instance_id": "theoremqa_00587",
+      "ground_truth": "[2, 4]",
+      "skill_annotations": [
+        "theoremqa_218"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[2, 4]"
+    },
+    {
+      "instance_id": "theoremqa_00602",
+      "ground_truth": "1.73",
+      "skill_annotations": [
+        "theoremqa_017"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.73"
+    },
+    {
+      "instance_id": "theoremqa_00608",
+      "ground_truth": "1.81",
+      "skill_annotations": [
+        "theoremqa_073"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.81"
+    },
+    {
+      "instance_id": "theoremqa_00609",
+      "ground_truth": "0.023",
+      "skill_annotations": [
+        "theoremqa_126"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.0228"
+    },
+    {
+      "instance_id": "theoremqa_00604",
+      "ground_truth": "176",
+      "skill_annotations": [
+        "theoremqa_291"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "176"
+    },
+    {
+      "instance_id": "theoremqa_00607",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_103"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00590",
+      "ground_truth": "1.9221",
+      "skill_annotations": [
+        "theoremqa_095"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00613",
+      "ground_truth": "-120",
+      "skill_annotations": [
+        "theoremqa_287"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "-120"
+    },
+    {
+      "instance_id": "theoremqa_00611",
+      "ground_truth": "5",
+      "skill_annotations": [
+        "theoremqa_075"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "5"
+    },
+    {
+      "instance_id": "theoremqa_00618",
+      "ground_truth": "1.56",
+      "skill_annotations": [
+        "theoremqa_004"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.5625"
+    },
+    {
+      "instance_id": "theoremqa_00596",
+      "ground_truth": "[0, 1, 2, 3, 8, 9]",
+      "skill_annotations": [
+        "theoremqa_218"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00615",
+      "ground_truth": "[1, 2, 2]",
+      "skill_annotations": [
+        "theoremqa_147"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "[1, 2]"
+    },
+    {
+      "instance_id": "theoremqa_00605",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_292"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00599",
+      "ground_truth": "15.9",
+      "skill_annotations": [
+        "theoremqa_319"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "265"
+    },
+    {
+      "instance_id": "theoremqa_00612",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_163"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00620",
+      "ground_truth": "3.54e-07",
+      "skill_annotations": [
+        "theoremqa_043"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "3.5e-7"
+    },
+    {
+      "instance_id": "theoremqa_00617",
+      "ground_truth": "0",
+      "skill_annotations": [
+        "theoremqa_297"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00610",
+      "ground_truth": "48.8",
+      "skill_annotations": [
+        "theoremqa_094"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "48.8"
+    },
+    {
+      "instance_id": "theoremqa_00606",
+      "ground_truth": "42.77325",
+      "skill_annotations": [
+        "theoremqa_261"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00621",
+      "ground_truth": "0.66667",
+      "skill_annotations": [
+        "theoremqa_283"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.6666666666666666"
+    },
+    {
+      "instance_id": "theoremqa_00614",
+      "ground_truth": "21536",
+      "skill_annotations": [
+        "theoremqa_217"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "4512"
+    },
+    {
+      "instance_id": "theoremqa_00625",
+      "ground_truth": "-42",
+      "skill_annotations": [
+        "theoremqa_150"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "22"
+    },
+    {
+      "instance_id": "theoremqa_00626",
+      "ground_truth": "102.95",
+      "skill_annotations": [
+        "theoremqa_258"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "102.93"
+    },
+    {
+      "instance_id": "theoremqa_00619",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_223"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00622",
+      "ground_truth": "0.363",
+      "skill_annotations": [
+        "theoremqa_155"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.363"
+    },
+    {
+      "instance_id": "theoremqa_00623",
+      "ground_truth": "30",
+      "skill_annotations": [
+        "theoremqa_027"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "30"
+    },
+    {
+      "instance_id": "theoremqa_00633",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_228"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00637",
+      "ground_truth": "16777216",
+      "skill_annotations": [
+        "theoremqa_169"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "16777216"
+    },
+    {
+      "instance_id": "theoremqa_00634",
+      "ground_truth": "6000",
+      "skill_annotations": [
+        "theoremqa_058"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "6000"
+    },
+    {
+      "instance_id": "theoremqa_00616",
+      "ground_truth": "0.3305",
+      "skill_annotations": [
+        "theoremqa_096"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00628",
+      "ground_truth": "1960",
+      "skill_annotations": [
+        "theoremqa_014"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "1960"
+    },
+    {
+      "instance_id": "theoremqa_00627",
+      "ground_truth": "0.0833",
+      "skill_annotations": [
+        "theoremqa_283"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.08333333333333333"
+    },
+    {
+      "instance_id": "theoremqa_00638",
+      "ground_truth": "[0, 0, 1, 1, 1, 1]",
+      "skill_annotations": [
+        "theoremqa_240"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[0, 0, 1, 1, 1, 1]"
+    },
+    {
+      "instance_id": "theoremqa_00624",
+      "ground_truth": "[1, 2]",
+      "skill_annotations": [
+        "theoremqa_132"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[1, 2]"
+    },
+    {
+      "instance_id": "theoremqa_00644",
+      "ground_truth": "-1.0",
+      "skill_annotations": [
+        "theoremqa_203"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00639",
+      "ground_truth": "2",
+      "skill_annotations": [
+        "theoremqa_224"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "2"
+    },
+    {
+      "instance_id": "theoremqa_00640",
+      "ground_truth": "8",
+      "skill_annotations": [
+        "theoremqa_232"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "8"
+    },
+    {
+      "instance_id": "theoremqa_00632",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_177"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00629",
+      "ground_truth": "[53.52, 54.25, 54.76]",
+      "skill_annotations": [
+        "theoremqa_086"
+      ],
+      "correct": false,
+      "answer_type": "list of float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00635",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_223"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00641",
+      "ground_truth": "1.99",
+      "skill_annotations": [
+        "theoremqa_305"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.99"
+    },
+    {
+      "instance_id": "theoremqa_00630",
+      "ground_truth": "1.8",
+      "skill_annotations": [
+        "theoremqa_099"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00645",
+      "ground_truth": "1.2",
+      "skill_annotations": [
+        "theoremqa_056"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.2"
+    },
+    {
+      "instance_id": "theoremqa_00643",
+      "ground_truth": "114.5",
+      "skill_annotations": [
+        "theoremqa_318"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "115"
+    },
+    {
+      "instance_id": "theoremqa_00631",
+      "ground_truth": "86",
+      "skill_annotations": [
+        "theoremqa_153"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00642",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_178"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00648",
+      "ground_truth": "1400",
+      "skill_annotations": [
+        "theoremqa_044"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "1400"
+    },
+    {
+      "instance_id": "theoremqa_00647",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_005"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00649",
+      "ground_truth": "0.016",
+      "skill_annotations": [
+        "theoremqa_007"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.016"
+    },
+    {
+      "instance_id": "theoremqa_00655",
+      "ground_truth": "170",
+      "skill_annotations": [
+        "theoremqa_031"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "170"
+    },
+    {
+      "instance_id": "theoremqa_00636",
+      "ground_truth": "3.0",
+      "skill_annotations": [
+        "theoremqa_197"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00658",
+      "ground_truth": "108000",
+      "skill_annotations": [
+        "theoremqa_033"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "107952"
+    },
+    {
+      "instance_id": "theoremqa_00656",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_126"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00660",
+      "ground_truth": "[7, 8, 10, 14]",
+      "skill_annotations": [
+        "theoremqa_214"
+      ],
+      "correct": true,
+      "answer_type": "list of integer",
+      "extracted_answer": "[7, 8, 10, 14]"
+    },
+    {
+      "instance_id": "theoremqa_00663",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_162"
+      ],
+      "correct": false,
+      "answer_type": "bool",
+      "extracted_answer": "FIR"
+    },
+    {
+      "instance_id": "theoremqa_00664",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_192"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00652",
+      "ground_truth": "3.846",
+      "skill_annotations": [
+        "theoremqa_050"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "3.78"
+    },
+    {
+      "instance_id": "theoremqa_00659",
+      "ground_truth": "23",
+      "skill_annotations": [
+        "theoremqa_001"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "23"
+    },
+    {
+      "instance_id": "theoremqa_00667",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_229"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00657",
+      "ground_truth": "9",
+      "skill_annotations": [
+        "theoremqa_153"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "9"
+    },
+    {
+      "instance_id": "theoremqa_00646",
+      "ground_truth": "-2.0",
+      "skill_annotations": [
+        "theoremqa_086"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "-2"
+    },
+    {
+      "instance_id": "theoremqa_00665",
+      "ground_truth": "0.452",
+      "skill_annotations": [
+        "theoremqa_217"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.452"
+    },
+    {
+      "instance_id": "theoremqa_00672",
+      "ground_truth": "0.6667",
+      "skill_annotations": [
+        "theoremqa_092"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.6667"
+    },
+    {
+      "instance_id": "theoremqa_00673",
+      "ground_truth": "352",
+      "skill_annotations": [
+        "theoremqa_213"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00662",
+      "ground_truth": "0.19634",
+      "skill_annotations": [
+        "theoremqa_103"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.19635"
+    },
+    {
+      "instance_id": "theoremqa_00670",
+      "ground_truth": "5",
+      "skill_annotations": [
+        "theoremqa_049"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "5"
+    },
+    {
+      "instance_id": "theoremqa_00654",
+      "ground_truth": "330.76",
+      "skill_annotations": [
+        "theoremqa_300"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "330.4"
+    },
+    {
+      "instance_id": "theoremqa_00650",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_171"
+      ],
+      "correct": false,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00651",
+      "ground_truth": "[-1.7807764064, 0.2807764064]",
+      "skill_annotations": [
+        "theoremqa_156"
+      ],
+      "correct": false,
+      "answer_type": "list of float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00671",
+      "ground_truth": "35",
+      "skill_annotations": [
+        "theoremqa_049"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "35"
+    },
+    {
+      "instance_id": "theoremqa_00653",
+      "ground_truth": "0.251",
+      "skill_annotations": [
+        "theoremqa_316"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00668",
+      "ground_truth": "0.5",
+      "skill_annotations": [
+        "theoremqa_082"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.5"
+    },
+    {
+      "instance_id": "theoremqa_00669",
+      "ground_truth": "2.7",
+      "skill_annotations": [
+        "theoremqa_070"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "26.88"
+    },
+    {
+      "instance_id": "theoremqa_00683",
+      "ground_truth": "0.125",
+      "skill_annotations": [
+        "theoremqa_287"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00678",
+      "ground_truth": "1.28e-06",
+      "skill_annotations": [
+        "theoremqa_303"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.28e-06"
+    },
+    {
+      "instance_id": "theoremqa_00674",
+      "ground_truth": "1140",
+      "skill_annotations": [
+        "theoremqa_291"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "1140"
+    },
+    {
+      "instance_id": "theoremqa_00675",
+      "ground_truth": "2",
+      "skill_annotations": [
+        "theoremqa_174"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "2"
+    },
+    {
+      "instance_id": "theoremqa_00661",
+      "ground_truth": "53.0",
+      "skill_annotations": [
+        "theoremqa_255"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00686",
+      "ground_truth": "1296",
+      "skill_annotations": [
+        "theoremqa_219"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "1296"
+    },
+    {
+      "instance_id": "theoremqa_00682",
+      "ground_truth": "6.5",
+      "skill_annotations": [
+        "theoremqa_248"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "6.5"
+    },
+    {
+      "instance_id": "theoremqa_00679",
+      "ground_truth": "1.581",
+      "skill_annotations": [
+        "theoremqa_196"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.582"
+    },
+    {
+      "instance_id": "theoremqa_00681",
+      "ground_truth": "3.26",
+      "skill_annotations": [
+        "theoremqa_031"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "3.26"
+    },
+    {
+      "instance_id": "theoremqa_00692",
+      "ground_truth": "-0.3789",
+      "skill_annotations": [
+        "theoremqa_120"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00685",
+      "ground_truth": "-756",
+      "skill_annotations": [
+        "theoremqa_285"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "-756"
+    },
+    {
+      "instance_id": "theoremqa_00666",
+      "ground_truth": "2.03",
+      "skill_annotations": [
+        "theoremqa_102"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00687",
+      "ground_truth": "11.25",
+      "skill_annotations": [
+        "theoremqa_069"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "11.18"
+    },
+    {
+      "instance_id": "theoremqa_00684",
+      "ground_truth": "-153.59",
+      "skill_annotations": [
+        "theoremqa_277"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "-14.22"
+    },
+    {
+      "instance_id": "theoremqa_00680",
+      "ground_truth": "291.45",
+      "skill_annotations": [
+        "theoremqa_257"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "290.81"
+    },
+    {
+      "instance_id": "theoremqa_00696",
+      "ground_truth": "0.23",
+      "skill_annotations": [
+        "theoremqa_009"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.23"
+    },
+    {
+      "instance_id": "theoremqa_00676",
+      "ground_truth": "10.92",
+      "skill_annotations": [
+        "theoremqa_008"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00677",
+      "ground_truth": "7.853",
+      "skill_annotations": [
+        "theoremqa_281"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00695",
+      "ground_truth": "263",
+      "skill_annotations": [
+        "theoremqa_232"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "263"
+    },
+    {
+      "instance_id": "theoremqa_00698",
+      "ground_truth": "90000000.0",
+      "skill_annotations": [
+        "theoremqa_300"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "9.04e7"
+    },
+    {
+      "instance_id": "theoremqa_00688",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_120"
+      ],
+      "correct": false,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00702",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_006"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00701",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_204"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00689",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_144"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00690",
+      "ground_truth": "9",
+      "skill_annotations": [
+        "theoremqa_176"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00691",
+      "ground_truth": "[7, 8, 9, 70, 80, 90]",
+      "skill_annotations": [
+        "theoremqa_154"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00700",
+      "ground_truth": "1.5",
+      "skill_annotations": [
+        "theoremqa_077"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.5"
+    },
+    {
+      "instance_id": "theoremqa_00699",
+      "ground_truth": "11.9",
+      "skill_annotations": [
+        "theoremqa_259"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "11.69"
+    },
+    {
+      "instance_id": "theoremqa_00693",
+      "ground_truth": "990000.0",
+      "skill_annotations": [
+        "theoremqa_143"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "1010000"
+    },
+    {
+      "instance_id": "theoremqa_00704",
+      "ground_truth": "1.0",
+      "skill_annotations": [
+        "theoremqa_012"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "9"
+    },
+    {
+      "instance_id": "theoremqa_00706",
+      "ground_truth": "12",
+      "skill_annotations": [
+        "theoremqa_036"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "12"
+    },
+    {
+      "instance_id": "theoremqa_00707",
+      "ground_truth": "210",
+      "skill_annotations": [
+        "theoremqa_291"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "210"
+    },
+    {
+      "instance_id": "theoremqa_00703",
+      "ground_truth": "6.8731",
+      "skill_annotations": [
+        "theoremqa_089"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "6.9004"
+    },
+    {
+      "instance_id": "theoremqa_00694",
+      "ground_truth": "23.0",
+      "skill_annotations": [
+        "theoremqa_018"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00713",
+      "ground_truth": "84",
+      "skill_annotations": [
+        "theoremqa_226"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "84"
+    },
+    {
+      "instance_id": "theoremqa_00718",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_245"
+      ],
+      "correct": false,
+      "answer_type": "bool",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00697",
+      "ground_truth": "0.3017",
+      "skill_annotations": [
+        "theoremqa_277"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00714",
+      "ground_truth": "1.4",
+      "skill_annotations": [
+        "theoremqa_104"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.414"
+    },
+    {
+      "instance_id": "theoremqa_00709",
+      "ground_truth": "3",
+      "skill_annotations": [
+        "theoremqa_288"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "3"
+    },
+    {
+      "instance_id": "theoremqa_00708",
+      "ground_truth": "463000000.0",
+      "skill_annotations": [
+        "theoremqa_319"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "5.38e-11"
+    },
+    {
+      "instance_id": "theoremqa_00705",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_293"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00712",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_158"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00717",
+      "ground_truth": "4",
+      "skill_annotations": [
+        "theoremqa_180"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "4"
+    },
+    {
+      "instance_id": "theoremqa_00716",
+      "ground_truth": "0.17",
+      "skill_annotations": [
+        "theoremqa_032"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.174"
+    },
+    {
+      "instance_id": "theoremqa_00720",
+      "ground_truth": "False",
+      "skill_annotations": [
+        "theoremqa_162"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00711",
+      "ground_truth": "0.8333",
+      "skill_annotations": [
+        "theoremqa_196"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0.8333"
+    },
+    {
+      "instance_id": "theoremqa_00729",
+      "ground_truth": "2041",
+      "skill_annotations": [
+        "theoremqa_277"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00721",
+      "ground_truth": "36",
+      "skill_annotations": [
+        "theoremqa_161"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "36"
+    },
+    {
+      "instance_id": "theoremqa_00731",
+      "ground_truth": "35.8",
+      "skill_annotations": [
+        "theoremqa_067"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": ""
+    },
+    {
+      "instance_id": "theoremqa_00725",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_229"
+      ],
+      "correct": false,
+      "answer_type": "bool",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00722",
+      "ground_truth": "2.0625",
+      "skill_annotations": [
+        "theoremqa_098"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "2.0625"
+    },
+    {
+      "instance_id": "theoremqa_00726",
+      "ground_truth": "672",
+      "skill_annotations": [
+        "theoremqa_291"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "672"
+    },
+    {
+      "instance_id": "theoremqa_00733",
+      "ground_truth": "(c)",
+      "skill_annotations": [
+        "theoremqa_175"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(c)"
+    },
+    {
+      "instance_id": "theoremqa_00734",
+      "ground_truth": "125",
+      "skill_annotations": [
+        "theoremqa_219"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "125"
+    },
+    {
+      "instance_id": "theoremqa_00723",
+      "ground_truth": "7.03",
+      "skill_annotations": [
+        "theoremqa_302"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "7"
+    },
+    {
+      "instance_id": "theoremqa_00730",
+      "ground_truth": "-4.0",
+      "skill_annotations": [
+        "theoremqa_277"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "-7.2744"
+    },
+    {
+      "instance_id": "theoremqa_00710",
+      "ground_truth": "2.24",
+      "skill_annotations": [
+        "theoremqa_102"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "False"
+    },
+    {
+      "instance_id": "theoremqa_00724",
+      "ground_truth": "4.1e-08",
+      "skill_annotations": [
+        "theoremqa_319"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "4.4e-8"
+    },
+    {
+      "instance_id": "theoremqa_00737",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_244"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00741",
+      "ground_truth": "(a)",
+      "skill_annotations": [
+        "theoremqa_152"
+      ],
+      "correct": true,
+      "answer_type": "option",
+      "extracted_answer": "(a)"
+    },
+    {
+      "instance_id": "theoremqa_00738",
+      "ground_truth": "3.1415926",
+      "skill_annotations": [
+        "theoremqa_292"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "3.142"
+    },
+    {
+      "instance_id": "theoremqa_00715",
+      "ground_truth": "1800",
+      "skill_annotations": [
+        "theoremqa_000"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00727",
+      "ground_truth": "[2, 3, 4]",
+      "skill_annotations": [
+        "theoremqa_159"
+      ],
+      "correct": false,
+      "answer_type": "list of integer",
+      "extracted_answer": "[-0.5, 3, 4]"
+    },
+    {
+      "instance_id": "theoremqa_00719",
+      "ground_truth": "0.36787944",
+      "skill_annotations": [
+        "theoremqa_119"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00739",
+      "ground_truth": "69.6",
+      "skill_annotations": [
+        "theoremqa_168"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "73"
+    },
+    {
+      "instance_id": "theoremqa_00736",
+      "ground_truth": "1.8",
+      "skill_annotations": [
+        "theoremqa_022"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "1.8"
+    },
+    {
+      "instance_id": "theoremqa_00746",
+      "ground_truth": "0.0",
+      "skill_annotations": [
+        "theoremqa_200"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "0"
+    },
+    {
+      "instance_id": "theoremqa_00728",
+      "ground_truth": "2.767",
+      "skill_annotations": [
+        "theoremqa_100"
+      ],
+      "correct": false,
+      "answer_type": "float",
+      "extracted_answer": "4.4375"
+    },
+    {
+      "instance_id": "theoremqa_00735",
+      "ground_truth": "6",
+      "skill_annotations": [
+        "theoremqa_253"
+      ],
+      "correct": false,
+      "answer_type": "integer",
+      "extracted_answer": "81"
+    },
+    {
+      "instance_id": "theoremqa_00742",
+      "ground_truth": "True",
+      "skill_annotations": [
+        "theoremqa_278"
+      ],
+      "correct": true,
+      "answer_type": "bool",
+      "extracted_answer": "True"
+    },
+    {
+      "instance_id": "theoremqa_00744",
+      "ground_truth": "3.7",
+      "skill_annotations": [
+        "theoremqa_039"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "3.71"
+    },
+    {
+      "instance_id": "theoremqa_00732",
+      "ground_truth": "57",
+      "skill_annotations": [
+        "theoremqa_001"
+      ],
+      "correct": true,
+      "answer_type": "integer",
+      "extracted_answer": "57"
+    },
+    {
+      "instance_id": "theoremqa_00745",
+      "ground_truth": "67.5",
+      "skill_annotations": [
+        "theoremqa_281"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "67.5"
+    },
+    {
+      "instance_id": "theoremqa_00743",
+      "ground_truth": "2.38",
+      "skill_annotations": [
+        "theoremqa_305"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "2.39"
+    },
+    {
+      "instance_id": "theoremqa_00740",
+      "ground_truth": "2.0",
+      "skill_annotations": [
+        "theoremqa_297"
+      ],
+      "correct": true,
+      "answer_type": "float",
+      "extracted_answer": "2"
+    }
+  ]
+}

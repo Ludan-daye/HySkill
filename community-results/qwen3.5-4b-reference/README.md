@@ -20,3 +20,7 @@
 - 列名与舰队包一致，`pd.concat` 前加一列 `model` 即可合并分析。
 
 原始超大件（top-50 全榜、做题 jsonl、6.3 万份想象缓存、Phase 0 试点存档）在实验室服务器 `results/phase1|phase2|hyp_cache`。
+
+## baselines-native/（2026-07-15 补跑的纯原装基线臂）
+
+按"基线不混搭"规则重跑的两个原装臂逐域评测（8 个 eval.json）：`always_rerank`（bm25→重排→top-1 直装，合并 69.5）与 `select_bm25`（bm25 候选+官方自选，合并 **59.2——低于裸考 63.5，净伤害**）。源候选取自 phase1 的 bm25/llm_rerank 榜单（只读），推理输出在服务器 `results/multimodel/qwen35-4b-baselines/`。
