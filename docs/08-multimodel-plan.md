@@ -110,6 +110,12 @@ tail -f run.log
 ```
 生成 `retrieval_top50.jsonl.gz`（每题×每方法的全量 50 深榜单，[skill_id, 分数, 是否金标] 三元组；书名按 id 从语料库反查，不重复存，单模型约 6–8MB）。
 
+**②.6 装载数据**（2026-07-15 起入库要求——**装载数据与得分数据必须全部上传**）：
+```bash
+.venv/bin/python scripts/export_loading.py <TAG>
+```
+生成 `loading_per_instance.jsonl.gz`（每题 × 每臂：实际装进上下文的技能 id 列表、金标、是否命中；bare 与门控拦截题的 loaded 为空——空本身就是装载决策记录）。约 100KB/模型。
+
 **③ 提交**：fork 本仓库,把整个 `community-results/<TAG>/` 文件夹提 PR（推荐）,或打包发维护者。你的 TAG 文件夹里已有 README 写明每个文件的意义与状态,照着核对。原始大件（做题 jsonl、日志、想象缓存、检索原始 json）**不要**提交,本地留存备复核——top-50 榜单请用 ②.5 的压缩三元组格式入库,不要提交原始检索 json。
 
 ## 8. 常见坑
