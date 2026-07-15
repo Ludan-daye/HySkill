@@ -53,6 +53,7 @@
 **select 对比（三个模型的正面数据）**：gated 零额外 token 下 3/3 胜 select——4B：72.5 vs 70.5；glm：52.5 vs 52.0（select 在 logicbench 被遮蔽毒害 49.2 vs gated 57.1）；llama：51.0 vs 48.7（select 甚至输给 always 52.0——自选不如直装路由 top-1，且四个域一个没赢）。deepseek/yi 的 4K 上下文物理塞不下 50 候选 prompt——select 有上下文门槛，门控没有。
 ¶ **llama 例外的解读（门控=保险）**：llama 是唯一无遮蔽域的模型（logicbench always 56.7 > bare 52.5），无灾可防时保守门控付出 −1.0 合并保费（champ 过拦 −3.6、logic 过拦 −3.8）；有灾的模型（ds/yi 遮蔽 −19/−22）门控净赚 +5.4/+5.2。期望收益跨 5 模型显著为正。
 **glm 全域 rerank 补齐（2026-07-15 新规则）**：routed 想象 3:2 胜 rerank——theoremqa 0.772 vs 0.679、medcalc **0.946 vs 0.781**（想象近天花板域暴露 rerank 的 BM25 召回上限）、champ 0.399 vs 0.313；rerank 胜 logicbench（0.301 vs 0.112，glm 想象归零域）与 bigcode（0.581 vs 0.513）。
+**llama 全域 rerank 补齐**：同样 **3:2**、同样的三个域——theoremqa **0.804 vs 0.623**、medcalc **0.977 vs 0.791**、champ **0.404 vs 0.216**；rerank 胜 logicbench（0.271 vs 0.148）与 bigcode（0.509 vs 0.477）。两个家族的胜负域完全一致：**BM25 召回天花板低的域想象碾压，词面友好域重排小胜**——域级规律跨家族成立。
 
 ---
 
