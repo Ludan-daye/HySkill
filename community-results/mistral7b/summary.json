@@ -494,6 +494,11 @@
     "correct": 39,
     "total": 223
    },
+   "always_rerank": {
+    "accuracy": 0.139,
+    "correct": 31,
+    "total": 223
+   },
    "bare": {
     "accuracy": 0.1166,
     "correct": 26,
@@ -502,6 +507,21 @@
    "gated": {
     "accuracy": 0.148,
     "correct": 33,
+    "total": 223
+   },
+   "oracle": {
+    "accuracy": 0.2511,
+    "correct": 56,
+    "total": 223
+   },
+   "select": {
+    "accuracy": 0.1256,
+    "correct": 28,
+    "total": 223
+   },
+   "select_bm25": {
+    "accuracy": 0.1614,
+    "correct": 36,
     "total": 223
    },
    "taus": {
@@ -522,6 +542,11 @@
     "correct": 406,
     "total": 760
    },
+   "always_rerank": {
+    "accuracy": 0.5329,
+    "correct": 405,
+    "total": 760
+   },
    "bare": {
     "accuracy": 0.6026,
     "correct": 458,
@@ -530,6 +555,21 @@
    "gated": {
     "accuracy": 0.5974,
     "correct": 454,
+    "total": 760
+   },
+   "oracle": {
+    "accuracy": 0.6868,
+    "correct": 522,
+    "total": 760
+   },
+   "select": {
+    "accuracy": 0.5816,
+    "correct": 442,
+    "total": 760
+   },
+   "select_bm25": {
+    "accuracy": 0.5855,
+    "correct": 445,
     "total": 760
    },
    "taus": {
@@ -550,6 +590,11 @@
     "correct": 366,
     "total": 1100
    },
+   "always_rerank": {
+    "accuracy": 0.2536,
+    "correct": 279,
+    "total": 1100
+   },
    "bare": {
     "accuracy": 0.1073,
     "correct": 118,
@@ -558,6 +603,21 @@
    "gated": {
     "accuracy": 0.3291,
     "correct": 362,
+    "total": 1100
+   },
+   "oracle": {
+    "accuracy": 0.3273,
+    "correct": 360,
+    "total": 1100
+   },
+   "select": {
+    "accuracy": 0.3136,
+    "correct": 345,
+    "total": 1100
+   },
+   "select_bm25": {
+    "accuracy": 0.2418,
+    "correct": 266,
     "total": 1100
    },
    "taus": {
@@ -578,6 +638,11 @@
     "correct": 185,
     "total": 747
    },
+   "always_rerank": {
+    "accuracy": 0.2035,
+    "correct": 152,
+    "total": 747
+   },
    "bare": {
     "accuracy": 0.1245,
     "correct": 93,
@@ -586,6 +651,21 @@
    "gated": {
     "accuracy": 0.249,
     "correct": 186,
+    "total": 747
+   },
+   "oracle": {
+    "accuracy": 0.2758,
+    "correct": 206,
+    "total": 747
+   },
+   "select": {
+    "accuracy": 0.2463,
+    "correct": 184,
+    "total": 747
+   },
+   "select_bm25": {
+    "accuracy": 0.1834,
+    "correct": 137,
     "total": 747
    },
    "taus": {
