@@ -44,6 +44,8 @@ fi
 
 export OPENAI_API_KEY="${OPENAI_API_KEY:-EMPTY}"
 export PYTHONPATH="$PWD"
+unset HTTP_PROXY HTTPS_PROXY ALL_PROXY http_proxy https_proxy all_proxy
+export NO_PROXY="127.0.0.1,localhost"
 
 MODEL_RESPONSE=$(curl --fail --silent --show-error "$API_BASE/models")
 printf '%s' "$MODEL_RESPONSE" | .venv/bin/python -c '
