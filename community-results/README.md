@@ -1,9 +1,31 @@
 # community-results：多模型协作实验回传区
 
-每个认领模型的运行者把 `scripts/run_multimodel.sh` 自动生成的
-`community-results/<TAG>/summary.json` 通过 PR 提交到这里（只收小结 JSON，
-原始 jsonl 请自行留存备查）。认领表与完整操作步骤见
+每个认领模型的运行者把规范化分析包通过 PR 提交到
+`community-results/<TAG>/`。这里接收可直接复核的小型 JSON / gzip JSONL，
+不接收 `results/hyp_cache` 的数万个散文件、原始做题 jsonl 或运行日志。认领表、
+导出命令和完整验收步骤见
 [docs/08-multimodel-plan.md](../docs/08-multimodel-plan.md)。
+
+## 协作者必传文件
+
+完成主实验后上传：
+
+- `summary.json`
+- `retrieval_top10.jsonl.gz` 与 `retrieval_top50.jsonl.gz`
+- `gating_per_instance.jsonl.gz` 与 `loading_per_instance.jsonl.gz`
+- `metrics_flat.jsonl.gz`、`router_decisions.json`
+- `imagination_samples.jsonl.gz`（每域 10 题的定性样例）
+- `MANIFEST.md` 与模型目录内的 `README.md`
+
+为支持生成采样数 K 消融，2026-07-22 起还必须补传：
+
+- `imagination_full_k4.jsonl.gz`：全部 3,970 题的三模板 × K=4 想象；
+- `imagination_full_k4.manifest.json`：模型/代码 revision 与完整性哈希。
+
+使用 `scripts/export_full_imagination_cache.py` 生成这两个文件。验收值固定为
+`rows=3970`、`unique_queries=3968`、`verified_cache_files=47616`；任一想象为空
+或缺失时脚本会失败，不得用空字符串或重新生成的文本悄悄补位。完整命令见
+[多模型计划 §7](../docs/08-multimodel-plan.md#7-结果回传三步)。
 
 ## 档案索引（每个模型一个文件夹，夹内 README 说明应存放的文件与服务器端原始件位置）
 

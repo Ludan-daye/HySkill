@@ -116,7 +116,24 @@ tail -f run.log
 ```
 生成 `loading_per_instance.jsonl.gz`（每题 × 每臂：实际装进上下文的技能 id 列表、金标、是否命中；bare 与门控拦截题的 loaded 为空——空本身就是装载决策记录）。约 100KB/模型。
 
-**③ 提交**：fork 本仓库,把整个 `community-results/<TAG>/` 文件夹提 PR（推荐）,或打包发维护者。你的 TAG 文件夹里已有 README 写明每个文件的意义与状态,照着核对。原始大件（做题 jsonl、日志、想象缓存、检索原始 json）**不要**提交,本地留存备复核——top-50 榜单请用 ②.5 的压缩三元组格式入库,不要提交原始检索 json。
+**②.7 完整 K=4 想象包**（2026-07-22 起入库要求——用于 K 消融复算）：
+```bash
+.venv/bin/python scripts/export_full_imagination_cache.py \
+  --tag <TAG> \
+  --model <TAG> \
+  --model-revision <IMMUTABLE_MODEL_REVISION> \
+  --generation-commit <ORIGINAL_RUN_COMMIT> \
+  --cache-dir results/hyp_cache \
+  --instances-dir external/SR-Agents/data/bench/instances
+```
+其中 `--model` 必须与原跑批的 `MODEL` 字符串完全一致，否则无法命中内容寻址缓存；`--model-revision` 填 Hugging Face / ModelScope commit，或可复核的不可变 checkpoint 标识；`--generation-commit` 填最初生成这批 K=4 缓存时的 HySkill commit。脚本会逐项验证 3,970 题、3 模板、每模板 4 份非空想象，并生成：
+
+- `imagination_full_k4.jsonl.gz`：3,970 行完整想象文本，通常约 5--15MB；
+- `imagination_full_k4.manifest.json`：模型 revision、代码 commit、模板/数据/产物哈希、3,968 个不同查询及 47,616 个已验证缓存项。
+
+这两个文件是从原始 `results/hyp_cache` 规范化得到的可复原数据包。不要提交原始 47,616 个散文件；它们文件数过多，仍应留在跑批服务器。
+
+**③ 提交**：先拉取最新 `main`，再 fork 本仓库，把整个 `community-results/<TAG>/` 文件夹提 PR（推荐），或打包发维护者。提交前至少确认：`gzip -t imagination_full_k4.jsonl.gz` 通过，文件 SHA-256 与 sidecar manifest 一致，manifest 中 `rows=3970`、`unique_queries=3968`、`verified_cache_files=47616`。原始做题 jsonl、日志、散装想象缓存和原始检索 json **不要**提交；top-50 榜单使用 ②.5 的压缩三元组格式。
 
 ## 8. 常见坑
 

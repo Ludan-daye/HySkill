@@ -29,6 +29,16 @@ SENTENCE_TEMPLATE = (
 )
 
 
+def hypothetical_cache_key(model_tag: str, temperature: float, template: str,
+                           query: str, sample_index: int) -> str:
+    """Return the content-addressed key for one hypothetical sample."""
+    if sample_index < 0:
+        raise ValueError(
+            f"sample_index must be non-negative, received {sample_index}")
+    raw = json.dumps([model_tag, temperature, template, query, sample_index])
+    return hashlib.sha256(raw.encode()).hexdigest()
+
+
 class OpenAIClient:
     """Thin wrapper; requires `openai` and OPENAI_API_KEY (any value for local servers).
 
@@ -67,8 +77,13 @@ class HypotheticalGenerator:
         self.n_failures = 0
 
     def _key(self, query: str, i: int) -> str:
-        raw = json.dumps([self._tag, self._temp, self._template, query, i])
-        return hashlib.sha256(raw.encode()).hexdigest()
+        return hypothetical_cache_key(
+            model_tag=self._tag,
+            temperature=self._temp,
+            template=self._template,
+            query=query,
+            sample_index=i,
+        )
 
     def generate(self, query: str) -> list[str]:
         """Return up to k_samples hypothetical docs; [] if all attempts fail."""
