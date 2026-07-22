@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Export the complete K=4 imagination cache as a GitHub-ready artifact.
+"""Export a complete imagination-prefix cache as a GitHub-ready artifact.
 
 The raw cache contains tens of thousands of hashed files and must not be
 committed. This exporter verifies every required cache entry and writes one
@@ -43,7 +43,6 @@ TEMPLATES: tuple[tuple[str, str], ...] = (
     ("passage", PASSAGE_TEMPLATE),
     ("skill", SKILL_TEMPLATE),
 )
-K_SAMPLES: int = 4
 TEMPERATURE: float = 0.7
 EXPECTED_TOTAL_ROWS: int = 3970
 EXPECTED_UNIQUE_QUERIES: int = 3968
@@ -56,6 +55,7 @@ class ExportConfig(TypedDict):
     model: str
     model_revision: str
     generation_commit: str
+    k_samples: int
     cache_dir: Path
     instances_dir: Path
     repository_root: Path
@@ -70,11 +70,12 @@ class ImaginationRow(TypedDict):
 
 def parse_args() -> ExportConfig:
     parser = argparse.ArgumentParser(
-        description="Export a complete, verified K=4 imagination cache pack.")
+        description="Export a complete, verified imagination-prefix cache pack.")
     parser.add_argument("--tag", required=True)
     parser.add_argument("--model", required=True)
     parser.add_argument("--model-revision", required=True)
     parser.add_argument("--generation-commit", required=True)
+    parser.add_argument("--k", required=True, type=int)
     parser.add_argument("--cache-dir", required=True, type=Path)
     parser.add_argument("--instances-dir", required=True, type=Path)
     args = parser.parse_args()
@@ -94,6 +95,10 @@ def parse_args() -> ExportConfig:
             ("generation_commit", generation_commit)):
         if not value:
             raise ValueError(f"{name} must be a non-empty string")
+    k_samples = int(args.k)
+    if k_samples <= 0:
+        raise ValueError(
+            f"k must be a positive integer; received {k_samples}")
 
     repository_root = Path(__file__).resolve().parents[1]
     cache_dir = resolve_path(repository_root, cast(Path, args.cache_dir))
@@ -109,6 +114,7 @@ def parse_args() -> ExportConfig:
         "model": model,
         "model_revision": model_revision,
         "generation_commit": generation_commit,
+        "k_samples": k_samples,
         "cache_dir": cache_dir,
         "instances_dir": instances_dir,
         "repository_root": repository_root,
@@ -183,14 +189,14 @@ def instance_id(instance: dict[str, object], domain: str, index: int) -> str:
 
 
 def read_cached_imaginations(cache_dir: Path, model: str, query: str,
-                             domain: str, iid: str) -> tuple[
+                             domain: str, iid: str, k_samples: int) -> tuple[
                                  dict[str, list[str]], set[Path]]:
     imaginations: dict[str, list[str]] = {}
     verified_paths: set[Path] = set()
     for template_name, template in TEMPLATES:
         model_tag = f"{model}|{template[:20]}"
         samples: list[str] = []
-        for sample_index in range(K_SAMPLES):
+        for sample_index in range(k_samples):
             key = hypothetical_cache_key(
                 model_tag=model_tag,
                 temperature=TEMPERATURE,
@@ -247,6 +253,7 @@ def build_rows(config: ExportConfig) -> tuple[
                 query=query,
                 domain=domain,
                 iid=iid,
+                k_samples=config["k_samples"],
             )
             rows.append({
                 "instance_id": iid,
@@ -313,7 +320,8 @@ def main() -> None:
     config = parse_args()
     rows, instance_manifest, verified_paths = build_rows(config)
     unique_queries = len({row["query"] for row in rows})
-    expected_cache_files = EXPECTED_UNIQUE_QUERIES * len(TEMPLATES) * K_SAMPLES
+    k_samples = config["k_samples"]
+    expected_cache_files = EXPECTED_UNIQUE_QUERIES * len(TEMPLATES) * k_samples
     if len(rows) != EXPECTED_TOTAL_ROWS:
         raise ValueError(
             f"unexpected total rows: expected={EXPECTED_TOTAL_ROWS}, "
@@ -328,8 +336,8 @@ def main() -> None:
             f"expected={expected_cache_files}, actual={len(verified_paths)}")
 
     output_dir = config["repository_root"] / "community-results" / config["tag"]
-    artifact_path = output_dir / "imagination_full_k4.jsonl.gz"
-    manifest_path = output_dir / "imagination_full_k4.manifest.json"
+    artifact_path = output_dir / f"imagination_full_k{k_samples}.jsonl.gz"
+    manifest_path = output_dir / f"imagination_full_k{k_samples}.manifest.json"
     write_deterministic_jsonl_gzip(artifact_path, rows)
     verified_output_rows = verify_written_artifact(artifact_path)
     artifact_size = artifact_path.stat().st_size
@@ -341,13 +349,13 @@ def main() -> None:
 
     manifest: dict[str, object] = {
         "schema_version": 1,
-        "artifact": "complete_k4_imagination_cache",
+        "artifact": "complete_imagination_prefix_cache",
         "tag": config["tag"],
         "model": config["model"],
         "model_revision": config["model_revision"],
         "export_code_commit": repository_commit(config["repository_root"]),
         "generation_code_commit": config["generation_commit"],
-        "k_samples": K_SAMPLES,
+        "k_samples": k_samples,
         "temperature": TEMPERATURE,
         "templates": {
             name: {"sha256": sha256_text(template)}
