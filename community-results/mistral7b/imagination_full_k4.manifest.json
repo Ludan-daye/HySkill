@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "artifact": "complete_imagination_prefix_cache",
+  "tag": "mistral7b",
+  "model": "mistral7b",
+  "model_revision": "modelscope:LLM-Research/Mistral-7B-Instruct-v0.3@c8cfccbcfd71d4e3479498c30b2823bab19c4687",
+  "export_code_commit": "681be3e971891699d0fcf343a03bc85d1d3ea682",
+  "generation_code_commit": "60ec45ce8115c47304aa5bbb8a527304e697be09",
+  "k_samples": 4,
+  "temperature": 0.7,
+  "templates": {
+    "sentence": {
+      "sha256": "3201b9698bd0b09b6f5ed1ed7eaffe2dac6997c5c4f455e1a360997014f6b616"
+    },
+    "passage": {
+      "sha256": "7991ae52a43d2f11ae49e2abcd2d8a18db8a3f9b55cd568669c673a1f9fb5c5c"
+    },
+    "skill": {
+      "sha256": "614c8509ef15f4ee3d410c5880df54619a49d7da7308691a5e413d9187cc8d94"
+    }
+  },
+  "instances": {
+    "theoremqa": {
+      "file": "theoremqa.json",
+      "sha256": "c969a7291e23361ba9f377e464be76093804deb628b964fb846c6eff6b28deeb",
+      "rows": 747
+    },
+    "logicbench": {
+      "file": "logicbench.json",
+      "sha256": "af5055caac041ea08cee47622f5d922b47b2ba0a8e3a60b87349599eeff1bdfe",
+      "rows": 760
+    },
+    "medcalcbench": {
+      "file": "medcalcbench.json",
+      "sha256": "814f6b082f56cf89dd9c50be7ab87b5bcb0e41633138951e42b38d6923c3244e",
+      "rows": 1100
+    },
+    "champ": {
+      "file": "champ.json",
+      "sha256": "d61346716cede953afb352e739e170b96d2bfb98824edd91b8783dc3526c7cec",
+      "rows": 223
+    },
+    "bigcodebench": {
+      "file": "bigcodebench.json",
+      "sha256": "0ed01363e2c93134cf8696fea47b6d640f32f0d7ae9d7b478a05595c3f5ae788",
+      "rows": 1140
+    }
+  },
+  "rows": 3970,
+  "verified_output_rows": 3970,
+  "unique_queries": 3968,
+  "verified_cache_files": 47616,
+  "output": {
+    "path": "community-results/mistral7b/imagination_full_k4.jsonl.gz",
+    "bytes": 9211211,
+    "sha256": "33a33efc0339260c9b67960df0b86829693e7e259a8467089f219ddb9ffcbd00"
+  }
+}
