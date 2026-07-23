@@ -1,0 +1,79 @@
+{
+  "artifact": "complete_model_k_ablation",
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 0
+  },
+  "cache": {
+    "data_sha256": {
+      "bigcodebench": "0ed01363e2c93134cf8696fea47b6d640f32f0d7ae9d7b478a05595c3f5ae788",
+      "champ": "d61346716cede953afb352e739e170b96d2bfb98824edd91b8783dc3526c7cec",
+      "logicbench": "af5055caac041ea08cee47622f5d922b47b2ba0a8e3a60b87349599eeff1bdfe",
+      "medcalcbench": "814f6b082f56cf89dd9c50be7ab87b5bcb0e41633138951e42b38d6923c3244e",
+      "theoremqa": "c969a7291e23361ba9f377e464be76093804deb628b964fb846c6eff6b28deeb"
+    },
+    "generation_code_commits": [
+      "24a31274b6b1df42eea54ba87a151bdcdae233c0"
+    ],
+    "manifests": {
+      "k1": {
+        "artifact_sha256": "127d1f2506c94501622d410fa8f90c6b30ec093e8897ec80a972cd5061bdd084",
+        "path": "community-results/qwen3.5-4b-reference/imagination_full_k1.manifest.json",
+        "sha256": "1f8230913e6db28f24e0b33de310162152db44d020ee0925ba21c6ae75dbee07"
+      },
+      "k10": {
+        "artifact_sha256": "f7a29171037bb34bdeff7f68005b5cfb16c4b773d540a0593ccb90100ee9e5c0",
+        "path": "community-results/qwen3.5-4b-reference/imagination_full_k10.manifest.json",
+        "sha256": "47da174f4f3276221212fbf944533bdd6ca5262a96039c22c55420c6bd5deb5e"
+      },
+      "k2": {
+        "artifact_sha256": "c6da1e3773e7fea8a420a96621e522a4a15593a0f7c59202757458f40831d9f0",
+        "path": "community-results/qwen3.5-4b-reference/imagination_full_k2.manifest.json",
+        "sha256": "88f93ffdd3e3d94481796df7d7e7d33d49b952ac7729aa03ed11fbef6adfe05f"
+      },
+      "k4": {
+        "artifact_sha256": "f2624cdd851a94c8f8cacc94370ffb105b6f39449c3c3bec9ec96d79daa2cb69",
+        "path": "community-results/qwen3.5-4b-reference/imagination_full_k4.manifest.json",
+        "sha256": "055438910c73da32db5fd02930c3d63fda0033246bba577d512ff630e52e8a4a"
+      },
+      "k8": {
+        "artifact_sha256": "2ac804edb1639debb4bb397857a25030ca5dd797c8171501641889cc74982669",
+        "path": "community-results/qwen3.5-4b-reference/imagination_full_k8.manifest.json",
+        "sha256": "5b15ae352a0b0cde1a5d5be00b6e16ffdc342df57ad79b0ad2caaa9cce82b5a4"
+      }
+    }
+  },
+  "cache_audit": {
+    "complete": true,
+    "path": "results/k-ablation/qwen3.5-4b-reference/audits/cache-k10.json",
+    "sha256": "99b0f61af1bdf6d50e32bec412c4cf947a598b61310736a44fa88744e7792e14"
+  },
+  "completed_at": "2026-07-23T06:08:18.686614+00:00",
+  "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+  "model": "qwen3.5-4b",
+  "model_revision": "huggingface:Qwen/Qwen3.5-4B@851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "outputs": {
+    "cost.json": "52abcbae7601a03bea376b748ced41100a2871004683606fa8026bdff24bb960",
+    "metrics_long.jsonl.gz": "909a823e9cf1be7a73531ef8a09fc0927a43a71cd0752280ce126451ce62083a",
+    "paired_vs_k4.json": "af242625e3a5cff162fdc0f3c03ba62c30becd9c83755dd057820a332d1e0608",
+    "summary.json": "d37ab72ae7ef54899296f75d65cf72ff40873e8671c93e3edbf35fc11b0fb72b"
+  },
+  "repository_commit": "b642012bd86ca098f828a0c06f6f926375d74b7f",
+  "result_files": 150,
+  "result_matrix_sha256": "1ac42a724166d35e0796403359b4439a95405fba1a6408187de6acda42caccd6",
+  "runner_bundle": {
+    "files": {
+      "hyskill/k_ablation.py": "3dedc0f4359b95974b3fb22e87b8289d1ee79e052f80e9c0d6714ce2917bb5dc",
+      "scripts/finalize_k_retrieval.py": "ff99f345309df6dc3c20bc4d178342e40e35c9721cb552c6e6b53f69d63a72ed",
+      "scripts/route_k_retrieval.py": "e6ee63bd32051dbbe4411ca392b759d6a3894551802e60c2c0004b26b9f8a68f",
+      "scripts/run_k_ablation.sh": "76936b472e346ffeb40f4da02348d8df670a2b252ba0b7c9c067dfdb90261878",
+      "scripts/validate_k_cache.py": "5f461415e11bfa83bec610a7ba0caf4fd4fbd0609570c306c2ceb47aa9391699",
+      "scripts/validate_k_retrieval.py": "540923350c79fb303c0f8a9d4d98e8f29aa4dff4179073a4121ca078702f27bd"
+    },
+    "sha256": "efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f"
+  },
+  "schema_version": 1,
+  "source_revision": "b642012+bundle-efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f",
+  "summarizer_sha256": "54b0a79786c1b3b36efe9db8532e12093bbaaa503149cfeb23ab9fd2ff24d5cf",
+  "tag": "qwen3.5-4b-reference"
+}

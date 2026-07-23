@@ -1,0 +1,1027 @@
+{
+  "by_k": {
+    "k1": {
+      "artifact_path": "/mnt/d5f4cfb6-8afe-40a4-8650-2965046cd208/ludan/HySkill-k-run-20260723/community-results/qwen3.5-4b-reference/imagination_full_k1.jsonl.gz",
+      "templates": {
+        "passage": {
+          "actual_unique_cache": {
+            "generations": 3968,
+            "input_tokens_per_query_estimate": 393.5906329584041,
+            "input_tokens_total_estimate": 1561767.6315789474,
+            "output_tokens_per_generation_estimate": 271.802843803056,
+            "output_tokens_per_query_estimate": 271.802843803056,
+            "output_tokens_total_estimate": 1078513.6842105263,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 665.3934767614601
+          },
+          "per_evaluated_instance": {
+            "generations": 3970,
+            "input_tokens_per_query_estimate": 393.5726501392019,
+            "input_tokens_total_estimate": 1562483.4210526317,
+            "output_tokens_per_generation_estimate": 271.85980379159486,
+            "output_tokens_per_query_estimate": 271.85980379159486,
+            "output_tokens_total_estimate": 1079283.4210526317,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 665.4324539307968
+          }
+        },
+        "sentence": {
+          "actual_unique_cache": {
+            "generations": 3968,
+            "input_tokens_per_query_estimate": 410.9590540110356,
+            "input_tokens_total_estimate": 1630685.5263157894,
+            "output_tokens_per_generation_estimate": 69.35596615025467,
+            "output_tokens_per_query_estimate": 69.35596615025467,
+            "output_tokens_total_estimate": 275204.47368421056,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 480.3150201612903
+          },
+          "per_evaluated_instance": {
+            "generations": 3970,
+            "input_tokens_per_query_estimate": 410.94107119183354,
+            "input_tokens_total_estimate": 1631436.052631579,
+            "output_tokens_per_generation_estimate": 69.34933050510406,
+            "output_tokens_per_query_estimate": 69.34933050510406,
+            "output_tokens_total_estimate": 275316.84210526315,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 480.2904016969376
+          }
+        },
+        "skill": {
+          "actual_unique_cache": {
+            "generations": 3968,
+            "input_tokens_per_query_estimate": 455.9590540110357,
+            "input_tokens_total_estimate": 1809245.5263157897,
+            "output_tokens_per_generation_estimate": 247.46849798387098,
+            "output_tokens_per_query_estimate": 247.46849798387098,
+            "output_tokens_total_estimate": 981955.0,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 703.4275519949067
+          },
+          "per_evaluated_instance": {
+            "generations": 3970,
+            "input_tokens_per_query_estimate": 455.94107119183354,
+            "input_tokens_total_estimate": 1810086.052631579,
+            "output_tokens_per_generation_estimate": 247.4933050510407,
+            "output_tokens_per_query_estimate": 247.4933050510407,
+            "output_tokens_total_estimate": 982548.4210526316,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 703.4343762428742
+          }
+        }
+      },
+      "variants": {
+        "hyskill": {
+          "actual_unique_cache": {
+            "generations": 3968,
+            "input_tokens_per_query_estimate": 455.9590540110357,
+            "input_tokens_total_estimate": 1809245.5263157897,
+            "output_tokens_per_generation_estimate": 247.46849798387098,
+            "output_tokens_per_query_estimate": 247.46849798387098,
+            "output_tokens_total_estimate": 981955.0,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 703.4275519949067
+          },
+          "per_evaluated_instance": {
+            "generations": 3970,
+            "input_tokens_per_query_estimate": 455.94107119183354,
+            "input_tokens_total_estimate": 1810086.052631579,
+            "output_tokens_per_generation_estimate": 247.4933050510407,
+            "output_tokens_per_query_estimate": 247.4933050510407,
+            "output_tokens_total_estimate": 982548.4210526316,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 703.4343762428742
+          }
+        },
+        "naive_passage": {
+          "actual_unique_cache": {
+            "generations": 3968,
+            "input_tokens_per_query_estimate": 393.5906329584041,
+            "input_tokens_total_estimate": 1561767.6315789474,
+            "output_tokens_per_generation_estimate": 271.802843803056,
+            "output_tokens_per_query_estimate": 271.802843803056,
+            "output_tokens_total_estimate": 1078513.6842105263,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 665.3934767614601
+          },
+          "per_evaluated_instance": {
+            "generations": 3970,
+            "input_tokens_per_query_estimate": 393.5726501392019,
+            "input_tokens_total_estimate": 1562483.4210526317,
+            "output_tokens_per_generation_estimate": 271.85980379159486,
+            "output_tokens_per_query_estimate": 271.85980379159486,
+            "output_tokens_total_estimate": 1079283.4210526317,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 665.4324539307968
+          }
+        },
+        "naive_sentence": {
+          "actual_unique_cache": {
+            "generations": 3968,
+            "input_tokens_per_query_estimate": 410.9590540110356,
+            "input_tokens_total_estimate": 1630685.5263157894,
+            "output_tokens_per_generation_estimate": 69.35596615025467,
+            "output_tokens_per_query_estimate": 69.35596615025467,
+            "output_tokens_total_estimate": 275204.47368421056,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 480.3150201612903
+          },
+          "per_evaluated_instance": {
+            "generations": 3970,
+            "input_tokens_per_query_estimate": 410.94107119183354,
+            "input_tokens_total_estimate": 1631436.052631579,
+            "output_tokens_per_generation_estimate": 69.34933050510406,
+            "output_tokens_per_query_estimate": 69.34933050510406,
+            "output_tokens_total_estimate": 275316.84210526315,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 480.2904016969376
+          }
+        },
+        "naive_skill": {
+          "actual_unique_cache": {
+            "generations": 3968,
+            "input_tokens_per_query_estimate": 455.9590540110357,
+            "input_tokens_total_estimate": 1809245.5263157897,
+            "output_tokens_per_generation_estimate": 247.46849798387098,
+            "output_tokens_per_query_estimate": 247.46849798387098,
+            "output_tokens_total_estimate": 981955.0,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 703.4275519949067
+          },
+          "per_evaluated_instance": {
+            "generations": 3970,
+            "input_tokens_per_query_estimate": 455.94107119183354,
+            "input_tokens_total_estimate": 1810086.052631579,
+            "output_tokens_per_generation_estimate": 247.4933050510407,
+            "output_tokens_per_query_estimate": 247.4933050510407,
+            "output_tokens_total_estimate": 982548.4210526316,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 703.4343762428742
+          }
+        },
+        "routed": {
+          "generations": 3970,
+          "input_tokens_per_query_estimate": 438.66014848203633,
+          "input_tokens_total_estimate": 1741480.7894736843,
+          "output_tokens_per_generation_estimate": 271.65027177515583,
+          "output_tokens_per_query_estimate": 271.65027177515583,
+          "output_tokens_total_estimate": 1078451.5789473685,
+          "picks": {
+            "bigcodebench": "hyskill",
+            "champ": "hyskill",
+            "logicbench": "hyskill",
+            "medcalcbench": "naive_passage",
+            "theoremqa": "two_stage"
+          },
+          "queries": 3970,
+          "total_tokens_per_query_estimate": 710.310420257192
+        },
+        "two_stage": {
+          "actual_unique_cache": {
+            "generations": 3968,
+            "input_tokens_per_query_estimate": 455.9590540110357,
+            "input_tokens_total_estimate": 1809245.5263157897,
+            "output_tokens_per_generation_estimate": 247.46849798387098,
+            "output_tokens_per_query_estimate": 247.46849798387098,
+            "output_tokens_total_estimate": 981955.0,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 703.4275519949067
+          },
+          "per_evaluated_instance": {
+            "generations": 3970,
+            "input_tokens_per_query_estimate": 455.94107119183354,
+            "input_tokens_total_estimate": 1810086.052631579,
+            "output_tokens_per_generation_estimate": 247.4933050510407,
+            "output_tokens_per_query_estimate": 247.4933050510407,
+            "output_tokens_total_estimate": 982548.4210526316,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 703.4343762428742
+          }
+        }
+      }
+    },
+    "k10": {
+      "artifact_path": "/mnt/d5f4cfb6-8afe-40a4-8650-2965046cd208/ludan/HySkill-k-run-20260723/community-results/qwen3.5-4b-reference/imagination_full_k10.jsonl.gz",
+      "templates": {
+        "passage": {
+          "actual_unique_cache": {
+            "generations": 39680,
+            "input_tokens_per_query_estimate": 3935.906329584041,
+            "input_tokens_total_estimate": 15617676.315789474,
+            "output_tokens_per_generation_estimate": 271.9865436651104,
+            "output_tokens_per_query_estimate": 2719.8654366511037,
+            "output_tokens_total_estimate": 10792426.05263158,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 6655.771766235145
+          },
+          "per_evaluated_instance": {
+            "generations": 39700,
+            "input_tokens_per_query_estimate": 3935.7265013920196,
+            "input_tokens_total_estimate": 15624834.210526317,
+            "output_tokens_per_generation_estimate": 272.032162269654,
+            "output_tokens_per_query_estimate": 2720.32162269654,
+            "output_tokens_total_estimate": 10799676.842105264,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 6656.048124088559
+          }
+        },
+        "sentence": {
+          "actual_unique_cache": {
+            "generations": 39680,
+            "input_tokens_per_query_estimate": 4109.590540110356,
+            "input_tokens_total_estimate": 16306855.263157895,
+            "output_tokens_per_generation_estimate": 68.6304117147708,
+            "output_tokens_per_query_estimate": 686.304117147708,
+            "output_tokens_total_estimate": 2723254.736842105,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 4795.894657258064
+          },
+          "per_evaluated_instance": {
+            "generations": 39700,
+            "input_tokens_per_query_estimate": 4109.4107119183345,
+            "input_tokens_total_estimate": 16314360.52631579,
+            "output_tokens_per_generation_estimate": 68.62634230412304,
+            "output_tokens_per_query_estimate": 686.2634230412303,
+            "output_tokens_total_estimate": 2724465.7894736845,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 4795.674134959566
+          }
+        },
+        "skill": {
+          "actual_unique_cache": {
+            "generations": 39680,
+            "input_tokens_per_query_estimate": 4559.590540110357,
+            "input_tokens_total_estimate": 18092455.263157897,
+            "output_tokens_per_generation_estimate": 248.22861842105266,
+            "output_tokens_per_query_estimate": 2482.2861842105262,
+            "output_tokens_total_estimate": 9849711.578947369,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 7041.876724320883
+          },
+          "per_evaluated_instance": {
+            "generations": 39700,
+            "input_tokens_per_query_estimate": 4559.4107119183345,
+            "input_tokens_total_estimate": 18100860.52631579,
+            "output_tokens_per_generation_estimate": 248.26211719475012,
+            "output_tokens_per_query_estimate": 2482.621171947501,
+            "output_tokens_total_estimate": 9856006.05263158,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 7042.031883865836
+          }
+        }
+      },
+      "variants": {
+        "hyskill": {
+          "actual_unique_cache": {
+            "generations": 39680,
+            "input_tokens_per_query_estimate": 4559.590540110357,
+            "input_tokens_total_estimate": 18092455.263157897,
+            "output_tokens_per_generation_estimate": 248.22861842105266,
+            "output_tokens_per_query_estimate": 2482.2861842105262,
+            "output_tokens_total_estimate": 9849711.578947369,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 7041.876724320883
+          },
+          "per_evaluated_instance": {
+            "generations": 39700,
+            "input_tokens_per_query_estimate": 4559.4107119183345,
+            "input_tokens_total_estimate": 18100860.52631579,
+            "output_tokens_per_generation_estimate": 248.26211719475012,
+            "output_tokens_per_query_estimate": 2482.621171947501,
+            "output_tokens_total_estimate": 9856006.05263158,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 7042.031883865836
+          }
+        },
+        "naive_passage": {
+          "actual_unique_cache": {
+            "generations": 39680,
+            "input_tokens_per_query_estimate": 3935.906329584041,
+            "input_tokens_total_estimate": 15617676.315789474,
+            "output_tokens_per_generation_estimate": 271.9865436651104,
+            "output_tokens_per_query_estimate": 2719.8654366511037,
+            "output_tokens_total_estimate": 10792426.05263158,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 6655.771766235145
+          },
+          "per_evaluated_instance": {
+            "generations": 39700,
+            "input_tokens_per_query_estimate": 3935.7265013920196,
+            "input_tokens_total_estimate": 15624834.210526317,
+            "output_tokens_per_generation_estimate": 272.032162269654,
+            "output_tokens_per_query_estimate": 2720.32162269654,
+            "output_tokens_total_estimate": 10799676.842105264,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 6656.048124088559
+          }
+        },
+        "naive_sentence": {
+          "actual_unique_cache": {
+            "generations": 39680,
+            "input_tokens_per_query_estimate": 4109.590540110356,
+            "input_tokens_total_estimate": 16306855.263157895,
+            "output_tokens_per_generation_estimate": 68.6304117147708,
+            "output_tokens_per_query_estimate": 686.304117147708,
+            "output_tokens_total_estimate": 2723254.736842105,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 4795.894657258064
+          },
+          "per_evaluated_instance": {
+            "generations": 39700,
+            "input_tokens_per_query_estimate": 4109.4107119183345,
+            "input_tokens_total_estimate": 16314360.52631579,
+            "output_tokens_per_generation_estimate": 68.62634230412304,
+            "output_tokens_per_query_estimate": 686.2634230412303,
+            "output_tokens_total_estimate": 2724465.7894736845,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 4795.674134959566
+          }
+        },
+        "naive_skill": {
+          "actual_unique_cache": {
+            "generations": 39680,
+            "input_tokens_per_query_estimate": 4559.590540110357,
+            "input_tokens_total_estimate": 18092455.263157897,
+            "output_tokens_per_generation_estimate": 248.22861842105266,
+            "output_tokens_per_query_estimate": 2482.2861842105262,
+            "output_tokens_total_estimate": 9849711.578947369,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 7041.876724320883
+          },
+          "per_evaluated_instance": {
+            "generations": 39700,
+            "input_tokens_per_query_estimate": 4559.4107119183345,
+            "input_tokens_total_estimate": 18100860.52631579,
+            "output_tokens_per_generation_estimate": 248.26211719475012,
+            "output_tokens_per_query_estimate": 2482.621171947501,
+            "output_tokens_total_estimate": 9856006.05263158,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 7042.031883865836
+          }
+        },
+        "routed": {
+          "generations": 39700,
+          "input_tokens_per_query_estimate": 4399.692430067612,
+          "input_tokens_total_estimate": 17466778.94736842,
+          "output_tokens_per_generation_estimate": 225.17455919395465,
+          "output_tokens_per_query_estimate": 2251.7455919395466,
+          "output_tokens_total_estimate": 8939430.0,
+          "picks": {
+            "bigcodebench": "hyskill",
+            "champ": "naive_passage",
+            "logicbench": "hyskill",
+            "medcalcbench": "naive_sentence",
+            "theoremqa": "two_stage"
+          },
+          "queries": 3970,
+          "total_tokens_per_query_estimate": 6651.438022007159
+        },
+        "two_stage": {
+          "actual_unique_cache": {
+            "generations": 39680,
+            "input_tokens_per_query_estimate": 4559.590540110357,
+            "input_tokens_total_estimate": 18092455.263157897,
+            "output_tokens_per_generation_estimate": 248.22861842105266,
+            "output_tokens_per_query_estimate": 2482.2861842105262,
+            "output_tokens_total_estimate": 9849711.578947369,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 7041.876724320883
+          },
+          "per_evaluated_instance": {
+            "generations": 39700,
+            "input_tokens_per_query_estimate": 4559.4107119183345,
+            "input_tokens_total_estimate": 18100860.52631579,
+            "output_tokens_per_generation_estimate": 248.26211719475012,
+            "output_tokens_per_query_estimate": 2482.621171947501,
+            "output_tokens_total_estimate": 9856006.05263158,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 7042.031883865836
+          }
+        }
+      }
+    },
+    "k2": {
+      "artifact_path": "/mnt/d5f4cfb6-8afe-40a4-8650-2965046cd208/ludan/HySkill-k-run-20260723/community-results/qwen3.5-4b-reference/imagination_full_k2.jsonl.gz",
+      "templates": {
+        "passage": {
+          "actual_unique_cache": {
+            "generations": 7936,
+            "input_tokens_per_query_estimate": 787.1812659168082,
+            "input_tokens_total_estimate": 3123535.263157895,
+            "output_tokens_per_generation_estimate": 271.987677737691,
+            "output_tokens_per_query_estimate": 543.975355475382,
+            "output_tokens_total_estimate": 2158494.210526316,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 1331.1566213921901
+          },
+          "per_evaluated_instance": {
+            "generations": 7940,
+            "input_tokens_per_query_estimate": 787.1453002784039,
+            "input_tokens_total_estimate": 3124966.8421052634,
+            "output_tokens_per_generation_estimate": 272.02966326395335,
+            "output_tokens_per_query_estimate": 544.0593265279067,
+            "output_tokens_total_estimate": 2159915.5263157897,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 1331.2046268063107
+          }
+        },
+        "sentence": {
+          "actual_unique_cache": {
+            "generations": 7936,
+            "input_tokens_per_query_estimate": 821.9181080220712,
+            "input_tokens_total_estimate": 3261371.052631579,
+            "output_tokens_per_generation_estimate": 68.68683016765705,
+            "output_tokens_per_query_estimate": 137.3736603353141,
+            "output_tokens_total_estimate": 545098.6842105263,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 959.2917683573854
+          },
+          "per_evaluated_instance": {
+            "generations": 7940,
+            "input_tokens_per_query_estimate": 821.8821423836671,
+            "input_tokens_total_estimate": 3262872.105263158,
+            "output_tokens_per_generation_estimate": 68.68394537982236,
+            "output_tokens_per_query_estimate": 137.36789075964472,
+            "output_tokens_total_estimate": 545350.5263157896,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 959.2500331433118
+          }
+        },
+        "skill": {
+          "actual_unique_cache": {
+            "generations": 7936,
+            "input_tokens_per_query_estimate": 911.9181080220714,
+            "input_tokens_total_estimate": 3618491.0526315793,
+            "output_tokens_per_generation_estimate": 247.91884417444822,
+            "output_tokens_per_query_estimate": 495.83768834889645,
+            "output_tokens_total_estimate": 1967483.9473684211,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 1407.7557963709678
+          },
+          "per_evaluated_instance": {
+            "generations": 7940,
+            "input_tokens_per_query_estimate": 911.8821423836671,
+            "input_tokens_total_estimate": 3620172.105263158,
+            "output_tokens_per_generation_estimate": 247.94020946572982,
+            "output_tokens_per_query_estimate": 495.88041893145964,
+            "output_tokens_total_estimate": 1968645.2631578948,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 1407.7625613151267
+          }
+        }
+      },
+      "variants": {
+        "hyskill": {
+          "actual_unique_cache": {
+            "generations": 7936,
+            "input_tokens_per_query_estimate": 911.9181080220714,
+            "input_tokens_total_estimate": 3618491.0526315793,
+            "output_tokens_per_generation_estimate": 247.91884417444822,
+            "output_tokens_per_query_estimate": 495.83768834889645,
+            "output_tokens_total_estimate": 1967483.9473684211,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 1407.7557963709678
+          },
+          "per_evaluated_instance": {
+            "generations": 7940,
+            "input_tokens_per_query_estimate": 911.8821423836671,
+            "input_tokens_total_estimate": 3620172.105263158,
+            "output_tokens_per_generation_estimate": 247.94020946572982,
+            "output_tokens_per_query_estimate": 495.88041893145964,
+            "output_tokens_total_estimate": 1968645.2631578948,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 1407.7625613151267
+          }
+        },
+        "naive_passage": {
+          "actual_unique_cache": {
+            "generations": 7936,
+            "input_tokens_per_query_estimate": 787.1812659168082,
+            "input_tokens_total_estimate": 3123535.263157895,
+            "output_tokens_per_generation_estimate": 271.987677737691,
+            "output_tokens_per_query_estimate": 543.975355475382,
+            "output_tokens_total_estimate": 2158494.210526316,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 1331.1566213921901
+          },
+          "per_evaluated_instance": {
+            "generations": 7940,
+            "input_tokens_per_query_estimate": 787.1453002784039,
+            "input_tokens_total_estimate": 3124966.8421052634,
+            "output_tokens_per_generation_estimate": 272.02966326395335,
+            "output_tokens_per_query_estimate": 544.0593265279067,
+            "output_tokens_total_estimate": 2159915.5263157897,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 1331.2046268063107
+          }
+        },
+        "naive_sentence": {
+          "actual_unique_cache": {
+            "generations": 7936,
+            "input_tokens_per_query_estimate": 821.9181080220712,
+            "input_tokens_total_estimate": 3261371.052631579,
+            "output_tokens_per_generation_estimate": 68.68683016765705,
+            "output_tokens_per_query_estimate": 137.3736603353141,
+            "output_tokens_total_estimate": 545098.6842105263,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 959.2917683573854
+          },
+          "per_evaluated_instance": {
+            "generations": 7940,
+            "input_tokens_per_query_estimate": 821.8821423836671,
+            "input_tokens_total_estimate": 3262872.105263158,
+            "output_tokens_per_generation_estimate": 68.68394537982236,
+            "output_tokens_per_query_estimate": 137.36789075964472,
+            "output_tokens_total_estimate": 545350.5263157896,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 959.2500331433118
+          }
+        },
+        "naive_skill": {
+          "actual_unique_cache": {
+            "generations": 7936,
+            "input_tokens_per_query_estimate": 911.9181080220714,
+            "input_tokens_total_estimate": 3618491.0526315793,
+            "output_tokens_per_generation_estimate": 247.91884417444822,
+            "output_tokens_per_query_estimate": 495.83768834889645,
+            "output_tokens_total_estimate": 1967483.9473684211,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 1407.7557963709678
+          },
+          "per_evaluated_instance": {
+            "generations": 7940,
+            "input_tokens_per_query_estimate": 911.8821423836671,
+            "input_tokens_total_estimate": 3620172.105263158,
+            "output_tokens_per_generation_estimate": 247.94020946572982,
+            "output_tokens_per_query_estimate": 495.88041893145964,
+            "output_tokens_total_estimate": 1968645.2631578948,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 1407.7625613151267
+          }
+        },
+        "routed": {
+          "generations": 7940,
+          "input_tokens_per_query_estimate": 877.3202969640727,
+          "input_tokens_total_estimate": 3482961.5789473685,
+          "output_tokens_per_generation_estimate": 272.12826461620045,
+          "output_tokens_per_query_estimate": 544.2565292324009,
+          "output_tokens_total_estimate": 2160698.4210526315,
+          "picks": {
+            "bigcodebench": "hyskill",
+            "champ": "hyskill",
+            "logicbench": "hyskill",
+            "medcalcbench": "naive_passage",
+            "theoremqa": "two_stage"
+          },
+          "queries": 3970,
+          "total_tokens_per_query_estimate": 1421.5768261964736
+        },
+        "two_stage": {
+          "actual_unique_cache": {
+            "generations": 7936,
+            "input_tokens_per_query_estimate": 911.9181080220714,
+            "input_tokens_total_estimate": 3618491.0526315793,
+            "output_tokens_per_generation_estimate": 247.91884417444822,
+            "output_tokens_per_query_estimate": 495.83768834889645,
+            "output_tokens_total_estimate": 1967483.9473684211,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 1407.7557963709678
+          },
+          "per_evaluated_instance": {
+            "generations": 7940,
+            "input_tokens_per_query_estimate": 911.8821423836671,
+            "input_tokens_total_estimate": 3620172.105263158,
+            "output_tokens_per_generation_estimate": 247.94020946572982,
+            "output_tokens_per_query_estimate": 495.88041893145964,
+            "output_tokens_total_estimate": 1968645.2631578948,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 1407.7625613151267
+          }
+        }
+      }
+    },
+    "k4": {
+      "artifact_path": "/mnt/d5f4cfb6-8afe-40a4-8650-2965046cd208/ludan/HySkill-k-run-20260723/community-results/qwen3.5-4b-reference/imagination_full_k4.jsonl.gz",
+      "templates": {
+        "passage": {
+          "actual_unique_cache": {
+            "generations": 15872,
+            "input_tokens_per_query_estimate": 1574.3625318336165,
+            "input_tokens_total_estimate": 6247070.52631579,
+            "output_tokens_per_generation_estimate": 271.9400433733022,
+            "output_tokens_per_query_estimate": 1087.7601734932089,
+            "output_tokens_total_estimate": 4316232.368421053,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 2662.122705326825
+          },
+          "per_evaluated_instance": {
+            "generations": 15880,
+            "input_tokens_per_query_estimate": 1574.2906005568077,
+            "input_tokens_total_estimate": 6249933.684210527,
+            "output_tokens_per_generation_estimate": 271.9842403552963,
+            "output_tokens_per_query_estimate": 1087.9369614211853,
+            "output_tokens_total_estimate": 4319109.736842105,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 2662.2275619779925
+          }
+        },
+        "sentence": {
+          "actual_unique_cache": {
+            "generations": 15872,
+            "input_tokens_per_query_estimate": 1643.8362160441425,
+            "input_tokens_total_estimate": 6522742.105263158,
+            "output_tokens_per_generation_estimate": 69.11114574490662,
+            "output_tokens_per_query_estimate": 276.4445829796265,
+            "output_tokens_total_estimate": 1096932.105263158,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 1920.280799023769
+          },
+          "per_evaluated_instance": {
+            "generations": 15880,
+            "input_tokens_per_query_estimate": 1643.7642847673342,
+            "input_tokens_total_estimate": 6525744.210526316,
+            "output_tokens_per_generation_estimate": 69.10521344292722,
+            "output_tokens_per_query_estimate": 276.4208537717089,
+            "output_tokens_total_estimate": 1097390.7894736843,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 1920.185138539043
+          }
+        },
+        "skill": {
+          "actual_unique_cache": {
+            "generations": 15872,
+            "input_tokens_per_query_estimate": 1823.8362160441427,
+            "input_tokens_total_estimate": 7236982.105263159,
+            "output_tokens_per_generation_estimate": 248.11853379668932,
+            "output_tokens_per_query_estimate": 992.4741351867573,
+            "output_tokens_total_estimate": 3938137.368421053,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 2816.3103512309003
+          },
+          "per_evaluated_instance": {
+            "generations": 15880,
+            "input_tokens_per_query_estimate": 1823.7642847673342,
+            "input_tokens_total_estimate": 7240344.210526316,
+            "output_tokens_per_generation_estimate": 248.14685801405278,
+            "output_tokens_per_query_estimate": 992.5874320562111,
+            "output_tokens_total_estimate": 3940572.105263158,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 2816.3517168235453
+          }
+        }
+      },
+      "variants": {
+        "hyskill": {
+          "actual_unique_cache": {
+            "generations": 15872,
+            "input_tokens_per_query_estimate": 1823.8362160441427,
+            "input_tokens_total_estimate": 7236982.105263159,
+            "output_tokens_per_generation_estimate": 248.11853379668932,
+            "output_tokens_per_query_estimate": 992.4741351867573,
+            "output_tokens_total_estimate": 3938137.368421053,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 2816.3103512309003
+          },
+          "per_evaluated_instance": {
+            "generations": 15880,
+            "input_tokens_per_query_estimate": 1823.7642847673342,
+            "input_tokens_total_estimate": 7240344.210526316,
+            "output_tokens_per_generation_estimate": 248.14685801405278,
+            "output_tokens_per_query_estimate": 992.5874320562111,
+            "output_tokens_total_estimate": 3940572.105263158,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 2816.3517168235453
+          }
+        },
+        "naive_passage": {
+          "actual_unique_cache": {
+            "generations": 15872,
+            "input_tokens_per_query_estimate": 1574.3625318336165,
+            "input_tokens_total_estimate": 6247070.52631579,
+            "output_tokens_per_generation_estimate": 271.9400433733022,
+            "output_tokens_per_query_estimate": 1087.7601734932089,
+            "output_tokens_total_estimate": 4316232.368421053,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 2662.122705326825
+          },
+          "per_evaluated_instance": {
+            "generations": 15880,
+            "input_tokens_per_query_estimate": 1574.2906005568077,
+            "input_tokens_total_estimate": 6249933.684210527,
+            "output_tokens_per_generation_estimate": 271.9842403552963,
+            "output_tokens_per_query_estimate": 1087.9369614211853,
+            "output_tokens_total_estimate": 4319109.736842105,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 2662.2275619779925
+          }
+        },
+        "naive_sentence": {
+          "actual_unique_cache": {
+            "generations": 15872,
+            "input_tokens_per_query_estimate": 1643.8362160441425,
+            "input_tokens_total_estimate": 6522742.105263158,
+            "output_tokens_per_generation_estimate": 69.11114574490662,
+            "output_tokens_per_query_estimate": 276.4445829796265,
+            "output_tokens_total_estimate": 1096932.105263158,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 1920.280799023769
+          },
+          "per_evaluated_instance": {
+            "generations": 15880,
+            "input_tokens_per_query_estimate": 1643.7642847673342,
+            "input_tokens_total_estimate": 6525744.210526316,
+            "output_tokens_per_generation_estimate": 69.10521344292722,
+            "output_tokens_per_query_estimate": 276.4208537717089,
+            "output_tokens_total_estimate": 1097390.7894736843,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 1920.185138539043
+          }
+        },
+        "naive_skill": {
+          "actual_unique_cache": {
+            "generations": 15872,
+            "input_tokens_per_query_estimate": 1823.8362160441427,
+            "input_tokens_total_estimate": 7236982.105263159,
+            "output_tokens_per_generation_estimate": 248.11853379668932,
+            "output_tokens_per_query_estimate": 992.4741351867573,
+            "output_tokens_total_estimate": 3938137.368421053,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 2816.3103512309003
+          },
+          "per_evaluated_instance": {
+            "generations": 15880,
+            "input_tokens_per_query_estimate": 1823.7642847673342,
+            "input_tokens_total_estimate": 7240344.210526316,
+            "output_tokens_per_generation_estimate": 248.14685801405278,
+            "output_tokens_per_query_estimate": 992.5874320562111,
+            "output_tokens_total_estimate": 3940572.105263158,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 2816.3517168235453
+          }
+        },
+        "routed": {
+          "generations": 15880,
+          "input_tokens_per_query_estimate": 1754.6405939281453,
+          "input_tokens_total_estimate": 6965923.157894737,
+          "output_tokens_per_generation_estimate": 271.8198329577092,
+          "output_tokens_per_query_estimate": 1087.2793318308368,
+          "output_tokens_total_estimate": 4316498.947368422,
+          "picks": {
+            "bigcodebench": "hyskill",
+            "champ": "hyskill",
+            "logicbench": "hyskill",
+            "medcalcbench": "naive_passage",
+            "theoremqa": "two_stage"
+          },
+          "queries": 3970,
+          "total_tokens_per_query_estimate": 2841.919925758982
+        },
+        "two_stage": {
+          "actual_unique_cache": {
+            "generations": 15872,
+            "input_tokens_per_query_estimate": 1823.8362160441427,
+            "input_tokens_total_estimate": 7236982.105263159,
+            "output_tokens_per_generation_estimate": 248.11853379668932,
+            "output_tokens_per_query_estimate": 992.4741351867573,
+            "output_tokens_total_estimate": 3938137.368421053,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 2816.3103512309003
+          },
+          "per_evaluated_instance": {
+            "generations": 15880,
+            "input_tokens_per_query_estimate": 1823.7642847673342,
+            "input_tokens_total_estimate": 7240344.210526316,
+            "output_tokens_per_generation_estimate": 248.14685801405278,
+            "output_tokens_per_query_estimate": 992.5874320562111,
+            "output_tokens_total_estimate": 3940572.105263158,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 2816.3517168235453
+          }
+        }
+      }
+    },
+    "k8": {
+      "artifact_path": "/mnt/d5f4cfb6-8afe-40a4-8650-2965046cd208/ludan/HySkill-k-run-20260723/community-results/qwen3.5-4b-reference/imagination_full_k8.jsonl.gz",
+      "templates": {
+        "passage": {
+          "actual_unique_cache": {
+            "generations": 31744,
+            "input_tokens_per_query_estimate": 3148.725063667233,
+            "input_tokens_total_estimate": 12494141.05263158,
+            "output_tokens_per_generation_estimate": 271.9330300297114,
+            "output_tokens_per_query_estimate": 2175.4642402376912,
+            "output_tokens_total_estimate": 8632242.105263159,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 5324.189303904924
+          },
+          "per_evaluated_instance": {
+            "generations": 31760,
+            "input_tokens_per_query_estimate": 3148.5812011136154,
+            "input_tokens_total_estimate": 12499867.368421054,
+            "output_tokens_per_generation_estimate": 271.9789125679438,
+            "output_tokens_per_query_estimate": 2175.8313005435502,
+            "output_tokens_total_estimate": 8638050.263157895,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 5324.412501657166
+          }
+        },
+        "sentence": {
+          "actual_unique_cache": {
+            "generations": 31744,
+            "input_tokens_per_query_estimate": 3287.672432088285,
+            "input_tokens_total_estimate": 13045484.210526315,
+            "output_tokens_per_generation_estimate": 68.77088252069186,
+            "output_tokens_per_query_estimate": 550.1670601655348,
+            "output_tokens_total_estimate": 2183062.8947368423,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 3837.83949225382
+          },
+          "per_evaluated_instance": {
+            "generations": 31760,
+            "input_tokens_per_query_estimate": 3287.5285695346683,
+            "input_tokens_total_estimate": 13051488.421052633,
+            "output_tokens_per_generation_estimate": 68.76615736444386,
+            "output_tokens_per_query_estimate": 550.1292589155508,
+            "output_tokens_total_estimate": 2184013.157894737,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 3837.657828450219
+          }
+        },
+        "skill": {
+          "actual_unique_cache": {
+            "generations": 31744,
+            "input_tokens_per_query_estimate": 3647.6724320882854,
+            "input_tokens_total_estimate": 14473964.210526317,
+            "output_tokens_per_generation_estimate": 248.02602563932513,
+            "output_tokens_per_query_estimate": 1984.208205114601,
+            "output_tokens_total_estimate": 7873338.157894737,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 5631.880637202887
+          },
+          "per_evaluated_instance": {
+            "generations": 31760,
+            "input_tokens_per_query_estimate": 3647.5285695346683,
+            "input_tokens_total_estimate": 14480688.421052633,
+            "output_tokens_per_generation_estimate": 248.05844823014718,
+            "output_tokens_per_query_estimate": 1984.4675858411774,
+            "output_tokens_total_estimate": 7878336.315789474,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 5631.996155375846
+          }
+        }
+      },
+      "variants": {
+        "hyskill": {
+          "actual_unique_cache": {
+            "generations": 31744,
+            "input_tokens_per_query_estimate": 3647.6724320882854,
+            "input_tokens_total_estimate": 14473964.210526317,
+            "output_tokens_per_generation_estimate": 248.02602563932513,
+            "output_tokens_per_query_estimate": 1984.208205114601,
+            "output_tokens_total_estimate": 7873338.157894737,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 5631.880637202887
+          },
+          "per_evaluated_instance": {
+            "generations": 31760,
+            "input_tokens_per_query_estimate": 3647.5285695346683,
+            "input_tokens_total_estimate": 14480688.421052633,
+            "output_tokens_per_generation_estimate": 248.05844823014718,
+            "output_tokens_per_query_estimate": 1984.4675858411774,
+            "output_tokens_total_estimate": 7878336.315789474,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 5631.996155375846
+          }
+        },
+        "naive_passage": {
+          "actual_unique_cache": {
+            "generations": 31744,
+            "input_tokens_per_query_estimate": 3148.725063667233,
+            "input_tokens_total_estimate": 12494141.05263158,
+            "output_tokens_per_generation_estimate": 271.9330300297114,
+            "output_tokens_per_query_estimate": 2175.4642402376912,
+            "output_tokens_total_estimate": 8632242.105263159,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 5324.189303904924
+          },
+          "per_evaluated_instance": {
+            "generations": 31760,
+            "input_tokens_per_query_estimate": 3148.5812011136154,
+            "input_tokens_total_estimate": 12499867.368421054,
+            "output_tokens_per_generation_estimate": 271.9789125679438,
+            "output_tokens_per_query_estimate": 2175.8313005435502,
+            "output_tokens_total_estimate": 8638050.263157895,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 5324.412501657166
+          }
+        },
+        "naive_sentence": {
+          "actual_unique_cache": {
+            "generations": 31744,
+            "input_tokens_per_query_estimate": 3287.672432088285,
+            "input_tokens_total_estimate": 13045484.210526315,
+            "output_tokens_per_generation_estimate": 68.77088252069186,
+            "output_tokens_per_query_estimate": 550.1670601655348,
+            "output_tokens_total_estimate": 2183062.8947368423,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 3837.83949225382
+          },
+          "per_evaluated_instance": {
+            "generations": 31760,
+            "input_tokens_per_query_estimate": 3287.5285695346683,
+            "input_tokens_total_estimate": 13051488.421052633,
+            "output_tokens_per_generation_estimate": 68.76615736444386,
+            "output_tokens_per_query_estimate": 550.1292589155508,
+            "output_tokens_total_estimate": 2184013.157894737,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 3837.657828450219
+          }
+        },
+        "naive_skill": {
+          "actual_unique_cache": {
+            "generations": 31744,
+            "input_tokens_per_query_estimate": 3647.6724320882854,
+            "input_tokens_total_estimate": 14473964.210526317,
+            "output_tokens_per_generation_estimate": 248.02602563932513,
+            "output_tokens_per_query_estimate": 1984.208205114601,
+            "output_tokens_total_estimate": 7873338.157894737,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 5631.880637202887
+          },
+          "per_evaluated_instance": {
+            "generations": 31760,
+            "input_tokens_per_query_estimate": 3647.5285695346683,
+            "input_tokens_total_estimate": 14480688.421052633,
+            "output_tokens_per_generation_estimate": 248.05844823014718,
+            "output_tokens_per_query_estimate": 1984.4675858411774,
+            "output_tokens_total_estimate": 7878336.315789474,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 5631.996155375846
+          }
+        },
+        "routed": {
+          "generations": 31760,
+          "input_tokens_per_query_estimate": 3509.2811878562907,
+          "input_tokens_total_estimate": 13931846.315789474,
+          "output_tokens_per_generation_estimate": 271.9154265544213,
+          "output_tokens_per_query_estimate": 2175.3234124353703,
+          "output_tokens_total_estimate": 8636033.94736842,
+          "picks": {
+            "bigcodebench": "hyskill",
+            "champ": "two_stage",
+            "logicbench": "hyskill",
+            "medcalcbench": "naive_passage",
+            "theoremqa": "two_stage"
+          },
+          "queries": 3970,
+          "total_tokens_per_query_estimate": 5684.604600291662
+        },
+        "two_stage": {
+          "actual_unique_cache": {
+            "generations": 31744,
+            "input_tokens_per_query_estimate": 3647.6724320882854,
+            "input_tokens_total_estimate": 14473964.210526317,
+            "output_tokens_per_generation_estimate": 248.02602563932513,
+            "output_tokens_per_query_estimate": 1984.208205114601,
+            "output_tokens_total_estimate": 7873338.157894737,
+            "queries": 3968,
+            "total_tokens_per_query_estimate": 5631.880637202887
+          },
+          "per_evaluated_instance": {
+            "generations": 31760,
+            "input_tokens_per_query_estimate": 3647.5285695346683,
+            "input_tokens_total_estimate": 14480688.421052633,
+            "output_tokens_per_generation_estimate": 248.05844823014718,
+            "output_tokens_per_query_estimate": 1984.4675858411774,
+            "output_tokens_total_estimate": 7878336.315789474,
+            "queries": 3970,
+            "total_tokens_per_query_estimate": 5631.996155375846
+          }
+        }
+      }
+    }
+  },
+  "cache_prefix_validation": {
+    "exact_prefix": true,
+    "reference_k": 10,
+    "validated_k_values": [
+      1,
+      2,
+      4,
+      8,
+      10
+    ]
+  },
+  "estimator": {
+    "characters_per_token": 3.8,
+    "kind": "actual UTF-8 text character count divided by a fixed ratio",
+    "scope": "generation prompt plus cached generation output"
+  },
+  "model": "qwen3.5-4b",
+  "schema_version": 1,
+  "tag": "qwen3.5-4b-reference",
+  "warmup_wall_clock": {
+    "reason": "The completed cache export did not record generation wall-clock time; no retrospective estimate is substituted.",
+    "status": "unavailable"
+  }
+}

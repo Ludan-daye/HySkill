@@ -1,0 +1,79 @@
+{
+  "artifact": "complete_model_k_ablation",
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 0
+  },
+  "cache": {
+    "data_sha256": {
+      "bigcodebench": "0ed01363e2c93134cf8696fea47b6d640f32f0d7ae9d7b478a05595c3f5ae788",
+      "champ": "d61346716cede953afb352e739e170b96d2bfb98824edd91b8783dc3526c7cec",
+      "logicbench": "af5055caac041ea08cee47622f5d922b47b2ba0a8e3a60b87349599eeff1bdfe",
+      "medcalcbench": "814f6b082f56cf89dd9c50be7ab87b5bcb0e41633138951e42b38d6923c3244e",
+      "theoremqa": "c969a7291e23361ba9f377e464be76093804deb628b964fb846c6eff6b28deeb"
+    },
+    "generation_code_commits": [
+      "291db6e92151b6013745c1e29a2470e05bdc431a"
+    ],
+    "manifests": {
+      "k1": {
+        "artifact_sha256": "8ac436708a25aa701aed98d456a8d55789899212ebb9b2f037d8ce56d766f6f2",
+        "path": "community-results/deepseek7b/imagination_full_k1.manifest.json",
+        "sha256": "2fb3d65074aee26383e7159e6ee294b9c02bf6b9d27c00015ccf41069081dc8d"
+      },
+      "k10": {
+        "artifact_sha256": "e49572ca7317bb4f423832bb76315ee65ac82ca6327ffffc4c6b60fd13a00091",
+        "path": "community-results/deepseek7b/imagination_full_k10.manifest.json",
+        "sha256": "45d462ee1fcfcd2c93ad5d579c042ca911bf9d900001f963483a6647b6d5cf7c"
+      },
+      "k2": {
+        "artifact_sha256": "9b0911f429ed322b45d29470a8b18a83d058ec7a0271448129847b7e08912295",
+        "path": "community-results/deepseek7b/imagination_full_k2.manifest.json",
+        "sha256": "cc666de47147673c7e889b440809cbeb03f829f1c2dcfd1d85cbacd5fd95c46b"
+      },
+      "k4": {
+        "artifact_sha256": "8a5a479d6e086c3dcc39969d8e721a83270811cbf5e6d24007ce151679f190f4",
+        "path": "community-results/deepseek7b/imagination_full_k4.manifest.json",
+        "sha256": "e44d439e9fd966b9503d7642ef6a79b00e11384a20136d0f6d890254286ace34"
+      },
+      "k8": {
+        "artifact_sha256": "85403856507fc00a050d4cd820e0b4b5b1498662da1f3b6df57b587e8ede7df3",
+        "path": "community-results/deepseek7b/imagination_full_k8.manifest.json",
+        "sha256": "3365761f64b7e15b64c32abebc691744db56dae41967e44e3166aed6122ba7c2"
+      }
+    }
+  },
+  "cache_audit": {
+    "complete": true,
+    "path": "results/k-ablation/deepseek7b/audits/cache-k10.json",
+    "sha256": "ee5c70a8be50d4bae3d64b482a3c09c654b1f9750a1b193cc8ea7c85e1fb58c8"
+  },
+  "completed_at": "2026-07-23T04:17:35.057779+00:00",
+  "encoder": "/root/.cache/modelscope/models/sentence-transformers--all-MiniLM-L6-v2/snapshots/master",
+  "model": "deepseek7b",
+  "model_revision": "modelscope:deepseek-ai/deepseek-llm-7b-chat@snapshots/master",
+  "outputs": {
+    "cost.json": "3649c74cbd44805f52a88289c264194327a2e34e7b4dd80570c5684f57ebaf55",
+    "metrics_long.jsonl.gz": "e2346b84a46ccb29411fcec6660e43b2e12dccf5bddac9a623e02997950abc66",
+    "paired_vs_k4.json": "fa52cde0d98acce74d675d64d2751078cacef23f71a28f3372225999fe4d98f0",
+    "summary.json": "d8c9090bf91f741b540b65ae09c8c436160984dd01c0a7b0b8827c0f91d01406"
+  },
+  "repository_commit": "b642012bd86ca098f828a0c06f6f926375d74b7f",
+  "result_files": 150,
+  "result_matrix_sha256": "4c5ae915666409f7e312e460e1596da1f462ac65749e3f3cf77105f10b607bea",
+  "runner_bundle": {
+    "files": {
+      "hyskill/k_ablation.py": "3dedc0f4359b95974b3fb22e87b8289d1ee79e052f80e9c0d6714ce2917bb5dc",
+      "scripts/finalize_k_retrieval.py": "ff99f345309df6dc3c20bc4d178342e40e35c9721cb552c6e6b53f69d63a72ed",
+      "scripts/route_k_retrieval.py": "e6ee63bd32051dbbe4411ca392b759d6a3894551802e60c2c0004b26b9f8a68f",
+      "scripts/run_k_ablation.sh": "76936b472e346ffeb40f4da02348d8df670a2b252ba0b7c9c067dfdb90261878",
+      "scripts/validate_k_cache.py": "5f461415e11bfa83bec610a7ba0caf4fd4fbd0609570c306c2ceb47aa9391699",
+      "scripts/validate_k_retrieval.py": "540923350c79fb303c0f8a9d4d98e8f29aa4dff4179073a4121ca078702f27bd"
+    },
+    "sha256": "efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f"
+  },
+  "schema_version": 1,
+  "source_revision": "b642012+bundle-efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f",
+  "summarizer_sha256": "54b0a79786c1b3b36efe9db8532e12093bbaaa503149cfeb23ab9fd2ff24d5cf",
+  "tag": "deepseek7b"
+}

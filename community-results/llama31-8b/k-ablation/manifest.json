@@ -1,0 +1,79 @@
+{
+  "artifact": "complete_model_k_ablation",
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 0
+  },
+  "cache": {
+    "data_sha256": {
+      "bigcodebench": "0ed01363e2c93134cf8696fea47b6d640f32f0d7ae9d7b478a05595c3f5ae788",
+      "champ": "d61346716cede953afb352e739e170b96d2bfb98824edd91b8783dc3526c7cec",
+      "logicbench": "af5055caac041ea08cee47622f5d922b47b2ba0a8e3a60b87349599eeff1bdfe",
+      "medcalcbench": "814f6b082f56cf89dd9c50be7ab87b5bcb0e41633138951e42b38d6923c3244e",
+      "theoremqa": "c969a7291e23361ba9f377e464be76093804deb628b964fb846c6eff6b28deeb"
+    },
+    "generation_code_commits": [
+      "291db6e92151b6013745c1e29a2470e05bdc431a"
+    ],
+    "manifests": {
+      "k1": {
+        "artifact_sha256": "528765f7c026f596666fbb010149246067de864a892ffb15c63915ef001db2e7",
+        "path": "community-results/llama31-8b/imagination_full_k1.manifest.json",
+        "sha256": "e46c81e07d907bebb42081248824eb55bb414715a0cc03a9205d36c8544b6d8d"
+      },
+      "k10": {
+        "artifact_sha256": "006b6bc07a52aeaa261ccf96f13dadb7e5bb253e569efd9cf5ca2d9b57c21dcf",
+        "path": "community-results/llama31-8b/imagination_full_k10.manifest.json",
+        "sha256": "ef3a6370d744c92804068492059284b9d43bd3affee057cb1c9c090b8d45c43a"
+      },
+      "k2": {
+        "artifact_sha256": "01fd11e3e7b6ef6e7e7117c6f3da23a1eb3dfedb11409bbd5cdadd6f5c3cf7e9",
+        "path": "community-results/llama31-8b/imagination_full_k2.manifest.json",
+        "sha256": "bca1b6f3be4ab17049c84da0859dd0e623e119b94a8a79e37283b72a8bee40f2"
+      },
+      "k4": {
+        "artifact_sha256": "94e86a1a4960209c0b1e689b34792df9bfd42adc3cfd82592708bdbf1b5dea8b",
+        "path": "community-results/llama31-8b/imagination_full_k4.manifest.json",
+        "sha256": "94b0ba6b18d131ff94b7648b7dc3095d15213a6f00a39cd086e7dbc29dc7e9b7"
+      },
+      "k8": {
+        "artifact_sha256": "bf19c4e0d7c397744e8d97ab0ce86e105097e58e789eb323ae74da0d183bfb4b",
+        "path": "community-results/llama31-8b/imagination_full_k8.manifest.json",
+        "sha256": "51426395f8bc78ab2e4c73de71a2dc726a63bae95eec41bfd9213a768272804f"
+      }
+    }
+  },
+  "cache_audit": {
+    "complete": true,
+    "path": "results/k-ablation/llama31-8b/audits/cache-k10.json",
+    "sha256": "70b9b8dcb17d4df7aea3a2af02f4c33682c7d9510b548ff802bb2064edac5335"
+  },
+  "completed_at": "2026-07-23T04:28:04.788362+00:00",
+  "encoder": "/root/.cache/modelscope/models/sentence-transformers--all-MiniLM-L6-v2/snapshots/master",
+  "model": "llama31-8b",
+  "model_revision": "modelscope:LLM-Research/Meta-Llama-3.1-8B-Instruct@snapshots/master",
+  "outputs": {
+    "cost.json": "e3a1c914c5df383f4a5f29146531c679faffcc930734818ac1493e75ed45bf9a",
+    "metrics_long.jsonl.gz": "47702881b23683ca7281d94bf2a633368ed2b82186caf21500b51f48130d9187",
+    "paired_vs_k4.json": "b2d24685f69d12ab4b3924d024dc96452b1530ba67811365293e411bd0f7c88a",
+    "summary.json": "630c6b8e7678e4f986a5f7415002d745ee0fa4f8d2996e9097d5a3c3cb19ea4f"
+  },
+  "repository_commit": "b642012bd86ca098f828a0c06f6f926375d74b7f",
+  "result_files": 150,
+  "result_matrix_sha256": "2589885ee19ade012db7da896c2b61123946a2a4f8a23fdb1f6877f5418b8975",
+  "runner_bundle": {
+    "files": {
+      "hyskill/k_ablation.py": "3dedc0f4359b95974b3fb22e87b8289d1ee79e052f80e9c0d6714ce2917bb5dc",
+      "scripts/finalize_k_retrieval.py": "ff99f345309df6dc3c20bc4d178342e40e35c9721cb552c6e6b53f69d63a72ed",
+      "scripts/route_k_retrieval.py": "e6ee63bd32051dbbe4411ca392b759d6a3894551802e60c2c0004b26b9f8a68f",
+      "scripts/run_k_ablation.sh": "76936b472e346ffeb40f4da02348d8df670a2b252ba0b7c9c067dfdb90261878",
+      "scripts/validate_k_cache.py": "5f461415e11bfa83bec610a7ba0caf4fd4fbd0609570c306c2ceb47aa9391699",
+      "scripts/validate_k_retrieval.py": "540923350c79fb303c0f8a9d4d98e8f29aa4dff4179073a4121ca078702f27bd"
+    },
+    "sha256": "efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f"
+  },
+  "schema_version": 1,
+  "source_revision": "b642012+bundle-efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f",
+  "summarizer_sha256": "54b0a79786c1b3b36efe9db8532e12093bbaaa503149cfeb23ab9fd2ff24d5cf",
+  "tag": "llama31-8b"
+}

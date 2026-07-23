@@ -29,6 +29,19 @@
 或重新生成的文本悄悄补位。完整命令见
 [多模型计划 §7](../docs/08-multimodel-plan.md#7-结果回传三步)。
 
+完成检索矩阵后，每个模型还必须在 `k-ablation/` 下提交以下五个紧凑文件：
+
+| 文件 | 内容 |
+|---|---|
+| `metrics_long.jsonl.gz` | 5 个 K × 5 域 × 6 变体 × 3 split 的规范化 Recall/nDCG 长表 |
+| `summary.json` | 逐域、跨域 micro/macro 的完整 K 曲线 |
+| `paired_vs_k4.json` | `K={1,2,8,10}` 相对 `K=4` 的逐题配对 bootstrap |
+| `cost.json` | 基于真实 prompt 和缓存输出文本的 token 估算及墙钟可用性 |
+| `manifest.json` | 模型、代码、缓存、150 个结果文件和上述输出的完整性证据 |
+
+服务器端 1,050 个原始检索 JSON、缓存散文件和日志仍按协议留在运行服务器，
+不进入 GitHub；上述逐题指标长表和哈希清单是公开复核入口。
+
 ## 档案索引（每个模型一个文件夹，夹内 README 说明应存放的文件与服务器端原始件位置）
 
 | TAG | 家族 | 跑批方 | summary.json | 重排臂 |
@@ -40,3 +53,19 @@
 | [yi15-9b](yi15-9b/) | 零一万物 | 服务器 B | ✅ 全套分析包已入库 | ➖ 跳过（4K 上下文) |
 | [mistral7b](mistral7b/) | Mistral | 外部协作者（EXPLORER41，PR #1+#2） | ✅ v2.2 满配（六臂+oracle+top50+装载数据） | ✅ 五域全跑 |
 | [qwen3.5-4b-reference](qwen3.5-4b-reference/) | 阿里（主实验基准列） | 实验室主服务器 | ✅ 全套参考包已入库（9 方法检索明细 + 7 臂逐题 + 双门信号 + 显著性） | ✅ |
+
+## K 消融归档索引
+
+| 范围 | 数据目录 | 状态 |
+|---|---|---|
+| Qwen3.5-4B | [qwen3.5-4b-reference/k-ablation](qwen3.5-4b-reference/k-ablation/) | ✅ 150 结果汇总包 |
+| Qwen3.5-9B | [qwen35-9b/k-ablation](qwen35-9b/k-ablation/) | ✅ 150 结果汇总包 |
+| GLM-4-9B | [glm4-9b/k-ablation](glm4-9b/k-ablation/) | ✅ 150 结果汇总包 |
+| Llama-3.1-8B | [llama31-8b/k-ablation](llama31-8b/k-ablation/) | ✅ 150 结果汇总包 |
+| DeepSeek-7B | [deepseek7b/k-ablation](deepseek7b/k-ablation/) | ✅ 150 结果汇总包 |
+| Yi-1.5-9B | [yi15-9b/k-ablation](yi15-9b/k-ablation/) | ✅ 150 结果汇总包 |
+| Mistral-7B | [mistral7b/k-ablation](mistral7b/k-ablation/) | ✅ 150 结果汇总包 |
+| 七模型共同支持 | [k-ablation-fleet](k-ablation-fleet/) | ✅ 5,040 指标行、10,000 次 bootstrap |
+
+论文级结论、效果--成本表和解释边界见
+[七模型 K 消融分析报告](../docs/10-k-ablation-analysis.md)。

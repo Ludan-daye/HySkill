@@ -1,0 +1,327 @@
+{
+  "by_k": {
+    "k1": {
+      "routed_total_tokens_per_query_estimate": {
+        "max": 745.0924698395863,
+        "mean": 702.288507793413,
+        "min": 662.9614211852048
+      },
+      "templates": {
+        "passage": {
+          "input_tokens_per_query_estimate": {
+            "max": 393.5726501392019,
+            "mean": 393.5726501392019,
+            "min": 393.5726501392019
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 311.79988068407795,
+            "mean": 238.7296642109051,
+            "min": 160.73140660214767
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 705.3725308232799,
+            "mean": 632.302314350107,
+            "min": 554.3040567413495
+          }
+        },
+        "sentence": {
+          "input_tokens_per_query_estimate": {
+            "max": 410.94107119183354,
+            "mean": 410.94107119183354,
+            "min": 410.94107119183354
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 152.4565822616996,
+            "mean": 84.9159201530274,
+            "min": 33.7029696407265
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 563.3976534535332,
+            "mean": 495.85699134486094,
+            "min": 444.64404083256005
+          }
+        },
+        "skill": {
+          "input_tokens_per_query_estimate": {
+            "max": 455.94107119183354,
+            "mean": 455.94107119183354,
+            "min": 455.94107119183354
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 337.6244199920456,
+            "mean": 264.0884737031496,
+            "min": 215.393212249768
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 793.5654911838791,
+            "mean": 720.0295448949831,
+            "min": 671.3342834416015
+          }
+        }
+      }
+    },
+    "k10": {
+      "routed_total_tokens_per_query_estimate": {
+        "max": 7243.6082460559455,
+        "mean": 6783.911810382379,
+        "min": 6629.892549383535
+      },
+      "templates": {
+        "passage": {
+          "input_tokens_per_query_estimate": {
+            "max": 3935.7265013920196,
+            "mean": 3935.7265013920196,
+            "min": 3935.7265013920196
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 3112.7823147288877,
+            "mean": 2383.2186890399803,
+            "min": 1589.4233063767733
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 7048.508816120907,
+            "mean": 6318.945190432,
+            "min": 5525.149807768793
+          }
+        },
+        "sentence": {
+          "input_tokens_per_query_estimate": {
+            "max": 4109.4107119183345,
+            "mean": 4109.4107119183345,
+            "min": 4109.4107119183345
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 1523.010141853374,
+            "mean": 851.0268934300486,
+            "min": 340.45505766936236
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 5632.420853771709,
+            "mean": 4960.437605348384,
+            "min": 4449.865769587697
+          }
+        },
+        "skill": {
+          "input_tokens_per_query_estimate": {
+            "max": 4559.4107119183345,
+            "mean": 4559.4107119183345,
+            "min": 4559.4107119183345
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 3385.8752485748378,
+            "mean": 2643.69108539611,
+            "min": 2171.797825798754
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 7945.285960493173,
+            "mean": 7203.101797314445,
+            "min": 6731.208537717089
+          }
+        }
+      }
+    },
+    "k2": {
+      "routed_total_tokens_per_query_estimate": {
+        "max": 1436.9886649874056,
+        "mean": 1385.0635783413195,
+        "min": 1324.7646162004507
+      },
+      "templates": {
+        "passage": {
+          "input_tokens_per_query_estimate": {
+            "max": 787.1453002784039,
+            "mean": 787.1453002784039,
+            "min": 787.1453002784039
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 623.2441336338327,
+            "mean": 477.21184257873904,
+            "min": 319.0522338592072
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 1410.3894339122367,
+            "mean": 1264.357142857143,
+            "min": 1106.197534137611
+          }
+        },
+        "sentence": {
+          "input_tokens_per_query_estimate": {
+            "max": 821.8821423836671,
+            "mean": 821.8821423836671,
+            "min": 821.8821423836671
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 303.9624154845552,
+            "mean": 169.76172799757578,
+            "min": 67.50749038843962
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 1125.8445578682222,
+            "mean": 991.6438703812429,
+            "min": 889.3896327721067
+          }
+        },
+        "skill": {
+          "input_tokens_per_query_estimate": {
+            "max": 911.8821423836671,
+            "mean": 911.8821423836671,
+            "min": 911.8821423836671
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 676.6519952273632,
+            "mean": 528.1697695119411,
+            "min": 432.48031287286227
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 1588.5341376110302,
+            "mean": 1440.0519118956083,
+            "min": 1344.3624552565293
+          }
+        }
+      }
+    },
+    "k4": {
+      "routed_total_tokens_per_query_estimate": {
+        "max": 2883.903619249635,
+        "mean": 2747.3036306130566,
+        "min": 2651.0222723054485
+      },
+      "templates": {
+        "passage": {
+          "input_tokens_per_query_estimate": {
+            "max": 1574.2906005568077,
+            "mean": 1574.2906005568077,
+            "min": 1574.2906005568077
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 1246.7339917804588,
+            "mean": 953.5140243555994,
+            "min": 637.9815723187062
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 2821.0245923372668,
+            "mean": 2527.804624912407,
+            "min": 2212.2721728755137
+          }
+        },
+        "sentence": {
+          "input_tokens_per_query_estimate": {
+            "max": 1643.7642847673342,
+            "mean": 1643.7642847673342,
+            "min": 1643.7642847673342
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 608.7172212647488,
+            "mean": 340.39146985852545,
+            "min": 136.0640328781652
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 2252.481506032083,
+            "mean": 1984.1557546258596,
+            "min": 1779.8283176454993
+          }
+        },
+        "skill": {
+          "input_tokens_per_query_estimate": {
+            "max": 1823.7642847673342,
+            "mean": 1823.7642847673342,
+            "min": 1823.7642847673342
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 1354.3449555879622,
+            "mean": 1057.0689570273291,
+            "min": 865.6113615272438
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 3178.1092403552966,
+            "mean": 2880.833241794663,
+            "min": 2689.375646294578
+          }
+        }
+      }
+    },
+    "k8": {
+      "routed_total_tokens_per_query_estimate": {
+        "max": 5795.586305183614,
+        "mean": 5478.9570936156515,
+        "min": 5303.538578814795
+      },
+      "templates": {
+        "passage": {
+          "input_tokens_per_query_estimate": {
+            "max": 3148.5812011136154,
+            "mean": 3148.5812011136154,
+            "min": 3148.5812011136154
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 2491.9547262362457,
+            "mean": 1906.501789738831,
+            "min": 1271.9398117459898
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 5640.535927349861,
+            "mean": 5055.0829908524465,
+            "min": 4420.521012859605
+          }
+        },
+        "sentence": {
+          "input_tokens_per_query_estimate": {
+            "max": 3287.5285695346683,
+            "mean": 3287.5285695346683,
+            "min": 3287.5285695346683
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 1220.3720668169162,
+            "mean": 681.1495426222989,
+            "min": 272.0932652790667
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 4507.900636351585,
+            "mean": 3968.678112156967,
+            "min": 3559.621834813735
+          }
+        },
+        "skill": {
+          "input_tokens_per_query_estimate": {
+            "max": 3647.5285695346683,
+            "mean": 3647.5285695346683,
+            "min": 3647.5285695346683
+          },
+          "output_tokens_per_query_estimate": {
+            "max": 2709.099562508286,
+            "mean": 2115.1201587091155,
+            "min": 1736.2313403155244
+          },
+          "total_tokens_per_query_estimate": {
+            "max": 6356.628132042954,
+            "mean": 5762.648728243783,
+            "min": 5383.759909850193
+          }
+        }
+      }
+    }
+  },
+  "estimator": {
+    "characters_per_token": 3.8,
+    "source": "actual prompts and cached generation outputs in each model pack"
+  },
+  "models": [
+    "deepseek7b",
+    "glm4-9b",
+    "llama31-8b",
+    "mistral7b",
+    "qwen3.5-4b-reference",
+    "qwen35-9b",
+    "yi15-9b"
+  ],
+  "schema_version": 1,
+  "warmup_wall_clock_status": {
+    "deepseek7b": "unavailable",
+    "glm4-9b": "unavailable",
+    "llama31-8b": "unavailable",
+    "mistral7b": "unavailable",
+    "qwen3.5-4b-reference": "unavailable",
+    "qwen35-9b": "unavailable",
+    "yi15-9b": "unavailable"
+  }
+}

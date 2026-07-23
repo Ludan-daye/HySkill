@@ -1,0 +1,79 @@
+{
+  "artifact": "complete_model_k_ablation",
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 0
+  },
+  "cache": {
+    "data_sha256": {
+      "bigcodebench": "0ed01363e2c93134cf8696fea47b6d640f32f0d7ae9d7b478a05595c3f5ae788",
+      "champ": "d61346716cede953afb352e739e170b96d2bfb98824edd91b8783dc3526c7cec",
+      "logicbench": "af5055caac041ea08cee47622f5d922b47b2ba0a8e3a60b87349599eeff1bdfe",
+      "medcalcbench": "814f6b082f56cf89dd9c50be7ab87b5bcb0e41633138951e42b38d6923c3244e",
+      "theoremqa": "c969a7291e23361ba9f377e464be76093804deb628b964fb846c6eff6b28deeb"
+    },
+    "generation_code_commits": [
+      "291db6e92151b6013745c1e29a2470e05bdc431a"
+    ],
+    "manifests": {
+      "k1": {
+        "artifact_sha256": "807d4ac04fa812c3e173bcf605ba733fdd796d4456679907fced9a488c5018c8",
+        "path": "community-results/glm4-9b/imagination_full_k1.manifest.json",
+        "sha256": "0264bde5a2000423db1ee139c96d12d898d0b46cbe3291856538033dd8e54c14"
+      },
+      "k10": {
+        "artifact_sha256": "5dfc5a3903baafc5d54f90288562c431f40eb4d5355dfc1c77d22408d63f338f",
+        "path": "community-results/glm4-9b/imagination_full_k10.manifest.json",
+        "sha256": "2ebcaf77b6f77e3e641d77b7dce2abd0e0df6ea43ce2ac3cdc0a2fce67484260"
+      },
+      "k2": {
+        "artifact_sha256": "90617f8c53960a43c930f990155919cb0fdf81395743e0bf2592f31284a427a2",
+        "path": "community-results/glm4-9b/imagination_full_k2.manifest.json",
+        "sha256": "af890cdc5728efea1788193eaeab50019bdd4956fe3eeb535d95541fdf13bc90"
+      },
+      "k4": {
+        "artifact_sha256": "c4f0c5a7a96f0f7607e90b69fc70b5db18d6e68cb75dc1045fbcc23e93a9ce15",
+        "path": "community-results/glm4-9b/imagination_full_k4.manifest.json",
+        "sha256": "4d1b05c1885682db42825754113e7a684f69c482e48258bfcb3f24085ccbe357"
+      },
+      "k8": {
+        "artifact_sha256": "f3a1aa225fe7b81d4c21f08f8ea62f172a5b1002df609b556e4473c3f9477dc0",
+        "path": "community-results/glm4-9b/imagination_full_k8.manifest.json",
+        "sha256": "fb56f6e04430bcf3efa082cf89639a491fe4b338040bd55cacbfde8c1cf7c90d"
+      }
+    }
+  },
+  "cache_audit": {
+    "complete": true,
+    "path": "results/k-ablation/glm4-9b/audits/cache-k10.json",
+    "sha256": "d9c35dff7147ef96bb07f77922306f52f48a262cc314dba89ae8edff961837b6"
+  },
+  "completed_at": "2026-07-23T04:27:18.256522+00:00",
+  "encoder": "/root/.cache/modelscope/models/sentence-transformers--all-MiniLM-L6-v2/snapshots/master",
+  "model": "glm4-9b",
+  "model_revision": "modelscope:ZhipuAI/glm-4-9b-chat@snapshots/master",
+  "outputs": {
+    "cost.json": "08c20d94d62638325821ba6109eb8e273c43afc93e6f94f4f3d914cb7c88f6e6",
+    "metrics_long.jsonl.gz": "54c5ba0bd40cbb60f179a47e25d73840641a07019fd0a9081dce5040759fc77e",
+    "paired_vs_k4.json": "3366f3cbe630e1293b7539e940e006efc3f72ccaa807b1733a8e23ada354657a",
+    "summary.json": "f6c7415642eabac7254eadd57dfce7612b78072ce629389f8807d172149670cf"
+  },
+  "repository_commit": "b642012bd86ca098f828a0c06f6f926375d74b7f",
+  "result_files": 150,
+  "result_matrix_sha256": "b9bc53d01d79b3241392fdc40c488d94427a561d7f90be5de50fc4f30057fc12",
+  "runner_bundle": {
+    "files": {
+      "hyskill/k_ablation.py": "3dedc0f4359b95974b3fb22e87b8289d1ee79e052f80e9c0d6714ce2917bb5dc",
+      "scripts/finalize_k_retrieval.py": "ff99f345309df6dc3c20bc4d178342e40e35c9721cb552c6e6b53f69d63a72ed",
+      "scripts/route_k_retrieval.py": "e6ee63bd32051dbbe4411ca392b759d6a3894551802e60c2c0004b26b9f8a68f",
+      "scripts/run_k_ablation.sh": "76936b472e346ffeb40f4da02348d8df670a2b252ba0b7c9c067dfdb90261878",
+      "scripts/validate_k_cache.py": "5f461415e11bfa83bec610a7ba0caf4fd4fbd0609570c306c2ceb47aa9391699",
+      "scripts/validate_k_retrieval.py": "540923350c79fb303c0f8a9d4d98e8f29aa4dff4179073a4121ca078702f27bd"
+    },
+    "sha256": "efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f"
+  },
+  "schema_version": 1,
+  "source_revision": "b642012+bundle-efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f",
+  "summarizer_sha256": "54b0a79786c1b3b36efe9db8532e12093bbaaa503149cfeb23ab9fd2ff24d5cf",
+  "tag": "glm4-9b"
+}

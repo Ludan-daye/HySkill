@@ -1,0 +1,79 @@
+{
+  "artifact": "complete_model_k_ablation",
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 0
+  },
+  "cache": {
+    "data_sha256": {
+      "bigcodebench": "0ed01363e2c93134cf8696fea47b6d640f32f0d7ae9d7b478a05595c3f5ae788",
+      "champ": "d61346716cede953afb352e739e170b96d2bfb98824edd91b8783dc3526c7cec",
+      "logicbench": "af5055caac041ea08cee47622f5d922b47b2ba0a8e3a60b87349599eeff1bdfe",
+      "medcalcbench": "814f6b082f56cf89dd9c50be7ab87b5bcb0e41633138951e42b38d6923c3244e",
+      "theoremqa": "c969a7291e23361ba9f377e464be76093804deb628b964fb846c6eff6b28deeb"
+    },
+    "generation_code_commits": [
+      "60ec45ce8115c47304aa5bbb8a527304e697be09"
+    ],
+    "manifests": {
+      "k1": {
+        "artifact_sha256": "6f10898978d88d62c7deee505efe6a6976822401d45bc0c0fbb3cd636bb835f9",
+        "path": "community-results/mistral7b/imagination_full_k1.manifest.json",
+        "sha256": "ad018acadf5eef20b3a59cd0b998c4927753912a01ddcd8360cd092a4fc42cd6"
+      },
+      "k10": {
+        "artifact_sha256": "ffea5e20f6242266d4c90c99e7a9705c16dfa6599e60e85d0ccf85569e9a9f1d",
+        "path": "community-results/mistral7b/imagination_full_k10.manifest.json",
+        "sha256": "ea123a87a45c9d0bb0b3f16ccd2bf45038817c93b241c975d2f48ed49e79ea74"
+      },
+      "k2": {
+        "artifact_sha256": "10ca8aea246601deb412a266e7729409776b9342fa7e5e5ea3175342c57156e8",
+        "path": "community-results/mistral7b/imagination_full_k2.manifest.json",
+        "sha256": "6db01a7075de3e5a07b0a399f2209e95fb0b8bf818b1910f03d12e2e4351156d"
+      },
+      "k4": {
+        "artifact_sha256": "33a33efc0339260c9b67960df0b86829693e7e259a8467089f219ddb9ffcbd00",
+        "path": "community-results/mistral7b/imagination_full_k4.manifest.json",
+        "sha256": "b0b7945b1e79e63d5e790d0b2c311500c0ac7d233f6106618eafba9d025bafdc"
+      },
+      "k8": {
+        "artifact_sha256": "06f5a126345595bac975afb439fdc75520f8956480e1c2be2b242d15f285769c",
+        "path": "community-results/mistral7b/imagination_full_k8.manifest.json",
+        "sha256": "9ef08f5ff1955a05e67b11df48c98bccf6926847dd37be3c4627e600b986d1da"
+      }
+    }
+  },
+  "cache_audit": {
+    "complete": true,
+    "path": "results/k-ablation/mistral7b/audits/cache-k10.json",
+    "sha256": "41013e1805d6d8ad30e404712ed4d6b430bce029bdb07a9d64b005d9d5e8f1d4"
+  },
+  "completed_at": "2026-07-23T04:28:50.810223+00:00",
+  "encoder": "/root/.cache/modelscope/models/sentence-transformers--all-MiniLM-L6-v2/snapshots/master",
+  "model": "mistral7b",
+  "model_revision": "modelscope:LLM-Research/Mistral-7B-Instruct-v0.3@c8cfccbcfd71d4e3479498c30b2823bab19c4687",
+  "outputs": {
+    "cost.json": "f3d92f8bc9f5ad319980451f9dbbfc8a343c823f1a9cf530e4eb4c916f0859c6",
+    "metrics_long.jsonl.gz": "917608446c5d957fa83997b58f2c4acdf5b08dc0404c4d27ac74a351521cf5f5",
+    "paired_vs_k4.json": "867e45b8c222f8abbbb377a7d8c34393bc5c46d2f5a16eebdc6934d4b0668e5c",
+    "summary.json": "9924f1e278e5a7dcb459a3a73c37bad794b8947e65a0f88d7f0413ebf3185cb0"
+  },
+  "repository_commit": "b642012bd86ca098f828a0c06f6f926375d74b7f",
+  "result_files": 150,
+  "result_matrix_sha256": "e2445d88d58207ad59a85500e4e7979c11372cd5abe353108b33d9a44b9f8833",
+  "runner_bundle": {
+    "files": {
+      "hyskill/k_ablation.py": "3dedc0f4359b95974b3fb22e87b8289d1ee79e052f80e9c0d6714ce2917bb5dc",
+      "scripts/finalize_k_retrieval.py": "ff99f345309df6dc3c20bc4d178342e40e35c9721cb552c6e6b53f69d63a72ed",
+      "scripts/route_k_retrieval.py": "e6ee63bd32051dbbe4411ca392b759d6a3894551802e60c2c0004b26b9f8a68f",
+      "scripts/run_k_ablation.sh": "76936b472e346ffeb40f4da02348d8df670a2b252ba0b7c9c067dfdb90261878",
+      "scripts/validate_k_cache.py": "5f461415e11bfa83bec610a7ba0caf4fd4fbd0609570c306c2ceb47aa9391699",
+      "scripts/validate_k_retrieval.py": "540923350c79fb303c0f8a9d4d98e8f29aa4dff4179073a4121ca078702f27bd"
+    },
+    "sha256": "efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f"
+  },
+  "schema_version": 1,
+  "source_revision": "b642012+bundle-efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f",
+  "summarizer_sha256": "54b0a79786c1b3b36efe9db8532e12093bbaaa503149cfeb23ab9fd2ff24d5cf",
+  "tag": "mistral7b"
+}

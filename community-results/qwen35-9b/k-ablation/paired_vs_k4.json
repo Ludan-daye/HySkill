@@ -1,0 +1,988 @@
+{
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 0,
+  "comparisons": {
+    "hyskill": {
+      "k10_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.006616483604126948,
+            0.0030284854282979384
+          ],
+          "difference_k_minus_k4": -0.0017710481846569081,
+          "mean_k": 0.573209428621938,
+          "mean_k4": 0.5749658742852168,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.4772,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.004582075047162329,
+            0.0039031241112852896
+          ],
+          "difference_k_minus_k4": -0.00034473006378759187,
+          "mean_k": 0.6166711678520707,
+          "mean_k4": 0.6170158979158582,
+          "n": 3177,
+          "p_two_sided": 0.86,
+          "seed": 6817151439543075780
+        }
+      },
+      "k1_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.004619642468156339,
+            0.008715676148021488
+          ],
+          "difference_k_minus_k4": 0.0020564196697435526,
+          "mean_k": 0.5770235914541465,
+          "mean_k4": 0.5749658742852168,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.552,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.0011001798252432819,
+            0.010594025040715925
+          ],
+          "difference_k_minus_k4": 0.0047445130027511315,
+          "mean_k": 0.6217604109186093,
+          "mean_k4": 0.6170158979158582,
+          "n": 3177,
+          "p_two_sided": 0.112,
+          "seed": 4550971626540736643
+        }
+      },
+      "k2_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            0.0018987895643762652,
+            0.012121503075486978
+          ],
+          "difference_k_minus_k4": 0.007022142861251089,
+          "mean_k": 0.5820213598072547,
+          "mean_k4": 0.5749658742852168,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.0068,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            0.0034189656955740974,
+            0.011999386176736642
+          ],
+          "difference_k_minus_k4": 0.007684124759216716,
+          "mean_k": 0.624700022675075,
+          "mean_k4": 0.6170158979158582,
+          "n": 3177,
+          "p_two_sided": 0.0002,
+          "seed": 6122925896459775245
+        }
+      },
+      "k8_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.00790878821249104,
+            0.0009525426427402555
+          ],
+          "difference_k_minus_k4": -0.0034503014549421736,
+          "mean_k": 0.5714991659117912,
+          "mean_k4": 0.5749658742852168,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.1254,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.004904161218565576,
+            0.002830762667131967
+          ],
+          "difference_k_minus_k4": -0.0010791609697512765,
+          "mean_k": 0.615936736946107,
+          "mean_k4": 0.6170158979158582,
+          "n": 3177,
+          "p_two_sided": 0.5994,
+          "seed": 1647400822458175153
+        }
+      }
+    },
+    "naive_passage": {
+      "k10_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            0.0014859084245254135,
+            0.007766923289420163
+          ],
+          "difference_k_minus_k4": 0.004667596494956112,
+          "mean_k": 0.5878524124538644,
+          "mean_k4": 0.5831651557740407,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.0024,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            0.0034936566669752683,
+            0.008254179155467051
+          ],
+          "difference_k_minus_k4": 0.005893082074095458,
+          "mean_k": 0.6334997355825697,
+          "mean_k4": 0.6276066535084742,
+          "n": 3177,
+          "p_two_sided": 0.0,
+          "seed": 8740029917368177277
+        }
+      },
+      "k1_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.033106180581591156,
+            -0.021897359561472127
+          ],
+          "difference_k_minus_k4": -0.027458680609907537,
+          "mean_k": 0.5557033871623571,
+          "mean_k4": 0.5831651557740407,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.0,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.03012138768772236,
+            -0.021648672532385952
+          ],
+          "difference_k_minus_k4": -0.025824882026380464,
+          "mean_k": 0.6017817714820938,
+          "mean_k4": 0.6276066535084742,
+          "n": 3177,
+          "p_two_sided": 0.0,
+          "seed": 1543755981811142294
+        }
+      },
+      "k2_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.01392627351743584,
+            -0.006413435303974299
+          ],
+          "difference_k_minus_k4": -0.010114411992070648,
+          "mean_k": 0.5730535346981858,
+          "mean_k4": 0.5831651557740407,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.0,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.012212067815007421,
+            -0.006645128374864618
+          ],
+          "difference_k_minus_k4": -0.009412206560662053,
+          "mean_k": 0.6181944469478122,
+          "mean_k4": 0.6276066535084742,
+          "n": 3177,
+          "p_two_sided": 0.0,
+          "seed": 3686343525577928315
+        }
+      },
+      "k8_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            0.0008802199554761095,
+            0.006411884798625749
+          ],
+          "difference_k_minus_k4": 0.0036645431239749563,
+          "mean_k": 0.5868225196538805,
+          "mean_k4": 0.5831651557740407,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.011,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            0.0020687868080531105,
+            0.0065700508697512355
+          ],
+          "difference_k_minus_k4": 0.004317391083958636,
+          "mean_k": 0.6319240445924329,
+          "mean_k4": 0.6276066535084742,
+          "n": 3177,
+          "p_two_sided": 0.0004,
+          "seed": 4485603503368870540
+        }
+      }
+    },
+    "naive_sentence": {
+      "k10_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.023246701615479745,
+            -0.010217980574036669
+          ],
+          "difference_k_minus_k4": -0.016664605758673543,
+          "mean_k": 0.4864689540265735,
+          "mean_k4": 0.5031325941452971,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.0,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.0198065533904419,
+            -0.010546941271535899
+          ],
+          "difference_k_minus_k4": -0.015227622601230251,
+          "mean_k": 0.5125482663237154,
+          "mean_k4": 0.5277758889249455,
+          "n": 3177,
+          "p_two_sided": 0.0,
+          "seed": 1261688267234862725
+        }
+      },
+      "k1_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.012392669355458559,
+            0.006244102607753329
+          ],
+          "difference_k_minus_k4": -0.0030712194376641268,
+          "mean_k": 0.5000506981705453,
+          "mean_k4": 0.5031325941452971,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.508,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.005286409343386704,
+            0.009855004587882776
+          ],
+          "difference_k_minus_k4": 0.002443066554248542,
+          "mean_k": 0.5302189554791942,
+          "mean_k4": 0.5277758889249455,
+          "n": 3177,
+          "p_two_sided": 0.5352,
+          "seed": 7177058400944894786
+        }
+      },
+      "k2_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.0007506428945610587,
+            0.012585175680139735
+          ],
+          "difference_k_minus_k4": 0.0059984745098425035,
+          "mean_k": 0.509113460983838,
+          "mean_k4": 0.5031325941452971,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.0796,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            0.0053520891221803795,
+            0.01564607017958698
+          ],
+          "difference_k_minus_k4": 0.010393417909773328,
+          "mean_k": 0.5381693068347189,
+          "mean_k4": 0.5277758889249455,
+          "n": 3177,
+          "p_two_sided": 0.0,
+          "seed": 9054422942596958679
+        }
+      },
+      "k8_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.019069662095710545,
+            -0.007659830666265012
+          ],
+          "difference_k_minus_k4": -0.013312658789457015,
+          "mean_k": 0.48984872390532647,
+          "mean_k4": 0.5031325941452971,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.0,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.018142175804755075,
+            -0.00896187659475697
+          ],
+          "difference_k_minus_k4": -0.013482052967765635,
+          "mean_k": 0.51429383595718,
+          "mean_k4": 0.5277758889249455,
+          "n": 3177,
+          "p_two_sided": 0.0,
+          "seed": 1964811226819315273
+        }
+      }
+    },
+    "naive_skill": {
+      "k10_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.004747036428643277,
+            0.002850112329077835
+          ],
+          "difference_k_minus_k4": -0.0009392881280010198,
+          "mean_k": 0.59265454877979,
+          "mean_k4": 0.5935624415864583,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.6256,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.005521687183799026,
+            0.00027375484536092777
+          ],
+          "difference_k_minus_k4": -0.0025886768775771206,
+          "mean_k": 0.6269341568290957,
+          "mean_k4": 0.6295228337066727,
+          "n": 3177,
+          "p_two_sided": 0.0742,
+          "seed": 8141614045210917323
+        }
+      },
+      "k1_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.02882224738863418,
+            -0.016371632846008188
+          ],
+          "difference_k_minus_k4": -0.022600137612404845,
+          "mean_k": 0.570981885856439,
+          "mean_k4": 0.5935624415864583,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.0,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.02562638981138112,
+            -0.015617353663772492
+          ],
+          "difference_k_minus_k4": -0.020570430471957692,
+          "mean_k": 0.6089524032347151,
+          "mean_k4": 0.6295228337066727,
+          "n": 3177,
+          "p_two_sided": 0.0,
+          "seed": 2219951461237407452
+        }
+      },
+      "k2_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.009560542377261595,
+            -0.0007136883093466811
+          ],
+          "difference_k_minus_k4": -0.005063074738388288,
+          "mean_k": 0.5885204709327596,
+          "mean_k4": 0.5935624415864583,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.026,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.007628100522996953,
+            -0.0009997322854112167
+          ],
+          "difference_k_minus_k4": -0.004343828120197129,
+          "mean_k": 0.6251790055864758,
+          "mean_k4": 0.6295228337066727,
+          "n": 3177,
+          "p_two_sided": 0.0122,
+          "seed": 2806540345965442388
+        }
+      },
+      "k8_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.004204418124003865,
+            0.002826696527730497
+          ],
+          "difference_k_minus_k4": -0.0007482612142792561,
+          "mean_k": 0.5928090912286572,
+          "mean_k4": 0.5935624415864583,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.6658,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.004877289148862903,
+            0.0006052760911387154
+          ],
+          "difference_k_minus_k4": -0.0021031519392598875,
+          "mean_k": 0.6274196817674129,
+          "mean_k4": 0.6295228337066727,
+          "n": 3177,
+          "p_two_sided": 0.1302,
+          "seed": 1115258247893576582
+        }
+      }
+    },
+    "routed": {
+      "k10_vs_k4": {
+        "by_domain": {
+          "bigcodebench": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.005450473082365628,
+              0.007886266915305942
+            ],
+            "difference_k_minus_k4": 0.0012351361251103682,
+            "mean_k": 0.5016462233176922,
+            "mean_k4": 0.5004110871925818,
+            "n": 912,
+            "p_two_sided": 0.7178,
+            "seed": 4840475692610974980
+          },
+          "champ": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              0.0014659350275443275,
+              0.05191884761609453
+            ],
+            "difference_k_minus_k4": 0.02654804676788274,
+            "mean_k": 0.4596669728999866,
+            "mean_k4": 0.4331189261321039,
+            "n": 179,
+            "p_two_sided": 0.0394,
+            "seed": 731168729493521330
+          },
+          "logicbench": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.02361217161637013,
+              0.004145813862100026
+            ],
+            "difference_k_minus_k4": -0.009863492728751236,
+            "mean_k": 0.3239733117307912,
+            "mean_k4": 0.33383680445954245,
+            "n": 608,
+            "p_two_sided": 0.1724,
+            "seed": 2199798520286136713
+          },
+          "medcalcbench": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.0037745820657464567,
+              0.0
+            ],
+            "difference_k_minus_k4": -0.0016775920292206475,
+            "mean_k": 0.9872692759699685,
+            "mean_k4": 0.9889468679991892,
+            "n": 880,
+            "p_two_sided": 0.1296,
+            "seed": 4681679728237915648
+          },
+          "theoremqa": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.006928493145935186,
+              0.004274480155129977
+            ],
+            "difference_k_minus_k4": -0.0012898031897493887,
+            "mean_k": 0.8217996813301284,
+            "mean_k4": 0.8230894845198778,
+            "n": 598,
+            "p_two_sided": 0.6484,
+            "seed": 4228090415970011618
+          }
+        },
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.003054667115297531,
+            0.00896434574292628
+          ],
+          "difference_k_minus_k4": 0.002977949712146898,
+          "mean_k": 0.6188710930497134,
+          "mean_k4": 0.6158806340606591,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.329,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.004574656696578013,
+            0.002967176687038133
+          ],
+          "difference_k_minus_k4": -0.0007447410622327322,
+          "mean_k": 0.6600537266717479,
+          "mean_k4": 0.6607984677339807,
+          "n": 3177,
+          "p_two_sided": 0.6726,
+          "seed": 6700486652353371980
+        }
+      },
+      "k1_vs_k4": {
+        "by_domain": {
+          "bigcodebench": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              0.006350680906102778,
+              0.023839292317729688
+            ],
+            "difference_k_minus_k4": 0.014902188689926417,
+            "mean_k": 0.5153132758825082,
+            "mean_k4": 0.5004110871925818,
+            "n": 912,
+            "p_two_sided": 0.0008,
+            "seed": 5344770599205402836
+          },
+          "champ": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.10894753404021958,
+              -0.0004915073178268222
+            ],
+            "difference_k_minus_k4": -0.054530904785444596,
+            "mean_k": 0.37858802134665925,
+            "mean_k4": 0.4331189261321039,
+            "n": 179,
+            "p_two_sided": 0.0472,
+            "seed": 11470674377633792
+          },
+          "logicbench": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              0.008702052948550795,
+              0.04313380904108271
+            ],
+            "difference_k_minus_k4": 0.026048805700333907,
+            "mean_k": 0.35988561015987636,
+            "mean_k4": 0.33383680445954245,
+            "n": 608,
+            "p_two_sided": 0.0042,
+            "seed": 2300085903895464467
+          },
+          "medcalcbench": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.02905748721902258,
+              -0.013730522524463822
+            ],
+            "difference_k_minus_k4": -0.021253406704733392,
+            "mean_k": 0.9676934612944559,
+            "mean_k4": 0.9889468679991892,
+            "n": 880,
+            "p_two_sided": 0.0,
+            "seed": 2057800879428533422
+          },
+          "theoremqa": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.02665950554047679,
+              -0.006298091227791894
+            ],
+            "difference_k_minus_k4": -0.01632348750506452,
+            "mean_k": 0.8067659970148132,
+            "mean_k4": 0.8230894845198778,
+            "n": 598,
+            "p_two_sided": 0.0006,
+            "seed": 3647188542344572337
+          }
+        },
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.02213220789128934,
+            0.0013458840756909894
+          ],
+          "difference_k_minus_k4": -0.01028121031349288,
+          "mean_k": 0.6056492731396627,
+          "mean_k4": 0.6158806340606591,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.0906,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.008702949218025155,
+            0.0032105420632530324
+          ],
+          "difference_k_minus_k4": -0.002768966142201021,
+          "mean_k": 0.6580295015917798,
+          "mean_k4": 0.6607984677339807,
+          "n": 3177,
+          "p_two_sided": 0.3648,
+          "seed": 3540821001412776919
+        }
+      },
+      "k2_vs_k4": {
+        "by_domain": {
+          "bigcodebench": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              0.0002896741101714171,
+              0.014478111875849218
+            ],
+            "difference_k_minus_k4": 0.007348437220857776,
+            "mean_k": 0.5077595244134395,
+            "mean_k4": 0.5004110871925818,
+            "n": 912,
+            "p_two_sided": 0.0402,
+            "seed": 7005621173460053912
+          },
+          "champ": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.013160631685690684,
+              0.039027718686898076
+            ],
+            "difference_k_minus_k4": 0.012853124022759862,
+            "mean_k": 0.44597205015486374,
+            "mean_k4": 0.4331189261321039,
+            "n": 179,
+            "p_two_sided": 0.3252,
+            "seed": 558761904349433078
+          },
+          "logicbench": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              0.015565572433364955,
+              0.04168417845716096
+            ],
+            "difference_k_minus_k4": 0.028717120766318376,
+            "mean_k": 0.3625539252258608,
+            "mean_k4": 0.33383680445954245,
+            "n": 608,
+            "p_two_sided": 0.0,
+            "seed": 6158605312270362198
+          },
+          "medcalcbench": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.006169139724025579,
+              0.0012312405965906788
+            ],
+            "difference_k_minus_k4": -0.0023945576582791225,
+            "mean_k": 0.98655231034091,
+            "mean_k4": 0.9889468679991892,
+            "n": 880,
+            "p_two_sided": 0.1902,
+            "seed": 1053363814563159069
+          },
+          "theoremqa": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.03327208331284613,
+              -0.005783507458428429
+            ],
+            "difference_k_minus_k4": -0.019367714314732727,
+            "mean_k": 0.8037217702051451,
+            "mean_k4": 0.8230894845198778,
+            "n": 598,
+            "p_two_sided": 0.0054,
+            "seed": 887056905364425594
+          }
+        },
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.001215561333460563,
+            0.01187081471108461
+          ],
+          "difference_k_minus_k4": 0.005414180371900031,
+          "mean_k": 0.6213119160680438,
+          "mean_k4": 0.6158806340606591,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.107,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.0004719745044152213,
+            0.00848991501462985
+          ],
+          "difference_k_minus_k4": 0.004020582144136632,
+          "mean_k": 0.6648190498781172,
+          "mean_k4": 0.6607984677339807,
+          "n": 3177,
+          "p_two_sided": 0.0786,
+          "seed": 7863406781357902823
+        }
+      },
+      "k8_vs_k4": {
+        "by_domain": {
+          "bigcodebench": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.005318557302070246,
+              0.007171981891151986
+            ],
+            "difference_k_minus_k4": 0.0009457427565040406,
+            "mean_k": 0.5013568299490858,
+            "mean_k4": 0.5004110871925818,
+            "n": 912,
+            "p_two_sided": 0.7632,
+            "seed": 5456297095341248949
+          },
+          "champ": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.0019500409762168457,
+              0.04931450098831079
+            ],
+            "difference_k_minus_k4": 0.02389240646546184,
+            "mean_k": 0.45701133259756566,
+            "mean_k4": 0.4331189261321039,
+            "n": 179,
+            "p_two_sided": 0.0742,
+            "seed": 8577448546892354819
+          },
+          "logicbench": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.021745276349599944,
+              0.002695354898524349
+            ],
+            "difference_k_minus_k4": -0.009418112750750546,
+            "mean_k": 0.3244186917087919,
+            "mean_k4": 0.33383680445954245,
+            "n": 608,
+            "p_two_sided": 0.1244,
+            "seed": 7116182345032433077
+          },
+          "medcalcbench": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.003355184058441295,
+              0.00041939800730516187
+            ],
+            "difference_k_minus_k4": -0.0012581940219154857,
+            "mean_k": 0.9876886739772737,
+            "mean_k4": 0.9889468679991892,
+            "n": 880,
+            "p_two_sided": 0.2528,
+            "seed": 8155613693933225681
+          },
+          "theoremqa": {
+            "bootstrap_samples": 10000,
+            "ci95": [
+              -0.007937430508912546,
+              0.0022274757961260687
+            ],
+            "difference_k_minus_k4": -0.0029153831392490764,
+            "mean_k": 0.8201741013806287,
+            "mean_k4": 0.8230894845198778,
+            "n": 598,
+            "p_two_sided": 0.255,
+            "seed": 631042908211497397
+          }
+        },
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.0036933200490285195,
+            0.008120945825898835
+          ],
+          "difference_k_minus_k4": 0.0022470387124691473,
+          "mean_k": 0.6181299259226691,
+          "mean_k4": 0.6158806340606591,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.4584,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.004542544582679633,
+            0.0023910643279406144
+          ],
+          "difference_k_minus_k4": -0.0010820158192519833,
+          "mean_k": 0.6597164519147286,
+          "mean_k4": 0.6607984677339807,
+          "n": 3177,
+          "p_two_sided": 0.5242,
+          "seed": 8432149036538755969
+        }
+      }
+    },
+    "two_stage": {
+      "k10_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.004332358415503191,
+            0.0030079270566939664
+          ],
+          "difference_k_minus_k4": -0.0006335928849256724,
+          "mean_k": 0.6010325646414714,
+          "mean_k4": 0.6016558987836749,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.7414,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.005073283988634593,
+            0.0007727222869159604
+          ],
+          "difference_k_minus_k4": -0.0021583006722170565,
+          "mean_k": 0.6367562674799617,
+          "mean_k4": 0.638914568152179,
+          "n": 3177,
+          "p_two_sided": 0.1498,
+          "seed": 663405107550229008
+        }
+      },
+      "k1_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.02457835719285449,
+            -0.012243426081184314
+          ],
+          "difference_k_minus_k4": -0.018463513757467177,
+          "mean_k": 0.5831655629782271,
+          "mean_k4": 0.6016558987836749,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.0,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.021266929945850718,
+            -0.011375587785660111
+          ],
+          "difference_k_minus_k4": -0.016303221266381385,
+          "mean_k": 0.6226113468857974,
+          "mean_k4": 0.638914568152179,
+          "n": 3177,
+          "p_two_sided": 0.0,
+          "seed": 4086084849685139534
+        }
+      },
+      "k2_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.006854131069808093,
+            0.0017962528932933713
+          ],
+          "difference_k_minus_k4": -0.0025631478100125726,
+          "mean_k": 0.5991061943733712,
+          "mean_k4": 0.6016558987836749,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.2412,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.005335349938854513,
+            0.0011026319157728657
+          ],
+          "difference_k_minus_k4": -0.0020920886433549732,
+          "mean_k": 0.6368224795088239,
+          "mean_k4": 0.638914568152179,
+          "n": 3177,
+          "p_two_sided": 0.2036,
+          "seed": 7160370687365970563
+        }
+      },
+      "k8_vs_k4": {
+        "cross_domain_macro_stratified": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.0037522951936731844,
+            0.0035932905700765375
+          ],
+          "difference_k_minus_k4": -3.115459349962944e-05,
+          "mean_k": 0.6016033503879299,
+          "mean_k4": 0.6016558987836749,
+          "n_domains": 5,
+          "n_instances": 3177,
+          "p_two_sided": 0.9848,
+          "seed_scheme": "independent paired resampling within each domain"
+        },
+        "cross_domain_micro": {
+          "bootstrap_samples": 10000,
+          "ci95": [
+            -0.00405729279473522,
+            0.0015137395530066538
+          ],
+          "difference_k_minus_k4": -0.0012741128210266065,
+          "mean_k": 0.6376404553311522,
+          "mean_k4": 0.638914568152179,
+          "n": 3177,
+          "p_two_sided": 0.3718,
+          "seed": 7948444292211212936
+        }
+      }
+    }
+  },
+  "contrast": "K minus K=4",
+  "metric": "nDCG@10",
+  "schema_version": 1,
+  "split": "test",
+  "validation_fraction": 0.2,
+  "validation_seed": 0
+}

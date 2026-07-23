@@ -1,0 +1,82 @@
+{
+  "artifact": "seven_model_k_ablation_fleet",
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 0
+  },
+  "completed_at": "2026-07-23T06:55:03.945458+00:00",
+  "model_count": 7,
+  "models": [
+    "deepseek7b",
+    "glm4-9b",
+    "llama31-8b",
+    "mistral7b",
+    "qwen3.5-4b-reference",
+    "qwen35-9b",
+    "yi15-9b"
+  ],
+  "outputs": {
+    "cost.json": "134fdec7593104d987970760afba7cdf77013f77bb42f3a4ea8da92c5c0d16aa",
+    "metrics_long.jsonl.gz": "23b9cf3ba820ae398344d6d928d3ba263b7cb01ff71fc05ef5fe0a32beefaee7",
+    "paired_vs_k4.json": "cab71756ae0e56af839585f2bea0032c05129591a98127b20ee354f1f86eabb7",
+    "summary.json": "ddb50d59ec069e4f085d4d003f72d2d31956e99019ff073543a9b9b719859183"
+  },
+  "provenance": {
+    "models": {
+      "deepseek7b": {
+        "encoder": "/root/.cache/modelscope/models/sentence-transformers--all-MiniLM-L6-v2/snapshots/master",
+        "manifest_path": "community-results/deepseek7b/k-ablation/manifest.json",
+        "manifest_sha256": "ce13d4121be50dedca0763a5e310330b42f87e110ec6c0cdd44d38213d166980",
+        "model": "deepseek7b",
+        "model_revision": "modelscope:deepseek-ai/deepseek-llm-7b-chat@snapshots/master"
+      },
+      "glm4-9b": {
+        "encoder": "/root/.cache/modelscope/models/sentence-transformers--all-MiniLM-L6-v2/snapshots/master",
+        "manifest_path": "community-results/glm4-9b/k-ablation/manifest.json",
+        "manifest_sha256": "1a896dd34647063204a67e661c1a3243219db09e5bfe2b1d9e8903fb4ab02729",
+        "model": "glm4-9b",
+        "model_revision": "modelscope:ZhipuAI/glm-4-9b-chat@snapshots/master"
+      },
+      "llama31-8b": {
+        "encoder": "/root/.cache/modelscope/models/sentence-transformers--all-MiniLM-L6-v2/snapshots/master",
+        "manifest_path": "community-results/llama31-8b/k-ablation/manifest.json",
+        "manifest_sha256": "e8e9b9725b2884f4caf81fe9bdb2861162916f82424ec693b685a74d3a2ef4af",
+        "model": "llama31-8b",
+        "model_revision": "modelscope:LLM-Research/Meta-Llama-3.1-8B-Instruct@snapshots/master"
+      },
+      "mistral7b": {
+        "encoder": "/root/.cache/modelscope/models/sentence-transformers--all-MiniLM-L6-v2/snapshots/master",
+        "manifest_path": "community-results/mistral7b/k-ablation/manifest.json",
+        "manifest_sha256": "f353110c3368026e66308be121378f552b9f2399b424a556ff96e385f4a88122",
+        "model": "mistral7b",
+        "model_revision": "modelscope:LLM-Research/Mistral-7B-Instruct-v0.3@c8cfccbcfd71d4e3479498c30b2823bab19c4687"
+      },
+      "qwen3.5-4b-reference": {
+        "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+        "manifest_path": "community-results/qwen3.5-4b-reference/k-ablation/manifest.json",
+        "manifest_sha256": "79f419517888bb324fa52d662625e65a4bb12ecec8283b81335a5177db6e9c74",
+        "model": "qwen3.5-4b",
+        "model_revision": "huggingface:Qwen/Qwen3.5-4B@851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+      },
+      "qwen35-9b": {
+        "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+        "manifest_path": "community-results/qwen35-9b/k-ablation/manifest.json",
+        "manifest_sha256": "e94679dda83a3fce22512781f7df68acbe793504b8a34ae01cbec83fd2f8521f",
+        "model": "qwen35-9b",
+        "model_revision": "huggingface:Qwen/Qwen3.5-9B@c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+      },
+      "yi15-9b": {
+        "encoder": "/root/.cache/modelscope/models/sentence-transformers--all-MiniLM-L6-v2/snapshots/master",
+        "manifest_path": "community-results/yi15-9b/k-ablation/manifest.json",
+        "manifest_sha256": "16252284cbee1ab6faf01cf11cc46a83aa544cfcc86f9138c0448940ac303295",
+        "model": "yi15-9b",
+        "model_revision": "modelscope:01ai/Yi-1.5-9B-Chat@snapshots/master"
+      }
+    },
+    "runner_bundle_sha256": "efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f",
+    "source_revision": "b642012+bundle-efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f"
+  },
+  "schema_version": 1,
+  "strict_common_support": true,
+  "summarizer_sha256": "0733e45b9429df149e06a780a3cc8681bf1aad280335345e001412681fb2cebc"
+}

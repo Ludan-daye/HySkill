@@ -1,0 +1,79 @@
+{
+  "artifact": "complete_model_k_ablation",
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 0
+  },
+  "cache": {
+    "data_sha256": {
+      "bigcodebench": "0ed01363e2c93134cf8696fea47b6d640f32f0d7ae9d7b478a05595c3f5ae788",
+      "champ": "d61346716cede953afb352e739e170b96d2bfb98824edd91b8783dc3526c7cec",
+      "logicbench": "af5055caac041ea08cee47622f5d922b47b2ba0a8e3a60b87349599eeff1bdfe",
+      "medcalcbench": "814f6b082f56cf89dd9c50be7ab87b5bcb0e41633138951e42b38d6923c3244e",
+      "theoremqa": "c969a7291e23361ba9f377e464be76093804deb628b964fb846c6eff6b28deeb"
+    },
+    "generation_code_commits": [
+      "291db6e92151b6013745c1e29a2470e05bdc431a"
+    ],
+    "manifests": {
+      "k1": {
+        "artifact_sha256": "216376680aeb2b599a66fa60d27730004cac4d630ffcfb8cf5dea08034ba5a1c",
+        "path": "community-results/yi15-9b/imagination_full_k1.manifest.json",
+        "sha256": "6602764c2d5d9a0fedaa322852521c90dfa7bdd37661b53f39ac40ef1781d66d"
+      },
+      "k10": {
+        "artifact_sha256": "b54aa5a653ce9ecfbfa2ea9cb02404b597f98c7154a4b8561ed3b8c339b564e8",
+        "path": "community-results/yi15-9b/imagination_full_k10.manifest.json",
+        "sha256": "1271c4cf7b77f67322d7ea927319d94e0de5a6352bc469cf97829865a3fc9a6e"
+      },
+      "k2": {
+        "artifact_sha256": "0ac28ee129e4a72687b44a769550504f422dac60a3004fb15d970a459f4ed412",
+        "path": "community-results/yi15-9b/imagination_full_k2.manifest.json",
+        "sha256": "804f586df8a60b22a9cf4cc97c8deee752e2de8d4f0961cc15205d89693a10c9"
+      },
+      "k4": {
+        "artifact_sha256": "ef2bdc80eda51ed35e951efb40bf6a3fcb045d87a317dd461f207f6508dd294f",
+        "path": "community-results/yi15-9b/imagination_full_k4.manifest.json",
+        "sha256": "6ac9191ca71aab95d2e404386d61bd85882eb85a2dec731c21834bbaeefa1f25"
+      },
+      "k8": {
+        "artifact_sha256": "9d929babde89a0c61d9a7d686a0bdb0b897626128a3f08c5d8c45e78b196ecbc",
+        "path": "community-results/yi15-9b/imagination_full_k8.manifest.json",
+        "sha256": "1357463fb9e3b4382b2f4181715357b9a9b733c104dd56df2d28c01bf6125dc6"
+      }
+    }
+  },
+  "cache_audit": {
+    "complete": true,
+    "path": "results/k-ablation/yi15-9b/audits/cache-k10.json",
+    "sha256": "b219be291e6f0dd55c03c41a64511c620958d8d35883716fab38ee9ff1239dbd"
+  },
+  "completed_at": "2026-07-23T04:18:29.735404+00:00",
+  "encoder": "/root/.cache/modelscope/models/sentence-transformers--all-MiniLM-L6-v2/snapshots/master",
+  "model": "yi15-9b",
+  "model_revision": "modelscope:01ai/Yi-1.5-9B-Chat@snapshots/master",
+  "outputs": {
+    "cost.json": "404243793e7ed0fe5c43b17dcfc049042497fc59270530c958842d7a8bc9e9ce",
+    "metrics_long.jsonl.gz": "2ef494a56f06f3dd5621c09ce78ef6334a2970b1248d74d48810e3cf54cc9107",
+    "paired_vs_k4.json": "51d9200a9f7e5d74939f20a605a1d98fcf68b983325aeedc566c958f83c34042",
+    "summary.json": "a4d6504a0b49199dec1930e76c5df7aedd5e15f367545b68268dbf44336969b3"
+  },
+  "repository_commit": "b642012bd86ca098f828a0c06f6f926375d74b7f",
+  "result_files": 150,
+  "result_matrix_sha256": "af3d90d91473bf85c245ce3e08d9395ad830633e522bd872dc9e8a6e8deb71ed",
+  "runner_bundle": {
+    "files": {
+      "hyskill/k_ablation.py": "3dedc0f4359b95974b3fb22e87b8289d1ee79e052f80e9c0d6714ce2917bb5dc",
+      "scripts/finalize_k_retrieval.py": "ff99f345309df6dc3c20bc4d178342e40e35c9721cb552c6e6b53f69d63a72ed",
+      "scripts/route_k_retrieval.py": "e6ee63bd32051dbbe4411ca392b759d6a3894551802e60c2c0004b26b9f8a68f",
+      "scripts/run_k_ablation.sh": "76936b472e346ffeb40f4da02348d8df670a2b252ba0b7c9c067dfdb90261878",
+      "scripts/validate_k_cache.py": "5f461415e11bfa83bec610a7ba0caf4fd4fbd0609570c306c2ceb47aa9391699",
+      "scripts/validate_k_retrieval.py": "540923350c79fb303c0f8a9d4d98e8f29aa4dff4179073a4121ca078702f27bd"
+    },
+    "sha256": "efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f"
+  },
+  "schema_version": 1,
+  "source_revision": "b642012+bundle-efc7d610d25b29e28fdb14ab58da099e3e7b2b0b0b7fb55d2f7817f8306cf69f",
+  "summarizer_sha256": "54b0a79786c1b3b36efe9db8532e12093bbaaa503149cfeb23ab9fd2ff24d5cf",
+  "tag": "yi15-9b"
+}
