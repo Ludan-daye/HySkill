@@ -6,16 +6,36 @@
 导出命令和完整验收步骤见
 [docs/08-multimodel-plan.md](../docs/08-multimodel-plan.md)。
 
-## 协作者必传文件
+## K=2/K=4 主实验目录契约
 
-完成主实验后上传：
+当前论文活跃主实验统一使用 K=2，新结果上传到
+`community-results/<TAG>/k2/`；历史 K=4 主实验包归档到
+`community-results/<TAG>/k4/`。两者不得把逐题证据、汇总指标或 manifest
+混在同一目录。
 
-- `summary.json`
-- `retrieval_top10.jsonl.gz` 与 `retrieval_top50.jsonl.gz`
+`k-ablation/` 继续保存 K={1,2,4,8,10} 的联合分析包；
+`imagination_full_k{1,2,4,8,10}.*` 继续作为完整 prefix cache 保持在模型
+目录根部。它们不归入 `k2/` 或 `k4/`。Qwen reference 的
+`baselines-native/` 不依赖 imagination K，也保持为共享证据。
+
+截至 2026-07-23，只读审计确认旧 K=4 主实验文件仍在模型目录根部。迁移必须
+等 K=2 包验收完成后采用一次 `git mv`，不得复制整个 399 MB 目录。详细文件
+映射、SHA 门禁和回滚规则见
+[GitHub K 目录迁移清单](../docs/superpowers/plans/2026-07-23-community-results-k-layout-migration.md)。
+
+## K=2 协作者必传文件
+
+完成统一主实验后上传到 `community-results/<TAG>/k2/`：
+
+- `retrieval_top50.jsonl.gz`、`router_decisions.json`
 - `gating_per_instance.jsonl.gz` 与 `loading_per_instance.jsonl.gz`
-- `metrics_flat.jsonl.gz`、`router_decisions.json`
-- `imagination_samples.jsonl.gz`（每域 10 题的定性样例）
-- `MANIFEST.md` 与模型目录内的 `README.md`
+- `selection_per_instance.jsonl.gz`（仅上下文支持 Select 的模型）
+- `answer_per_instance.jsonl.gz` 与 `answer_metrics.json`
+- `metrics_flat.jsonl.gz`、`significance.json`
+- `reuse_manifest.json`、`manifest.json` 与 `README.md`
+
+无法运行 Select 的模型必须在 manifest 中标记 unavailable 和原因，不得上传
+空文件或以零值代替。
 
 为支持生成采样数 K 消融，2026-07-22 起还必须按嵌套前缀补传：
 

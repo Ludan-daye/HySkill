@@ -1,0 +1,56 @@
+{
+  "baseline_comparisons": {
+    "reason": "Legacy baseline comparisons are not part of this upload until runtime identity is proven or controlled baseline reruns finish.",
+    "status": "excluded_pending_runtime_identity_gate"
+  },
+  "files": {
+    "answer_metrics_long.jsonl.gz": {
+      "rows": 210,
+      "schema": "k2-answer-metrics-long-v1",
+      "sha256": "63b68d62528e566704ce9ec9c7d8a031adc90a1db945e9adfdfd45cb4ecf2e8a"
+    },
+    "loading_metrics_long.jsonl.gz": {
+      "rows": 210,
+      "schema": "k2-loading-metrics-long-v1",
+      "sha256": "6215a4fc9fe257c62b607aff1e47c8486a18b8ac1a5b0c71afd393b1ccd67acb"
+    },
+    "paired_comparisons.json": {
+      "rows": 4,
+      "schema": "k2-answer-paired-comparisons-v1",
+      "sha256": "4547f8e49996e36c84df15457ec3e5560b42bd174b97b3ab476fc62d15333a4c"
+    },
+    "summary.json": {
+      "rows": 1,
+      "schema": "k2-fleet-summary-v1",
+      "sha256": "c2c4e110b140ee00e56220798ede743bbf094a045bc1377110a9128a494caf16"
+    }
+  },
+  "k_samples": 2,
+  "manifest_self_policy": {
+    "included_in_files": false,
+    "reason": "manifest.json is excluded because a file cannot contain its own stable SHA-256 digest."
+  },
+  "schema_version": "k2-fleet-public-pack-v1",
+  "support": {
+    "select_eligible_models": [
+      "glm4-9b",
+      "llama31-8b",
+      "mistral7b",
+      "qwen3.5-4b-reference",
+      "qwen35-9b"
+    ],
+    "seven_models": [
+      "deepseek7b",
+      "glm4-9b",
+      "llama31-8b",
+      "mistral7b",
+      "qwen3.5-4b-reference",
+      "qwen35-9b",
+      "yi15-9b"
+    ],
+    "unavailable_select_models": [
+      "deepseek7b",
+      "yi15-9b"
+    ]
+  }
+}
