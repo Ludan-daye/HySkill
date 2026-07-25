@@ -176,8 +176,61 @@ estimates and must not be reported as measured usage. Exact stage totals require
 offline reconstruction with each frozen tokenizer and chat template; until
 that is completed, the correct public value is `not_recorded`.
 
+## Gate recalibration under runtime-matched Bare
+
+Closing K2M001 required re-running Bare under the frozen K=2 runtime. `gate.py`
+calibrates `tau2` against "did **Bare** answer this correctly", so a fresh Bare
+changes the calibration labels, then `tau2`, then the load/skip decision. All 32
+gates were recalibrated (`valid=true`). `tau1` is unchanged everywhere — it
+depends only on retrieval labels.
+
+`tau2` moved on 9 jobs, flipping **609** decisions, which were re-inferred;
+22,031 rows kept their original answer because the payload did not change, and
+the 40 pre-existing method failures were preserved rather than resampled.
+Qwen3.5-4B medcalcbench alone contributes 463 of the 609, because its `tau2`
+went from `null` to a non-empty threshold.
+
+Held-out effects: the 8 affected units go 67.71% → 67.32% (−0.39pp, net −17
+items). Seven-model Gated loading precision 73.64→73.19, loading rate
+69.43→68.01, gold-load rate 51.61→50.17. **Always and Hy+Select are numerically
+unchanged** — they never pass through the gate, which serves as the correctness
+check on the rebuild.
+
+All four paired comparisons keep their significance verdict; every CI still
+contains zero. The Qwen4 routed-vs-fixed contrast flips sign (−0.13 → +0.18pp)
+at p=0.8548 — noise inside "no detected difference", **not** a direction
+reversal.
+
+Numbers above supersede the loading and Gated answer figures earlier in this
+document. Evidence: `community-results/k2-gate-recalibration-v2/`.
+
+## Native rerank degrades into BM25 order on smaller models
+
+The frozen protocol lets a listwise rerank that parses incompletely fall back to
+appending the omitted candidates in their original BM25 order. Measuring how
+often that happens shows the native Rerank baseline is not a working reranker on
+most models:
+
+| Model | omitted mean | fully ranked | ≥41 of 50 appended | used all 3 parse attempts |
+|---|---:|---:|---:|---:|
+| Llama-3.1-8B | 9.8 | 33.3% | 6.5% | 17.3% |
+| Mistral-7B | 24.7 | 7.7% | 30.6% | 55.1% |
+| Qwen3.5-4B | 32.6 | 5.1% | 62.7% | 69.4% |
+| GLM-4-9B | 37.4 | 2.7% | 72.3% | 80.5% |
+
+Every row is `failure_category=success`; nothing here violates the protocol, and
+Llama's 33% full-ranking rate shows the pipeline itself is correct. This is a
+capability difference, not a bug.
+
+The consequence for interpretation: on GLM and Qwen3.5-4B, roughly two thirds of
+the "Gated vs native Rerank" comparison is effectively **Gated vs BM25 order**.
+Report the contrast with that caveat rather than as a comparison against a
+functioning LLM reranker.
+
 ## Public evidence
 
+- `community-results/k2-gate-recalibration-v2/` (gate recalibration, supersedes
+  the Gated/loading figures in `k2-fleet/`)
 - `community-results/k2-fleet/loading_metrics_long.jsonl.gz`
 - `community-results/k2-fleet/answer_metrics_long.jsonl.gz`
 - `community-results/k2-fleet/summary.json`

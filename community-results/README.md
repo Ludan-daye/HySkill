@@ -18,10 +18,24 @@
 目录根部。它们不归入 `k2/` 或 `k4/`。Qwen reference 的
 `baselines-native/` 不依赖 imagination K，也保持为共享证据。
 
-截至 2026-07-23，只读审计确认旧 K=4 主实验文件仍在模型目录根部。迁移必须
-等 K=2 包验收完成后采用一次 `git mv`，不得复制整个 399 MB 目录。详细文件
+K=4 迁移已于 2026-07-25（提交 `d64a77f`）完成：70 个白名单文件用一次
+`git mv` 移入 `<TAG>/k4/`，前后 SHA-256 与字节数逐一核对通过，
+113 个受保护文件未被触碰，清单见
+[`k4-migration-manifest.json`](k4-migration-manifest.json)。详细
 映射、SHA 门禁和回滚规则见
 [GitHub K 目录迁移清单](../docs/superpowers/plans/2026-07-23-community-results-k-layout-migration.md)。
+
+## 门控重标定补充包
+
+[`k2-gate-recalibration-v2/`](k2-gate-recalibration-v2/) 是 `<TAG>/k2/` 的
+**补充，不是替代**。关闭 K2M001 需要用 runtime-matched 的 Bare 重跑，而
+`gate.py` 的 `tau2` 正标签恰好是「Bare 在这道题上是否答对」，因此新 Bare
+改变了 9 个 job 的 `tau2`，翻转 609 条加载决策并触发重新推理。
+
+`<TAG>/k2/` 保持 `aa5020c` 发布时的状态不变——那 609 条不是对旧数据的
+修正，而是新的实验事实，旧答案在旧 `tau2` 下依然是有效记录。**论文引用
+门控相关数字时应以补充包为准**，并注明标定所依据的 Bare 是 runtime-matched
+版本。四条主对比的显著性判定未发生变化（CI 依旧全部包含零）。
 
 ## K=2 协作者必传文件
 
