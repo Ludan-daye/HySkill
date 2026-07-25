@@ -2,10 +2,85 @@
 
 ## Current Research Handoff
 
-Before changing experiments, figures, or either manuscript, read the
-2026-07-24 live operational handoff later in this file, then read
-[paper/STATE.md](paper/STATE.md). The latter remains the manuscript baseline but
-is stale for the completed K=2 execution and packaging progress.
+Read the **2026-07-25 update immediately below** first, then the 2026-07-24 live
+operational handoff later in this file for the frozen protocol decisions it
+still owns, then [paper/STATE.md](paper/STATE.md). `paper/STATE.md` remains the
+manuscript baseline but is stale for all K=2 execution and packaging progress.
+
+## 2026-07-25 Update
+
+### Server inventory is completely different
+
+Every port in the 2026-07-24 table below is dead, and the hardware changed. The
+verified inventory as of 2026-07-25 is five endpoints, all of which were found
+idle after a reboot:
+
+| Endpoint | GPU | Holds |
+|---|---|---|
+| `223.109.239.32:10536` | RTX 4090 49G | glm4-9b + llama31-8b baseline results |
+| `223.109.239.32:10528` | RTX 4090 49G | deepseek7b + yi15-9b Bare, shared-bm25 |
+| `180.127.11.167:11024` | RTX 4090 24G | qwen35-9b results; **qwen9 weights**; vLLM 0.17.1 |
+| `180.127.11.169:20436` | A100 40G | mistral7b results; **glm/llama/mistral weights (61G)**; vLLM 0.19.1 |
+| `8.138.30.52:6007` | A100 80G (shared, busy) | qwen3.5-4b-reference results |
+
+Two `223.109.239.32` hosts are new machines not in the old table. The old S3
+entry was "2× A100 40G"; that endpoint is now a single 24G 4090.
+
+### What finished
+
+- **K=4 migration** (`d64a77f`): 70 whitelisted files moved into `<TAG>/k4/`,
+  every pre/post SHA-256 and byte count verified, 113 protected files untouched.
+- **All 609 gate re-answers** were already complete on three servers and have
+  been recovered (1,063 files / 409 MB pulled from all five endpoints).
+- **Gate recalibration is packaged and pushed**:
+  `community-results/k2-gate-recalibration-v2/` (`0ec7537`). It is a
+  **supplement, not a replacement** — `<TAG>/k2/` stays as published at
+  `aa5020c`. Folding the 609 rows into `k2/` would require editing the
+  deliberately frozen provenance counts in `hyskill/k2_answer_provenance.py`
+  and widening the exporter's `provenance_level` whitelist. Paper must cite the
+  supplement for gate-related numbers.
+- **mistral7b's 12 evals** (answers existed but were never scored).
+
+### Baseline rerun status
+
+Only three model-arm cells were ever missing; the rest were complete but
+unretrieved. Remaining work is 8,490 answers:
+
+| Cell | State |
+|---|---|
+| glm4-9b Rerank | running on `.169` |
+| glm4-9b Select | auto-chained after Rerank via `/root/glm-autochain.sh` |
+| qwen35-9b Rerank | running on `.167` |
+
+Bare is 7/7 complete. Rerank has llama/mistral/qwen4; Select has those three
+plus qwen9.
+
+### Environment traps that cost real time
+
+- `.167`'s `.venv/bin/python` resolves to anaconda3 3.11 with **no numpy**.
+  Use `/root/qwen9-client-env` (built from vllm-env, plus scipy/openai/
+  tree_sitter/tree_sitter_python/bm25). `--system-site-packages` inherits
+  anaconda's packages, **not** vllm-env's.
+- `run_decision`'s stderr goes to `$domain-*.decision.$label.log`, **not** the
+  lane log. A lane log that stops after two lines with no error means you are
+  reading the wrong file.
+- Launching a lane over SSH needs the session held open; `setsid` + immediate
+  disconnect gets the children SIGHUP'd.
+- `clone_runtime_facts.py` inherits hardware from the Bare manifest. glm's Bare
+  ran on an A100 80G but the rerun uses a 40G; `fix_facts_hardware.py` rewrites
+  it to the real card. GPU model is not part of the identity gate, but leaving
+  it wrong records a machine that never produced the rows.
+- Local macOS: the checked-in `.venv` is unusable (shebangs point at an old
+  `/root` path). Use `PYTHONPATH=.:external/SR-Agents/src python3`, and install
+  `tree_sitter_python` for the SR-Agents evaluator.
+
+### New scientific finding — native rerank degrades into BM25 order
+
+GLM appends ≥41 of 50 candidates in BM25 order on 72.3% of instances and fully
+ranks only 2.7%; Llama is 6.5% / 33.3%. Every row is `failure_category=success`,
+so nothing violates the protocol — it is a capability difference. But it means
+roughly two thirds of "Gated vs native Rerank" on GLM and Qwen3.5-4B is
+effectively **Gated vs BM25 order**. See `docs/10-k2-results.md`.
 
 ## Project Structure & Module Organization
 
