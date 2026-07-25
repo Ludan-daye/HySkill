@@ -2,7 +2,7 @@
 """Package a community multi-model run into a small summary JSON.
 
 Reads results/multimodel/<tag>/ (big, local-only) and writes
-community-results/<tag>/summary.json (small, meant to be PRed back).
+community-results/<tag>/k4/summary.json (small, meant to be PRed back).
 
 Usage: python scripts/summarize_multimodel.py <tag> [<model-name>]
 """
@@ -128,7 +128,7 @@ def main() -> None:
     if cost:
         out["cost"] = cost
 
-    dst = Path("community-results") / tag
+    dst = Path("community-results") / tag / "k4"
     dst.mkdir(parents=True, exist_ok=True)
     (dst / "summary.json").write_text(json.dumps(out, indent=1))
     print(f"wrote {dst / 'summary.json'}")

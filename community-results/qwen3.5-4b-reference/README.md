@@ -1,26 +1,20 @@
-# qwen3.5-4b 主实验参考包
+# qwen3.5-4b-reference result index
 
-**模型**：Qwen/Qwen3.5-4B（全部 Phase 0/1/2/2c 主实验的生成器与执行器）｜ 数据覆盖：Phase 1 全量 9 方法检索网格 + Phase 2 五臂 + Phase 2c 路由臂（含 select、oracle）。这是跨模型对比的**基准列**，也是数据最全的一份（唯一有 7 臂做题与双门信号的包）。
+- [K=2 unified main result](k2/)
+- [K=4 legacy main-result archive](k4/)
+- [Joint K ablation](k-ablation/)
+- [K-independent native baselines](baselines-native/)
 
-## 文件清单（全部已入库）
+## Imagination prefix caches
 
-| 文件 | 规模 | 内容 |
-|---|---|---|
-| `retrieval_top10.jsonl.gz` | 38,560 行 | （实例 × 方法）：bm25/dense/hybrid/llm_rerank/三粒度想象/四路/两阶段 **9 方法** + routed，金标 + top-10 + 逐题 nDCG@10 |
-| `gating_per_instance.jsonl.gz` | 2,830 行 | **双门信号**（固定门与路由门各一套 S1/S2/τ/拦截/标定集标记）+ **7 臂逐题对错**（bare/always/gated/select/oracle/always_r/gated_r） |
-| `imagination_samples.jsonl.gz` | 50 行 | 与舰队包同一批 50 题（seed 0）：3 模板 × K=4 想象全文 + 各方法 top-3（名称/简介/分数/命中） |
-| `router_decisions.json` | 4 域 | 路由决策与验证集全变体比分 |
-| `metrics_flat.jsonl.gz` | 448 行 | 全部（域 × 方法 × 指标）数字拍平：Recall@1/5/10/50、nDCG@k、各臂 accuracy/n |
-| `significance.json` | — | Phase 2 全套配对 bootstrap（分域 + 合并 + 剔标定集净测试版） |
-| `MANIFEST.md` | — | 自动清单 + pandas 读取示例 |
+| K | Cache | Manifest |
+|---:|---|---|
+| 1 | [JSONL](imagination_full_k1.jsonl.gz) | [Manifest](imagination_full_k1.manifest.json) |
+| 2 | [JSONL](imagination_full_k2.jsonl.gz) | [Manifest](imagination_full_k2.manifest.json) |
+| 4 | [JSONL](imagination_full_k4.jsonl.gz) | [Manifest](imagination_full_k4.manifest.json) |
+| 8 | [JSONL](imagination_full_k8.jsonl.gz) | [Manifest](imagination_full_k8.manifest.json) |
+| 10 | [JSONL](imagination_full_k10.jsonl.gz) | [Manifest](imagination_full_k10.manifest.json) |
 
-## 与舰队包的对齐
-
-- imagination_samples 的 50 题与所有舰队模型完全相同（seed 0），可逐题横向比"不同模型想象了什么、检回了什么"；
-- 列名与舰队包一致，`pd.concat` 前加一列 `model` 即可合并分析。
-
-原始超大件（top-50 全榜、做题 jsonl、6.3 万份想象缓存、Phase 0 试点存档）在实验室服务器 `results/phase1|phase2|hyp_cache`。
-
-## baselines-native/（2026-07-15 补跑的纯原装基线臂）
-
-按"基线不混搭"规则重跑的两个原装臂逐域评测（8 个 eval.json）：`always_rerank`（bm25→重排→top-1 直装，合并 69.5）与 `select_bm25`（bm25 候选+官方自选，合并 **59.2——低于裸考 63.5，净伤害**）。源候选取自 phase1 的 bm25/llm_rerank 榜单（只读），推理输出在服务器 `results/multimodel/qwen35-4b-baselines/`。
+The archived [K=4 README](k4/README.md) is byte-preserved from the
+pre-migration package. Its historical relative links may not resolve from the
+archived location.

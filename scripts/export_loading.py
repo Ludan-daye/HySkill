@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """Export per-instance LOADING data (which skill each arm actually put in
-context) into community-results/<TAG>/loading_per_instance.jsonl.gz.
+context) into community-results/<TAG>/k4/loading_per_instance.jsonl.gz.
 
 Row: {instance_id, domain, arm, loaded: [skill_ids], gold: [...],
       hit: 1 if any loaded skill is gold else 0 (null when nothing loaded)}
@@ -39,7 +39,7 @@ def parse_used(v):
 def main():
     tag = sys.argv[1]
     phase2 = "--phase2" in sys.argv
-    out_dir = Path(f"community-results/{tag}")
+    out_dir = Path(f"community-results/{tag}/k4")
     out_dir.mkdir(parents=True, exist_ok=True)
     n = 0
     with gzip.open(out_dir / "loading_per_instance.jsonl.gz", "wt", encoding="utf-8") as f:

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """Export FULL top-50 retrieval lists (instance x method) into
-community-results/<TAG>/retrieval_top50.jsonl.gz.
+community-results/<TAG>/k4/retrieval_top50.jsonl.gz.
 
 Complements retrieval_top10.jsonl.gz (which carries names + per-row nDCG):
 this file carries the complete 50-deep ranking as (skill_id, score, is_gold)
@@ -27,7 +27,7 @@ P1_METHODS = ["bm25", "dense", "hybrid", "llm_rerank", "naive_sentence",
 def main():
     tag = sys.argv[1]
     phase1 = "--phase1" in sys.argv
-    out_dir = Path(f"community-results/{tag}")
+    out_dir = Path(f"community-results/{tag}/k4")
     out_dir.mkdir(parents=True, exist_ok=True)
     n_rows = 0
     with gzip.open(out_dir / "retrieval_top50.jsonl.gz", "wt", encoding="utf-8") as f:

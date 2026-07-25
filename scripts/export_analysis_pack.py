@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Export a per-model ANALYSIS PACK into community-results/<tag>/.
+"""Export a per-model K=4 ANALYSIS PACK into community-results/<tag>/k4/.
 
 Produces small, GitHub-committable, analysis-ready files (gzip JSONL):
 
@@ -54,7 +54,7 @@ def main() -> None:
     tag = sys.argv[1]
     model = sys.argv[2] if len(sys.argv) > 2 else tag
     res = Path(f"results/multimodel/{tag}")
-    out = Path(f"community-results/{tag}")
+    out = Path(f"community-results/{tag}/k4")
     out.mkdir(parents=True, exist_ok=True)
 
     from sragents.cli.retrieve import _build_query

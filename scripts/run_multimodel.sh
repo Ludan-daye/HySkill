@@ -15,7 +15,7 @@
 #     [WORKERS=32] [INFER_WORKERS=24] [RERANK_WORKERS=8] \
 #     ./scripts/run_multimodel.sh
 #
-# TAG    short id -> results/multimodel/<TAG>/, community-results/<TAG>/
+# TAG    short id -> results/multimodel/<TAG>/, community-results/<TAG>/k4/
 # MODEL  the --served-model-name of your endpoint. KEEP MODEL == TAG and
 #        never change it mid-run (it is baked into cache keys).
 # INFER_WORKERS is PER Track-B stream (4 streams run at once -> ~4x in flight).
@@ -198,6 +198,6 @@ if [[ "$TRACKB" == "1" ]]; then
   echo TRACKB-DONE
 fi
 
-echo "=== [5/5] summary -> community-results/$TAG/summary.json ==="
+echo "=== [5/5] summary -> community-results/$TAG/k4/summary.json ==="
 .venv/bin/python scripts/summarize_multimodel.py "$TAG" "$MODEL"
 echo ALL-DONE

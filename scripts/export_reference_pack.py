@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """Export the qwen3.5-4b MAIN-EXPERIMENT reference pack (Phase 1 + 2 + 2c)
-into community-results/qwen3.5-4b-reference/ — same shapes as the fleet
+into community-results/qwen3.5-4b-reference/k4/ — same shapes as the fleet
 analysis packs, but covering the full 9-method grid and all 7 answering arms.
 
 Files:
@@ -32,7 +32,7 @@ METHODS = ["bm25", "dense", "hybrid", "llm_rerank", "naive_sentence",
 ARMS = ["bare", "always", "gated", "select", "oracle", "always_r", "gated_r"]
 SRA = "external/SR-Agents"
 MODEL = "qwen3.5-4b"
-OUT = Path("community-results/qwen3.5-4b-reference")
+OUT = Path("community-results/qwen3.5-4b-reference/k4")
 SAMPLES_PER_DOMAIN = 10
 
 
