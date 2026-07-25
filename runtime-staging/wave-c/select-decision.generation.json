@@ -1,0 +1,12 @@
+{
+  "temperature": 0.0,
+  "max_tokens": 64,
+  "thinking": false,
+  "extra_body": {
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "max_parse_attempts": 3,
+  "rank1_fallback": true
+}

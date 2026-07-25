@@ -1,0 +1,55 @@
+{
+  "schema_version": "runtime-matched-runtime-facts-v1",
+  "job": {
+    "job_id": "llama31-8b-theoremqa-bare-20260724-v1",
+    "result_tag": "llama31-8b",
+    "model": "llama31-8b",
+    "domain": "theoremqa",
+    "arm": "bare"
+  },
+  "checkpoint": {
+    "repository": "LLM-Research/Meta-Llama-3.1-8B-Instruct",
+    "revision": "snapshots/master",
+    "path": "/root/.cache/modelscope/models/LLM-Research--Meta-Llama-3.1-8B-Instruct/snapshots/master",
+    "provenance": "ModelScope China-hosted cache with independently verified frozen identity",
+    "files_manifest_sha256": "a8e51a9052d5cfe3faea783aa90837c6ba39d04f438eb6eca344a0f4b1e44630"
+  },
+  "tokenizer": {
+    "artifacts": {
+      "tokenizer.json": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+      "tokenizer_config.json": "177c7b61e616fecb84c17ce0591acb92c6c4d60e9ac5ababfb940ff23bbcd424"
+    },
+    "chat_template_sha256": "177c7b61e616fecb84c17ce0591acb92c6c4d60e9ac5ababfb940ff23bbcd424"
+  },
+  "endpoint": {
+    "api_base": "http://127.0.0.1:8000/v1",
+    "served_model": "llama31-8b",
+    "process_command": "/root/vllmenv/bin/python3 /root/vllmenv/bin/vllm serve /root/.cache/modelscope/models/LLM-Research--Meta-Llama-3.1-8B-Instruct/snapshots/master --port 8000 --max-model-len 8192 --dtype bfloat16 --enforce-eager --served-model-name llama31-8b",
+    "vllm_version": "0.19.1",
+    "dtype": "bfloat16",
+    "quantization": "none",
+    "max_model_len": 8192,
+    "tensor_parallel_size": 1,
+    "models_readback": {
+      "data": [
+        {
+          "id": "llama31-8b"
+        }
+      ]
+    }
+  },
+  "software": {
+    "python_version": "3.10.12",
+    "pytorch_version": "2.10.0+cu128",
+    "transformers_version": "5.13.1",
+    "cuda_version": "12.8",
+    "driver_version": "550.127.05"
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA A100-SXM4-80GB",
+    "gpu_uuid": "GPU-b4ba5d9a-9d97-7d35-bcca-87bbad3b3e9a"
+  },
+  "source": {
+    "sr_agents_revision": "277fd8d2bbd7d3b81a5cf4ffa6e87e18c7906e4f"
+  }
+}

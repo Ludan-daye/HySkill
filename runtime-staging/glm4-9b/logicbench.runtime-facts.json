@@ -1,0 +1,55 @@
+{
+  "schema_version": "runtime-matched-runtime-facts-v1",
+  "job": {
+    "job_id": "glm4-9b-logicbench-bare-20260724-v1",
+    "result_tag": "glm4-9b",
+    "model": "glm4-9b",
+    "domain": "logicbench",
+    "arm": "bare"
+  },
+  "checkpoint": {
+    "repository": "ZhipuAI/glm-4-9b-chat",
+    "revision": "snapshots/master",
+    "path": "/root/.cache/modelscope/models/ZhipuAI--glm-4-9b-chat/snapshots/master",
+    "provenance": "ModelScope China-hosted cache with independently verified frozen identity",
+    "files_manifest_sha256": "cd37e55587031d4dbc51bf768f83268669e196434f209b1bd0e6245991e038be"
+  },
+  "tokenizer": {
+    "artifacts": {
+      "tokenizer.model": "5a493598071550244b2ee7f26118f3edec2150b9dfa967929a99052ac83fe716",
+      "tokenizer_config.json": "f891e4d4ebb4009b6996dea97befb77a60c0cef0e88ac1edd6c741b1367f9c62"
+    },
+    "chat_template_sha256": "f891e4d4ebb4009b6996dea97befb77a60c0cef0e88ac1edd6c741b1367f9c62"
+  },
+  "endpoint": {
+    "api_base": "http://127.0.0.1:8000/v1",
+    "served_model": "glm4-9b",
+    "process_command": "/root/vllmenv/bin/python3 /root/vllmenv/bin/vllm serve /root/.cache/modelscope/models/ZhipuAI--glm-4-9b-chat/snapshots/master --port 8000 --max-model-len 8192 --dtype bfloat16 --enforce-eager --trust-remote-code --served-model-name glm4-9b",
+    "vllm_version": "0.19.1",
+    "dtype": "bfloat16",
+    "quantization": "none",
+    "max_model_len": 8192,
+    "tensor_parallel_size": 1,
+    "models_readback": {
+      "data": [
+        {
+          "id": "glm4-9b"
+        }
+      ]
+    }
+  },
+  "software": {
+    "python_version": "3.10.12",
+    "pytorch_version": "2.10.0+cu128",
+    "transformers_version": "5.13.1",
+    "cuda_version": "12.8",
+    "driver_version": "550.127.05"
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA A100-SXM4-80GB",
+    "gpu_uuid": "GPU-b4ba5d9a-9d97-7d35-bcca-87bbad3b3e9a"
+  },
+  "source": {
+    "sr_agents_revision": "277fd8d2bbd7d3b81a5cf4ffa6e87e18c7906e4f"
+  }
+}

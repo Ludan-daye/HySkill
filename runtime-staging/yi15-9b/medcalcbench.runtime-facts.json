@@ -1,0 +1,59 @@
+{
+  "schema_version": "runtime-matched-runtime-facts-v1",
+  "job": {
+    "job_id": "yi15-9b-medcalcbench-bare-20260724-v1",
+    "result_tag": "yi15-9b",
+    "model": "yi15-9b",
+    "domain": "medcalcbench",
+    "arm": "bare"
+  },
+  "checkpoint": {
+    "repository": "01ai/Yi-1.5-9B-Chat",
+    "revision": "snapshots/master",
+    "path": "/root/.cache/modelscope/models/01ai--Yi-1.5-9B-Chat/snapshots/master",
+    "provenance": "ModelScope China-hosted cache with independently verified frozen identity",
+    "files_manifest_sha256": "45eb2167b36e6209f26a897a440cf27bf002f4b1368556d9105fbe76341addca"
+  },
+  "tokenizer": {
+    "artifacts": {
+      "tokenizer.json": "a13ccc285aea27f5e9a98d40e04e330b01d89db6de7af10b013f56eec8eae8a2",
+      "tokenizer.model": "386c49cf943d71aa110361135338c50e38beeff0a66593480421f37b319e1a39",
+      "tokenizer_config.json": "a877a66153e25d07e7ac73fa33f4d4003cb8bdd93bab1a32fc0b4578554ccba4"
+    },
+    "chat_template_sha256": "a877a66153e25d07e7ac73fa33f4d4003cb8bdd93bab1a32fc0b4578554ccba4"
+  },
+  "endpoint": {
+    "api_base": "http://127.0.0.1:8000/v1",
+      "served_model": "yi15-9b",
+      "process_command": "/root/vllmenv/bin/python3 /root/vllmenv/bin/vllm serve /root/.cache/modelscope/models/01ai--Yi-1.5-9B-Chat/snapshots/master --port 8000 --max-model-len 8192 --dtype bfloat16 --enforce-eager --served-model-name yi15-9b",
+      "vllm_version": "0.19.1",
+    "dtype": "bfloat16",
+    "quantization": "none",
+    "max_model_len": 8192,
+    "tensor_parallel_size": 1,
+    "environment": {
+      "VLLM_ALLOW_LONG_MAX_MODEL_LEN": "1"
+    },
+    "models_readback": {
+      "data": [
+        {
+          "id": "yi15-9b"
+        }
+      ]
+    }
+  },
+  "software": {
+    "python_version": "3.10.12",
+    "pytorch_version": "2.10.0+cu128",
+    "transformers_version": "5.13.1",
+    "cuda_version": "12.8",
+    "driver_version": "550.127.05"
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA A100-SXM4-80GB",
+    "gpu_uuid": "GPU-0c5f7877-6c7e-1a73-366e-a4355eab98f1"
+  },
+  "source": {
+    "sr_agents_revision": "277fd8d2bbd7d3b81a5cf4ffa6e87e18c7906e4f"
+  }
+}

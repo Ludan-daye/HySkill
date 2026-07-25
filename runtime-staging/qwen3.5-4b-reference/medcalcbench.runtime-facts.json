@@ -1,0 +1,61 @@
+{
+  "schema_version": "runtime-matched-runtime-facts-v1",
+  "job": {
+    "job_id": "qwen3.5-4b-reference-medcalcbench-bare-20260724-v1",
+    "result_tag": "qwen3.5-4b-reference",
+    "model": "qwen3.5-4b",
+    "domain": "medcalcbench",
+    "arm": "bare"
+  },
+  "checkpoint": {
+    "repository": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "path": "/mnt/d5f4cfb6-8afe-40a4-8650-2965046cd208/hf_cache/hub/models--Qwen--Qwen3.5-4B/snapshots/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "provenance": "Verified local Hugging Face snapshot; no download performed for this run",
+    "files_manifest_sha256": "7447e4e49652e2eb494c53d808d9b4e005838b1430aecb6df8181b2105d177dc"
+  },
+  "tokenizer": {
+    "artifacts": {
+      "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+    },
+    "chat_template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+  },
+  "endpoint": {
+    "api_base": "http://127.0.0.1:8311/v1",
+    "served_model": "qwen3.5-4b",
+    "process_command": "/home/vicuna/anaconda3/envs/api/bin/python /home/vicuna/anaconda3/envs/api/bin/vllm serve /mnt/d5f4cfb6-8afe-40a4-8650-2965046cd208/hf_cache/hub/models--Qwen--Qwen3.5-4B/snapshots/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a --port 8311 --max-model-len 8192 --served-model-name qwen3.5-4b --gpu-memory-utilization 0.4",
+    "vllm_version": "0.17.1",
+    "dtype": "bfloat16",
+    "quantization": "none",
+    "max_model_len": 8192,
+    "tensor_parallel_size": 1,
+    "models_readback": {
+      "data": [
+        {
+          "id": "qwen3.5-4b",
+          "object": "model",
+          "root": "/mnt/d5f4cfb6-8afe-40a4-8650-2965046cd208/hf_cache/hub/models--Qwen--Qwen3.5-4B/snapshots/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+          "max_model_len": 8192
+        }
+      ]
+    }
+  },
+  "software": {
+    "python_version": "3.11.11",
+    "pytorch_version": "2.10.0+cu128",
+    "transformers_version": "4.57.6",
+    "cuda_version": "12.8",
+    "driver_version": "535.86.05",
+    "client_python_version": "3.11.13",
+    "client_openai_version": "1.109.1"
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA A100 80GB PCIe",
+    "gpu_uuid": "GPU-62ed8235-20e0-9106-d0e8-5805762893f6",
+    "node_hostname": "user-SYS-7049GP-TRT"
+  },
+  "source": {
+    "sr_agents_revision": "277fd8d2bbd7d3b81a5cf4ffa6e87e18c7906e4f",
+    "base_repository_commit": "aa5020cd8b42f91d3265ce7261376420d3cf0e1d"
+  }
+}
