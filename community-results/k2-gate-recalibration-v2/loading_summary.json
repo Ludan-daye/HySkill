@@ -1,0 +1,461 @@
+{
+ "schema_version": "k2-loading-summary-v1",
+ "valid": true,
+ "input_files": [
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/deepseek7b/champ-routed-always-gated.loading.jsonl",
+   "sha256": "c242d5437e6f6d6f4865e23d37c7b766c8a74c3f523308a850bbe23a49273865"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/deepseek7b/logicbench-routed-always-gated.loading.jsonl",
+   "sha256": "ad8e66a651d6403a32990c1bb842a54e7d77ec2bd68790323b66fb1e3e563dd8"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/deepseek7b/medcalcbench-routed-always-gated.loading.jsonl",
+   "sha256": "294edb978e0ef4333ef0714f0b4c104795743508cfaf1b8bd74ac78206288f43"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/deepseek7b/theoremqa-routed-always-gated.loading.jsonl",
+   "sha256": "adb2b26b9053e0522cd3d4266ba703766349171f7e971cfb19e31b67798f41a3"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/champ-routed-always-gated.loading.jsonl",
+   "sha256": "3d952a1df60da5985aaac2e38486d151c439460df0f7a2c09d7fe22cece9ada4"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/champ-routed-select.loading.jsonl",
+   "sha256": "4dfb8211beba1e46c47a09c4c6f79b9dffe05b24a1778ac50514c197330f29c3"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/logicbench-routed-always-gated.loading.jsonl",
+   "sha256": "3f256bcdde60556ab7760fb6ae06d843f396e9d3f1fad1cad6db3c97e1260d91"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/logicbench-routed-select.loading.jsonl",
+   "sha256": "618f66270aad63a2ebf92fd61e61c5170dccf419a1d1d6404689512bd4285a16"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/medcalcbench-routed-always-gated.loading.jsonl",
+   "sha256": "a5f9bbb9d78d88e53f317d08e079ef55cee056f0e7a2f4fa43003d7c0be37e45"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/medcalcbench-routed-select.loading.jsonl",
+   "sha256": "e35c8c816352dc4ad75c239818bc7c90c52d0e988cdaca44f7abf3c31bcfe273"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/theoremqa-routed-always-gated.loading.jsonl",
+   "sha256": "13c6f4f9e0d14b00418fcfa8f3c67f9815240318ee22076b229aff48842d407c"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/theoremqa-routed-select.loading.jsonl",
+   "sha256": "a41f4ca6e8fd6ed72f649c9bf4004f640513224b3efedeab8acd5c87e2d54b80"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/champ-routed-always-gated.loading.jsonl",
+   "sha256": "6ff63cf080104b624a60e8af538efcfa343c726cd6bb4df2661bb63e9646b3c5"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/champ-routed-select.loading.jsonl",
+   "sha256": "6d2fb4d658eb2d258cac7a2af3c4909b4abd4cb21c3688d20bc6764fe0289a1b"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/logicbench-routed-always-gated.loading.jsonl",
+   "sha256": "10375a0761aa501f53400918cd5bae327bdb11882383216f76ac55a8c0a85a47"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/logicbench-routed-select.loading.jsonl",
+   "sha256": "f365966e9f854477e426be35d5aba761c1148b555ef78b5fd932258e62d3519c"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/medcalcbench-routed-always-gated.loading.jsonl",
+   "sha256": "77354df25ee6a14a5bf8e8535d2a4e7f34a2a245e0fa18e6556e65de8e969ee5"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/medcalcbench-routed-select.loading.jsonl",
+   "sha256": "dc2bd04273bef35aaadd7f4327292496af8274caebb1549d1347246469374b33"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/theoremqa-routed-always-gated.loading.jsonl",
+   "sha256": "32dee79d5ae93c30d6731649b5b2c44f16cec16de72348f62438325ba744e2c2"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/theoremqa-routed-select.loading.jsonl",
+   "sha256": "7c2414016f3c930ad3f1f71be6c4228aa1edabb201e620713732a91621862bcf"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/champ-routed-always-gated.loading.jsonl",
+   "sha256": "31bdad73cc20838bb7deefa559ce690c54e270e2b2ebfdcc5cd2ddea627c4a08"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/champ-routed-select.loading.jsonl",
+   "sha256": "2dfcf766352b40df323e9d3809caca5e03ad9f5588e0130ab68bab881b89c157"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/logicbench-routed-always-gated.loading.jsonl",
+   "sha256": "9d96135fb1f33d0656148902e8bad6f7b55f01e085d65043fe6f6d008cf2cee8"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/logicbench-routed-select.loading.jsonl",
+   "sha256": "3b072c901482c8f09c89330b898f185174fff601e220e1587d3047f3f9a6d27b"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/medcalcbench-routed-always-gated.loading.jsonl",
+   "sha256": "fcb7edbdc5c8fb485cb1951094e3313d475eb95163069c9224cf6b63ba886136"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/medcalcbench-routed-select.loading.jsonl",
+   "sha256": "241a24c8cc39ab86720135d78faa24c6540f08834b9b31d878763db93c10373f"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/theoremqa-routed-always-gated.loading.jsonl",
+   "sha256": "bfa96196df8c965787626075d0b7da0273643ca73e2f33f52a729bf00f97eeed"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/theoremqa-routed-select.loading.jsonl",
+   "sha256": "25ee3a8e071b94cdb06fdd0ebceb0b8deb6535b9c6d3a24a4b42c2ac91d19ccf"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/champ-routed-always-gated.loading.jsonl",
+   "sha256": "82e3d57844b245245df73b3d8db7d3e81cafd20966f2ae37f0c4b0938b2d47c3"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/champ-routed-select.loading.jsonl",
+   "sha256": "043220d79ac54778adfb00e1b66658bf21d6349463d575131be88f8a1405d2b5"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/logicbench-routed-always-gated.loading.jsonl",
+   "sha256": "da6e7462393154c852a97cce3f7d3942adb6fa01d3b0f25e8ffd4f91e1add3ba"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/logicbench-routed-select.loading.jsonl",
+   "sha256": "f3a5624c7dd93672ae8151ca5660f2d94a46fbdfff3ba68049ae3f6a9361f28d"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/medcalcbench-routed-always-gated.loading.jsonl",
+   "sha256": "f91975f189a1c2ddceceff566edca7eb6b0270686920d7838f96a7ab47df5365"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/medcalcbench-routed-select.loading.jsonl",
+   "sha256": "f4baac26f698b5746f29d571dc57a4f98beecce1b7fe69487157f8d4eb4d527d"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/theoremqa-routed-always-gated.loading.jsonl",
+   "sha256": "504cef2dfbeffd7e2bf906c095e9e2ae2942f8a16a21a823cc77282c04e83ec5"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/theoremqa-routed-select.loading.jsonl",
+   "sha256": "8d1379d1d38b26ba8e7d9ce131f2913d5f0d004d3373b4f9f7ee53cb6550efa1"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/champ-routed-always-gated.loading.jsonl",
+   "sha256": "3ab36037194e6be06298aa6bf46d2116ed7c3da6f5a8c681c65fc207e6962528"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/champ-routed-select.loading.jsonl",
+   "sha256": "3d278fe8e7827345983bc6e671ccac8ec1dbc52dbf9fdb94c22904ea47eb22e7"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/logicbench-routed-always-gated.loading.jsonl",
+   "sha256": "3cca5f3a7f05b691f20897f63d2d1ee0d935b5d46b71056cae8d0aa554ccae9b"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/logicbench-routed-select.loading.jsonl",
+   "sha256": "1ee785feae44efdf9d066d710bdfd0342d47f3c752435850af73ced2daf366be"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/medcalcbench-routed-always-gated.loading.jsonl",
+   "sha256": "30d8b700c70547f202ec8652ff74ed559fa91bcf1abdb72b9f7a28892319c8f9"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/medcalcbench-routed-select.loading.jsonl",
+   "sha256": "832352cf86a3061eab97194495f45f5404266d27426ceeec539ace76c38de149"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/theoremqa-routed-always-gated.loading.jsonl",
+   "sha256": "c8f9e5bd2f45ef95defeb03ae7f0adea87cfc5c9c1ae7a8b5f5044fa7773fe50"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/theoremqa-routed-select.loading.jsonl",
+   "sha256": "90ec2f69cfdfc9c48e22b7a96ce1e9cec867c837abd0ab71a93381a1f1aaa613"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/yi15-9b/champ-routed-always-gated.loading.jsonl",
+   "sha256": "c198d71747589965857a729d31c673b9c01dda7d104c37f3658ff314c9425cf1"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/yi15-9b/logicbench-routed-always-gated.loading.jsonl",
+   "sha256": "9904a74bd84235babda0a224c17bd2c3bfaf5951eb77e692f517531a89eedbcd"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/yi15-9b/medcalcbench-routed-always-gated.loading.jsonl",
+   "sha256": "873e2fddf6fce1b1987d83c5d873a93379f783f03c508683184a84e290ae4954"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/yi15-9b/theoremqa-routed-always-gated.loading.jsonl",
+   "sha256": "5fb383fe72ed6cdc6cff92c93fb4800ca83e989bf52da30cb67f78ce00829caf"
+  }
+ ],
+ "input_records": 53770,
+ "seven_model_support": [
+  "deepseek7b",
+  "glm4-9b",
+  "llama31-8b",
+  "mistral7b",
+  "qwen3.5-4b-reference",
+  "qwen35-9b",
+  "yi15-9b"
+ ],
+ "five_model_support": [
+  "glm4-9b",
+  "llama31-8b",
+  "mistral7b",
+  "qwen3.5-4b-reference",
+  "qwen35-9b"
+ ],
+ "expected_total_per_model": 2830,
+ "expected_heldout_per_model": 2265,
+ "fleet_model_macro": [
+  {
+   "schema_version": "k2-loading-metrics-v1",
+   "level": "fleet_model_macro",
+   "split": "full",
+   "model": null,
+   "domain": null,
+   "arm": "routed_always",
+   "support": "seven_model",
+   "models": 7,
+   "instances": 19810,
+   "loaded": 19810,
+   "gold_loaded": 10788,
+   "method_failures": 0,
+   "loaded_skill_precision": 0.5445734477536598,
+   "loading_rate": 1.0,
+   "gold_load_rate": 0.5445734477536598,
+   "selection_failure_rate": 0.0,
+   "metric_model_denominators": {
+    "loaded_skill_precision": 7,
+    "loading_rate": 7,
+    "gold_load_rate": 7,
+    "selection_failure_rate": 7
+   }
+  },
+  {
+   "schema_version": "k2-loading-metrics-v1",
+   "level": "fleet_model_macro",
+   "split": "full",
+   "model": null,
+   "domain": null,
+   "arm": "routed_gated",
+   "support": "seven_model",
+   "models": 7,
+   "instances": 19810,
+   "loaded": 13518,
+   "gold_loaded": 10024,
+   "method_failures": 0,
+   "loaded_skill_precision": 0.7358413069543187,
+   "loading_rate": 0.6823826350328117,
+   "gold_load_rate": 0.5060070671378092,
+   "selection_failure_rate": 0.0,
+   "metric_model_denominators": {
+    "loaded_skill_precision": 7,
+    "loading_rate": 7,
+    "gold_load_rate": 7,
+    "selection_failure_rate": 7
+   }
+  },
+  {
+   "schema_version": "k2-loading-metrics-v1",
+   "level": "fleet_model_macro",
+   "split": "full",
+   "model": null,
+   "domain": null,
+   "arm": "routed_always",
+   "support": "five_model",
+   "models": 5,
+   "instances": 14150,
+   "loaded": 14150,
+   "gold_loaded": 8304,
+   "method_failures": 0,
+   "loaded_skill_precision": 0.5868551236749117,
+   "loading_rate": 1.0,
+   "gold_load_rate": 0.5868551236749117,
+   "selection_failure_rate": 0.0,
+   "metric_model_denominators": {
+    "loaded_skill_precision": 5,
+    "loading_rate": 5,
+    "gold_load_rate": 5,
+    "selection_failure_rate": 5
+   }
+  },
+  {
+   "schema_version": "k2-loading-metrics-v1",
+   "level": "fleet_model_macro",
+   "split": "full",
+   "model": null,
+   "domain": null,
+   "arm": "routed_gated",
+   "support": "five_model",
+   "models": 5,
+   "instances": 14150,
+   "loaded": 10146,
+   "gold_loaded": 7713,
+   "method_failures": 0,
+   "loaded_skill_precision": 0.762962141975016,
+   "loading_rate": 0.7170318021201413,
+   "gold_load_rate": 0.5450883392226149,
+   "selection_failure_rate": 0.0,
+   "metric_model_denominators": {
+    "loaded_skill_precision": 5,
+    "loading_rate": 5,
+    "gold_load_rate": 5,
+    "selection_failure_rate": 5
+   }
+  },
+  {
+   "schema_version": "k2-loading-metrics-v1",
+   "level": "fleet_model_macro",
+   "split": "full",
+   "model": null,
+   "domain": null,
+   "arm": "routed_select",
+   "support": "five_model",
+   "models": 5,
+   "instances": 14150,
+   "loaded": 14150,
+   "gold_loaded": 8861,
+   "method_failures": 0,
+   "loaded_skill_precision": 0.6262190812720848,
+   "loading_rate": 1.0,
+   "gold_load_rate": 0.6262190812720848,
+   "selection_failure_rate": 0.0,
+   "metric_model_denominators": {
+    "loaded_skill_precision": 5,
+    "loading_rate": 5,
+    "gold_load_rate": 5,
+    "selection_failure_rate": 5
+   }
+  },
+  {
+   "schema_version": "k2-loading-metrics-v1",
+   "level": "fleet_model_macro",
+   "split": "heldout",
+   "model": null,
+   "domain": null,
+   "arm": "routed_always",
+   "support": "seven_model",
+   "models": 7,
+   "instances": 15855,
+   "loaded": 15855,
+   "gold_loaded": 8587,
+   "method_failures": 0,
+   "loaded_skill_precision": 0.5415957111321349,
+   "loading_rate": 1.0,
+   "gold_load_rate": 0.5415957111321349,
+   "selection_failure_rate": 0.0,
+   "metric_model_denominators": {
+    "loaded_skill_precision": 7,
+    "loading_rate": 7,
+    "gold_load_rate": 7,
+    "selection_failure_rate": 7
+   }
+  },
+  {
+   "schema_version": "k2-loading-metrics-v1",
+   "level": "fleet_model_macro",
+   "split": "heldout",
+   "model": null,
+   "domain": null,
+   "arm": "routed_gated",
+   "support": "seven_model",
+   "models": 7,
+   "instances": 15855,
+   "loaded": 10783,
+   "gold_loaded": 7955,
+   "method_failures": 0,
+   "loaded_skill_precision": 0.7318813224470871,
+   "loading_rate": 0.6801009145380006,
+   "gold_load_rate": 0.5017344686218859,
+   "selection_failure_rate": 0.0,
+   "metric_model_denominators": {
+    "loaded_skill_precision": 7,
+    "loading_rate": 7,
+    "gold_load_rate": 7,
+    "selection_failure_rate": 7
+   }
+  },
+  {
+   "schema_version": "k2-loading-metrics-v1",
+   "level": "fleet_model_macro",
+   "split": "heldout",
+   "model": null,
+   "domain": null,
+   "arm": "routed_always",
+   "support": "five_model",
+   "models": 5,
+   "instances": 11325,
+   "loaded": 11325,
+   "gold_loaded": 6613,
+   "method_failures": 0,
+   "loaded_skill_precision": 0.5839293598233996,
+   "loading_rate": 1.0,
+   "gold_load_rate": 0.5839293598233996,
+   "selection_failure_rate": 0.0,
+   "metric_model_denominators": {
+    "loaded_skill_precision": 5,
+    "loading_rate": 5,
+    "gold_load_rate": 5,
+    "selection_failure_rate": 5
+   }
+  },
+  {
+   "schema_version": "k2-loading-metrics-v1",
+   "level": "fleet_model_macro",
+   "split": "heldout",
+   "model": null,
+   "domain": null,
+   "arm": "routed_gated",
+   "support": "five_model",
+   "models": 5,
+   "instances": 11325,
+   "loaded": 8118,
+   "gold_loaded": 6132,
+   "method_failures": 0,
+   "loaded_skill_precision": 0.7582174884534163,
+   "loading_rate": 0.7168211920529801,
+   "gold_load_rate": 0.5414569536423841,
+   "selection_failure_rate": 0.0,
+   "metric_model_denominators": {
+    "loaded_skill_precision": 5,
+    "loading_rate": 5,
+    "gold_load_rate": 5,
+    "selection_failure_rate": 5
+   }
+  },
+  {
+   "schema_version": "k2-loading-metrics-v1",
+   "level": "fleet_model_macro",
+   "split": "heldout",
+   "model": null,
+   "domain": null,
+   "arm": "routed_select",
+   "support": "five_model",
+   "models": 5,
+   "instances": 11325,
+   "loaded": 11325,
+   "gold_loaded": 7053,
+   "method_failures": 0,
+   "loaded_skill_precision": 0.6227814569536424,
+   "loading_rate": 1.0,
+   "gold_load_rate": 0.6227814569536424,
+   "selection_failure_rate": 0.0,
+   "metric_model_denominators": {
+    "loaded_skill_precision": 5,
+    "loading_rate": 5,
+    "gold_load_rate": 5,
+    "selection_failure_rate": 5
+   }
+  }
+ ],
+ "long_metrics_path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-fleet-v2-20260725/loading_metrics_long.jsonl",
+ "long_metrics_sha256": "4b5dd11eaa77ec336e4af403bc61efd0132bd5a7b8f4893500860f3aebc7785c"
+}

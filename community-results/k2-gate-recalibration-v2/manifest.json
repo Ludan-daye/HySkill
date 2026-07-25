@@ -1,0 +1,108 @@
+{
+ "schema_version": "k2-gate-recalibration-pack-v1",
+ "base_k2_commit": "aa5020c",
+ "relationship": "supplement_not_replacement",
+ "k_samples": 2,
+ "gates_recalibrated": 32,
+ "jobs_with_tau2_change": 9,
+ "decisions_flipped": 609,
+ "rows_preserved": 22031,
+ "preserved_method_failures": 40,
+ "tau1_changes": 0,
+ "bootstrap": {
+  "samples": 10000,
+  "seed": 0,
+  "split": "heldout"
+ },
+ "effect": {
+  "answers_affected_units_heldout": {
+   "old": "2961/4373",
+   "new": "2944/4373",
+   "delta_pp": -0.39
+  },
+  "loading_seven_gated": {
+   "precision": [
+    73.64,
+    73.19
+   ],
+   "loading_rate": [
+    69.43,
+    68.01
+   ],
+   "gold_load_rate": [
+    51.61,
+    50.17
+   ]
+  },
+  "loading_five_gated": {
+   "precision": [
+    76.43,
+    75.82
+   ],
+   "loading_rate": [
+    73.76,
+    71.68
+   ],
+   "gold_load_rate": [
+    56.21,
+    54.15
+   ]
+  },
+  "always_and_select_unchanged": true
+ },
+ "claim_rules": [
+  "四条对比的 95% CI 全部包含零，显著性判定未发生变化",
+  "Qwen4 routed vs fixed 的符号翻转(-0.13 -> +0.18)在 p>0.85 下属噪声，不得解读为方向反转",
+  "tau1 全部未变；受影响的只有 S2 这条'模型已会'信号"
+ ],
+ "manifest_self_policy": {
+  "included_in_files": false,
+  "reason": "manifest.json 不能包含自身的稳定 SHA-256"
+ },
+ "files": {
+  "README.md": {
+   "sha256": "6224c4782e789dc0ae21f7c331c653ce5eaa0d335cc2eaf7dcdbbaaa11a81266",
+   "bytes": 4429
+  },
+  "answer_metrics_long.jsonl.gz": {
+   "sha256": "cb109145abfecea6bf0b39e77bc0e53fc136277bc1826b01eab560c325d6ab8f",
+   "bytes": 4132,
+   "rows": 210
+  },
+  "answer_summary.json": {
+   "sha256": "59ae23ce96c5dd92bea3bf2d1ce5e964a34c7e0a41c115a9ade9484546fb72a5",
+   "bytes": 38884,
+   "rows": 1
+  },
+  "changed_decisions.jsonl.gz": {
+   "sha256": "9f06e067f0e97a31ee5988dafb76ba4f09202dcb0e69c2df65e8a8de2d5e83a5",
+   "bytes": 27540,
+   "rows": 609
+  },
+  "loading_metrics_long.jsonl.gz": {
+   "sha256": "0f6b408788eaa1eab379663171b891969ddd10429e5c70f6151dcc5926e0894d",
+   "bytes": 5540,
+   "rows": 210
+  },
+  "loading_summary.json": {
+   "sha256": "92dea6a1149c80215aa0b1b55429a4ce032d9777398dcb5c4bd2af66a1d9623a",
+   "bytes": 17928,
+   "rows": 1
+  },
+  "paired_comparisons.json": {
+   "sha256": "4dedd8c185f481b6d9d76d2a9148c0d0e27fb76156343d90e0348c8be3d9b3a4",
+   "bytes": 36379,
+   "rows": 4
+  },
+  "rerun_answers.jsonl.gz": {
+   "sha256": "24a73fd3409419f43d398037cf036a2b09e76de99bd25ad8d334a128a284fe12",
+   "bytes": 406990,
+   "rows": 609
+  },
+  "taus_recalibrated.json": {
+   "sha256": "eb5b39e09222ab967b673d39afd5b612ea3f2ae0321156a48f1fbeb609e0ae76",
+   "bytes": 4635,
+   "rows": 9
+  }
+ }
+}

@@ -1,0 +1,1198 @@
+{
+ "schema_version": "k2-answer-summary-v1",
+ "model_pooled": {
+  "deepseek7b": {
+   "full": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "deepseek7b",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2830,
+     "correct": 388,
+     "accuracy": 0.1371024734982332,
+     "failure_categories": {
+      "success": 2744,
+      "method_failure": 86
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "deepseek7b",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2830,
+     "correct": 477,
+     "accuracy": 0.1685512367491166,
+     "failure_categories": {
+      "success": 2813,
+      "method_failure": 17
+     }
+    }
+   },
+   "heldout": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "deepseek7b",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2265,
+     "correct": 307,
+     "accuracy": 0.13554083885209714,
+     "failure_categories": {
+      "success": 2196,
+      "method_failure": 69
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "deepseek7b",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2265,
+     "correct": 383,
+     "accuracy": 0.16909492273730684,
+     "failure_categories": {
+      "success": 2252,
+      "method_failure": 13
+     }
+    }
+   }
+  },
+  "glm4-9b": {
+   "full": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "glm4-9b",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2830,
+     "correct": 1380,
+     "accuracy": 0.4876325088339223,
+     "failure_categories": {
+      "success": 2801,
+      "method_failure": 29
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "glm4-9b",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2830,
+     "correct": 1437,
+     "accuracy": 0.507773851590106,
+     "failure_categories": {
+      "success": 2830
+     }
+    },
+    "routed_select": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "glm4-9b",
+     "domain": null,
+     "arm": "routed_select",
+     "support": null,
+     "n": 2830,
+     "correct": 1503,
+     "accuracy": 0.5310954063604241,
+     "failure_categories": {
+      "success": 2809,
+      "method_failure": 21
+     }
+    }
+   },
+   "heldout": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "glm4-9b",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2265,
+     "correct": 1089,
+     "accuracy": 0.48079470198675495,
+     "failure_categories": {
+      "success": 2242,
+      "method_failure": 23
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "glm4-9b",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2265,
+     "correct": 1129,
+     "accuracy": 0.49845474613686536,
+     "failure_categories": {
+      "success": 2265
+     }
+    },
+    "routed_select": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "glm4-9b",
+     "domain": null,
+     "arm": "routed_select",
+     "support": null,
+     "n": 2265,
+     "correct": 1196,
+     "accuracy": 0.5280353200883002,
+     "failure_categories": {
+      "success": 2250,
+      "method_failure": 15
+     }
+    }
+   }
+  },
+  "llama31-8b": {
+   "full": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "llama31-8b",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2830,
+     "correct": 1452,
+     "accuracy": 0.5130742049469965,
+     "failure_categories": {
+      "success": 2810,
+      "method_failure": 20
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "llama31-8b",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2830,
+     "correct": 1434,
+     "accuracy": 0.5067137809187279,
+     "failure_categories": {
+      "success": 2830
+     }
+    },
+    "routed_select": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "llama31-8b",
+     "domain": null,
+     "arm": "routed_select",
+     "support": null,
+     "n": 2830,
+     "correct": 1379,
+     "accuracy": 0.4872791519434629,
+     "failure_categories": {
+      "success": 2804,
+      "method_failure": 26
+     }
+    }
+   },
+   "heldout": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "llama31-8b",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2265,
+     "correct": 1150,
+     "accuracy": 0.5077262693156733,
+     "failure_categories": {
+      "success": 2248,
+      "method_failure": 17
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "llama31-8b",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2265,
+     "correct": 1146,
+     "accuracy": 0.5059602649006623,
+     "failure_categories": {
+      "success": 2265
+     }
+    },
+    "routed_select": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "llama31-8b",
+     "domain": null,
+     "arm": "routed_select",
+     "support": null,
+     "n": 2265,
+     "correct": 1108,
+     "accuracy": 0.4891832229580574,
+     "failure_categories": {
+      "success": 2242,
+      "method_failure": 23
+     }
+    }
+   }
+  },
+  "mistral7b": {
+   "full": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "mistral7b",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2830,
+     "correct": 958,
+     "accuracy": 0.3385159010600707,
+     "failure_categories": {
+      "success": 2788,
+      "method_failure": 42
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "mistral7b",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2830,
+     "correct": 977,
+     "accuracy": 0.3452296819787986,
+     "failure_categories": {
+      "success": 2830
+     }
+    },
+    "routed_select": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "mistral7b",
+     "domain": null,
+     "arm": "routed_select",
+     "support": null,
+     "n": 2830,
+     "correct": 966,
+     "accuracy": 0.3413427561837456,
+     "failure_categories": {
+      "success": 2792,
+      "method_failure": 38
+     }
+    }
+   },
+   "heldout": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "mistral7b",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2265,
+     "correct": 768,
+     "accuracy": 0.3390728476821192,
+     "failure_categories": {
+      "success": 2229,
+      "method_failure": 36
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "mistral7b",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2265,
+     "correct": 786,
+     "accuracy": 0.34701986754966885,
+     "failure_categories": {
+      "success": 2265
+     }
+    },
+    "routed_select": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "mistral7b",
+     "domain": null,
+     "arm": "routed_select",
+     "support": null,
+     "n": 2265,
+     "correct": 767,
+     "accuracy": 0.33863134657836647,
+     "failure_categories": {
+      "success": 2231,
+      "method_failure": 34
+     }
+    }
+   }
+  },
+  "qwen3.5-4b-reference": {
+   "full": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "qwen3.5-4b-reference",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2830,
+     "correct": 2023,
+     "accuracy": 0.7148409893992933,
+     "failure_categories": {
+      "success": 2816,
+      "method_failure": 14
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "qwen3.5-4b-reference",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2830,
+     "correct": 2041,
+     "accuracy": 0.7212014134275618,
+     "failure_categories": {
+      "success": 2830
+     }
+    },
+    "routed_select": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "qwen3.5-4b-reference",
+     "domain": null,
+     "arm": "routed_select",
+     "support": null,
+     "n": 2830,
+     "correct": 2063,
+     "accuracy": 0.7289752650176679,
+     "failure_categories": {
+      "success": 2813,
+      "method_failure": 17
+     }
+    },
+    "fixed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "qwen3.5-4b-reference",
+     "domain": null,
+     "arm": "fixed_gated",
+     "support": null,
+     "n": 2830,
+     "correct": 2031,
+     "accuracy": 0.7176678445229682,
+     "failure_categories": {
+      "success": 2830
+     }
+    }
+   },
+   "heldout": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "qwen3.5-4b-reference",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2265,
+     "correct": 1633,
+     "accuracy": 0.720971302428256,
+     "failure_categories": {
+      "success": 2255,
+      "method_failure": 10
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "qwen3.5-4b-reference",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2265,
+     "correct": 1642,
+     "accuracy": 0.7249448123620309,
+     "failure_categories": {
+      "success": 2265
+     }
+    },
+    "routed_select": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "qwen3.5-4b-reference",
+     "domain": null,
+     "arm": "routed_select",
+     "support": null,
+     "n": 2265,
+     "correct": 1662,
+     "accuracy": 0.7337748344370861,
+     "failure_categories": {
+      "success": 2249,
+      "method_failure": 16
+     }
+    },
+    "fixed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "qwen3.5-4b-reference",
+     "domain": null,
+     "arm": "fixed_gated",
+     "support": null,
+     "n": 2265,
+     "correct": 1638,
+     "accuracy": 0.7231788079470198,
+     "failure_categories": {
+      "success": 2265
+     }
+    }
+   }
+  },
+  "qwen35-9b": {
+   "full": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "qwen35-9b",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2830,
+     "correct": 2036,
+     "accuracy": 0.719434628975265,
+     "failure_categories": {
+      "success": 2820,
+      "method_failure": 10
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "qwen35-9b",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2830,
+     "correct": 2071,
+     "accuracy": 0.7318021201413427,
+     "failure_categories": {
+      "success": 2830
+     }
+    },
+    "routed_select": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "qwen35-9b",
+     "domain": null,
+     "arm": "routed_select",
+     "support": null,
+     "n": 2830,
+     "correct": 2142,
+     "accuracy": 0.7568904593639576,
+     "failure_categories": {
+      "success": 2827,
+      "method_failure": 3
+     }
+    }
+   },
+   "heldout": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "qwen35-9b",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2265,
+     "correct": 1640,
+     "accuracy": 0.7240618101545254,
+     "failure_categories": {
+      "success": 2257,
+      "method_failure": 8
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "qwen35-9b",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2265,
+     "correct": 1672,
+     "accuracy": 0.7381898454746136,
+     "failure_categories": {
+      "success": 2265
+     }
+    },
+    "routed_select": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "qwen35-9b",
+     "domain": null,
+     "arm": "routed_select",
+     "support": null,
+     "n": 2265,
+     "correct": 1721,
+     "accuracy": 0.7598233995584989,
+     "failure_categories": {
+      "success": 2263,
+      "method_failure": 2
+     }
+    }
+   }
+  },
+  "yi15-9b": {
+   "full": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "yi15-9b",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2830,
+     "correct": 1130,
+     "accuracy": 0.3992932862190813,
+     "failure_categories": {
+      "success": 2709,
+      "method_failure": 121
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "full",
+     "model": "yi15-9b",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2830,
+     "correct": 1232,
+     "accuracy": 0.4353356890459364,
+     "failure_categories": {
+      "success": 2807,
+      "method_failure": 23
+     }
+    }
+   },
+   "heldout": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "yi15-9b",
+     "domain": null,
+     "arm": "routed_always",
+     "support": null,
+     "n": 2265,
+     "correct": 908,
+     "accuracy": 0.4008830022075055,
+     "failure_categories": {
+      "success": 2173,
+      "method_failure": 92
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "model_pooled",
+     "split": "heldout",
+     "model": "yi15-9b",
+     "domain": null,
+     "arm": "routed_gated",
+     "support": null,
+     "n": 2265,
+     "correct": 986,
+     "accuracy": 0.43532008830022073,
+     "failure_categories": {
+      "success": 2246,
+      "method_failure": 19
+     }
+    }
+   }
+  }
+ },
+ "fleet_model_macro": {
+  "seven_model": {
+   "full": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "fleet_model_macro",
+     "split": "full",
+     "model": null,
+     "domain": null,
+     "arm": "routed_always",
+     "support": "seven_model",
+     "n": 19810,
+     "correct": 9367,
+     "accuracy": 0.4728419989904089,
+     "fleet_micro_accuracy": 0.4728419989904089,
+     "failure_categories": {
+      "success": 19488,
+      "method_failure": 322
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "fleet_model_macro",
+     "split": "full",
+     "model": null,
+     "domain": null,
+     "arm": "routed_gated",
+     "support": "seven_model",
+     "n": 19810,
+     "correct": 9669,
+     "accuracy": 0.4880868248359414,
+     "fleet_micro_accuracy": 0.48808682483594146,
+     "failure_categories": {
+      "success": 19770,
+      "method_failure": 40
+     }
+    }
+   },
+   "heldout": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "fleet_model_macro",
+     "split": "heldout",
+     "model": null,
+     "domain": null,
+     "arm": "routed_always",
+     "support": "seven_model",
+     "n": 15855,
+     "correct": 7495,
+     "accuracy": 0.4727215389467045,
+     "fleet_micro_accuracy": 0.4727215389467045,
+     "failure_categories": {
+      "success": 15600,
+      "method_failure": 255
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "fleet_model_macro",
+     "split": "heldout",
+     "model": null,
+     "domain": null,
+     "arm": "routed_gated",
+     "support": "seven_model",
+     "n": 15855,
+     "correct": 7744,
+     "accuracy": 0.48842636392305266,
+     "fleet_micro_accuracy": 0.48842636392305266,
+     "failure_categories": {
+      "success": 15823,
+      "method_failure": 32
+     }
+    }
+   }
+  },
+  "five_model": {
+   "full": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "fleet_model_macro",
+     "split": "full",
+     "model": null,
+     "domain": null,
+     "arm": "routed_always",
+     "support": "five_model",
+     "n": 14150,
+     "correct": 7849,
+     "accuracy": 0.5546996466431096,
+     "fleet_micro_accuracy": 0.5546996466431096,
+     "failure_categories": {
+      "success": 14035,
+      "method_failure": 115
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "fleet_model_macro",
+     "split": "full",
+     "model": null,
+     "domain": null,
+     "arm": "routed_gated",
+     "support": "five_model",
+     "n": 14150,
+     "correct": 7960,
+     "accuracy": 0.5625441696113074,
+     "fleet_micro_accuracy": 0.5625441696113074,
+     "failure_categories": {
+      "success": 14150
+     }
+    },
+    "routed_select": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "fleet_model_macro",
+     "split": "full",
+     "model": null,
+     "domain": null,
+     "arm": "routed_select",
+     "support": "five_model",
+     "n": 14150,
+     "correct": 8053,
+     "accuracy": 0.5691166077738516,
+     "fleet_micro_accuracy": 0.5691166077738515,
+     "failure_categories": {
+      "success": 14045,
+      "method_failure": 105
+     }
+    }
+   },
+   "heldout": {
+    "routed_always": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "fleet_model_macro",
+     "split": "heldout",
+     "model": null,
+     "domain": null,
+     "arm": "routed_always",
+     "support": "five_model",
+     "n": 11325,
+     "correct": 6280,
+     "accuracy": 0.5545253863134658,
+     "fleet_micro_accuracy": 0.5545253863134658,
+     "failure_categories": {
+      "success": 11231,
+      "method_failure": 94
+     }
+    },
+    "routed_gated": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "fleet_model_macro",
+     "split": "heldout",
+     "model": null,
+     "domain": null,
+     "arm": "routed_gated",
+     "support": "five_model",
+     "n": 11325,
+     "correct": 6375,
+     "accuracy": 0.5629139072847682,
+     "fleet_micro_accuracy": 0.5629139072847682,
+     "failure_categories": {
+      "success": 11325
+     }
+    },
+    "routed_select": {
+     "schema_version": "k2-answer-metrics-long-v1",
+     "level": "fleet_model_macro",
+     "split": "heldout",
+     "model": null,
+     "domain": null,
+     "arm": "routed_select",
+     "support": "five_model",
+     "n": 11325,
+     "correct": 6454,
+     "accuracy": 0.5698896247240619,
+     "fleet_micro_accuracy": 0.5698896247240618,
+     "failure_categories": {
+      "success": 11235,
+      "method_failure": 90
+     }
+    }
+   }
+  }
+ },
+ "seven_models": [
+  "deepseek7b",
+  "glm4-9b",
+  "llama31-8b",
+  "mistral7b",
+  "qwen3.5-4b-reference",
+  "qwen35-9b",
+  "yi15-9b"
+ ],
+ "five_models": [
+  "glm4-9b",
+  "llama31-8b",
+  "mistral7b",
+  "qwen3.5-4b-reference",
+  "qwen35-9b"
+ ],
+ "fixed_model": "qwen3.5-4b-reference",
+ "expected_total_per_model": 2830,
+ "expected_heldout_per_model": 2265,
+ "inputs": [
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/deepseek7b/champ-routed-always.eval.json",
+   "sha256": "82174c228fcbcf99af71f9820a314ab7779de4c78797d9dc2f90a3a3d8b8f0b2"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/deepseek7b/champ-routed-gated.eval.json",
+   "sha256": "1d81bb8d033ed7ac7ba23d5544a007fff4abd38260ed3152d3080c4a9fcf781a"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/deepseek7b/logicbench-routed-always.eval.json",
+   "sha256": "10bae7ee05a2ff620e88a58f378cb27adb13d3b3264e65ef46848c9189345253"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/deepseek7b/logicbench-routed-gated.eval.json",
+   "sha256": "12159d031d56d32602dde8b6fb58e16c19f67aa52933028b92aca53e0802d288"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/deepseek7b/medcalcbench-routed-always.eval.json",
+   "sha256": "034960b5ae1e7f11f58efdd451775166ea0d79c3f91d4898395c2b20fcc6680b"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/deepseek7b/medcalcbench-routed-gated.eval.json",
+   "sha256": "1faf83948ce57be1b832c9302b90b5b82713ac353d708a0d30d847fb4c0efffd"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/deepseek7b/theoremqa-routed-always.eval.json",
+   "sha256": "eb5ef15b2ef290d63c7ae61f655a0d892536fc18d11b98dd4e92462642483297"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/deepseek7b/theoremqa-routed-gated.eval.json",
+   "sha256": "75cda20705a33d97ad2bef32cc72311f8cc685b5a8f3aa5fbea7730fa01ba005"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/champ-routed-always.eval.json",
+   "sha256": "0179a6fcfe39bc9b98851ac71560598a7c744faa96d003b135db5eb2696bf81f"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/champ-routed-gated.eval.json",
+   "sha256": "d33a0010c1341ddeeb3bfa78719b9f502d1f0b4d2e286a625b08faff08c3e341"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/champ-routed-select.eval.json",
+   "sha256": "7104665d7552cad4727f0e6fa4717937597864416e0f94a573f78299097e1ef2"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/logicbench-routed-always.eval.json",
+   "sha256": "6451b22315534278823f4acdebb383572eaa02cfcfe09da1dd5fcc1e1dea05fb"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/logicbench-routed-gated.eval.json",
+   "sha256": "b9417aea4b21c0a7d3cb0e4d71f6f1bc7fd9c5e7027c4170f5b09544c7cd409a"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/logicbench-routed-select.eval.json",
+   "sha256": "427d23bdfc1cd0126b8007c3d9922ec99f2815bdcc00dd76e3bad346ce82e7fc"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/medcalcbench-routed-always.eval.json",
+   "sha256": "fe1caee1615cdcdb3f1f7b27e45cd0267c01434d072aa15b09df4d4a0ec6fbd7"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/medcalcbench-routed-gated.eval.json",
+   "sha256": "a7ab03203261266792b4666fcfed273b2962f5bb2f42cabc41c91090162333e9"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/medcalcbench-routed-select.eval.json",
+   "sha256": "5ebe7f347f1747acb4602bd72940c5a24803b0556f205c9d0b4dd09244b4d469"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/theoremqa-routed-always.eval.json",
+   "sha256": "5d78c7986127261505ee55795741eb85d17d5fcedab72bfe9265f025deeac059"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/theoremqa-routed-gated.eval.json",
+   "sha256": "d2ac8a4ad6df50e223d3257e85bdf8c2dfd54e93b2d155d28089f91088212578"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/glm4-9b/theoremqa-routed-select.eval.json",
+   "sha256": "c51d6f52bbc0e04fa639f6514eb247e35af2ad2881bc9f1c0eca5e1f8457ab7e"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/champ-routed-always.eval.json",
+   "sha256": "98722aa21a5971f1efa791698cc92af25a6a33b04d62e652bdb199f62338368a"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/champ-routed-gated.eval.json",
+   "sha256": "52be8f5e439369c1cc5ee06f4e96844985845189f0e89f11f3932492f2e91981"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/champ-routed-select.eval.json",
+   "sha256": "42e011a8ca67bd2745a31224f84e2074fd4dc6b0b6a56ed3699fda85251a2bde"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/logicbench-routed-always.eval.json",
+   "sha256": "ed3eebe59d13143826f26f6664eea5a454cc85937f96095051decf60b32d71bd"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/logicbench-routed-gated.eval.json",
+   "sha256": "194a7a689def8778076bb790f2269d626cd6e219a4cd5280c1a78d7fd4479f0f"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/logicbench-routed-select.eval.json",
+   "sha256": "aae04b806f17fb1f0067dccc14e431938ec6706cbea1b94576f47b1cb30c91ab"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/medcalcbench-routed-always.eval.json",
+   "sha256": "cc594c8be2b2b0006d987fd62be2a02d99925772a5f04db339dc65dd7fe5d77e"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/medcalcbench-routed-gated.eval.json",
+   "sha256": "132bd69ea1556537770a16736acb0f59c68eb80d48c4e5fd4578285c7eeb3a33"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/medcalcbench-routed-select.eval.json",
+   "sha256": "88be0701ee53ff42a065959a6d3555ca1966243037148637bb97bcc462fe5a63"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/theoremqa-routed-always.eval.json",
+   "sha256": "fafcf64eff94c49f3c75a98f3082ff2e498a81f88f33e5dbf342cb5f4f3b0269"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/theoremqa-routed-gated.eval.json",
+   "sha256": "a13a3736dc57166657a494c72cf9a4292a10a6d23f9dbaa3edcb9ec20ba336d4"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/llama31-8b/theoremqa-routed-select.eval.json",
+   "sha256": "1ac2eb3caedb3185bab29e94565ebeb114608db31be093f16379753b2da99a6f"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/champ-routed-always.eval.json",
+   "sha256": "f83572559f9ca39d5efa01b7dea5a07e2d3c128fba18f0ae10652a2781e3f002"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/champ-routed-gated.eval.json",
+   "sha256": "d260115c046a0354e47d400574470c74e29e785208bbb7a31c8637cb7ad9dbe6"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/champ-routed-select.eval.json",
+   "sha256": "08aaec4bce27893d8097859bd47c213be6fefd7d30f34d59db3d14b1afb4c172"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/logicbench-routed-always.eval.json",
+   "sha256": "9e8973da1679ad92c81d1025bc514279dcf99497c383787703cd8f9c157e0a0a"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/logicbench-routed-gated.eval.json",
+   "sha256": "6d2175c0d7cefd2b24098cbdca1b4eb228703559cd96e60e9499b17f4c6f360b"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/logicbench-routed-select.eval.json",
+   "sha256": "8efedce7bba17bd1fcc6d9e31d23b8374e36f100efb4ac08637293deb091c26f"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/medcalcbench-routed-always.eval.json",
+   "sha256": "33ce138a3ad925c1fd33c01876b0dc675b358d3a5e3c101ece005d3ddf0b999f"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/medcalcbench-routed-gated.eval.json",
+   "sha256": "8eab978ec4d69634f4b654f1a406beea8bc8cfaf2ef53a0f7bfc5fe4dcf89d65"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/medcalcbench-routed-select.eval.json",
+   "sha256": "5fe01a39fde122c50f8d16bce8132fae51938511cc3f8601c3c6995c7f5fd48a"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/theoremqa-routed-always.eval.json",
+   "sha256": "87f43cf070acbf268ef6c979311a04ef041cd42e527c880acc1c13190284beff"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/theoremqa-routed-gated.eval.json",
+   "sha256": "92390e3ed5ee850ff2807ecc694dba5e6651bf6a37566775d38d9949283a7ff9"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/mistral7b/theoremqa-routed-select.eval.json",
+   "sha256": "2f149e9149fbfcc41cd05301d342b48e4ec36f845575b3c74078b6109189f118"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/champ-fixed-gated.eval.json",
+   "sha256": "46cc68431ea10cd4ac2e5bcf0fd6f01e3cb5f35083eb2a79c05c62a7ebae85fc"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/champ-routed-always.eval.json",
+   "sha256": "9c1f202d3748c6b698791c19334825d74af731e58e40bf095e3eefbbd5e9a390"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/champ-routed-gated.eval.json",
+   "sha256": "9a7a8f591e9eec2d5bc7f6c95b6c49fba2b1c259753404f17490bc247dbe2ff9"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/champ-routed-select.eval.json",
+   "sha256": "fd6362c361bedf47e609b08d6ab4b58c4f3787a8e36c74ceaf17d786cdb4a1b1"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/logicbench-fixed-gated.eval.json",
+   "sha256": "16a96797939b02f6a1d39034928451da7f02a056894800aceb75b8834b1609ee"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/logicbench-routed-always.eval.json",
+   "sha256": "1072f2dcd7a0cedfd297a05165fc3655e05f3aa6cffa0cb7c343ad90f178941e"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/logicbench-routed-gated.eval.json",
+   "sha256": "28c7dad7b9928a0b44232bc21b76a21b363114ee1aebbf74f13d8aada1408835"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/logicbench-routed-select.eval.json",
+   "sha256": "d5b1f243a22eab375d971286d3c55087cee39074103724468bbc3a07bfca42e3"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/medcalcbench-fixed-gated.eval.json",
+   "sha256": "03e699c1dfe9b05a3f85940d8f083652478fbb2a33bd9e10af3a017c4ffa02eb"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/medcalcbench-routed-always.eval.json",
+   "sha256": "a06940771b00dc77ae38d4b9de51b84de88a4d2342490dd26a7dd81d180fd68c"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/medcalcbench-routed-gated.eval.json",
+   "sha256": "7cbbc61524bd1f378d28d74ddc58934b11f3a8ea574dc7c2ab9ff9c390f8dbf3"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/medcalcbench-routed-select.eval.json",
+   "sha256": "c1b59eef47273e082ed48b962fec17f4e365f231042d724ac0f84f2fc2724642"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/theoremqa-fixed-gated.eval.json",
+   "sha256": "c5cfe6c6b8821e5e85afa17fc910a04a372e48325e72cdf03d179fd1adec389a"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/theoremqa-routed-always.eval.json",
+   "sha256": "271fb5716ee1d302461c58351b958d4c78c9d68b6dc2ac30c89d47194be6d41f"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/theoremqa-routed-gated.eval.json",
+   "sha256": "2465d71a3906b37f666f2ac5696ab13e19644508077dfa7a2780c87b2feb7a2e"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen3.5-4b-reference/theoremqa-routed-select.eval.json",
+   "sha256": "e25eaaf1a75085fdf56d9692895b51d0c29abdc2c6a1e533087965e73029db57"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/champ-routed-always.eval.json",
+   "sha256": "b119c939c915f67a1e1dc1e33f124df6880da4a3270b2ee819e1c3e2fa422ed9"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/champ-routed-gated.eval.json",
+   "sha256": "cdf1e11d9194978908189b0f693a9f293815eb47e72a0932e9fd20862103dd9b"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/champ-routed-select.eval.json",
+   "sha256": "b0dcda6ed1746be917927ebe17591a55b39061b91bebd887dcb63e8709c0f603"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/logicbench-routed-always.eval.json",
+   "sha256": "6759312ef26bdca435f2fca77787014d93307895ae5445fe4838dd01aa55b0fe"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/logicbench-routed-gated.eval.json",
+   "sha256": "ee7761b6faaa3b565d58b54f89f9ffb2f0d7fb8adf4adfa7744ac496bab37b56"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/logicbench-routed-select.eval.json",
+   "sha256": "b57e3bb3cfd961dff7b8729517a3668b7f7cbf7d5830beafdd2eab3bcd037e5a"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/medcalcbench-routed-always.eval.json",
+   "sha256": "78b583f49b8432232d91f21507aff584db2142fe3661dfd45daf328306edf60b"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/medcalcbench-routed-gated.eval.json",
+   "sha256": "5e66817c4f5c447bc48a2a75e062791f447d670206552941803d394ad11cf75b"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/medcalcbench-routed-select.eval.json",
+   "sha256": "276ac57267354c5d48b96ae6a641bebae62ffc76742fab350b076da954d9cbe2"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/theoremqa-routed-always.eval.json",
+   "sha256": "b56590d2db4bd91caf1b7ce06ced3dbe88c24d47f8cd37b80a2a5a2db5537d08"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/theoremqa-routed-gated.eval.json",
+   "sha256": "7b2de1c5c7587462f2cab83068ba46ecf5cb64fcb25ec43bd0cb9dde3ebf17fa"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/qwen35-9b/theoremqa-routed-select.eval.json",
+   "sha256": "c62a11c5e4b5e16c1d23022bd8df83408dd4b933ca0d2d7a1655b11fc142a5bc"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/yi15-9b/champ-routed-always.eval.json",
+   "sha256": "a4ed04e727d030ae9a7e24e8cb507ab9cce8723f74a73e1d4a6568baecd14ee4"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/yi15-9b/champ-routed-gated.eval.json",
+   "sha256": "c7d6113e064ea18ca39cc535febc64276452c28aa29be81ffcfc2bb9d5fd6350"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/yi15-9b/logicbench-routed-always.eval.json",
+   "sha256": "785043025617c209e8014aead4869254d1d93f5e0a0787c2a2aee120d9ccb102"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/yi15-9b/logicbench-routed-gated.eval.json",
+   "sha256": "0f2c038f7994e0077edce579d3d71d651406bc0345de01af975f25b05eca13a7"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/yi15-9b/medcalcbench-routed-always.eval.json",
+   "sha256": "6749fdaaf0ede83c2f41b8e762bdc4ec1907e92b61699bb91c99122b9f5831ee"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/yi15-9b/medcalcbench-routed-gated.eval.json",
+   "sha256": "ba911ab9509fec3e29ab71ec401829cc0cbf44b7b899d620fbe21f7d8d61b294"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/yi15-9b/theoremqa-routed-always.eval.json",
+   "sha256": "1285d2dd8dff931e4b612b98d06eaeeece2f38c18e39d686e1409ef7cbdf34ae"
+  },
+  {
+   "path": "/Users/a1-6/importantfile/Research/skill-LLM/results/k2-formal-v2-20260725/yi15-9b/theoremqa-routed-gated.eval.json",
+   "sha256": "15e3c523af98716170a478204ec5ca91eafa4c77427886a456fbdc941dfb2e0f"
+  }
+ ]
+}

@@ -1,0 +1,241 @@
+{
+ "schema_version": "k2-gate-recalibration-taus-v1",
+ "jobs": [
+  {
+   "model": "llama31-8b",
+   "domain": "champ",
+   "arm": "routed_gated",
+   "p_min": 0.9,
+   "validation_count": 44,
+   "old_thresholds": {
+    "tau1": null,
+    "tau2": 0.65
+   },
+   "new_thresholds": {
+    "tau1": null,
+    "tau2": null
+   },
+   "old_decision_counts": {
+    "kept": 212,
+    "skipped_s2": 11
+   },
+   "new_decision_counts": {
+    "kept": 223
+   },
+   "decision_change_count": 11,
+   "rerun_required_count": 11,
+   "preserved_row_count": 212
+  },
+  {
+   "model": "llama31-8b",
+   "domain": "logicbench",
+   "arm": "routed_gated",
+   "p_min": 0.9,
+   "validation_count": 152,
+   "old_thresholds": {
+    "tau1": 0.6017,
+    "tau2": null
+   },
+   "new_thresholds": {
+    "tau1": 0.6017,
+    "tau2": 0.725
+   },
+   "old_decision_counts": {
+    "blocked_s1": 754,
+    "kept": 6
+   },
+   "new_decision_counts": {
+    "blocked_s1": 754,
+    "kept": 6
+   },
+   "decision_change_count": 0,
+   "rerun_required_count": 0,
+   "preserved_row_count": 760
+  },
+  {
+   "model": "llama31-8b",
+   "domain": "theoremqa",
+   "arm": "routed_gated",
+   "p_min": 0.9,
+   "validation_count": 149,
+   "old_thresholds": {
+    "tau1": 0.3455,
+    "tau2": 0.3125
+   },
+   "new_thresholds": {
+    "tau1": 0.3455,
+    "tau2": null
+   },
+   "old_decision_counts": {
+    "kept": 739,
+    "blocked_s1": 5,
+    "skipped_s2": 3
+   },
+   "new_decision_counts": {
+    "kept": 742,
+    "blocked_s1": 5
+   },
+   "decision_change_count": 3,
+   "rerun_required_count": 3,
+   "preserved_row_count": 744
+  },
+  {
+   "model": "qwen3.5-4b-reference",
+   "domain": "champ",
+   "arm": "routed_gated",
+   "p_min": 0.9,
+   "validation_count": 44,
+   "old_thresholds": {
+    "tau1": 0.3564,
+    "tau2": 0.7
+   },
+   "new_thresholds": {
+    "tau1": 0.3564,
+    "tau2": 0.6
+   },
+   "old_decision_counts": {
+    "kept": 185,
+    "skipped_s2": 15,
+    "blocked_s1": 23
+   },
+   "new_decision_counts": {
+    "kept": 196,
+    "blocked_s1": 23,
+    "skipped_s2": 4
+   },
+   "decision_change_count": 11,
+   "rerun_required_count": 11,
+   "preserved_row_count": 212
+  },
+  {
+   "model": "qwen3.5-4b-reference",
+   "domain": "medcalcbench",
+   "arm": "fixed_gated",
+   "p_min": 0.9,
+   "validation_count": 220,
+   "old_thresholds": {
+    "tau1": null,
+    "tau2": null
+   },
+   "new_thresholds": {
+    "tau1": null,
+    "tau2": 0.3704
+   },
+   "old_decision_counts": {
+    "kept": 1100
+   },
+   "new_decision_counts": {
+    "skipped_s2": 237,
+    "kept": 863
+   },
+   "decision_change_count": 237,
+   "rerun_required_count": 237,
+   "preserved_row_count": 863
+  },
+  {
+   "model": "qwen3.5-4b-reference",
+   "domain": "medcalcbench",
+   "arm": "routed_gated",
+   "p_min": 0.9,
+   "validation_count": 220,
+   "old_thresholds": {
+    "tau1": null,
+    "tau2": null
+   },
+   "new_thresholds": {
+    "tau1": null,
+    "tau2": 0.3636
+   },
+   "old_decision_counts": {
+    "kept": 1100
+   },
+   "new_decision_counts": {
+    "skipped_s2": 226,
+    "kept": 874
+   },
+   "decision_change_count": 226,
+   "rerun_required_count": 226,
+   "preserved_row_count": 874
+  },
+  {
+   "model": "qwen35-9b",
+   "domain": "medcalcbench",
+   "arm": "routed_gated",
+   "p_min": 0.9,
+   "validation_count": 220,
+   "old_thresholds": {
+    "tau1": null,
+    "tau2": 0.1852
+   },
+   "new_thresholds": {
+    "tau1": null,
+    "tau2": 0.3125
+   },
+   "old_decision_counts": {
+    "kept": 1100
+   },
+   "new_decision_counts": {
+    "skipped_s2": 102,
+    "kept": 998
+   },
+   "decision_change_count": 102,
+   "rerun_required_count": 102,
+   "preserved_row_count": 998
+  },
+  {
+   "model": "qwen35-9b",
+   "domain": "theoremqa",
+   "arm": "routed_gated",
+   "p_min": 0.9,
+   "validation_count": 149,
+   "old_thresholds": {
+    "tau1": 0.4573,
+    "tau2": 0.3429
+   },
+   "new_thresholds": {
+    "tau1": 0.4573,
+    "tau2": 0.3226
+   },
+   "old_decision_counts": {
+    "kept": 672,
+    "skipped_s2": 11,
+    "blocked_s1": 64
+   },
+   "new_decision_counts": {
+    "kept": 679,
+    "skipped_s2": 4,
+    "blocked_s1": 64
+   },
+   "decision_change_count": 7,
+   "rerun_required_count": 7,
+   "preserved_row_count": 740
+  },
+  {
+   "model": "yi15-9b",
+   "domain": "champ",
+   "arm": "routed_gated",
+   "p_min": 0.9,
+   "validation_count": 44,
+   "old_thresholds": {
+    "tau1": 0.4886,
+    "tau2": 0.7
+   },
+   "new_thresholds": {
+    "tau1": 0.4886,
+    "tau2": null
+   },
+   "old_decision_counts": {
+    "blocked_s1": 97,
+    "kept": 114,
+    "skipped_s2": 12
+   },
+   "new_decision_counts": {
+    "blocked_s1": 97,
+    "kept": 126
+   },
+   "decision_change_count": 12,
+   "rerun_required_count": 12,
+   "preserved_row_count": 211
+  }
+ ]
+}
