@@ -360,7 +360,19 @@ def validate_runtime_manifest(
 
 
 def runtime_identity_key(public: Mapping[str, JsonValue]) -> str:
-    """Return one model-level runtime identity excluding job/generation."""
+    """Return the protocol-level runtime identity that all jobs must share.
+
+    The frozen protocol requires one checkpoint, tokenizer, chat template,
+    served model, vLLM version, dtype and context length per model. It does
+    not require one physical GPU: the formal K=2 run itself spans A100 80GB,
+    2x A100 40GB and RTX 4090 nodes, and `hardware` is absent from the
+    runtime-identity table in AGENTS.md.
+
+    `hardware` and `source` are therefore reported as execution context by
+    `runtime_context_key` rather than folded into identity. Requiring them to
+    match would fail any model whose arms ran on different nodes -- a
+    deployment fact, not an identity violation.
+    """
 
     payload: JsonObject = {
         field: cast(JsonValue, public.get(field))
@@ -369,9 +381,21 @@ def runtime_identity_key(public: Mapping[str, JsonValue]) -> str:
             "tokenizer",
             "endpoint",
             "software",
-            "hardware",
-            "source",
         )
+    }
+    return canonical_json(payload)
+
+
+def runtime_context_key(public: Mapping[str, JsonValue]) -> str:
+    """Return the execution context (node and source pack) for reporting.
+
+    Recorded and surfaced in the validation report so a reviewer can see
+    exactly which physical node produced which arm. Not an acceptance gate.
+    """
+
+    payload: JsonObject = {
+        field: cast(JsonValue, public.get(field))
+        for field in ("hardware", "source")
     }
     return canonical_json(payload)
 
@@ -896,6 +920,26 @@ def validate_model(
         raise BaselineFleetValidationError(
             f"Model jobs do not share one runtime identity: "
             f"model={model}, identities={len(runtime_keys)}"
+        )
+    context_keys: set[str] = {
+        runtime_context_key(row) for row in runtime_rows
+    }
+    if len(context_keys) > 1:
+        print(
+            canonical_json(
+                {
+                    "event": "runtime_context_varies",
+                    "model": model,
+                    "protocol_identity_count": len(runtime_keys),
+                    "execution_context_count": len(context_keys),
+                    "contexts": sorted(context_keys),
+                    "note": (
+                        "Protocol identity (checkpoint/tokenizer/endpoint/"
+                        "software) is single; arms ran on different nodes."
+                    ),
+                }
+            ),
+            flush=True,
         )
     unique_sources: dict[str, str] = {}
     for source in source_files:
