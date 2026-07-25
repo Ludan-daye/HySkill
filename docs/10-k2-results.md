@@ -176,6 +176,42 @@ estimates and must not be reported as measured usage. Exact stage totals require
 offline reconstruction with each frozen tokenizer and chat template; until
 that is completed, the correct public value is `not_recorded`.
 
+## Baseline comparisons under runtime-matched baselines (K2M001 closed)
+
+Bare, native Rerank, and BM25+Select were re-run for all seven models under the
+same checkpoint, tokenizer, chat template, served model, vLLM version, BF16, and
+8K context as the formal K=2 answers — 48,110 answers and 28,300 decisions over
+108 jobs, 98,207 HTTP calls, 250,356,288 tokens, `valid=true`.
+
+This retires the `baseline_runtime_identity_gate=not_proven_by_this_script` flag
+that had kept these four contrasts out of `k2-fleet/`. Held-out, hierarchical
+bootstrap, 10,000 samples, seed 0:
+
+| Contrast | A | B | A−B | 95% CI | p |
+|---|---:|---:|---:|---:|---:|
+| Gated vs Bare, seven models | 45.47% | 37.24% | **+8.23 pp** | [+3.53, +13.87] | 0.0000 |
+| Gated vs native Rerank, five models | 52.38% | 48.77% | **+3.61 pp** | [+0.79, +6.27] | 0.0154 |
+| Gated vs BM25+Select, five models | 52.38% | 48.94% | **+3.44 pp** | [+0.28, +7.38] | 0.0302 |
+| Hy+Select vs BM25+Select, five models | 53.18% | 48.94% | **+4.24 pp** | [+0.81, +8.20] | 0.0160 |
+
+**All four CIs exclude zero.** Every contrast also keeps the sign and magnitude
+of the earlier unverified numbers (+8.06 / +2.88 / +3.98 / +4.78), so the concern
+that unproven runtime identity had inflated them does not hold.
+
+Two caveats that must travel with these numbers:
+
+- The `Gated vs native Rerank` contrast is weakened as a claim about reranking by
+  the degradation documented below: on GLM and Qwen3.5-4B most instances compare
+  against BM25 order rather than a working reranker.
+- The Gated column here comes from the published `k2/` packs, i.e. **before** the
+  gate recalibration described in the next section. That recalibration moves
+  seven-model Gated by −0.13 pp globally and changes no significance verdict, so
+  it does not affect the conclusions above; `k2-gate-recalibration-v2/` carries
+  the recalculated figures.
+
+Evidence: `community-results/baselines-runtime-matched-fleet/` and
+`community-results/<model>/baselines-runtime-matched/`.
+
 ## Gate recalibration under runtime-matched Bare
 
 Closing K2M001 required re-running Bare under the frozen K=2 runtime. `gate.py`
