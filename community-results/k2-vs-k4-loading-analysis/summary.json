@@ -1,0 +1,76 @@
+{
+ "schema_version": "k2-vs-k4-loading-summary-v1",
+ "split": "heldout",
+ "domains": [
+  "champ",
+  "logicbench",
+  "medcalcbench",
+  "theoremqa"
+ ],
+ "arms": {
+  "routed_gated": {
+   "models": [
+    "deepseek7b",
+    "glm4-9b",
+    "llama31-8b",
+    "mistral7b",
+    "qwen3.5-4b-reference",
+    "qwen35-9b",
+    "yi15-9b"
+   ],
+   "n_models": 7,
+   "k4": {
+    "loaded_skill_precision": 0.7309501484306118,
+    "loading_rate": 0.666321555884657,
+    "gold_load_rate": 0.4942153549225367
+   },
+   "k2": {
+    "loaded_skill_precision": 0.7363812869582201,
+    "loading_rate": 0.6942920214443393,
+    "gold_load_rate": 0.5161147902869757
+   }
+  },
+  "routed_always": {
+   "models": [
+    "deepseek7b",
+    "glm4-9b",
+    "llama31-8b",
+    "mistral7b",
+    "qwen3.5-4b-reference",
+    "qwen35-9b",
+    "yi15-9b"
+   ],
+   "n_models": 7,
+   "k4": {
+    "loaded_skill_precision": 0.5536944992542168,
+    "loading_rate": 0.9212613648646691,
+    "gold_load_rate": 0.5165317759331753
+   },
+   "k2": {
+    "loaded_skill_precision": 0.5415957111321349,
+    "loading_rate": 1.0,
+    "gold_load_rate": 0.5415957111321349
+   }
+  },
+  "routed_select": {
+   "models": [
+    "glm4-9b",
+    "llama31-8b",
+    "mistral7b",
+    "qwen3.5-4b-reference",
+    "qwen35-9b"
+   ],
+   "n_models": 5,
+   "k4": {
+    "loaded_skill_precision": 0.6221235011484761,
+    "loading_rate": 0.9964324214697463,
+    "gold_load_rate": 0.6199558498896247
+   },
+   "k2": {
+    "loaded_skill_precision": 0.6227814569536424,
+    "loading_rate": 1.0,
+    "gold_load_rate": 0.6227814569536424
+   }
+  }
+ }
+}

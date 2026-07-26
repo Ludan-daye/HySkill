@@ -1,0 +1,51 @@
+{
+ "schema_version": "k2-vs-k4-loading-analysis-v1",
+ "split": "heldout",
+ "domains": [
+  "champ",
+  "logicbench",
+  "medcalcbench",
+  "theoremqa"
+ ],
+ "headline": {
+  "gold_load_rate_k4_vs_k2": {
+   "routed_always": [
+    0.5165,
+    0.5416
+   ],
+   "routed_gated": [
+    0.4942,
+    0.5161
+   ],
+   "routed_select": [
+    0.62,
+    0.6228
+   ]
+  },
+  "conclusion": "K=2 在三个臂上的 gold_load_rate 全部不劣于 K=4"
+ },
+ "methodology_warning": "K=4 的 Always 臂加载率仅 92.13%（yi15-9b 的 medcalcbench 空加载达 38.0%），因此 loaded_skill_precision 在两者间分母不同、不可比；必须用 gold_load_rate 比较。",
+ "heldout_derivation": {
+  "k2": "loading_per_instance 的 is_validation 字段",
+  "k4": "由同包 gating_per_instance 的 in_calibration_split 按 (domain, instance_id) 关联重建，非原始记录"
+ },
+ "manifest_self_policy": {
+  "included_in_files": false,
+  "reason": "manifest.json 不能包含自身 SHA-256"
+ },
+ "files": {
+  "README.md": {
+   "sha256": "f74ead6f67d7647610878308044bd7e75d1a03dcf2798d7b66e50dec3a26b2fc",
+   "bytes": 3177
+  },
+  "loading_by_model.jsonl.gz": {
+   "sha256": "fd6d742ce4a916dfbbdc249c8b40adaf4ec6dce444edb5ba420303538f942956",
+   "bytes": 1448,
+   "rows": 19
+  },
+  "summary.json": {
+   "sha256": "1d0f2ff4c512cd4ffe95dc659a925e290c7b07e3872b914f0216b875596832e4",
+   "bytes": 1560
+  }
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "schema_version": "k2-gate-recalibration-sensitivity-v1",
+ "question": "若改用门控重标定后的 Gated 重算四条 baseline 对比，结论会变吗？",
+ "answer": "不会。四条判定全部保持显著，且三条的差值与置信区间下界均变得更强；published k2/ 因此是保守的一侧。",
+ "bootstrap": {
+  "samples": 10000,
+  "seed": 0,
+  "split": "heldout"
+ },
+ "comparisons": [
+  {
+   "comparison": "gated_vs_bare_seven_model",
+   "published_k2_gated": {
+    "difference_pp": 8.23,
+    "ci95_pp": [
+     3.53,
+     13.87
+    ],
+    "p": 0.0
+   },
+   "recalibrated_gated": {
+    "difference_pp": 8.37,
+    "ci95_pp": [
+     3.67,
+     13.96
+    ],
+    "p": 0.0
+   },
+   "verdict_changed": false
+  },
+  {
+   "comparison": "gated_vs_bm25_select_five_model",
+   "published_k2_gated": {
+    "difference_pp": 3.44,
+    "ci95_pp": [
+     0.28,
+     7.38
+    ],
+    "p": 0.0302
+   },
+   "recalibrated_gated": {
+    "difference_pp": 3.55,
+    "ci95_pp": [
+     0.47,
+     7.36
+    ],
+    "p": 0.0216
+   },
+   "verdict_changed": false
+  },
+  {
+   "comparison": "gated_vs_native_rerank_five_model",
+   "published_k2_gated": {
+    "difference_pp": 3.61,
+    "ci95_pp": [
+     0.79,
+     6.27
+    ],
+    "p": 0.0154
+   },
+   "recalibrated_gated": {
+    "difference_pp": 3.72,
+    "ci95_pp": [
+     0.98,
+     6.37
+    ],
+    "p": 0.013
+   },
+   "verdict_changed": false
+  },
+  {
+   "comparison": "hyskill_select_vs_bm25_select_five_model",
+   "published_k2_gated": {
+    "difference_pp": 4.24,
+    "ci95_pp": [
+     0.81,
+     8.2
+    ],
+    "p": 0.016
+   },
+   "recalibrated_gated": {
+    "difference_pp": 4.24,
+    "ci95_pp": [
+     0.81,
+     8.2
+    ],
+    "p": 0.016
+   },
+   "verdict_changed": false
+  }
+ ]
+}

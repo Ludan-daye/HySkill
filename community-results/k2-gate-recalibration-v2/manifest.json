@@ -103,6 +103,19 @@
    "sha256": "eb5b39e09222ab967b673d39afd5b612ea3f2ae0321156a48f1fbeb609e0ae76",
    "bytes": 4635,
    "rows": 9
+  },
+  "paired_comparisons_with_baselines.json": {
+   "sha256": "6f36bf3adcc6974ab72313a988d6a8fbc38bdf2d49a0e0ab79d5770bcd8bbe5f",
+   "bytes": 75454
+  },
+  "sensitivity_vs_published.json": {
+   "sha256": "24e3e5798e1dc962a6d238788a5168a026b8531e49feb752065191300f7ee848",
+   "bytes": 1734
   }
+ },
+ "sensitivity_check": {
+  "question": "改用重标定后的 Gated 重算四条 baseline 对比，结论是否改变",
+  "answer": "不变；四条判定全部保持显著，三条变得更强，published k2/ 是保守一侧",
+  "evidence": "sensitivity_vs_published.json"
  }
 }
