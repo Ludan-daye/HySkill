@@ -65,6 +65,16 @@ The retrieval generator had all seven paths dead after the `d64a77f` migration m
 
 **The passage-imagination curve was removed.** It is K-dependent and `k2/` publishes no per-instance passage pool, so plotting it would mix K inside one figure. Curves are now routed (7 models), LLM rerank (5), BM25 (5) — DeepSeek-7B and Yi-1.5-9B have no complete BM25 or rerank pool in `k4/`, and the script refuses to impute.
 
+### Why the retrieval figure reads two files out of `k4/`
+
+This looks wrong at a glance and was questioned once already, so it is recorded here rather than rediscovered.
+
+`K_img` controls how many hypothetical skill documents the LLM writes. Only methods that consume those documents can change with it. BM25 is lexical matching on the raw query and never calls the LLM at all; LLM reranking reorders BM25's 50 candidates and reads a candidate list, not an imagination. Neither takes `K` as an input, so their rankings are byte-identical at K=1, K=2 and K=4.
+
+That is why the K=2 campaign only re-ran the imagination-dependent arms: re-running the baselines would have burned compute to reproduce identical files. `k4/` is therefore not "the K=4 numbers" — it is "everything the K=4 round emitted", part of which is shared across all K. `k2/` publishes `routed` only.
+
+**Considered and rejected: copying the baseline top50 into `k2/` to make it self-contained.** Reasons: `k2/` is a published frozen pack whose `manifest.json` binds an 11-file list with a per-file SHA, so adding files breaks the directory contract and the exporter that writes it; and the two schemas differ (`k2` uses `gold_skill_ids`/`retrieved`/`k_samples`, the archive uses `gold`/`top50`). The `k_samples` field is the blocking one — BM25 has no such quantity, so writing 2 would assert it consumed two imaginations, and writing null would violate the schema. The current arrangement is safe because both the generator code (`K_INDEPENDENT_METHODS`) and the emitted manifest (`k_provenance`) state the split explicitly, and the figure caption tells the reader.
+
 ## Completion Snapshot
 
 Status marks: `[x]` complete for the current scope, `[~]` usable draft with remaining work, `[ ]` not drafted, `[!]` waiting on user input or a new experiment.
