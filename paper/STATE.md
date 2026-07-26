@@ -15,7 +15,7 @@
 
 As of 2026-07-26 both manuscripts carry K=2 numbers throughout, including the abstract, introduction, and all source comments. This was verified mechanically, not by reading: an audit checked every value the migration was supposed to replace and every value it was supposed to introduce, across `main.tex`, `intro.tex`, and `experiments.tex` (English) and `main.tex` (Chinese). Result: no surviving K=4 value, all required K=2 values present.
 
-Pushed commits: English `f75c3c0`, Chinese `6dce6c2`, both live on Overleaf; repository `8e50f75` on GitHub.
+Pushed commits: English `494b74f`, Chinese `aae9257`, both live on Overleaf. The audit covers rendered text *and* source comments, after a first pass found stale K=4 figures surviving only in comments and in the Chinese "\section{说明}" note.
 
 ### What each number now is
 
@@ -36,7 +36,8 @@ These are not transcription updates. The K=2 data says something different from 
 
 1. **The best fixed variant is two-stage, not passage.** At K=4 passage led (.501); at K=2 two-stage leads (.505) with passage and field fusion within .003. The manuscript no longer names a winner — it argues the top three are separated by less than cross-model spread, which is the actual motivation for routing.
 2. **Routed retrieval no longer beats reranking on nDCG@10.** The Qwen3.5-4B held-out paired test over the same 3,177 instances gives $-.001$, 95% CI $[-.013, .011]$, $p=0.8904$. The manuscript now reports no detected difference at the top of the ranking and rests the retrieval argument on Recall@50 (.638 → .836), where reranking is structurally capped because it can only reorder the BM25 pool. **Do not restore any "routed beats rerank on nDCG" claim.**
-3. **Native Select does not abstain.** The old text said it may "choose or abstain". All 14,150 decisions across the five eligible models resolve to a choice — it is a forced single pick at temperature 0 with a deterministic rank-1 fallback. Gating is the only arm in the comparison that can decline to load.
+3. **The introduction's retrieval claim is now pooled, not per-domain.** It asserted a significant win over BM25, dense, and hybrid "in each domain", sourced from the K=4 Phase 1 grid and never retested. Recomputed at K=2 (Qwen3.5-4B held-out, 3,177 paired instances, bootstrap 5,000, seed 0): pooled +0.191 vs BM25, +0.265 vs dense, +0.186 vs hybrid, all $p<0.0001$ — so the pooled claim holds. The per-domain claim does not: routed retrieval is **significantly behind** BM25 ($-0.047$) and hybrid ($-0.058$) on BigCodeBench, both $p<0.0001$, where lexical matching on shared code identifiers wins. Per-domain, dense is 5/5 significant and BM25/hybrid are 4/5. **This BigCodeBench boundary is a real negative result and belongs in Analysis (T001) — do not let it disappear.**
+4. **Native Select does not abstain.** The old text said it may "choose or abstain". All 14,150 decisions across the five eligible models resolve to a choice — it is a forced single pick at temperature 0 with a deterministic rank-1 fallback. Gating is the only arm in the comparison that can decline to load.
 
 ### The four baseline contrasts now in the paper
 
@@ -124,7 +125,7 @@ The specific thing to watch is `tab:e2e-main`, which grew from 4 to 7 columns. `
 | ID | Status | Priority | Task | Done when |
 |---|---|---|---|---|
 | T000 | `[!]` | High | Compile both manuscripts on Overleaf | No errors; `tab:e2e-main` fits without overflow; page budget re-checked. |
-| T001 | `[ ]` | High | Draft Analysis | Each pattern has direct evidence, a counterexample or boundary, and no unsupported universal wording. |
+| T001 | `[ ]` | High | Draft Analysis | Each pattern has direct evidence, a counterexample or boundary, and no unsupported universal wording. Must include the BigCodeBench retrieval boundary recorded above. |
 | T002 | `[ ]` | High | Draft Conclusion and Limitations | Closes the problem-method-result loop; names the unrun settings, the inactive $S_2$, and the undetected internal-arm differences. |
 | T003 | `[!]` | Medium | Insert method overview figure | Wait for the user's drawing, then place it with an ordinary AuthorKit float. |
 | T004 | `[ ]` | High | Final consistency and citation audit | English/Chinese content, terminology, support sets, references, and claims agree. |
