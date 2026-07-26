@@ -362,11 +362,16 @@ def validate_runtime_manifest(
 def runtime_identity_key(public: Mapping[str, JsonValue]) -> str:
     """Return the protocol-level runtime identity that all jobs must share.
 
-    The frozen protocol requires one checkpoint, tokenizer, chat template,
-    served model, vLLM version, dtype and context length per model. It does
-    not require one physical GPU: the formal K=2 run itself spans A100 80GB,
-    2x A100 40GB and RTX 4090 nodes, and `hardware` is absent from the
-    runtime-identity table in AGENTS.md.
+    The decisive evidence is the formal K=2 answers themselves: every row
+    carries a `runtime_identity` with exactly eight fields --
+    checkpoint, tokenizer_revision, chat_template_revision, served_model,
+    vllm_version, dtype, context_length, model. There is no hardware field.
+    A baseline arm is a valid control when those eight parameters match; the
+    physical node is not part of what the main experiment considers identity.
+
+    This is consistent with how K=2 was actually run: it spans A100 80GB,
+    2x A100 40GB and RTX 4090 nodes, and AGENTS.md's runtime-identity table
+    has no hardware column either.
 
     `hardware` and `source` are therefore reported as execution context by
     `runtime_context_key` rather than folded into identity. Requiring them to
