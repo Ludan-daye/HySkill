@@ -203,11 +203,10 @@ Two caveats that must travel with these numbers:
 - The `Gated vs native Rerank` contrast is weakened as a claim about reranking by
   the degradation documented below: on GLM and Qwen3.5-4B most instances compare
   against BM25 order rather than a working reranker.
-- The Gated column here comes from the published `k2/` packs, i.e. **before** the
-  gate recalibration described in the next section. That recalibration moves
-  seven-model Gated by −0.13 pp globally and changes no significance verdict, so
-  it does not affect the conclusions above; `k2-gate-recalibration-v2/` carries
-  the recalculated figures.
+- The Gated column comes from the published `k2/` packs, which is the source the
+  paper cites throughout. The gate recalibration in the next section is a
+  robustness check on those figures, not a replacement: it moves seven-model
+  Gated by −0.13 pp and changes no significance verdict.
 
 Evidence: `community-results/baselines-runtime-matched-fleet/` and
 `community-results/<model>/baselines-runtime-matched/`.
@@ -237,8 +236,15 @@ contains zero. The Qwen4 routed-vs-fixed contrast flips sign (−0.13 → +0.18p
 at p=0.8548 — noise inside "no detected difference", **not** a direction
 reversal.
 
-Numbers above supersede the loading and Gated answer figures earlier in this
-document. Evidence: `community-results/k2-gate-recalibration-v2/`.
+**Which numbers the paper cites.** The published `k2/` packs remain the primary
+source for Gated figures. This recalibration is reported as a robustness check,
+not a replacement: it moves seven-model Gated by −0.13 pp globally and changes
+no significance verdict, so the published figures stand. Evidence for the check:
+`community-results/k2-gate-recalibration-v2/`.
+
+Reporting it this way also keeps the baseline comparison table internally
+consistent — that table's Gated column comes from `k2/`, so citing `k2/`
+throughout avoids mixing two Gated vintages in one paper.
 
 ## Native rerank degrades into BM25 order on smaller models
 
@@ -265,8 +271,8 @@ functioning LLM reranker.
 
 ## Public evidence
 
-- `community-results/k2-gate-recalibration-v2/` (gate recalibration, supersedes
-  the Gated/loading figures in `k2-fleet/`)
+- `community-results/k2-gate-recalibration-v2/` (gate recalibration — robustness
+  check on the `k2/` Gated figures, not a replacement for them)
 - `community-results/k2-fleet/loading_metrics_long.jsonl.gz`
 - `community-results/k2-fleet/answer_metrics_long.jsonl.gz`
 - `community-results/k2-fleet/summary.json`
