@@ -14,9 +14,10 @@ Most of the value in the tree is **frozen experimental evidence and its
 provenance**, not application code. Code exists to produce, validate, and package
 that evidence. Treat committed results as immutable artifacts.
 
-An AAAI-2027 manuscript is in flight (`paper/`). Experiments are computationally
-complete for K=2; the remaining work is provenance, baseline runtime identity,
-packaging, and manuscript integration.
+An AAAI-2027 manuscript is in flight (`paper/`). **The K=2 experiments and their
+control arms are complete and published**; K2M001 (baseline runtime identity) is
+closed. The remaining work is manuscript integration — `experiments.tex` is still
+a K=4 document.
 
 ## Read this before changing experiments, data, or the paper
 
@@ -30,8 +31,9 @@ Source-of-truth order (highest first):
    `2026-07-23-k2-unified-loading-and-ablation.md`,
    `2026-07-24-runtime-matched-baseline-rerun.md`, and
    `2026-07-23-community-results-k-layout-migration.md`.
-4. `docs/10-k2-results.md` (active K=2 numbers), `docs/05-results.md` (Phase 1/2),
-   `docs/10-k-ablation-analysis.md` (K ablation).
+4. `docs/10-k2-results.md` (active K=2 numbers, the four closed baseline
+   contrasts, gate recalibration, cross-K loading, rerank degradation),
+   `docs/05-results.md` (Phase 1/2), `docs/10-k-ablation-analysis.md` (K ablation).
 5. `paper/STATE.md` — manuscript baseline, last updated 2026-07-21 and stale for
    K=2 execution progress.
 
@@ -181,47 +183,82 @@ external/SR-Agents/data/bench/   frozen corpus + instances (gitignored)
 | Path | Contents |
 |---|---|
 | `<TAG>/k2/` | active paper experiment: 12 files (11 for DeepSeek/Yi, no Select) |
-| `<TAG>/k4/` | archived historical K=4 main experiment |
+| `<TAG>/k4/` | archived historical K=4 main experiment (fixed reference) |
+| `<TAG>/baselines-runtime-matched/` | Bare / native Rerank / BM25+Select under the K=2 runtime |
 | `<TAG>/k-ablation/` | joint K={1,2,4,8,10} pack: 5 files |
 | `<TAG>/imagination_full_k{1,2,4,8,10}.*` | full nested prefix caches — stay at model root |
 | `qwen3.5-4b-reference/baselines-native/` | K-independent shared evidence |
+| `baselines-runtime-matched-fleet/` | the four baseline contrasts (K2M001 evidence) |
+| `k2-gate-recalibration-v2/` | gate recalibration + sensitivity check |
+| `k2-vs-k4-loading-analysis/` | cross-K loading comparison |
 | `k2-fleet/`, `k-ablation-fleet/` | cross-model aggregates |
 
 Never mix per-instance evidence, summaries, and manifests across those
 directories, and never move `k-ablation/`, `imagination_full_k*`, or
 `baselines-native/` into `k2/` or `k4/`.
 
-## Current working-tree state (as of 2026-07-25)
+## Current state (as of 2026-07-25, end of the K2M001 round)
 
-`main` is at `aa5020c` (= `origin/main`), which published the seven K=2 packs plus
-`community-results/k2-fleet/`. The dirty tree is a **reviewed, in-progress
-migration**, not junk:
+`main` is at `28c11ef` and everything below is pushed. The K=2 project is
+**experimentally complete**: 48,110 baseline answers + 28,300 decisions across
+108 jobs, `valid=true`, and the four baseline contrasts are all significant on
+held-out data. K2M001 is closed.
 
-- **70 staged `git mv` renames** moving each `<TAG>/*` K=4 file into `<TAG>/k4/`,
-  with `community-results/k4-migration-manifest.json` (untracked) recording
-  70 files / 70,917,990 bytes with pre/post SHA-256 and a 113-file protected set.
-- **6 modified reader/writer scripts** (`export_top50.py`, `export_loading.py`,
-  `export_analysis_pack.py`, `export_reference_pack.py`, `summarize_multimodel.py`,
-  `run_multimodel.sh`) switched to the `<TAG>/k4/` output path.
-- Untracked but intended: `AGENTS.md`, `docs/superpowers/`, `docs/10-k2-results.md`,
-  the K=2 scripts/tests/modules, per-model top-level `README.md`, and `paper/`.
+Committed this round, in order: `d64a77f` K=4 migration (70 files, SHA-verified)
+· `c6a3206` K=2 downstream pipeline · `58fa20e` handoff docs · `0ec7537` gate
+recalibration pack · `a349ba5` results doc · `4915baa` AGENTS.md refresh ·
+`9c0ddc3` runtime-matched baseline packs · `4f5542a`+`eee8a9f` citation scoping ·
+`28c11ef` K=2 vs K=4 loading analysis.
 
-A **second worktree** holds the K2M001 baseline rerun:
-`/Users/a1-6/importantfile/Research/skill-LLM-baseline-run-20260724` on branch
-`codex/runtime-matched-baselines-20260724`, also based on `aa5020c`. It carries
-six `hyskill/runtime_matched_*.py` modules, twenty `scripts/*runtime_matched*.py`
-CLIs, eleven test files, and `runtime-staging/<tag>/` launch scripts for Wave A
-(fresh Bare) and Wave C (native Rerank / BM25+Select) — all untracked. Its purpose
-is to re-run the three legacy baselines under the *same* checkpoint, tokenizer,
-chat template, vLLM, and 8K context as the formal K=2 rows, because the four
-baseline contrasts currently record
-`baseline_runtime_identity_gate=not_proven_by_this_script`. That is why
-`community-results/k2-fleet/paired_comparisons.json` ships only **4** of the 8
-contrasts and its manifest marks the rest
-`excluded_pending_runtime_identity_gate`.
+The second worktree
+`/Users/a1-6/importantfile/Research/skill-LLM-baseline-run-20260724` (branch
+`codex/runtime-matched-baselines-20260724`, at `35b2f80`) holds the baseline
+implementation: six `hyskill/runtime_matched_*.py` modules, twenty
+`scripts/*runtime_matched*.py` CLIs, eleven test files, `runtime-staging/`. It is
+pushed and clean. Its `results/` (gitignored) holds the raw 409 MB recovered from
+the five servers plus the v2 formal tree — that is local-only evidence, not a
+deliverable.
 
-Do not merge baseline work into the K4 migration state, and do not treat the
-uncommitted migration as a prerequisite for baseline runs.
+Four untracked paths in `main` are **deliberately not committed**: `paper/`
+(contains two nested Overleaf repos), `error.log`, `package.json`,
+`package-lock.json`.
+
+### Frozen decisions from this round
+
+- **The paper is built on K=2 + gating**; K=4 remains a fixed reference in
+  `<TAG>/k4/`. Do not switch the main line back — every baseline in this round
+  was run against K=2 retrieval inputs.
+- **Gated figures are cited from the published `k2/` packs**, not from
+  `k2-gate-recalibration-v2/`. The recalibration is a sensitivity check: it
+  changes no verdict and makes three of the four contrasts stronger, so `k2/` is
+  the conservative side.
+- **Runtime identity is parameter-only.** The formal K=2 answers' own
+  `runtime_identity` has eight fields and no hardware column, so
+  `runtime_identity_key` was narrowed to match; `hardware`/`source` are reported
+  via `runtime_context_key` and a `runtime_context_varies` record. This is the
+  only validation gate narrowed this round (branch commit `35b2f80`).
+
+### Two metric traps
+
+- **`loaded_skill_precision` is not comparable across K.** K=4's Always arm is
+  not 100% loaded (yi15-9b returns nothing on 38.0% of medcalcbench), so its
+  denominator silently drops retrieval failures and the metric reads too high.
+  Use `gold_load_rate` for any cross-K loading comparison.
+- **`nvidia-smi` utilization cannot tell you whether a vLLM job is saturated.**
+  It shows ~100% whenever a kernel is resident. Read vLLM's own
+  `Running / Waiting / KV cache usage` triple instead. Getting this wrong left a
+  job running at 1/20 speed for hours this round.
+
+### Remaining work (outside the K2M001 scope)
+
+- `paper/latex/sections/experiments.tex` is still an entirely K=4 manuscript and
+  asserts that routing and gating are both significant on Qwen4 — the K=2 result
+  is −0.13 pp with a CI crossing zero, p=0.8808.
+- Analysis and Conclusion sections are skeletons; the method overview figure and
+  the AAAI-27 reproducibility checklist are missing.
+- Both Overleaf repos need syncing; keep EN/ZH content aligned.
+- CLEAN001: remove the temporary staging SSH key (`codex-k2-stage-20260723`)
+  from the three servers where it was installed.
 
 ## Non-negotiable rules
 

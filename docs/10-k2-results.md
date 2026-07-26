@@ -246,6 +246,56 @@ Reporting it this way also keeps the baseline comparison table internally
 consistent — that table's Gated column comes from `k2/`, so citing `k2/`
 throughout avoids mixing two Gated vintages in one paper.
 
+## Why the paper is built on K=2 rather than K=4
+
+Held-out, seven models (five for Hy+Select), four rule domains. Using
+`gold_load_rate` — the only cross-K comparable loading metric, see the warning
+below — K=2 is no worse than K=4 on any arm:
+
+| Arm | K=4 | K=2 | K=2 − K=4 |
+|---|---:|---:|---:|
+| Always (no gate) | 51.65% | **54.16%** | **+2.51 pp** |
+| Gated | 49.42% | **51.61%** | **+2.19 pp** |
+| Hy+Select | 62.00% | **62.28%** | +0.28 pp |
+
+K=2 also costs 1,385 generation tokens per item against K=4's 2,747 (−49.6%),
+and the K ablation finds routed retrieval nDCG@10 macro-average 54.43% for K=2
+against 54.17% for K=4.
+
+### The metric trap that reverses this conclusion
+
+**K=4's Always arm is not 100% loaded.** yi15-9b returns no candidate on 38.0%
+of medcalcbench and 36.8% of logicbench instances; across seven models the K=4
+Always loading rate is only 92.13%, against 100% for K=2.
+
+That makes `loaded_skill_precision` **incomparable across K**: K=4's denominator
+silently excludes exactly the instances where retrieval failed, inflating the
+figure. Read that way K=4 appears to win Always, 55.37% vs 54.16%. It does not.
+`gold_load_rate` keeps every instance in the denominator and is the metric any
+cross-K loading comparison must use.
+
+### Gating absorbs K=2's weaker retrieval
+
+K=2 imagines twice instead of four times, so its retrieval is genuinely weaker —
+and the gate compensates. On **loaded-skill precision** the ordering flips once
+the gate is applied: K=4 leads on Always but K=2 leads on Gated (73.10% →
+73.64%).
+
+yi15-9b shows the mechanism most clearly. Under K=4 nearly 40% of its retrievals
+come back empty, so the gate is forced down to a 51.83% loading rate; under K=2
+retrieval is stable, the gate returns to 66.49%, and gold-load rate is 12.6 pp
+higher. This is the paper's central claim in miniature: the gate's value is
+absorbing retrieval uncertainty.
+
+### Where K=4 still wins
+
+K=2's margin comes almost entirely from the two weak models — yi15-9b (+12.6 pp
+gold-load rate) and deepseek7b (+3.8 pp). On **llama31-8b and mistral7b, K=4
+leads by roughly 0.5 pp**. The claim is "K=2 is the better cost–effect tradeoff
+across models", not "K=2 wins on every model".
+
+Evidence: `community-results/k2-vs-k4-loading-analysis/`.
+
 ## Native rerank degrades into BM25 order on smaller models
 
 The frozen protocol lets a listwise rerank that parses incompletely fall back to

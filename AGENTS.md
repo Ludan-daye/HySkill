@@ -37,23 +37,83 @@ entry was "2× A100 40G"; that endpoint is now a single 24G 4090.
   **supplement, not a replacement** — `<TAG>/k2/` stays as published at
   `aa5020c`. Folding the 609 rows into `k2/` would require editing the
   deliberately frozen provenance counts in `hyskill/k2_answer_provenance.py`
-  and widening the exporter's `provenance_level` whitelist. Paper must cite the
-  supplement for gate-related numbers.
+  and widening the exporter's `provenance_level` whitelist, so it was not done.
+  The paper cites `k2/`; see the frozen decisions below.
 - **mistral7b's 12 evals** (answers existed but were never scored).
+- **Runtime-matched baseline packs** (`9c0ddc3`): seven
+  `<TAG>/baselines-runtime-matched/` plus
+  `community-results/baselines-runtime-matched-fleet/`, 61 files.
+- **K=2 vs K=4 loading analysis** (`28c11ef`):
+  `community-results/k2-vs-k4-loading-analysis/`.
 
-### Baseline rerun status
+### Where the deliverables live
 
-Only three model-arm cells were ever missing; the rest were complete but
-unretrieved. Remaining work is 8,490 answers:
-
-| Cell | State |
+| Path | Contents |
 |---|---|
-| glm4-9b Rerank | running on `.169` |
-| glm4-9b Select | auto-chained after Rerank via `/root/glm-autochain.sh` |
-| qwen35-9b Rerank | running on `.167` |
+| `<TAG>/k2/` | Active main experiment, incl. `loading_per_instance` |
+| `<TAG>/k4/` | Archived fixed reference |
+| `<TAG>/baselines-runtime-matched/` | Bare / native Rerank / BM25+Select |
+| `<TAG>/k-ablation/` | Joint K={1,2,4,8,10} pack |
+| `baselines-runtime-matched-fleet/` | The four significant contrasts |
+| `k2-gate-recalibration-v2/` | Gate recalibration + sensitivity check |
+| `k2-vs-k4-loading-analysis/` | Cross-K loading comparison |
+| `k2-fleet/`, `k-ablation-fleet/` | Fleet aggregates |
 
-Bare is 7/7 complete. Rerank has llama/mistral/qwen4; Select has those three
-plus qwen9.
+### K2M001 is CLOSED — the baseline rerun finished
+
+All three missing cells completed. Fleet totals: **48,110 answers + 28,300
+decisions across 108 jobs**, 98,207 HTTP calls, 250,356,288 tokens,
+`valid=true`. Bare 7/7, Rerank 5/5, Select 5/5.
+
+The `baseline_runtime_identity_gate=not_proven_by_this_script` flag is retired.
+All four contrasts are significant on held-out data (hierarchical bootstrap,
+10,000 samples, seed 0):
+
+| Contrast | A | B | A−B | 95% CI | p |
+|---|---:|---:|---:|---:|---:|
+| Gated vs Bare, 7 models | 45.47% | 37.24% | +8.23 pp | [+3.53, +13.87] | 0.0000 |
+| Gated vs native Rerank, 5 | 52.38% | 48.77% | +3.61 pp | [+0.79, +6.27] | 0.0154 |
+| Gated vs BM25+Select, 5 | 52.38% | 48.94% | +3.44 pp | [+0.28, +7.38] | 0.0302 |
+| Hy+Select vs BM25+Select, 5 | 53.18% | 48.94% | +4.24 pp | [+0.81, +8.20] | 0.0160 |
+
+Every contrast keeps the sign and magnitude of the earlier unverified numbers
+(+8.06 / +2.88 / +3.98 / +4.78), so the worry that unproven runtime identity had
+inflated them is resolved, not deferred.
+
+### Frozen decisions made in this round
+
+- **The paper is built on K=2 + gating.** K=4 stays as a fixed reference in
+  `<TAG>/k4/`. Evidence in `community-results/k2-vs-k4-loading-analysis/`:
+  by `gold_load_rate`, K=2 is no worse than K=4 on any arm (Always 54.16 vs
+  51.65, Gated 51.61 vs 49.42, Hy+Select 62.28 vs 62.00) at half the generation
+  cost. But K=2's margin comes almost entirely from yi15-9b and deepseek7b;
+  llama31-8b and mistral7b favour K=4 by ~0.5 pp. Claim the tradeoff, not a
+  per-model sweep.
+- **The paper cites the published `k2/` packs for Gated figures**, not
+  `k2-gate-recalibration-v2/`. The recalibration is a sensitivity check:
+  recomputing all four contrasts with recalibrated Gated changes no verdict and
+  makes three of them stronger, so `k2/` is the conservative side. See
+  `k2-gate-recalibration-v2/sensitivity_vs_published.json`.
+- **Runtime identity is parameter-only.** `runtime_identity_key` in
+  `validate_runtime_matched_baselines.py` used to fold `hardware` and `source`
+  into the identity every job of a model must share, which failed glm4-9b (Bare
+  on an A100 80GB, native arms on a 40GB). The decisive evidence is that the
+  formal K=2 answers' own `runtime_identity` has exactly eight fields and no
+  hardware column. Identity now covers only the protocol fields; hardware and
+  source are reported via `runtime_context_key`, and validate emits a
+  `runtime_context_varies` record naming each node. **This is the only validation
+  gate that was narrowed this round — review branch commit `35b2f80`.**
+
+### Two caveats that must travel with the numbers
+
+1. **`loaded_skill_precision` is not comparable across K.** K=4's Always arm is
+   not 100% loaded (yi15-9b returns nothing on 38.0% of medcalcbench), so its
+   denominator silently drops retrieval failures. Read that way K=4 falsely
+   "wins" Always 55.37 vs 54.16. Use `gold_load_rate` for any cross-K loading
+   comparison.
+2. **`Gated vs native Rerank` is a weak claim about reranking.** On GLM 72.3%
+   and Qwen3.5-4B 62.7% of instances have ≥41 of 50 candidates appended in BM25
+   order, so most of that contrast is effectively Gated vs BM25 order.
 
 ### Environment traps that cost real time
 
