@@ -111,9 +111,15 @@ inflated them is resolved, not deferred.
    denominator silently drops retrieval failures. Read that way K=4 falsely
    "wins" Always 55.37 vs 54.16. Use `gold_load_rate` for any cross-K loading
    comparison.
-2. **`Gated vs native Rerank` is a weak claim about reranking.** On GLM 72.3%
-   and Qwen3.5-4B 62.7% of instances have ≥41 of 50 candidates appended in BM25
-   order, so most of that contrast is effectively Gated vs BM25 order.
+2. **`omitted_candidate_count` does not measure whether reranking worked.** It
+   counts how many of the 50 candidates were appended in BM25 order because the
+   listwise output parsed incompletely. It is uncorrelated (if anything inversely
+   correlated) with whether the model changed the loaded skill: Llama omits the
+   fewest (9.8) yet changes only 50.7% of top-1 decisions, while Qwen3.5-4B omits
+   32.6 and changes 80.1%. All five models change top-1 on 50–80% of instances,
+   so `Gated vs native Rerank` needs no interpretive caveat. Also note
+   `ordered_candidate_ids` is the **input** order, not the model's output;
+   `selected_skill_id` is the choice.
 
 ### Environment traps that cost real time
 

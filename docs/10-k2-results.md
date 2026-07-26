@@ -198,11 +198,12 @@ bootstrap, 10,000 samples, seed 0:
 of the earlier unverified numbers (+8.06 / +2.88 / +3.98 / +4.78), so the concern
 that unproven runtime identity had inflated them does not hold.
 
-Two caveats that must travel with these numbers:
+Two notes that must travel with these numbers:
 
-- The `Gated vs native Rerank` contrast is weakened as a claim about reranking by
-  the degradation documented below: on GLM and Qwen3.5-4B most instances compare
-  against BM25 order rather than a working reranker.
+- The last three contrasts use **five-model support**, because DeepSeek-7B and
+  Yi-1.5-9B cannot fit the 50-candidate Rerank/Select prompt in 8K context; their
+  cells are `unavailable`, never zero. Do not average a five-model figure against
+  the seven-model `Gated vs Bare`.
 - The Gated column comes from the published `k2/` packs, which is the source the
   paper cites throughout. The gate recalibration in the next section is a
   robustness check on those figures, not a replacement: it moves seven-model
@@ -296,28 +297,43 @@ across models", not "K=2 wins on every model".
 
 Evidence: `community-results/k2-vs-k4-loading-analysis/`.
 
-## Native rerank degrades into BM25 order on smaller models
+## Listwise rerank: incomplete ordering does not mean an inert reranker
 
 The frozen protocol lets a listwise rerank that parses incompletely fall back to
-appending the omitted candidates in their original BM25 order. Measuring how
-often that happens shows the native Rerank baseline is not a working reranker on
-most models:
+appending the omitted candidates in their original BM25 order.
+`omitted_candidate_count` records how many of the 50 candidates were appended
+that way. It varies enormously across models — and it does **not** measure
+whether reranking affected the loading decision.
 
-| Model | omitted mean | fully ranked | ≥41 of 50 appended | used all 3 parse attempts |
-|---|---:|---:|---:|---:|
-| Llama-3.1-8B | 9.8 | 33.3% | 6.5% | 17.3% |
-| Mistral-7B | 24.7 | 7.7% | 30.6% | 55.1% |
-| Qwen3.5-4B | 32.6 | 5.1% | 62.7% | 69.4% |
-| GLM-4-9B | 37.4 | 2.7% | 72.3% | 80.5% |
+The `always_rerank` arm loads exactly one skill, the reranked top-1. The question
+that matters is therefore how often the model's top-1 differs from BM25's:
 
-Every row is `failure_category=success`; nothing here violates the protocol, and
-Llama's 33% full-ranking rate shows the pipeline itself is correct. This is a
-capability difference, not a bug.
+| Model | omitted mean | fully ranked | **changed BM25 top-1** |
+|---|---:|---:|---:|
+| Llama-3.1-8B | **9.8** (lowest) | 33.3% | 50.7% |
+| Mistral-7B | 24.7 | 7.7% | **71.6%** |
+| Qwen3.5-4B | 32.6 | 5.1% | **80.1%** |
+| Qwen3.5-9B | 35.8 | 4.8% | 77.6% |
+| GLM-4-9B | **36.8** (highest) | 4.2% | 49.9% |
 
-The consequence for interpretation: on GLM and Qwen3.5-4B, roughly two thirds of
-the "Gated vs native Rerank" comparison is effectively **Gated vs BM25 order**.
-Report the contrast with that caveat rather than as a comparison against a
-functioning LLM reranker.
+The two columns are not positively correlated — if anything the reverse. Llama
+has the lowest omitted count yet changes the fewest top-1 decisions; Qwen3.5-4B
+omits three times as many candidates yet changes 80.1% of them. **All five models
+substantively alter the loaded skill on 50–80% of instances**, so the native
+Rerank baseline is a working reranker on every model, and
+`Gated vs native Rerank` needs no interpretive caveat.
+
+What `omitted_candidate_count` does measure is the ability to emit a complete
+50-item ordering — a format-following capability that correlates with model size.
+That would matter for a top-5 or nDCG@10 comparison, where the tail order enters
+the metric. It does not matter for an arm that loads only top-1.
+
+`ordered_candidate_ids` in the decision records is the **input** order (verified
+identical to the BM25 source on 223/223 champ instances), not the model's output;
+`selected_skill_id` is the model's choice. Confusing the two is what makes the
+"degraded into BM25 order" reading look plausible.
+
+Every row is `failure_category=success`; nothing here violates the protocol.
 
 ## Public evidence
 
