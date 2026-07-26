@@ -1,0 +1,409 @@
+{
+  "comparison": "Gold-skill Recall@K for K=2 routed imagination, LLM reranking, and BM25",
+  "k_provenance": {
+    "routed": "K_img=2 active pack (community-results/<tag>/k2/); imagination-dependent",
+    "llm_rerank": "K-independent: reads BM25 candidates, never an imagination; rankings identical under any K",
+    "bm25": "K-independent: lexical retrieval, never an imagination; rankings identical under any K"
+  },
+  "metric": "Mean per-instance recall pooled over each figure's listed comparison domains; model figures do not average across models",
+  "cutoffs": [
+    5,
+    10,
+    50
+  ],
+  "domains": [
+    "theoremqa",
+    "logicbench",
+    "medcalcbench",
+    "champ",
+    "bigcodebench"
+  ],
+  "style_mapping": {
+    "routed": {
+      "color": "#0072B2",
+      "linestyle": "-",
+      "marker": "o"
+    },
+    "llm_rerank": {
+      "color": "#D55E00",
+      "linestyle": "--",
+      "marker": "s"
+    },
+    "bm25": {
+      "color": "#666666",
+      "linestyle": ":",
+      "marker": "^"
+    }
+  },
+  "models": {
+    "01-qwen35-4b": {
+      "label": "Qwen3.5-4B",
+      "sources": {
+        "routed_k2": "community-results/qwen3.5-4b-reference/k2/retrieval_top50.jsonl.gz",
+        "k_independent_baselines": "community-results/qwen3.5-4b-reference/k4/retrieval_top50.jsonl.gz"
+      },
+      "comparison_domains": [
+        "theoremqa",
+        "logicbench",
+        "medcalcbench",
+        "champ"
+      ],
+      "instance_count": 2830,
+      "series": {
+        "routed": [
+          0.7719081272084806,
+          0.8430624263839812,
+          0.9342049469964665
+        ],
+        "llm_rerank": [
+          0.7311071849234393,
+          0.7688692579505301,
+          0.7943816254416961
+        ],
+        "bm25": [
+          0.48857479387514724,
+          0.6072438162544169,
+          0.7943816254416961
+        ]
+      },
+      "omitted_methods": {},
+      "y_axis": {
+        "limits": [
+          0.45,
+          1.0
+        ],
+        "ticks": [
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9,
+          1.0
+        ]
+      },
+      "pdf": "paper/figures/retrieval-recall-by-model/01-qwen35-4b.pdf",
+      "png": "paper/figures/retrieval-recall-by-model/01-qwen35-4b.png"
+    },
+    "02-qwen35-9b": {
+      "label": "Qwen3.5-9B",
+      "sources": {
+        "routed_k2": "community-results/qwen35-9b/k2/retrieval_top50.jsonl.gz",
+        "k_independent_baselines": "community-results/qwen35-9b/k4/retrieval_top50.jsonl.gz"
+      },
+      "comparison_domains": [
+        "theoremqa",
+        "logicbench",
+        "medcalcbench",
+        "champ",
+        "bigcodebench"
+      ],
+      "instance_count": 3970,
+      "series": {
+        "routed": [
+          0.6991813602015113,
+          0.7827329974811083,
+          0.9053442485306465
+        ],
+        "llm_rerank": [
+          0.6440176322418136,
+          0.6660327455919396,
+          0.687649034424853
+        ],
+        "bm25": [
+          0.41357682619647357,
+          0.495352644836272,
+          0.687649034424853
+        ]
+      },
+      "omitted_methods": {},
+      "y_axis": {
+        "limits": [
+          0.35,
+          0.95
+        ],
+        "ticks": [
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9
+        ]
+      },
+      "pdf": "paper/figures/retrieval-recall-by-model/02-qwen35-9b.pdf",
+      "png": "paper/figures/retrieval-recall-by-model/02-qwen35-9b.png"
+    },
+    "03-glm4-9b": {
+      "label": "GLM-4-9B",
+      "sources": {
+        "routed_k2": "community-results/glm4-9b/k2/retrieval_top50.jsonl.gz",
+        "k_independent_baselines": "community-results/glm4-9b/k4/retrieval_top50.jsonl.gz"
+      },
+      "comparison_domains": [
+        "theoremqa",
+        "logicbench",
+        "medcalcbench",
+        "champ",
+        "bigcodebench"
+      ],
+      "instance_count": 3970,
+      "series": {
+        "routed": [
+          0.617241813602015,
+          0.6893408900083963,
+          0.8194836272040302
+        ],
+        "llm_rerank": [
+          0.6161125104953821,
+          0.6402350965575146,
+          0.687649034424853
+        ],
+        "bm25": [
+          0.41357682619647357,
+          0.495352644836272,
+          0.687649034424853
+        ]
+      },
+      "omitted_methods": {},
+      "y_axis": {
+        "limits": [
+          0.35,
+          0.9
+        ],
+        "ticks": [
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9
+        ]
+      },
+      "pdf": "paper/figures/retrieval-recall-by-model/03-glm4-9b.pdf",
+      "png": "paper/figures/retrieval-recall-by-model/03-glm4-9b.png"
+    },
+    "04-llama31-8b": {
+      "label": "Llama-3.1-8B",
+      "sources": {
+        "routed_k2": "community-results/llama31-8b/k2/retrieval_top50.jsonl.gz",
+        "k_independent_baselines": "community-results/llama31-8b/k4/retrieval_top50.jsonl.gz"
+      },
+      "comparison_domains": [
+        "theoremqa",
+        "logicbench",
+        "medcalcbench",
+        "champ",
+        "bigcodebench"
+      ],
+      "instance_count": 3970,
+      "series": {
+        "routed": [
+          0.6256255247691015,
+          0.7005625524769101,
+          0.8278127623845507
+        ],
+        "llm_rerank": [
+          0.5757010915197313,
+          0.604592779177162,
+          0.687649034424853
+        ],
+        "bm25": [
+          0.41357682619647357,
+          0.495352644836272,
+          0.687649034424853
+        ]
+      },
+      "omitted_methods": {},
+      "y_axis": {
+        "limits": [
+          0.35,
+          0.9
+        ],
+        "ticks": [
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9
+        ]
+      },
+      "pdf": "paper/figures/retrieval-recall-by-model/04-llama31-8b.pdf",
+      "png": "paper/figures/retrieval-recall-by-model/04-llama31-8b.png"
+    },
+    "05-deepseek7b": {
+      "label": "DeepSeek-7B",
+      "sources": {
+        "routed_k2": "community-results/deepseek7b/k2/retrieval_top50.jsonl.gz",
+        "k_independent_baselines": "community-results/deepseek7b/k4/retrieval_top50.jsonl.gz"
+      },
+      "comparison_domains": [
+        "theoremqa",
+        "logicbench",
+        "medcalcbench",
+        "champ",
+        "bigcodebench"
+      ],
+      "instance_count": 3970,
+      "series": {
+        "routed": [
+          0.48774979009235936,
+          0.5737573467674223,
+          0.7428589420654912
+        ]
+      },
+      "omitted_methods": {
+        "llm_rerank": "partial instance pool: 0/3970",
+        "bm25": "partial instance pool: 747/3970"
+      },
+      "y_axis": {
+        "limits": [
+          0.45,
+          0.8
+        ],
+        "ticks": [
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ]
+      },
+      "pdf": "paper/figures/retrieval-recall-by-model/05-deepseek7b.pdf",
+      "png": "paper/figures/retrieval-recall-by-model/05-deepseek7b.png"
+    },
+    "06-yi15-9b": {
+      "label": "Yi-1.5-9B",
+      "sources": {
+        "routed_k2": "community-results/yi15-9b/k2/retrieval_top50.jsonl.gz",
+        "k_independent_baselines": "community-results/yi15-9b/k4/retrieval_top50.jsonl.gz"
+      },
+      "comparison_domains": [
+        "theoremqa",
+        "logicbench",
+        "medcalcbench",
+        "champ",
+        "bigcodebench"
+      ],
+      "instance_count": 3970,
+      "series": {
+        "routed": [
+          0.6202350965575147,
+          0.6896305625524769,
+          0.8254408060453401
+        ]
+      },
+      "omitted_methods": {
+        "llm_rerank": "partial instance pool: 0/3970",
+        "bm25": "partial instance pool: 747/3970"
+      },
+      "y_axis": {
+        "limits": [
+          0.55,
+          0.9
+        ],
+        "ticks": [
+          0.55,
+          0.6,
+          0.65,
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9
+        ]
+      },
+      "pdf": "paper/figures/retrieval-recall-by-model/06-yi15-9b.pdf",
+      "png": "paper/figures/retrieval-recall-by-model/06-yi15-9b.png"
+    },
+    "07-mistral7b": {
+      "label": "Mistral-7B",
+      "sources": {
+        "routed_k2": "community-results/mistral7b/k2/retrieval_top50.jsonl.gz",
+        "k_independent_baselines": "community-results/mistral7b/k4/retrieval_top50.jsonl.gz"
+      },
+      "comparison_domains": [
+        "theoremqa",
+        "logicbench",
+        "medcalcbench",
+        "champ",
+        "bigcodebench"
+      ],
+      "instance_count": 3970,
+      "series": {
+        "routed": [
+          0.610831234256927,
+          0.6784214945424014,
+          0.8258018471872376
+        ],
+        "llm_rerank": [
+          0.5796599496221663,
+          0.6154617968094038,
+          0.687649034424853
+        ],
+        "bm25": [
+          0.41357682619647357,
+          0.495352644836272,
+          0.687649034424853
+        ]
+      },
+      "omitted_methods": {},
+      "y_axis": {
+        "limits": [
+          0.35,
+          0.9
+        ],
+        "ticks": [
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9
+        ]
+      },
+      "pdf": "paper/figures/retrieval-recall-by-model/07-mistral7b.pdf",
+      "png": "paper/figures/retrieval-recall-by-model/07-mistral7b.png"
+    }
+  },
+  "average": {
+    "label": "Available-model average",
+    "model_counts": {
+      "routed": 7,
+      "llm_rerank": 5,
+      "bm25": 5
+    },
+    "series": {
+      "routed": [
+        0.6332532780982728,
+        0.7082154671732424,
+        0.8401353114876804
+      ],
+      "llm_rerank": [
+        0.6293196737605065,
+        0.65903833521731,
+        0.7089955526282217
+      ],
+      "bm25": [
+        0.4285764197322083,
+        0.517730879119901,
+        0.7089955526282217
+      ]
+    },
+    "y_axis": {
+      "limits": [
+        0.35,
+        0.9
+      ],
+      "ticks": [
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ]
+    },
+    "pdf": "paper/figures/retrieval-recall-by-model/08-available-model-average.pdf",
+    "png": "paper/figures/retrieval-recall-by-model/08-available-model-average.png"
+  }
+}

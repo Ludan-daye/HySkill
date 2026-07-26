@@ -1,0 +1,108 @@
+{
+  "comparison": "Hold the selector and answering model fixed and replace BM25 top-50 candidates with routed K=2 HySkill top-50 candidates",
+  "chart_type": "Single-panel grouped bar chart",
+  "metric": "End-to-end task accuracy pooled over four rule-evaluable domains",
+  "domains": [
+    "theoremqa",
+    "logicbench",
+    "medcalcbench",
+    "champ"
+  ],
+  "selector_control": "The selector and answering model are identical within each model pair",
+  "display_rounding": "Gain labels subtract one-decimal rounded endpoint accuracies, while exact gains remain in the model records",
+  "candidate_sources": {
+    "bm25": "Fresh runtime-matched BM25 top-50 candidate pool",
+    "hyskill": "Active routed HySkill K=2 top-50 candidate pool for all five eligible models"
+  },
+  "model_sources": {
+    "qwen35-4b": [
+      "community-results/qwen3.5-4b-reference/baselines-runtime-matched/answer_per_instance.jsonl.gz",
+      "community-results/qwen3.5-4b-reference/k2/answer_per_instance.jsonl.gz"
+    ],
+    "qwen35-9b": [
+      "community-results/qwen35-9b/baselines-runtime-matched/answer_per_instance.jsonl.gz",
+      "community-results/qwen35-9b/k2/answer_per_instance.jsonl.gz"
+    ],
+    "glm4-9b": [
+      "community-results/glm4-9b/baselines-runtime-matched/answer_per_instance.jsonl.gz",
+      "community-results/glm4-9b/k2/answer_per_instance.jsonl.gz"
+    ],
+    "llama31-8b": [
+      "community-results/llama31-8b/baselines-runtime-matched/answer_per_instance.jsonl.gz",
+      "community-results/llama31-8b/k2/answer_per_instance.jsonl.gz"
+    ],
+    "mistral7b": [
+      "community-results/mistral7b/baselines-runtime-matched/answer_per_instance.jsonl.gz",
+      "community-results/mistral7b/k2/answer_per_instance.jsonl.gz"
+    ]
+  },
+  "models": [
+    {
+      "slug": "qwen35-4b",
+      "label": "Qwen3.5-4B",
+      "instance_count": 2830,
+      "bm25_correct": 1788,
+      "hyskill_correct": 2063,
+      "bm25_accuracy": 63.18021201413428,
+      "hyskill_accuracy": 72.89752650176679,
+      "delta": 9.717314487632514
+    },
+    {
+      "slug": "qwen35-9b",
+      "label": "Qwen3.5-9B",
+      "instance_count": 2830,
+      "bm25_correct": 1972,
+      "hyskill_correct": 2142,
+      "bm25_accuracy": 69.68197879858657,
+      "hyskill_accuracy": 75.68904593639576,
+      "delta": 6.007067137809187
+    },
+    {
+      "slug": "glm4-9b",
+      "label": "GLM-4-9B",
+      "instance_count": 2830,
+      "bm25_correct": 1342,
+      "hyskill_correct": 1503,
+      "bm25_accuracy": 47.420494699646646,
+      "hyskill_accuracy": 53.109540636042404,
+      "delta": 5.6890459363957575
+    },
+    {
+      "slug": "llama31-8b",
+      "label": "Llama-3.1-8B",
+      "instance_count": 2830,
+      "bm25_correct": 1339,
+      "hyskill_correct": 1379,
+      "bm25_accuracy": 47.314487632508836,
+      "hyskill_accuracy": 48.72791519434629,
+      "delta": 1.4134275618374517
+    },
+    {
+      "slug": "mistral7b",
+      "label": "Mistral-7B",
+      "instance_count": 2830,
+      "bm25_correct": 892,
+      "hyskill_correct": 966,
+      "bm25_accuracy": 31.519434628975265,
+      "hyskill_accuracy": 34.13427561837456,
+      "delta": 2.614840989399294
+    }
+  ],
+  "pooled": {
+    "slug": "pooled-five-models",
+    "label": "5-model pooled",
+    "instance_count": 14150,
+    "bm25_correct": 7333,
+    "hyskill_correct": 8053,
+    "bm25_accuracy": 51.82332155477032,
+    "hyskill_accuracy": 56.91166077738516,
+    "delta": 5.088339222614842
+  },
+  "outputs": {
+    "pdf": "paper/figures/select-candidate-source-ablation/select-candidate-source-ablation.pdf",
+    "png": "paper/figures/select-candidate-source-ablation/select-candidate-source-ablation.png",
+    "grayscale_png": "paper/figures/select-candidate-source-ablation/select-candidate-source-ablation-grayscale.png"
+  },
+  "caption_draft": "Effect of HySkill candidate construction under a fixed LLM selector. Each model pools 2,830 instances from four rule-evaluable domains. Within each pair, the selector and answering model are held fixed; only the top-50 candidate source changes from native BM25 to HySkill. All five HySkill arms use active routed K=2 candidates, while all BM25 arms are fresh runtime-matched reruns. Labels above each pair report gains in percentage points over the paired BM25 arm. The pooled row contains 14,150 decisions across the five models for which both arms fit the context window.",
+  "alt_text": "Grouped bar chart comparing end-to-end accuracy with fresh BM25 candidates and routed K=2 HySkill candidates for five eligible models and their pooled decisions."
+}

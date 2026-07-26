@@ -1,0 +1,333 @@
+{
+  "comparison": "K=2 held-out loaded-skill precision for routed gating, routed unconditional loading, and routed Hy+Select",
+  "metric": "P(loaded skill is gold | at least one skill was loaded)",
+  "split": "heldout",
+  "scope_note": "Frozen calibration IDs are excluded. DeepSeek-7B and Yi-1.5-9B have explicitly unavailable Select arms. The average uses the same five Select-eligible models for every policy.",
+  "domains": [
+    "theoremqa",
+    "logicbench",
+    "medcalcbench",
+    "champ"
+  ],
+  "policy_labels": {
+    "gated": "Gated",
+    "always": "Always",
+    "select": "Hy+Select"
+  },
+  "style_mapping": {
+    "gated": {
+      "facecolor": "#3B6EA8",
+      "edgecolor": "#294E75",
+      "hatch": "o",
+      "marker": "o"
+    },
+    "always": {
+      "facecolor": "#4F9D88",
+      "edgecolor": "#376E5F",
+      "hatch": "//",
+      "marker": "D"
+    },
+    "select": {
+      "facecolor": "#C47A44",
+      "edgecolor": "#8F5831",
+      "hatch": "||",
+      "marker": "s"
+    }
+  },
+  "models": {
+    "01-qwen35-4b": {
+      "label": "Qwen3.5-4B",
+      "source": "community-results/qwen3.5-4b-reference/k2/loading_per_instance.jsonl.gz",
+      "instance_count": 2265,
+      "values": {
+        "gated": 0.82855321861058,
+        "always": 0.6203090507726269,
+        "select": 0.6181015452538632
+      },
+      "loaded_counts": {
+        "gated": 1569,
+        "always": 2265,
+        "select": 2265
+      },
+      "source_arms": {
+        "gated": "routed_gated",
+        "always": "routed_always",
+        "select": "routed_select"
+      },
+      "omitted_policies": {},
+      "y_axis": {
+        "limits": [
+          0.55,
+          0.9
+        ],
+        "ticks": [
+          0.55,
+          0.6,
+          0.65,
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9
+        ]
+      },
+      "pdf": "paper/figures/loading-precision-by-model/01-qwen35-4b.pdf",
+      "png": "paper/figures/loading-precision-by-model/01-qwen35-4b.png"
+    },
+    "02-qwen35-9b": {
+      "label": "Qwen3.5-9B",
+      "source": "community-results/qwen35-9b/k2/loading_per_instance.jsonl.gz",
+      "instance_count": 2265,
+      "values": {
+        "gated": 0.713162034609334,
+        "always": 0.6207505518763797,
+        "select": 0.7275938189845474
+      },
+      "loaded_counts": {
+        "gated": 1907,
+        "always": 2265,
+        "select": 2265
+      },
+      "source_arms": {
+        "gated": "routed_gated",
+        "always": "routed_always",
+        "select": "routed_select"
+      },
+      "omitted_policies": {},
+      "y_axis": {
+        "limits": [
+          0.55,
+          0.8
+        ],
+        "ticks": [
+          0.55,
+          0.6,
+          0.65,
+          0.7,
+          0.75,
+          0.8
+        ]
+      },
+      "pdf": "paper/figures/loading-precision-by-model/02-qwen35-9b.pdf",
+      "png": "paper/figures/loading-precision-by-model/02-qwen35-9b.png"
+    },
+    "03-glm4-9b": {
+      "label": "GLM-4-9B",
+      "source": "community-results/glm4-9b/k2/loading_per_instance.jsonl.gz",
+      "instance_count": 2265,
+      "values": {
+        "gated": 0.7529706066291432,
+        "always": 0.5465783664459161,
+        "select": 0.6618101545253863
+      },
+      "loaded_counts": {
+        "gated": 1599,
+        "always": 2265,
+        "select": 2265
+      },
+      "source_arms": {
+        "gated": "routed_gated",
+        "always": "routed_always",
+        "select": "routed_select"
+      },
+      "omitted_policies": {},
+      "y_axis": {
+        "limits": [
+          0.5,
+          0.8
+        ],
+        "ticks": [
+          0.5,
+          0.55,
+          0.6,
+          0.65,
+          0.7,
+          0.75,
+          0.8
+        ]
+      },
+      "pdf": "paper/figures/loading-precision-by-model/03-glm4-9b.pdf",
+      "png": "paper/figures/loading-precision-by-model/03-glm4-9b.png"
+    },
+    "04-llama31-8b": {
+      "label": "Llama-3.1-8B",
+      "source": "community-results/llama31-8b/k2/loading_per_instance.jsonl.gz",
+      "instance_count": 2265,
+      "values": {
+        "gated": 0.7743119266055046,
+        "always": 0.5788079470198676,
+        "select": 0.5147902869757175
+      },
+      "loaded_counts": {
+        "gated": 1635,
+        "always": 2265,
+        "select": 2265
+      },
+      "source_arms": {
+        "gated": "routed_gated",
+        "always": "routed_always",
+        "select": "routed_select"
+      },
+      "omitted_policies": {},
+      "y_axis": {
+        "limits": [
+          0.45,
+          0.8
+        ],
+        "ticks": [
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ]
+      },
+      "pdf": "paper/figures/loading-precision-by-model/04-llama31-8b.pdf",
+      "png": "paper/figures/loading-precision-by-model/04-llama31-8b.png"
+    },
+    "05-deepseek7b": {
+      "label": "DeepSeek-7B",
+      "source": "community-results/deepseek7b/k2/loading_per_instance.jsonl.gz",
+      "instance_count": 2265,
+      "values": {
+        "gated": 0.5352480417754569,
+        "always": 0.31920529801324504
+      },
+      "loaded_counts": {
+        "gated": 1149,
+        "always": 2265
+      },
+      "source_arms": {
+        "gated": "routed_gated",
+        "always": "routed_always",
+        "select": "routed_select"
+      },
+      "omitted_policies": {
+        "select": "unavailable"
+      },
+      "y_axis": {
+        "limits": [
+          0.25,
+          0.6
+        ],
+        "ticks": [
+          0.25,
+          0.3,
+          0.35,
+          0.4,
+          0.45,
+          0.5,
+          0.55,
+          0.6
+        ]
+      },
+      "pdf": "paper/figures/loading-precision-by-model/05-deepseek7b.pdf",
+      "png": "paper/figures/loading-precision-by-model/05-deepseek7b.png"
+    },
+    "06-yi15-9b": {
+      "label": "Yi-1.5-9B",
+      "source": "community-results/yi15-9b/k2/loading_per_instance.jsonl.gz",
+      "instance_count": 2265,
+      "values": {
+        "gated": 0.798140770252324,
+        "always": 0.552317880794702
+      },
+      "loaded_counts": {
+        "gated": 1506,
+        "always": 2265
+      },
+      "source_arms": {
+        "gated": "routed_gated",
+        "always": "routed_always",
+        "select": "routed_select"
+      },
+      "omitted_policies": {
+        "select": "unavailable"
+      },
+      "y_axis": {
+        "limits": [
+          0.5,
+          0.85
+        ],
+        "ticks": [
+          0.5,
+          0.55,
+          0.6,
+          0.65,
+          0.7,
+          0.75,
+          0.8,
+          0.85
+        ]
+      },
+      "pdf": "paper/figures/loading-precision-by-model/06-yi15-9b.pdf",
+      "png": "paper/figures/loading-precision-by-model/06-yi15-9b.png"
+    },
+    "07-mistral7b": {
+      "label": "Mistral-7B",
+      "source": "community-results/mistral7b/k2/loading_per_instance.jsonl.gz",
+      "instance_count": 2265,
+      "values": {
+        "gated": 0.7522824102251978,
+        "always": 0.5532008830022075,
+        "select": 0.5916114790286976
+      },
+      "loaded_counts": {
+        "gated": 1643,
+        "always": 2265,
+        "select": 2265
+      },
+      "source_arms": {
+        "gated": "routed_gated",
+        "always": "routed_always",
+        "select": "routed_select"
+      },
+      "omitted_policies": {},
+      "y_axis": {
+        "limits": [
+          0.5,
+          0.8
+        ],
+        "ticks": [
+          0.5,
+          0.55,
+          0.6,
+          0.65,
+          0.7,
+          0.75,
+          0.8
+        ]
+      },
+      "pdf": "paper/figures/loading-precision-by-model/07-mistral7b.pdf",
+      "png": "paper/figures/loading-precision-by-model/07-mistral7b.png"
+    }
+  },
+  "average": {
+    "label": "Five-model strict-common-support average",
+    "model_counts": {
+      "gated": 5,
+      "always": 5,
+      "select": 5
+    },
+    "values": {
+      "gated": 0.7642560393359519,
+      "always": 0.5839293598233996,
+      "select": 0.6227814569536424
+    },
+    "y_axis": {
+      "limits": [
+        0.55,
+        0.8
+      ],
+      "ticks": [
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8
+      ]
+    },
+    "pdf": "paper/figures/loading-precision-by-model/08-five-model-average.pdf",
+    "png": "paper/figures/loading-precision-by-model/08-five-model-average.png"
+  }
+}
