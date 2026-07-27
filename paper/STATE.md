@@ -90,9 +90,49 @@ Status marks: `[x]` complete for the current scope, `[~]` usable draft with rema
 | W004 | `[ ]` | Analysis | `sections/analysis.tex` is a 12-line skeleton. | Evidence-backed patterns, counterexamples, and scope without repeating main tables. |
 | W005 | `[ ]` | Conclusion and limitations | `sections/conclusion.tex` is a 13-line skeleton. | Conclusion plus explicit limitations consistent with the experiments. |
 | W006 | `[ ]` | Reproducibility checklist | Not included by `main.tex`. | Add the AAAI-27 checklist before submission. |
+| R001 | `[x]` | Anonymous release | `Hyskill_aaai` published at `04a37a1`: code, K=2 evidence, and a 47-check verifier. All checks pass. | Done. Re-sync only if the paper's numbers change. |
 | L001 | `[!]` | Final layout | **Not compiled since the K=2 edits.** The main table went from 4 to 7 columns. | Compile on Overleaf and check the main table does not overflow `table*`. |
 
 The paper remains **not submission-ready**: Analysis and Conclusion are empty, and the method overview and checklist are missing. The experimental content itself is complete and internally consistent.
+
+## Anonymous release (2026-07-26)
+
+Published at `github.com/Ludan-daye/Hyskill_aaai`, commit `04a37a1`, **132 MB / 308 files, no LFS needed** (largest file 10.3 MB). Local working copy: `/Users/a1-6/importantfile/Research/Hyskill_aaai`.
+
+Built as a **fresh `git init`** — the main repository's history is deliberately not carried over, because it contains the author identity and historical large files. Commit author is `Anonymous <anonymous@example.com>`, set repository-locally.
+
+### Layout, and why names changed
+
+| Release path | Source | Reason for the name |
+|---|---|---|
+| `results/` | `community-results/` | The old name implies community submissions; these are our own runs |
+| `results/<tag>/k2/` | `<tag>/k2/` | **Kept** — "k2" states the paper's configuration and is self-documenting |
+| `results/<tag>/baselines/` | `<tag>/baselines-runtime-matched/` | Only one baseline set ships, so the qualifier is redundant |
+| `results/<tag>/baseline-rankings/` | `<tag>/k4/retrieval_top50.jsonl.gz` | **The important one.** These are the K-independent BM25/dense/hybrid/rerank rankings; living under `k4/` was a historical accident, and shipping an orphan `k4/` directory with one file in it would be inexplicable |
+| `results/<tag>/imagination_k2.*` | `imagination_full_k2.*` | Only K=2 ships, so `full_k*` no longer describes a family |
+| `results/fleet/{k2,baselines,k-ablation}/` | `k2-fleet/`, `baselines-runtime-matched-fleet/`, `k-ablation-fleet/` | Grouped rather than three sibling directories |
+
+Figure scripts were repointed accordingly (`parents[3]`→`parents[2]`, `community-results`→`results`, `k4`→`baseline-rankings`). `generate_retrieval_recall_curve.py` was dropped — it reads `<tag>/summary.json`, a K=4-era file not in this release.
+
+### What is deliberately excluded
+
+`AGENTS.md` (five server IP:port pairs and `ssh root@` commands), `CLAUDE.md`, `docs/superpowers/`, both Overleaf repositories, `k2-gate-recalibration-v2/` (contains `/Users/a1-6/...` and the paper does not cite it), `<tag>/k4/` beyond the one rankings file, `<tag>/baselines-native/` (superseded), and the imagination caches for K other than 2.
+
+### Verification carried out before publishing
+
+- `scripts/verify_paper_numbers.py` — a new script in the release that recomputes **47 published values** from `results/` and exits non-zero on any mismatch. It also asserts the structural claims: the four baseline CIs exclude zero, the four internal-arm CIs contain it. **All 47 pass.**
+- All three figure generators run against the new layout, and their emitted values match the main repository item-for-item (8/8, 8/8, 18/18).
+- `pytest`: 67 passed, 1 skipped, 1 failed — the failure is `test_k2_downstream_pipeline.py`, which needs the `external/SR-Agents` checkout. Documented in `REPRODUCE.md`, not a defect.
+- Final sensitive-content sweep: **0 IPs, 0 `/Users/`, 0 `/home/`, 0 real names or account handles.**
+
+### Two judgement calls recorded
+
+1. **`/root/...` paths were left in place.** 16 `k-ablation` JSON files record `/root/HySkill-k-run-20260723/` and `/root/.cache/modelscope/`. They carry no personal identifier, and `manifest.json` is SHA-bound to `cost.json`, so rewriting the paths would break the verification chain that gives the pack its credibility. Evidence integrity beat cosmetics; the README says so explicitly.
+2. **The repository URL still contains the author's GitHub username.** This was raised twice and the user judged it acceptable. If the link goes into the submission verbatim, a reviewer sees `Ludan-daye` on click; routing through `anonymous.4open.science` would remove that. Recorded here as an open risk, not a resolved one.
+
+### License
+
+MIT, copyright "Anonymous Authors". SR-Agents is MIT (Copyright 2026 Weihang Su) and its notice is reproduced in full as that license requires; SR-Agents itself is not redistributed.
 
 ## Known open risk
 
@@ -130,6 +170,7 @@ The specific thing to watch is `tab:e2e-main`, which grew from 4 to 7 columns. `
 | T003 | `[!]` | Medium | Insert method overview figure | Wait for the user's drawing, then place it with an ordinary AuthorKit float. |
 | T004 | `[ ]` | High | Final consistency and citation audit | English/Chinese content, terminology, support sets, references, and claims agree. |
 | T005 | `[ ]` | High | Final AAAI packaging | Checklist included, page budget checked, figures readable, forbidden layout constructs absent. |
+| T007 | `[!]` | Medium | Decide the anonymous link form | If the release URL enters the submission, route it through `anonymous.4open.science` or accept that the GitHub username is visible. |
 | T006 | `[ ]` | Low | Refresh stale repo docs | `CLAUDE.md` and `AGENTS.md` still describe `experiments.tex` as an entirely K=4 manuscript asserting significant routing and gating on Qwen4. Both statements are now wrong. |
 
 ## Writing and Layout Rules
