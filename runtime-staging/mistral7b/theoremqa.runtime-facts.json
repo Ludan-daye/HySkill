@@ -1,0 +1,61 @@
+{
+  "schema_version": "runtime-matched-runtime-facts-v1",
+  "job": {
+    "job_id": "mistral7b-theoremqa-bare-20260724-v1",
+    "result_tag": "mistral7b",
+    "model": "mistral7b",
+    "domain": "theoremqa",
+    "arm": "bare"
+  },
+  "checkpoint": {
+    "repository": "LLM-Research/Mistral-7B-Instruct-v0.3",
+    "revision": "c8cfccbcfd71d4e3479498c30b2823bab19c4687",
+    "path": "/root/HySkill-baseline-runtime-matched-20260724/checkpoints/mistral7b-c8cfccbcfd71d4e3479498c30b2823bab19c4687",
+    "provenance": "ModelScope China-hosted exact revision with all 13 frozen K=2 manifest files re-hashed",
+    "files_manifest_sha256": "559840283ece7b8cbbb937d74d5ce47aff520cda4a453a3331ac3e8f26bfa6df"
+  },
+  "tokenizer": {
+    "artifacts": {
+      "tokenizer.json": "60b945759e27a63c3c5c0ca675881f5a73b4aa38b5d1d6818570308d4f1a3c59",
+      "tokenizer.model": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+      "tokenizer_config.json": "b0c776216a54c6d031866d1dff0b31715bd73f5ba87f8a30eb35e8c603dff95d"
+    },
+    "chat_template_sha256": "b0c776216a54c6d031866d1dff0b31715bd73f5ba87f8a30eb35e8c603dff95d"
+  },
+  "endpoint": {
+    "api_base": "http://127.0.0.1:8000/v1",
+    "served_model": "mistral7b",
+    "process_command": "/root/HySkill-baseline-runtime-matched-20260724/runtime/vllm0191/bin/python3 /root/HySkill-baseline-runtime-matched-20260724/runtime/vllm0191/bin/vllm serve /root/HySkill-baseline-runtime-matched-20260724/checkpoints/mistral7b-c8cfccbcfd71d4e3479498c30b2823bab19c4687 --port 8000 --max-model-len 8192 --dtype bfloat16 --enforce-eager --served-model-name mistral7b",
+    "vllm_version": "0.19.1",
+    "dtype": "bfloat16",
+    "quantization": "none",
+    "max_model_len": 8192,
+    "tensor_parallel_size": 1,
+    "environment": {
+      "CPATH": "/root/HySkill-baseline-runtime-matched-20260724/runtime/python310-dev-3.10.12/usr/include/python3.10:/root/HySkill-baseline-runtime-matched-20260724/runtime/python310-dev-3.10.12/usr/include"
+    },
+    "models_readback": {
+      "data": [
+        {
+          "id": "mistral7b"
+        }
+      ]
+    }
+  },
+  "software": {
+    "python_version": "3.10.12",
+    "pytorch_version": "2.10.0+cu128",
+    "transformers_version": "5.14.1",
+    "cuda_version": "12.8",
+    "driver_version": "550.127.05",
+    "python_headers_package_sha256": "7ec59ebb7ecea34f416f37f74797712a7d477cc344f1bca1755528b154eaa04a",
+    "python_headers_source": "Aliyun Ubuntu mirror libpython3.10-dev 3.10.12-1~22.04.16"
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA A800-SXM4-40GB",
+    "gpu_uuid": "GPU-70f91f90-24c3-cdb0-0cfa-9212fb8b411b"
+  },
+  "source": {
+    "sr_agents_revision": "277fd8d2bbd7d3b81a5cf4ffa6e87e18c7906e4f"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "runtime-matched-runtime-facts-v1",
+  "job": {
+    "job_id": "deepseek7b-logicbench-bare-20260724-v1",
+    "result_tag": "deepseek7b",
+    "model": "deepseek7b",
+    "domain": "logicbench",
+    "arm": "bare"
+  },
+  "checkpoint": {
+    "repository": "deepseek-ai/deepseek-llm-7b-chat",
+    "revision": "snapshots/master",
+    "path": "/root/.cache/modelscope/models/deepseek-ai--deepseek-llm-7b-chat/snapshots/master",
+    "provenance": "ModelScope China-hosted cache with independently verified frozen identity",
+    "files_manifest_sha256": "25b7f08040a12a38ed6a4fdca625063e18091926a30813d56a3c87e3cbe1f03b"
+  },
+  "tokenizer": {
+    "artifacts": {
+      "tokenizer.json": "a08b02921f08548065a7b2ec13b2ffeed873231add60f9c3c7b08b04f2cc212a",
+      "tokenizer_config.json": "9e4d4a34afe6db6096508a5363b065cf684ec3a9047da1c2dbe30bd8537a6086"
+    },
+    "chat_template_sha256": "9e4d4a34afe6db6096508a5363b065cf684ec3a9047da1c2dbe30bd8537a6086"
+  },
+  "endpoint": {
+    "api_base": "http://127.0.0.1:8000/v1",
+    "served_model": "deepseek7b",
+    "process_command": "/root/vllmenv/bin/python3 /root/vllmenv/bin/vllm serve /root/.cache/modelscope/models/deepseek-ai--deepseek-llm-7b-chat/snapshots/master --port 8000 --max-model-len 8192 --dtype bfloat16 --enforce-eager --served-model-name deepseek7b",
+    "vllm_version": "0.19.1",
+    "dtype": "bfloat16",
+    "quantization": "none",
+    "max_model_len": 8192,
+    "tensor_parallel_size": 1,
+    "models_readback": {
+      "data": [
+        {
+          "id": "deepseek7b"
+        }
+      ]
+    }
+  },
+  "software": {
+    "python_version": "3.10.12",
+    "pytorch_version": "2.10.0+cu128",
+    "transformers_version": "5.13.1",
+    "cuda_version": "12.8",
+    "driver_version": "550.127.05"
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA A100-SXM4-80GB",
+    "gpu_uuid": "GPU-0c5f7877-6c7e-1a73-366e-a4355eab98f1"
+  },
+  "source": {
+    "sr_agents_revision": "277fd8d2bbd7d3b81a5cf4ffa6e87e18c7906e4f"
+  }
+}

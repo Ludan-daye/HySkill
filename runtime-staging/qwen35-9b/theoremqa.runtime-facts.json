@@ -1,0 +1,61 @@
+{
+  "schema_version": "runtime-matched-runtime-facts-v1",
+  "job": {
+    "job_id": "qwen35-9b-theoremqa-bare-20260724-v1",
+    "result_tag": "qwen35-9b",
+    "model": "qwen35-9b",
+    "domain": "theoremqa",
+    "arm": "bare"
+  },
+  "checkpoint": {
+    "repository": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "path": "/root/HySkill-k2-main-20260723/models/Qwen3.5-9B-c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "provenance": "China Hugging Face mirror snapshot with source and target SHA manifests verified",
+    "files_manifest_sha256": "daf8a250ee437249688f839397f7908ed75e10eba31ab9a5663456c36c46b595"
+  },
+  "tokenizer": {
+    "artifacts": {
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+    },
+    "chat_template_sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+  },
+  "endpoint": {
+    "api_base": "http://127.0.0.1:8000/v1",
+    "served_model": "qwen35-9b",
+    "process_command": "/root/HySkill-k2-main-20260723/runtime/vllm-env/bin/python /root/HySkill-k2-main-20260723/runtime/vllm-env/bin/vllm serve /root/HySkill-k2-main-20260723/models/Qwen3.5-9B-c202236235762e1c871ad0ccb60c8ee5ba337b9a --port 8000 --max-model-len 8192 --dtype bfloat16 --enforce-eager --served-model-name qwen35-9b --gpu-memory-utilization 0.90",
+    "vllm_version": "0.17.1",
+    "dtype": "bfloat16",
+    "quantization": "none",
+    "max_model_len": 8192,
+    "tensor_parallel_size": 1,
+    "models_readback": {
+      "data": [
+        {
+          "id": "qwen35-9b",
+          "object": "model",
+          "root": "/root/HySkill-k2-main-20260723/models/Qwen3.5-9B-c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_model_len": 8192
+        }
+      ]
+    }
+  },
+  "software": {
+    "python_version": "3.11.7",
+    "pytorch_version": "2.10.0+cu128",
+    "transformers_version": "4.57.6",
+    "cuda_version": "12.8",
+    "driver_version": "550.78",
+    "client_openai_version": "2.24.0"
+  },
+  "hardware": {
+    "gpu_model": "NVIDIA GeForce RTX 4090",
+    "gpu_uuid": "GPU-47594ab9-4fb2-6293-9ca4-a7e63a5838ac",
+    "node_hostname": "ubuntu22"
+  },
+  "source": {
+    "sr_agents_revision": "277fd8d2bbd7d3b81a5cf4ffa6e87e18c7906e4f",
+    "base_repository_commit": "aa5020cd8b42f91d3265ce7261376420d3cf0e1d"
+  }
+}
