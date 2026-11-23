@@ -1,6 +1,6 @@
 # HySkill Current State and Agent Handoff
 
-> Updated: 2026-07-26, after the K=2 manuscript migration. Read this file before changing experiments, figures, or the paper. It records the current state, not a history log. Do not copy claims from older status paragraphs without checking the sources below.
+> Updated: 2026-11-23, after the evidence-scoping pass on the K=2 manuscript. Read this file before changing experiments, figures, or the paper. It records the current state, not a history log. Do not copy claims from older status paragraphs without checking the sources below.
 
 ## Source-of-Truth Order
 
@@ -52,6 +52,23 @@ Held-out, hierarchical bootstrap (models → domains → paired instances), 10,0
 
 The internal-arm contrasts (Gated vs Always, Gated vs Hy+Select, Hy+Select vs Always, routed vs fixed Gated) all have CIs containing zero and are reported as no detected difference. The paper separates HySkill from the native pipelines but does not rank routing, gating, and selection against each other.
 
+## Evidence-scoping pass (2026-11-23)
+
+Every number below was recomputed from `community-results/` before editing. Manuscript commits: English `49813a4` (the user's pending prose, method-overview, and figure edits) then `53c57c2`; Chinese `facd869` then `d6bb1f0`. Not pushed to Overleaf and not compiled.
+
+| Change | Evidence |
+|---|---|
+| Abstract no longer claims a win over LLM reranking; it states pooled nDCG@10 over BM25/dense/hybrid and Recall@50 .638 → .836 | Qwen3.5-4B held-out, 3,177 pairs: +.191 BM25, +.265 dense, +.186 hybrid, −.001 rerank |
+| Intro's "each domain" retrieval claim replaced by the pooled claim plus the BigCodeBench exception | BigCodeBench: −.047 vs BM25, −.058 vs hybrid |
+| Intro no longer attributes 63.5 → 72.9 to the gate | Qwen3.5-4B Always is already 72.1; internal-arm CIs contain zero |
+| Held-out version of `tab:retrieval-common` added in the text | The table uses all 3,970 instances, including the routing validation split. Held-out: BM25/rerank R@50 .632, routed .835; nDCG@10 rerank .509, routed .563 |
+| Loaded-skill precision 73.6% labelled as a model average | `k2-fleet` seven-model held-out: macro .736, micro .743; 69.4% × 74.3% = 51.6% gold-load |
+| DeepSeek-7B Always-below-Bare added to Summary of Findings | Always 13.554 (69 method failures) vs Bare 15.055; Gated 16.909 |
+| English $\tau_2$ label: "answers **correctly** without a skill" | Matches `scripts/gate.py`; the Chinese text was already correct |
+| `tab:e2e-main` rounded to one decimal | All 45 cells recomputed; bold positions unchanged |
+
+The table's strict common support is GLM-4-9B, Llama-3.1-8B, Mistral-7B, and Qwen3.5-9B. Qwen3.5-4B is excluded because its `k4/` pack has routed rows for only 2,830 instances.
+
 ## Figures
 
 All three generators were re-run on 2026-07-26 and their outputs copied into both manuscript repositories.
@@ -85,10 +102,10 @@ Status marks: `[x]` complete for the current scope, `[~]` usable draft with rema
 | E001 | `[x]` | Core comparison data | Seven K=2 packs plus seven runtime-matched baseline packs. DeepSeek-7B and Yi-1.5-9B cannot fit the 50-candidate prompt; marked unavailable, never zero. | Analysis-pack files present under `community-results/`. |
 | F001 | `[x]` | Result figures | Retrieval, loading, and select-ablation figures regenerated from K=2 packs and synced to both repos. | All PDFs present in both manuscript repositories. |
 | W001 | `[x]` | Abstract, Introduction, Related Work | Drafted bilingually; headline numbers migrated to K=2. | Final citation pass after all sections exist. |
-| W002 | `[~]` | Method | Five variants, offline routing, and the loading gate are written and synchronized. | The two-lane overview figure is still absent; the user said they will draw it. |
+| W002 | `[x]` | Method | Five variants, offline routing, and the loading gate are written and synchronized; overview figure added. | Done. |
 | W003 | `[x]` | Experiments | Fully migrated to K=2, native baselines restored, three reversed claims rewritten, mechanically audited. | Done for the current evidence. Revisit only if new experiments land. |
-| W004 | `[ ]` | Analysis | `sections/analysis.tex` is a 12-line skeleton. | Evidence-backed patterns, counterexamples, and scope without repeating main tables. |
-| W005 | `[ ]` | Conclusion and limitations | `sections/conclusion.tex` is a 13-line skeleton. | Conclusion plus explicit limitations consistent with the experiments. |
+| W004 | `[~]` | Analysis | Drafted as a three-paragraph "Summary of Findings", including the BigCodeBench and DeepSeek-7B negative results. | Evidence-backed patterns, counterexamples, and scope without repeating main tables. |
+| W005 | `[~]` | Conclusion and limitations | Drafted, with a limitations paragraph. | Conclusion plus explicit limitations consistent with the experiments. |
 | W006 | `[ ]` | Reproducibility checklist | Not included by `main.tex`. | Add the AAAI-27 checklist before submission. |
 | R001 | `[x]` | Anonymous release | `Hyskill_aaai` published at `04a37a1`: code, K=2 evidence, and a 47-check verifier. All checks pass. | Done. Re-sync only if the paper's numbers change. |
 | L001 | `[!]` | Final layout | **Not compiled since the K=2 edits.** The main table went from 4 to 7 columns. | Compile on Overleaf and check the main table does not overflow `table*`. |
@@ -165,9 +182,9 @@ The specific thing to watch is `tab:e2e-main`, which grew from 4 to 7 columns. `
 | ID | Status | Priority | Task | Done when |
 |---|---|---|---|---|
 | T000 | `[!]` | High | Compile both manuscripts on Overleaf | No errors; `tab:e2e-main` fits without overflow; page budget re-checked. |
-| T001 | `[ ]` | High | Draft Analysis | Each pattern has direct evidence, a counterexample or boundary, and no unsupported universal wording. Must include the BigCodeBench retrieval boundary recorded above. |
-| T002 | `[ ]` | High | Draft Conclusion and Limitations | Closes the problem-method-result loop; names the unrun settings, the inactive $S_2$, and the undetected internal-arm differences. |
-| T003 | `[!]` | Medium | Insert method overview figure | Wait for the user's drawing, then place it with an ordinary AuthorKit float. |
+| T001 | `[~]` | High | Draft Analysis | Each pattern has direct evidence, a counterexample or boundary, and no unsupported universal wording. Must include the BigCodeBench retrieval boundary recorded above. |
+| T002 | `[~]` | High | Draft Conclusion and Limitations | Closes the problem-method-result loop; names the unrun settings, the inactive $S_2$, and the undetected internal-arm differences. |
+| T003 | `[x]` | Medium | Insert method overview figure | Placed as `fig:hyskill-framework`. |
 | T004 | `[ ]` | High | Final consistency and citation audit | English/Chinese content, terminology, support sets, references, and claims agree. |
 | T005 | `[ ]` | High | Final AAAI packaging | Checklist included, page budget checked, figures readable, forbidden layout constructs absent. |
 | T007 | `[!]` | Medium | Decide the anonymous link form | If the release URL enters the submission, route it through `anonymous.4open.science` or accept that the GitHub username is visible. |
