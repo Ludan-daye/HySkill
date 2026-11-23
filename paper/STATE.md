@@ -52,6 +52,16 @@ Held-out, hierarchical bootstrap (models → domains → paired instances), 10,0
 
 The internal-arm contrasts (Gated vs Always, Gated vs Hy+Select, Hy+Select vs Always, routed vs fixed Gated) all have CIs containing zero and are reported as no detected difference. The paper separates HySkill from the native pipelines but does not rank routing, gating, and selection against each other.
 
+## Venue switch: AAAI-27 rejected, now IJCAI-27 (2026-11-23)
+
+AAAI-27 rejected the paper. The English Overleaf project (`paper/latex`, remote `overleaf`) now holds the **IJCAI-27** version at `dbb0ec6`; the AAAI version is preserved in its history and as local tag `aaai27-submission` (`d5cd16e`). IJCAI-27: abstract 2027-01-04, full paper 2027-01-11 (AoE), 7 content pages + 2 for references, anonymous, line numbers on. The official kit zip is kept in `paper/ijcai27-kit/`.
+
+**The Overleaf project was 12 commits ahead of the local `paper/latex` checkout** (Discussion section, completed citations, revised figures). Work from branch `scoping-on-overleaf` (worktree `paper/latex-overleaf-head`), not the stale local `main`. The section below was first applied to the stale tree; `bd27ce6` re-applies it on the Overleaf text and also corrects the online cost: the Overleaf text said 1.39k tokens (2.6x / 5.6x), which counts only the routed template; the complete routed-and-gated cost, including the gate's full-skill generations on sentence/passage routes, is 2.04k (Select 1.8x, Rerank 3.8x), per `figures/online-cost-comparison/manifest.json`.
+
+The page budget is exhausted: content ends at the bottom of page 7. Any addition needs an equal cut.
+
+The Chinese manuscript (`paper/latex-zh`) still mirrors the older condensed English text, not the Overleaf rewrite.
+
 ## Evidence-scoping pass (2026-11-23)
 
 Every number below was recomputed from `community-results/` before editing. Manuscript commits: English `49813a4` (the user's pending prose, method-overview, and figure edits) then `53c57c2`; Chinese `facd869` then `d6bb1f0`. Not pushed to Overleaf and not compiled.
