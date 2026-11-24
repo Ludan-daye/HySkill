@@ -1,0 +1,3 @@
+{"instance_id":"ex_bm25","domain":"theoremqa","variant":"bm25","gold":["gold_b"],"top50":[["skill_b",0.8,1],["skill_a",0.2,0]]}
+{"instance_id":"ex_rerank","domain":"logicbench","variant":"llm_rerank","gold":["gold_r"],"top50":[["skill_r",0.7,0]]}
+{"instance_id":"ex_decoy","domain":"theoremqa","variant":"naive_sentence","gold":["gold_n"],"top50":[["skill_n",0.1,0]]}
