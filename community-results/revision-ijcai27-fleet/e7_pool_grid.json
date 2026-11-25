@@ -1,0 +1,191 @@
+{
+  "experiment": "E7_candidate_source_by_downstream_grid",
+  "models": [
+    "glm4-9b",
+    "llama31-8b",
+    "mistral7b",
+    "qwen3.5-4b-reference",
+    "qwen35-9b"
+  ],
+  "domains": [
+    "theoremqa",
+    "logicbench",
+    "medcalcbench",
+    "champ"
+  ],
+  "held_out_instances_per_model": 2265,
+  "arms": {
+    "bare": {
+      "cell_macro_accuracy": 0.432665869611481,
+      "instance_weighted_accuracy": 0.4393818984547462,
+      "per_model_accuracy": {
+        "glm4-9b": 0.3086092715231788,
+        "llama31-8b": 0.34746136865342164,
+        "mistral7b": 0.24812362030905077,
+        "qwen3.5-4b-reference": 0.634878587196468,
+        "qwen35-9b": 0.6578366445916115
+      },
+      "method_failures_in_denominator": 0,
+      "n_instances": 11325
+    },
+    "select_bm25": {
+      "cell_macro_accuracy": 0.48944901462458634,
+      "instance_weighted_accuracy": 0.5169094922737306,
+      "per_model_accuracy": {
+        "glm4-9b": 0.46799116997792495,
+        "llama31-8b": 0.4675496688741722,
+        "mistral7b": 0.31699779249448123,
+        "qwen3.5-4b-reference": 0.6335540838852097,
+        "qwen35-9b": 0.6984547461368653
+      },
+      "method_failures_in_denominator": 583,
+      "n_instances": 11325
+    },
+    "always_rerank": {
+      "cell_macro_accuracy": 0.48773451441253346,
+      "instance_weighted_accuracy": 0.5213245033112582,
+      "per_model_accuracy": {
+        "glm4-9b": 0.43973509933774835,
+        "llama31-8b": 0.46578366445916114,
+        "mistral7b": 0.3055187637969095,
+        "qwen3.5-4b-reference": 0.6777041942604857,
+        "qwen35-9b": 0.7178807947019867
+      },
+      "method_failures_in_denominator": 618,
+      "n_instances": 11325
+    },
+    "routed_gated": {
+      "cell_macro_accuracy": 0.523846618047077,
+      "instance_weighted_accuracy": 0.5632671081677705,
+      "per_model_accuracy": {
+        "glm4-9b": 0.49845474613686536,
+        "llama31-8b": 0.5055187637969095,
+        "mistral7b": 0.34701986754966885,
+        "qwen3.5-4b-reference": 0.7289183222958058,
+        "qwen35-9b": 0.7364238410596027
+      },
+      "method_failures_in_denominator": 0,
+      "n_instances": 11325
+    },
+    "routed_select": {
+      "cell_macro_accuracy": 0.5318338695241389,
+      "instance_weighted_accuracy": 0.5698896247240619,
+      "per_model_accuracy": {
+        "glm4-9b": 0.5280353200883002,
+        "llama31-8b": 0.4891832229580574,
+        "mistral7b": 0.33863134657836647,
+        "qwen3.5-4b-reference": 0.7337748344370861,
+        "qwen35-9b": 0.7598233995584989
+      },
+      "method_failures_in_denominator": 90,
+      "n_instances": 11325
+    },
+    "hy_rerank": {
+      "cell_macro_accuracy": 0.515500556214173,
+      "instance_weighted_accuracy": 0.5517880794701987,
+      "per_model_accuracy": {
+        "glm4-9b": 0.48520971302428256,
+        "llama31-8b": 0.4821192052980132,
+        "mistral7b": 0.33245033112582784,
+        "qwen3.5-4b-reference": 0.7196467991169978,
+        "qwen35-9b": 0.739514348785872
+      },
+      "method_failures_in_denominator": 106,
+      "n_instances": 11325
+    }
+  },
+  "paired_contrasts": {
+    "hy_rerank_vs_always_rerank": {
+      "mean_a": 0.515500556214173,
+      "mean_b": 0.48773451441253346,
+      "difference": 0.02776604180163954,
+      "ci95": [
+        -0.0002796749973616309,
+        0.05579765930916956
+      ],
+      "p_two_sided": 0.0524,
+      "n_models": 5,
+      "n_domains": 4,
+      "n_instances": 11325,
+      "samples": 10000,
+      "seed": 0
+    },
+    "routed_select_vs_select_bm25": {
+      "mean_a": 0.5318338695241388,
+      "mean_b": 0.48944901462458645,
+      "difference": 0.04238485489955247,
+      "ci95": [
+        0.007952883019624098,
+        0.08170711854085201
+      ],
+      "p_two_sided": 0.0158,
+      "n_models": 5,
+      "n_domains": 4,
+      "n_instances": 11325,
+      "samples": 10000,
+      "seed": 0
+    },
+    "routed_select_vs_hy_rerank": {
+      "mean_a": 0.5318338695241388,
+      "mean_b": 0.515500556214173,
+      "difference": 0.016333313309965798,
+      "ci95": [
+        -0.006647513065903835,
+        0.04009805496139488
+      ],
+      "p_two_sided": 0.158,
+      "n_models": 5,
+      "n_domains": 4,
+      "n_instances": 11325,
+      "samples": 10000,
+      "seed": 0
+    },
+    "select_bm25_vs_always_rerank": {
+      "mean_a": 0.48944901462458645,
+      "mean_b": 0.48773451441253346,
+      "difference": 0.0017145002120528788,
+      "ci95": [
+        -0.03105544336862161,
+        0.02981794960178174
+      ],
+      "p_two_sided": 0.8818,
+      "n_models": 5,
+      "n_domains": 4,
+      "n_instances": 11325,
+      "samples": 10000,
+      "seed": 0
+    },
+    "hy_rerank_vs_routed_gated": {
+      "mean_a": 0.515500556214173,
+      "mean_b": 0.523846618047077,
+      "difference": -0.008346061832903939,
+      "ci95": [
+        -0.028688828717173258,
+        0.011648226485675388
+      ],
+      "p_two_sided": 0.3916,
+      "n_models": 5,
+      "n_domains": 4,
+      "n_instances": 11325,
+      "samples": 10000,
+      "seed": 0
+    },
+    "hy_rerank_vs_bare": {
+      "mean_a": 0.515500556214173,
+      "mean_b": 0.43266586961148096,
+      "difference": 0.082834686602692,
+      "ci95": [
+        0.033231978504765024,
+        0.14766996426745224
+      ],
+      "p_two_sided": 0.001,
+      "n_models": 5,
+      "n_domains": 4,
+      "n_instances": 11325,
+      "samples": 10000,
+      "seed": 0
+    }
+  },
+  "hy_rerank_beats_bm25_rerank_significantly": false,
+  "claim_guidance": "The 95% CI for Hy+Rerank minus BM25+Rerank contains zero or is negative; per Spec \u00a77, scope the downstream candidate-pool claim to Select (Hy+Select > BM25+Select) and report no detected improvement (or negative difference) under listwise Rerank."
+}

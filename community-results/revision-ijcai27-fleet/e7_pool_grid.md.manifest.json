@@ -1,0 +1,25 @@
+{
+  "git_head": "4307e75a3f8e5e4bf8894fb2cf6b09e7823f8711",
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 0,
+  "input_sha256": {
+    "community-results/glm4-9b/k2/answer_per_instance.jsonl.gz": "3cba49d8f229198d1faad5cda8c3e28779282efc74e0e7aefea93192e2e5059a",
+    "community-results/glm4-9b/baselines-runtime-matched/answer_per_instance.jsonl.gz": "b7019ce4cd02dd408f2bc99ab641fad78428342e440bc31f907fb6053442844d",
+    "community-results/glm4-9b/revision-ijcai27/hy_rerank/answer_per_instance.jsonl.gz": "0b2197db20b39b5292c774063f939dda6801d1f387a67bb6c7d147eaea2a146a",
+    "community-results/llama31-8b/k2/answer_per_instance.jsonl.gz": "4ba935aab8d799efc1d5bc02e9ddb843dbcd198ef125440c8f3b29d648aae0ce",
+    "community-results/llama31-8b/baselines-runtime-matched/answer_per_instance.jsonl.gz": "7647c0248417dbd56e9657865623f1cabb39ac01bdd229e69b1826456bd86bc8",
+    "community-results/llama31-8b/revision-ijcai27/hy_rerank/answer_per_instance.jsonl.gz": "ac393aa5d4d672ffc98fd709abb2d52ac99442be51728ae20b874fb93703a277",
+    "community-results/mistral7b/k2/answer_per_instance.jsonl.gz": "33f211db94cf9bf937bcc1d241508e6e76f40a56624b8069ec5b7d98a1b2e840",
+    "community-results/mistral7b/baselines-runtime-matched/answer_per_instance.jsonl.gz": "029168b079690d3fb8851388ce6081cb02f77403119cb8b81faba5bbbcae267a",
+    "community-results/mistral7b/revision-ijcai27/hy_rerank/answer_per_instance.jsonl.gz": "c69f265c46bd545cbd4b596a72a7ce431d16e43e52250d31f1ca29e9c7f16b0b",
+    "community-results/qwen3.5-4b-reference/k2/answer_per_instance.jsonl.gz": "d309009bfad9ff6212eb2a517a02b14c36f5113253796d2e74ddd17c644e5fcd",
+    "community-results/qwen3.5-4b-reference/baselines-runtime-matched/answer_per_instance.jsonl.gz": "047c9913e6b48f2a6c6f7f8e575eef5adb729865751197ce666707c51bd0551f",
+    "community-results/qwen3.5-4b-reference/revision-ijcai27/hy_rerank/answer_per_instance.jsonl.gz": "980d84c6b0aaa0b2e70aea05efc2097c70a500b24e44a4ff056f424f82f53eb0",
+    "community-results/qwen35-9b/k2/answer_per_instance.jsonl.gz": "ad9cbb31dd0b89d23293217cabc91f501ff1c5496b62f5ecfeefe5fe00677346",
+    "community-results/qwen35-9b/baselines-runtime-matched/answer_per_instance.jsonl.gz": "8111f53505ec6e73843f90cbe7f20e68972213d1ac79fa247f0024df87f28162",
+    "community-results/qwen35-9b/revision-ijcai27/hy_rerank/answer_per_instance.jsonl.gz": "dcef88cd88d001e49c0a6e183bb3dcaef18575fcaaf6617fd89864e6098f8315"
+  },
+  "output_path": "community-results/revision-ijcai27-fleet/e7_pool_grid.md",
+  "output_sha256": "4e81d7aa1fea3cb3233cac03e5cd0d2d060b14379647ad1d15a2687b5c2af159",
+  "output_bytes": 1143
+}
