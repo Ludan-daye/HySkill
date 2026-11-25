@@ -297,6 +297,25 @@ def load_runtime_rerank_rankings(raw_root: Path, tag: str) -> list[RankingRow]:
     preserved.
     """
 
+    return _load_runtime_decision_rankings(raw_root, tag, rerank_order=True)
+
+
+def load_runtime_bm25_rankings(raw_root: Path, tag: str) -> list[RankingRow]:
+    """Load the shared FastBM25 candidate order the runtime reranker received.
+
+    This is ``ordered_candidate_ids`` from the same ``always_rerank`` decision
+    rows, so the BM25 and Rerank columns score one candidate pool per instance.
+    Rows carry arm ``bm25_shared`` and no omission count.
+    """
+
+    return _load_runtime_decision_rankings(raw_root, tag, rerank_order=False)
+
+
+def _load_runtime_decision_rankings(
+    raw_root: Path, tag: str, rerank_order: bool
+) -> list[RankingRow]:
+    """Parse runtime ``always_rerank`` decisions into reranked or BM25 order."""
+
     if not tag:
         raise ValueError("tag must be a non-empty string")
     decisions_dir: Path = Path(raw_root) / tag / "decisions"
@@ -347,12 +366,10 @@ def load_runtime_rerank_rankings(raw_root: Path, tag: str) -> list[RankingRow]:
                 raw.get("omitted_candidate_count"),
                 f"{context}.omitted_candidate_count",
             )
-            ranked_raw: list[object] = require_list(
-                raw.get("reranked_candidate_ids"),
-                f"{context}.reranked_candidate_ids",
-            )
+            field: str = "reranked_candidate_ids" if rerank_order else "ordered_candidate_ids"
+            ranked_raw: list[object] = require_list(raw.get(field), f"{context}.{field}")
             ranked_ids: list[str] = [
-                require_string(skill_id, f"{context}.reranked_candidate_ids[{index}]")
+                require_string(skill_id, f"{context}.{field}[{index}]")
                 for index, skill_id in enumerate(ranked_raw)
             ]
             _require_unique_ids(ranked_ids, context)
@@ -360,11 +377,11 @@ def load_runtime_rerank_rankings(raw_root: Path, tag: str) -> list[RankingRow]:
                 {
                     "model": model,
                     "domain": domain,
-                    "arm": arm,
+                    "arm": arm if rerank_order else "bm25_shared",
                     "instance_id": instance_id,
                     "gold_skill_ids": _gold_annotations(domain, instance_id, gold_by_domain),
                     "ranked_ids": ranked_ids,
-                    "omitted_count": omitted_count,
+                    "omitted_count": omitted_count if rerank_order else None,
                 }
             )
     return rows
