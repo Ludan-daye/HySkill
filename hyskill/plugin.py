@@ -97,8 +97,9 @@ def dense_factory(model_path="sentence-transformers/all-MiniLM-L6-v2",
 
 @register("fast_bm25")
 def fast_bm25_factory():
-    """BM25 on the bm25s backend — rank-identical to the builtin bm25
-    retriever, minutes instead of hours at 26k docs. Feeds llm_rerank."""
+    """Okapi BM25 on the bm25s backend (whitespace tokens), minutes instead of
+    hours at 26k docs. Feeds llm_rerank. Not rank-identical to the builtin
+    SR-Agents bm25 retriever, which strips punctuation and clips IDF at zero."""
     from hyskill.bm25 import FastBM25Retriever
     return FastBM25Retriever()
 
