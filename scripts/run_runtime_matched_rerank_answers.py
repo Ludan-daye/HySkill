@@ -20,9 +20,9 @@ from hyskill.runtime_matched_execution import (
 )
 from hyskill.runtime_matched_rerank import (
     FROZEN_SRAGENTS_REVISION,
-    RERANK_ANSWER_JOB_ARM,
-    RERANK_ANSWER_STAGE,
     RERANK_ANSWER_SCHEMA_VERSION,
+    RERANK_ANSWER_STAGE,
+    RERANK_ARMS,
     RERANK_ARM,
     RERANK_DECISION_SCHEMA_VERSION,
     RERANK_DECISION_STAGE,
@@ -46,6 +46,7 @@ from hyskill.runtime_matched_rerank import (
     now_sleep,
     read_jsonl,
     require_object,
+    require_rerank_arm,
     require_string,
     require_supported_model,
     run_answer_one,
@@ -61,6 +62,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--instances", required=True, type=Path)
     parser.add_argument("--corpus", required=True, type=Path)
     parser.add_argument("--decisions", required=True, type=Path)
+    parser.add_argument(
+        "--arm",
+        default=RERANK_ARM,
+        choices=RERANK_ARMS,
+    )
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--attempt-log", required=True, type=Path)
     parser.add_argument("--runtime-manifest", required=True, type=Path)
@@ -86,14 +92,16 @@ def validate_decision(
     model_tag: str,
     model: str,
     domain: str,
+    arm: str = RERANK_ARM,
 ) -> str:
     """Validate one decision and return its failure category."""
 
+    validated_arm: str = require_rerank_arm(arm)
     for field, expected in (
         ("schema_version", RERANK_DECISION_SCHEMA_VERSION),
         ("instance_id", instance_id),
         ("domain", domain),
-        ("arm", RERANK_ARM),
+        ("arm", validated_arm),
         ("stage", RERANK_DECISION_STAGE),
         ("model", model_tag),
         ("served_model", model),
@@ -157,9 +165,11 @@ def validate_existing_answer(
     decision_source_sha256: str,
     zero_call_payload_hash: str | None,
     zero_call_request_hash: str | None,
+    arm: str = RERANK_ARM,
 ) -> None:
     """Reject stale, reused, or cross-job answer rows on resume."""
 
+    validated_arm: str = require_rerank_arm(arm)
     expected_payload_hash: str = (
         answer_input["answer_payload_hash"]
         if answer_input is not None
@@ -180,7 +190,7 @@ def validate_existing_answer(
         ("schema_version", RERANK_ANSWER_SCHEMA_VERSION),
         ("instance_id", instance_id),
         ("domain", domain),
-        ("arm", RERANK_ARM),
+        ("arm", validated_arm),
         ("stage", RERANK_ANSWER_STAGE),
         ("model", model_tag),
         ("served_model", model),
@@ -262,6 +272,7 @@ def main() -> None:
     instances_path: Path = cast(Path, args.instances).resolve()
     corpus_path: Path = cast(Path, args.corpus).resolve()
     decisions_path: Path = cast(Path, args.decisions).resolve()
+    arm: str = require_rerank_arm(str(args.arm))
     output_path: Path = cast(Path, args.output).resolve()
     attempt_log_path: Path = cast(Path, args.attempt_log).resolve()
     manifest_path: Path = cast(Path, args.runtime_manifest).resolve()
@@ -289,7 +300,7 @@ def main() -> None:
         model,
         api_base,
         domain,
-        RERANK_ANSWER_JOB_ARM,
+        arm,
         RERANK_ANSWER_STAGE,
         generation,
         (
@@ -340,6 +351,7 @@ def main() -> None:
             model_tag,
             model,
             domain,
+            arm=arm,
         )
         categories[instance_id] = category
         if category == "success":
@@ -359,6 +371,7 @@ def main() -> None:
                 runtime,
                 manifest,
                 runtime_manifest_sha256,
+                arm=arm,
             )
         elif category == "method_failure":
             zero_call_hashes[instance_id] = decision_failure_hashes(
@@ -366,6 +379,7 @@ def main() -> None:
                 decision,
                 manifest,
                 runtime_manifest_sha256,
+                arm=arm,
             )
         else:
             unresolved_decisions.append(instance_id)
@@ -413,6 +427,7 @@ def main() -> None:
             decision_source_sha256,
             zero_hashes[0] if zero_hashes is not None else None,
             zero_hashes[1] if zero_hashes is not None else None,
+            arm=arm,
         )
 
     pending_all_ids: list[str] = sorted(
@@ -438,6 +453,7 @@ def main() -> None:
             manifest,
             runtime_manifest_sha256,
             decision_source_sha256,
+            arm=arm,
         )
         append_jsonl(output_path, record, write_lock)
         existing_index[instance_id] = record
@@ -477,6 +493,7 @@ def main() -> None:
             job_id,
             now_sleep,
             RETRY_DELAYS_SECONDS,
+            arm=arm,
         )
         selected_skill_id: str = require_string(
             decision.get("selected_skill_id"),
@@ -501,6 +518,7 @@ def main() -> None:
             runtime_manifest_sha256,
             manifest["code_bundle_sha256"],
             decision_source_sha256,
+            arm=arm,
         )
 
     futures: dict[Future[JsonObject], str] = {}

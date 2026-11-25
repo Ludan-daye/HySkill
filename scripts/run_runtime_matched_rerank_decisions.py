@@ -20,7 +20,8 @@ from hyskill.runtime_matched_execution import (
 )
 from hyskill.runtime_matched_rerank import (
     FROZEN_SRAGENTS_REVISION,
-    RERANK_DECISION_JOB_ARM,
+    RERANK_ARMS,
+    RERANK_ARM,
     RERANK_DECISION_STAGE,
     RETRY_DELAYS_SECONDS,
     JsonObject,
@@ -32,6 +33,7 @@ from hyskill.runtime_matched_rerank import (
     assert_exact_coverage,
     build_rerank_decision,
     build_rerank_inputs,
+    candidate_artifact_name,
     indexed_rows,
     load_corpus,
     load_instances,
@@ -40,6 +42,7 @@ from hyskill.runtime_matched_rerank import (
     now_sleep,
     read_jsonl,
     require_object,
+    require_rerank_arm,
     require_string,
     require_supported_model,
     rerank_generation,
@@ -56,7 +59,18 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--instances", required=True, type=Path)
     parser.add_argument("--corpus", required=True, type=Path)
-    parser.add_argument("--bm25-source", required=True, type=Path)
+    parser.add_argument(
+        "--candidate-source",
+        "--bm25-source",
+        dest="candidate_source",
+        required=True,
+        type=Path,
+    )
+    parser.add_argument(
+        "--arm",
+        default=RERANK_ARM,
+        choices=RERANK_ARMS,
+    )
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--attempt-log", required=True, type=Path)
     parser.add_argument("--runtime-manifest", required=True, type=Path)
@@ -91,7 +105,8 @@ def main() -> None:
         )
     instances_path: Path = cast(Path, args.instances).resolve()
     corpus_path: Path = cast(Path, args.corpus).resolve()
-    source_path: Path = cast(Path, args.bm25_source).resolve()
+    source_path: Path = cast(Path, args.candidate_source).resolve()
+    arm: str = require_rerank_arm(str(args.arm))
     output_path: Path = cast(Path, args.output).resolve()
     attempt_log_path: Path = cast(Path, args.attempt_log).resolve()
     manifest_path: Path = cast(Path, args.runtime_manifest).resolve()
@@ -119,11 +134,11 @@ def main() -> None:
         model,
         api_base,
         domain,
-        RERANK_DECISION_JOB_ARM,
+        arm,
         RERANK_DECISION_STAGE,
         generation,
         (
-            ("bm25_candidates", source_path),
+            (candidate_artifact_name(arm), source_path),
             ("corpus", corpus_path),
             ("instances", instances_path),
         ),
@@ -163,6 +178,7 @@ def main() -> None:
         runtime,
         manifest,
         runtime_manifest_sha256,
+        arm=arm,
     )
     input_index: dict[str, RerankInput] = {
         require_string(
@@ -202,6 +218,7 @@ def main() -> None:
             runtime_manifest_sha256,
             manifest["code_bundle_sha256"],
             source_sha256,
+            arm=arm,
         )
 
     write_lock: threading.Lock = threading.Lock()
@@ -238,6 +255,7 @@ def main() -> None:
             extra_body,
             now_sleep,
             RETRY_DELAYS_SECONDS,
+            arm=arm,
         )
         return build_rerank_decision(
             rerank_input,
@@ -248,6 +266,7 @@ def main() -> None:
             runtime_manifest_sha256,
             manifest["code_bundle_sha256"],
             source_sha256,
+            arm=arm,
         )
 
     futures: dict[Future[RerankDecision], str] = {}

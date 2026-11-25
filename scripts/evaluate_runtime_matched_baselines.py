@@ -27,6 +27,7 @@ BaselineArm: TypeAlias = Literal[
     "bare",
     "always_rerank",
     "select_bm25",
+    "hy_rerank",
 ]
 FailureCategory: TypeAlias = Literal[
     "success",
@@ -47,6 +48,7 @@ BASELINE_ARMS: frozenset[str] = frozenset(
         "bare",
         "always_rerank",
         "select_bm25",
+        "hy_rerank",
     }
 )
 RESOLVED_ANSWER_CATEGORIES: frozenset[str] = frozenset(

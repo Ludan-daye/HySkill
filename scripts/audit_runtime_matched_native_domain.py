@@ -40,7 +40,7 @@ from scripts.summarize_runtime_matched_usage import (
 )
 
 
-NativeArm: TypeAlias = Literal["always_rerank", "select_bm25"]
+NativeArm: TypeAlias = Literal["always_rerank", "select_bm25", "hy_rerank"]
 
 AUDIT_SCHEMA_VERSION: str = "runtime-matched-native-domain-audit-v1"
 RESOLVED_ANSWER_CATEGORIES: frozenset[str] = frozenset(
@@ -52,6 +52,7 @@ RESOLVED_DECISION_CATEGORIES: frozenset[str] = frozenset(
 NATIVE_ARMS: tuple[NativeArm, ...] = (
     "always_rerank",
     "select_bm25",
+    "hy_rerank",
 )
 
 
@@ -429,9 +430,14 @@ def validate_decisions(
         if arm == "select_bm25"
         else "source_sha256"
     )
+    candidate_artifact: str = (
+        "routed_candidates"
+        if arm == "hy_rerank"
+        else "bm25_candidates"
+    )
     bm25_sha: str = manifest_artifact(
         manifest,
-        "bm25_candidates",
+        candidate_artifact,
     )["sha256"]
     code_bundle_sha: str = manifest["code_bundle_sha256"]
     call_counts: dict[str, int] = {}

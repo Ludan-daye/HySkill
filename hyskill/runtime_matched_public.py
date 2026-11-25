@@ -39,6 +39,10 @@ JOB_MANIFEST_SCHEMA_VERSION: str = "runtime-matched-job-manifest-v1"
 RUNTIME_FACTS_SCHEMA_VERSION: str = "runtime-matched-runtime-facts-v1"
 SHA256_LENGTH: int = 64
 NATIVE_ARMS: tuple[str, ...] = ("always_rerank", "select_bm25")
+RERANK_ARMS: frozenset[str] = frozenset({"always_rerank", "hy_rerank"})
+SUPPORTED_DECISION_ARMS: frozenset[str] = frozenset(
+    {"always_rerank", "select_bm25", "hy_rerank"}
+)
 RESOLVED_CATEGORIES: frozenset[str] = frozenset(
     {"success", "selector_fallback", "method_failure"}
 )
@@ -263,11 +267,11 @@ def public_decision_row(
 ) -> JsonObject:
     """Remove raw LLM text while preserving candidate and loading evidence."""
 
-    if arm not in NATIVE_ARMS:
+    if arm not in SUPPORTED_DECISION_ARMS:
         raise ValueError(f"Unsupported native arm: arm={arm}")
     expected_schema: str = (
         RERANK_DECISION_SCHEMA_VERSION
-        if arm == "always_rerank"
+        if arm in RERANK_ARMS
         else SELECT_DECISION_SCHEMA_VERSION
     )
     context: str = f"decision:{model}:{domain}:{arm}"
@@ -313,12 +317,12 @@ def public_decision_row(
         )
     source_field: str = (
         "source_sha256"
-        if arm == "always_rerank"
+        if arm in RERANK_ARMS
         else "candidate_source_sha256"
     )
     payload_field: str = (
         "decision_payload_hash"
-        if arm == "always_rerank"
+        if arm in RERANK_ARMS
         else "selector_payload_hash"
     )
     public_row: JsonObject = {
@@ -363,7 +367,7 @@ def public_decision_row(
             f"{context}.runtime_manifest_sha256",
         ),
     }
-    if arm == "always_rerank":
+    if arm in RERANK_ARMS:
         reranked: list[str] = require_string_list(
             row.get("reranked_candidate_ids"),
             f"{context}.reranked_candidate_ids",

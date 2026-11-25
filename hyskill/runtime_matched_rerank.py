@@ -54,10 +54,18 @@ RERANK_ANSWER_PAYLOAD_SCHEMA_VERSION: str = (
 RERANK_EXECUTION_SCHEMA_VERSION: str = (
     "runtime-matched-rerank-execution-v1"
 )
+HY_RERANK_EXECUTION_SCHEMA_VERSION: str = (
+    "runtime-matched-hy-rerank-execution-v1"
+)
 RERANK_ANSWER_EXECUTION_SCHEMA_VERSION: str = (
     "runtime-matched-rerank-answer-execution-v1"
 )
+HY_RERANK_ANSWER_EXECUTION_SCHEMA_VERSION: str = (
+    "runtime-matched-hy-rerank-answer-execution-v1"
+)
 RERANK_ARM: str = "always_rerank"
+HY_RERANK_ARM: str = "hy_rerank"
+RERANK_ARMS: tuple[str, ...] = (RERANK_ARM, HY_RERANK_ARM)
 RERANK_DECISION_JOB_ARM: str = RERANK_ARM
 RERANK_ANSWER_JOB_ARM: str = RERANK_ARM
 RERANK_DECISION_STAGE: str = "decision"
@@ -449,6 +457,23 @@ def require_supported_model(model_tag: str) -> None:
         )
 
 
+def require_rerank_arm(arm: str) -> str:
+    """Validate one supported rerank arm."""
+
+    if arm not in RERANK_ARMS:
+        raise RuntimeMatchedRerankError(
+            f"Unsupported rerank arm: arm={arm!r}, allowed={RERANK_ARMS}"
+        )
+    return arm
+
+
+def candidate_artifact_name(arm: str) -> str:
+    """Return the manifest artifact key for a rerank arm's candidate file."""
+
+    validated = require_rerank_arm(arm)
+    return "routed_candidates" if validated == HY_RERANK_ARM else "bm25_candidates"
+
+
 def load_native_rerank_runtime(
     checkout: Path,
     expected_revision: str,
@@ -759,9 +784,16 @@ def build_rerank_inputs(
     runtime: NativeRerankRuntime,
     manifest: JobBoundManifest,
     runtime_manifest_sha256: str,
+    arm: str = RERANK_ARM,
 ) -> list[RerankInput]:
     """Render every native listwise request and bind exact hashes."""
 
+    validated_arm: str = require_rerank_arm(arm)
+    execution_schema: str = (
+        RERANK_EXECUTION_SCHEMA_VERSION
+        if validated_arm == RERANK_ARM
+        else HY_RERANK_EXECUTION_SCHEMA_VERSION
+    )
     generation: JsonObject = manifest_generation(manifest)
     output: list[RerankInput] = []
     for instance in instances:
@@ -829,7 +861,7 @@ def build_rerank_inputs(
             generation,
         )
         request_hash: str = execution_request_hash(
-            RERANK_EXECUTION_SCHEMA_VERSION,
+            execution_schema,
             payload_hash,
             runtime_manifest_sha256,
             manifest["code_bundle_sha256"],
@@ -894,9 +926,11 @@ def request_rerank_response(
     logical_attempt_start: int,
     sleep: Callable[[float], None],
     retry_delays: Sequence[float],
+    arm: str = RERANK_ARM,
 ) -> tuple[str | None, int, FailureCategory, JsonObject | None]:
     """Call one parse attempt with bounded transient retries."""
 
+    validated_arm: str = require_rerank_arm(arm)
     instance_id: str = require_string(
         rerank_input["instance"].get("instance_id"),
         "instance.instance_id",
@@ -909,7 +943,7 @@ def request_rerank_response(
             job_id,
             model,
             domain,
-            RERANK_ARM,
+            validated_arm,
             instance_id,
             logical_attempt,
             rerank_input["decision_payload_hash"],
@@ -981,9 +1015,11 @@ def rerank_one(
     extra_body: JsonObject | None,
     sleep: Callable[[float], None],
     retry_delays: Sequence[float],
+    arm: str = RERANK_ARM,
 ) -> RerankOutcome:
     """Execute native parse retries and source-order omission append."""
 
+    validated_arm: str = require_rerank_arm(arm)
     raw_responses: list[str] = []
     best_indices: list[int] = []
     client_calls: int = 0
@@ -1000,6 +1036,7 @@ def rerank_one(
             client_calls,
             sleep,
             retry_delays,
+            arm=validated_arm,
         )
         client_calls += calls
         if category != "success":
@@ -1054,20 +1091,22 @@ def build_rerank_decision(
     runtime_manifest_sha256: str,
     code_bundle_sha256: str,
     source_sha256: str,
+    arm: str = RERANK_ARM,
 ) -> RerankDecision:
     """Attach immutable request and runtime identity to one outcome."""
 
+    validated_arm: str = require_rerank_arm(arm)
     instance_id: str = require_string(
         rerank_input["instance"].get("instance_id"),
         "instance.instance_id",
     )
     reranked_ids: list[str] = outcome["reranked_candidate_ids"]
     raw_responses: list[str] = outcome["raw_responses"]
-    return {
+    record: dict[str, JsonValue] = {
         "schema_version": RERANK_DECISION_SCHEMA_VERSION,
         "instance_id": instance_id,
         "domain": domain,
-        "arm": RERANK_ARM,
+        "arm": validated_arm,
         "stage": RERANK_DECISION_STAGE,
         "model": model_tag,
         "served_model": served_model,
@@ -1091,6 +1130,9 @@ def build_rerank_decision(
         "source_sha256": source_sha256,
         "error": outcome["error"],
     }
+    if validated_arm == HY_RERANK_ARM:
+        record["candidate_source_sha256"] = source_sha256
+    return cast(RerankDecision, record)
 
 
 def validate_existing_decision(
@@ -1102,9 +1144,11 @@ def validate_existing_decision(
     runtime_manifest_sha256: str,
     code_bundle_sha256: str,
     source_sha256: str,
+    arm: str = RERANK_ARM,
 ) -> None:
     """Reject stale or cross-job rows during safe resume."""
 
+    validated_arm: str = require_rerank_arm(arm)
     instance_id: str = require_string(
         rerank_input["instance"].get("instance_id"),
         "instance.instance_id",
@@ -1113,7 +1157,7 @@ def validate_existing_decision(
         ("schema_version", RERANK_DECISION_SCHEMA_VERSION),
         ("instance_id", instance_id),
         ("domain", domain),
-        ("arm", RERANK_ARM),
+        ("arm", validated_arm),
         ("stage", RERANK_DECISION_STAGE),
         ("model", model_tag),
         ("served_model", served_model),
@@ -1210,9 +1254,16 @@ def build_answer_input(
     runtime: NativeRerankRuntime,
     manifest: JobBoundManifest,
     runtime_manifest_sha256: str,
+    arm: str = RERANK_ARM,
 ) -> AnswerInput:
     """Render the exact native direct-engine payload for hashing."""
 
+    validated_arm: str = require_rerank_arm(arm)
+    answer_exec_schema: str = (
+        RERANK_ANSWER_EXECUTION_SCHEMA_VERSION
+        if validated_arm == RERANK_ARM
+        else HY_RERANK_ANSWER_EXECUTION_SCHEMA_VERSION
+    )
     content: str = require_string(skill.get("content"), "skill.content")
     system, user = runtime["build_prompt"](instance, [content])
     messages: list[JsonObject] = []
@@ -1237,7 +1288,7 @@ def build_answer_input(
         manifest_generation(manifest),
     )
     request_hash: str = execution_request_hash(
-        RERANK_ANSWER_EXECUTION_SCHEMA_VERSION,
+        answer_exec_schema,
         payload_hash,
         runtime_manifest_sha256,
         manifest["code_bundle_sha256"],
@@ -1257,9 +1308,16 @@ def decision_failure_hashes(
     decision: JsonObject,
     manifest: JobBoundManifest,
     runtime_manifest_sha256: str,
+    arm: str = RERANK_ARM,
 ) -> tuple[str, str]:
     """Hash an explicit zero-call outcome caused by decision failure."""
 
+    validated_arm: str = require_rerank_arm(arm)
+    answer_exec_schema: str = (
+        RERANK_ANSWER_EXECUTION_SCHEMA_VERSION
+        if validated_arm == RERANK_ARM
+        else HY_RERANK_ANSWER_EXECUTION_SCHEMA_VERSION
+    )
     payload_hash: str = sha256_json(
         {
             "schema_version": "runtime-matched-rerank-zero-call-v1",
@@ -1274,7 +1332,7 @@ def decision_failure_hashes(
     return (
         payload_hash,
         execution_request_hash(
-            RERANK_ANSWER_EXECUTION_SCHEMA_VERSION,
+            answer_exec_schema,
             payload_hash,
             runtime_manifest_sha256,
             manifest["code_bundle_sha256"],
@@ -1292,9 +1350,11 @@ def run_answer_one(
     job_id: str,
     sleep: Callable[[float], None],
     retry_delays: Sequence[float],
+    arm: str = RERANK_ARM,
 ) -> AnswerOutcome:
     """Run one direct answer with exact retry and empty-output behavior."""
 
+    validated_arm: str = require_rerank_arm(arm)
     instance_id: str = require_string(
         answer_input["instance"].get("instance_id"),
         "instance.instance_id",
@@ -1304,7 +1364,7 @@ def run_answer_one(
             job_id,
             model,
             domain,
-            RERANK_ARM,
+            validated_arm,
             instance_id,
             engine_attempt,
             answer_input["answer_payload_hash"],
@@ -1410,9 +1470,11 @@ def build_answer_record(
     runtime_manifest_sha256: str,
     code_bundle_sha256: str,
     decision_source_sha256: str,
+    arm: str = RERANK_ARM,
 ) -> JsonObject:
     """Attach decision, request, runtime, and outcome evidence."""
 
+    validated_arm: str = require_rerank_arm(arm)
     instance_id: str = require_string(
         answer_input["instance"].get("instance_id"),
         "instance.instance_id",
@@ -1425,7 +1487,7 @@ def build_answer_record(
         "schema_version": RERANK_ANSWER_SCHEMA_VERSION,
         "instance_id": instance_id,
         "domain": domain,
-        "arm": RERANK_ARM,
+        "arm": validated_arm,
         "stage": RERANK_ANSWER_STAGE,
         "model": model_tag,
         "served_model": served_model,
@@ -1462,9 +1524,11 @@ def build_zero_call_answer_record(
     manifest: JobBoundManifest,
     runtime_manifest_sha256: str,
     decision_source_sha256: str,
+    arm: str = RERANK_ARM,
 ) -> JsonObject:
     """Emit one method-failure answer row without any model call."""
 
+    validated_arm: str = require_rerank_arm(arm)
     instance_id: str = require_string(
         instance.get("instance_id"),
         "instance.instance_id",
@@ -1480,12 +1544,13 @@ def build_zero_call_answer_record(
         decision,
         manifest,
         runtime_manifest_sha256,
+        arm=validated_arm,
     )
     return {
         "schema_version": RERANK_ANSWER_SCHEMA_VERSION,
         "instance_id": instance_id,
         "domain": domain,
-        "arm": RERANK_ARM,
+        "arm": validated_arm,
         "stage": RERANK_ANSWER_STAGE,
         "model": model_tag,
         "served_model": served_model,
