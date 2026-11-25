@@ -1,0 +1,318 @@
+{
+  "passed": false,
+  "metric_mismatches": [
+    {
+      "domain": "__all_macro__",
+      "variant": "hyskill",
+      "split": "all",
+      "metric": "Recall@10",
+      "published": 0.7602642101150039,
+      "recomputed": 0.7605273680097407,
+      "n_published": 5,
+      "n_recomputed": 5
+    },
+    {
+      "domain": "logicbench",
+      "variant": "hyskill",
+      "split": "all",
+      "metric": "Recall@10",
+      "published": 0.6302631578947369,
+      "recomputed": 0.631578947368421,
+      "n_published": 760,
+      "n_recomputed": 760
+    },
+    {
+      "domain": "logicbench",
+      "variant": "hyskill",
+      "split": "test",
+      "metric": "Recall@10",
+      "published": 0.6266447368421053,
+      "recomputed": 0.6282894736842105,
+      "n_published": 608,
+      "n_recomputed": 608
+    },
+    {
+      "domain": "logicbench",
+      "variant": "routed",
+      "split": "all",
+      "metric": "Recall@10",
+      "published": 0.6302631578947369,
+      "recomputed": 0.631578947368421,
+      "n_published": 760,
+      "n_recomputed": 760
+    },
+    {
+      "domain": "logicbench",
+      "variant": "routed",
+      "split": "test",
+      "metric": "Recall@10",
+      "published": 0.6266447368421053,
+      "recomputed": 0.6282894736842105,
+      "n_published": 608,
+      "n_recomputed": 608
+    }
+  ],
+  "router_pick_mismatches": [],
+  "routed_top50_overlap": {
+    "theoremqa": 1.0,
+    "logicbench": 0.999921052631579,
+    "medcalcbench": 1.0,
+    "champ": 1.0,
+    "bigcodebench": 0.9999824561403509
+  },
+  "bm25_report": {
+    "explanation": "The five models that store BM25 for every domain use the same 3,970 instance ids and the same gold lists. The test-split gap is the scorer stored in the file, not a different question set. qwen3.5-4b-reference macro-averages to hit@50 0.801 and nDCG@10 0.434 across the five domains. Those lists are the SR-Agents BM25Retriever ranking: punctuation is stripped before tokenization and Lucene IDF is clipped at zero. Rescoring one query per domain reproduced that file's top-50 ids exactly, and theoremqa_00000's leading score is 75.10751. glm4-9b, llama31-8b, mistral7b, and qwen35-9b macro-average to hit@50 0.705 and nDCG@10 0.357. Those lists match FastBM25 (whitespace tokens, Robertson/Okapi); the same query's leading score is 28.06001. Mistral reorders some tied rows, but its per-instance test hit@50 and nDCG@10 match the other FastBM25 models, so the macro matches. deepseek7b and yi15-9b store BM25 for theoremqa only, and those rows match the FastBM25 theoremqa ranking.",
+    "instance_ids_equal_among_full_models": true,
+    "gold_equal_among_full_models": true,
+    "qwen_ranking_differs_from_glm4_9b": true,
+    "leading_scores": {
+      "qwen3.5-4b-reference": {
+        "instance_id": "theoremqa_00000",
+        "skill_id": "theoremqa_000",
+        "score": 75.10751
+      },
+      "glm4-9b": {
+        "instance_id": "theoremqa_00000",
+        "skill_id": "theoremqa_000",
+        "score": 28.06001
+      }
+    },
+    "models": {
+      "deepseek7b": {
+        "domains": {
+          "theoremqa": {
+            "n": 747,
+            "test_n": 598,
+            "hit@50": 0.7324414715719063,
+            "nDCG@10": 0.5527790128785112
+          }
+        },
+        "missing_domains": [
+          "logicbench",
+          "medcalcbench",
+          "champ",
+          "bigcodebench"
+        ],
+        "test_macro_hit@50": 0.7324414715719063,
+        "test_macro_nDCG@10": 0.5527790128785112,
+        "ranking_matches_glm4_9b_on_shared_domains": true,
+        "test_metrics_match_glm4_9b_on_shared_domains": true
+      },
+      "glm4-9b": {
+        "domains": {
+          "theoremqa": {
+            "n": 747,
+            "test_n": 598,
+            "hit@50": 0.7324414715719063,
+            "nDCG@10": 0.5527790128785112
+          },
+          "logicbench": {
+            "n": 760,
+            "test_n": 608,
+            "hit@50": 0.5148026315789473,
+            "nDCG@10": 0.20550410538334027
+          },
+          "medcalcbench": {
+            "n": 1100,
+            "test_n": 880,
+            "hit@50": 0.8090909090909091,
+            "nDCG@10": 0.39741200578867864
+          },
+          "champ": {
+            "n": 223,
+            "test_n": 179,
+            "hit@50": 0.5139664804469274,
+            "nDCG@10": 0.21911453745722267
+          },
+          "bigcodebench": {
+            "n": 1140,
+            "test_n": 912,
+            "hit@50": 0.9550438596491229,
+            "nDCG@10": 0.4110388635520297
+          }
+        },
+        "missing_domains": [],
+        "test_macro_hit@50": 0.7050690704675626,
+        "test_macro_nDCG@10": 0.3571697050119565,
+        "ranking_matches_glm4_9b_on_shared_domains": true,
+        "test_metrics_match_glm4_9b_on_shared_domains": true
+      },
+      "llama31-8b": {
+        "domains": {
+          "theoremqa": {
+            "n": 747,
+            "test_n": 598,
+            "hit@50": 0.7324414715719063,
+            "nDCG@10": 0.5527790128785112
+          },
+          "logicbench": {
+            "n": 760,
+            "test_n": 608,
+            "hit@50": 0.5148026315789473,
+            "nDCG@10": 0.20550410538334027
+          },
+          "medcalcbench": {
+            "n": 1100,
+            "test_n": 880,
+            "hit@50": 0.8090909090909091,
+            "nDCG@10": 0.39741200578867864
+          },
+          "champ": {
+            "n": 223,
+            "test_n": 179,
+            "hit@50": 0.5139664804469274,
+            "nDCG@10": 0.21911453745722267
+          },
+          "bigcodebench": {
+            "n": 1140,
+            "test_n": 912,
+            "hit@50": 0.9550438596491229,
+            "nDCG@10": 0.4110388635520297
+          }
+        },
+        "missing_domains": [],
+        "test_macro_hit@50": 0.7050690704675626,
+        "test_macro_nDCG@10": 0.3571697050119565,
+        "ranking_matches_glm4_9b_on_shared_domains": true,
+        "test_metrics_match_glm4_9b_on_shared_domains": true
+      },
+      "mistral7b": {
+        "domains": {
+          "theoremqa": {
+            "n": 747,
+            "test_n": 598,
+            "hit@50": 0.7324414715719063,
+            "nDCG@10": 0.5527790128785112
+          },
+          "logicbench": {
+            "n": 760,
+            "test_n": 608,
+            "hit@50": 0.5148026315789473,
+            "nDCG@10": 0.20550410538334027
+          },
+          "medcalcbench": {
+            "n": 1100,
+            "test_n": 880,
+            "hit@50": 0.8090909090909091,
+            "nDCG@10": 0.39741200578867864
+          },
+          "champ": {
+            "n": 223,
+            "test_n": 179,
+            "hit@50": 0.5139664804469274,
+            "nDCG@10": 0.21911453745722267
+          },
+          "bigcodebench": {
+            "n": 1140,
+            "test_n": 912,
+            "hit@50": 0.9550438596491229,
+            "nDCG@10": 0.4110388635520297
+          }
+        },
+        "missing_domains": [],
+        "test_macro_hit@50": 0.7050690704675626,
+        "test_macro_nDCG@10": 0.3571697050119565,
+        "ranking_matches_glm4_9b_on_shared_domains": false,
+        "test_metrics_match_glm4_9b_on_shared_domains": true
+      },
+      "qwen3.5-4b-reference": {
+        "domains": {
+          "theoremqa": {
+            "n": 747,
+            "test_n": 598,
+            "hit@50": 0.8963210702341137,
+            "nDCG@10": 0.6939391600864893
+          },
+          "logicbench": {
+            "n": 760,
+            "test_n": 608,
+            "hit@50": 0.5740131578947368,
+            "nDCG@10": 0.22065831347965204
+          },
+          "medcalcbench": {
+            "n": 1100,
+            "test_n": 880,
+            "hit@50": 0.9193181818181818,
+            "nDCG@10": 0.4465796213510902
+          },
+          "champ": {
+            "n": 223,
+            "test_n": 179,
+            "hit@50": 0.6256983240223464,
+            "nDCG@10": 0.2546791216306288
+          },
+          "bigcodebench": {
+            "n": 1140,
+            "test_n": 912,
+            "hit@50": 0.9912280701754386,
+            "nDCG@10": 0.5547202454528986
+          }
+        },
+        "missing_domains": [],
+        "test_macro_hit@50": 0.8013157608289635,
+        "test_macro_nDCG@10": 0.4341152924001518,
+        "ranking_matches_glm4_9b_on_shared_domains": false,
+        "test_metrics_match_glm4_9b_on_shared_domains": false
+      },
+      "qwen35-9b": {
+        "domains": {
+          "theoremqa": {
+            "n": 747,
+            "test_n": 598,
+            "hit@50": 0.7324414715719063,
+            "nDCG@10": 0.5527790128785112
+          },
+          "logicbench": {
+            "n": 760,
+            "test_n": 608,
+            "hit@50": 0.5148026315789473,
+            "nDCG@10": 0.20550410538334027
+          },
+          "medcalcbench": {
+            "n": 1100,
+            "test_n": 880,
+            "hit@50": 0.8090909090909091,
+            "nDCG@10": 0.39741200578867864
+          },
+          "champ": {
+            "n": 223,
+            "test_n": 179,
+            "hit@50": 0.5139664804469274,
+            "nDCG@10": 0.21911453745722267
+          },
+          "bigcodebench": {
+            "n": 1140,
+            "test_n": 912,
+            "hit@50": 0.9550438596491229,
+            "nDCG@10": 0.4110388635520297
+          }
+        },
+        "missing_domains": [],
+        "test_macro_hit@50": 0.7050690704675626,
+        "test_macro_nDCG@10": 0.3571697050119565,
+        "ranking_matches_glm4_9b_on_shared_domains": true,
+        "test_metrics_match_glm4_9b_on_shared_domains": true
+      },
+      "yi15-9b": {
+        "domains": {
+          "theoremqa": {
+            "n": 747,
+            "test_n": 598,
+            "hit@50": 0.7324414715719063,
+            "nDCG@10": 0.5527790128785112
+          }
+        },
+        "missing_domains": [
+          "logicbench",
+          "medcalcbench",
+          "champ",
+          "bigcodebench"
+        ],
+        "test_macro_hit@50": 0.7324414715719063,
+        "test_macro_nDCG@10": 0.5527790128785112,
+        "ranking_matches_glm4_9b_on_shared_domains": true,
+        "test_metrics_match_glm4_9b_on_shared_domains": true
+      }
+    }
+  }
+}
