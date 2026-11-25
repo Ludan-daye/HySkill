@@ -1,0 +1,306 @@
+{
+  "experiment": "E4_additional_encoders",
+  "models_7": [
+    "deepseek7b",
+    "glm4-9b",
+    "llama31-8b",
+    "mistral7b",
+    "qwen3.5-4b-reference",
+    "qwen35-9b",
+    "yi15-9b"
+  ],
+  "models_5_bm25": [
+    "glm4-9b",
+    "llama31-8b",
+    "mistral7b",
+    "qwen35-9b"
+  ],
+  "domains": [
+    "theoremqa",
+    "logicbench",
+    "medcalcbench",
+    "champ",
+    "bigcodebench"
+  ],
+  "encoders": {
+    "BAAI/bge-base-en-v1.5": {
+      "slug": "bge-base-en-v1.5",
+      "macro_test_means_7models": {
+        "naive_sentence": {
+          "nDCG@10": 0.47652546234047416,
+          "Recall@50": 0.7356765848016263
+        },
+        "naive_passage": {
+          "nDCG@10": 0.5229813239924147,
+          "Recall@50": 0.7789569784055821
+        },
+        "naive_skill": {
+          "nDCG@10": 0.5214487590399661,
+          "Recall@50": 0.7670604383072663
+        },
+        "hyskill": {
+          "nDCG@10": 0.5054481288976025,
+          "Recall@50": 0.800423251763187
+        },
+        "two_stage": {
+          "nDCG@10": 0.5296801634212913,
+          "Recall@50": 0.800423251763187
+        },
+        "routed": {
+          "nDCG@10": 0.5571093118959024,
+          "Recall@50": 0.8088569361614214
+        }
+      },
+      "routed_vs_naive_passage_7models": {
+        "nDCG@10": {
+          "mean_a": 0.5571093118959024,
+          "mean_b": 0.5229813239924147,
+          "difference": 0.03412798790348769,
+          "ci95": [
+            -0.0007008337469139561,
+            0.07686563385886626
+          ],
+          "p_two_sided": 0.0594,
+          "n_models": 7,
+          "n_domains": 5,
+          "n_instances": 22239,
+          "samples": 10000,
+          "seed": 0
+        },
+        "Recall@50": {
+          "mean_a": 0.8088569361614214,
+          "mean_b": 0.778956978405582,
+          "difference": 0.029899957755839347,
+          "ci95": [
+            -0.013381933494299739,
+            0.08071784894901518
+          ],
+          "p_two_sided": 0.1872,
+          "n_models": 7,
+          "n_domains": 5,
+          "n_instances": 22239,
+          "samples": 10000,
+          "seed": 0
+        }
+      },
+      "routed_vs_bm25_4models": {
+        "nDCG@10": {
+          "mean_a": 0.5762170137287762,
+          "mean_b": 0.35716970501195655,
+          "difference": 0.21904730871681966,
+          "ci95": [
+            0.12036202942343904,
+            0.3198050686907769
+          ],
+          "p_two_sided": 0.0,
+          "n_models": 4,
+          "n_domains": 5,
+          "n_instances": 12708,
+          "samples": 10000,
+          "seed": 0
+        },
+        "Recall@50": {
+          "mean_a": 0.8247435862949242,
+          "mean_b": 0.6323046670241308,
+          "difference": 0.19243891927079335,
+          "ci95": [
+            0.10499330628866607,
+            0.2739035041618619
+          ],
+          "p_two_sided": 0.0,
+          "n_models": 4,
+          "n_domains": 5,
+          "n_instances": 12708,
+          "samples": 10000,
+          "seed": 0
+        }
+      }
+    },
+    "thenlper/gte-base": {
+      "slug": "gte-base",
+      "macro_test_means_7models": {
+        "naive_sentence": {
+          "nDCG@10": 0.469673649024354,
+          "Recall@50": 0.7228010459470516
+        },
+        "naive_passage": {
+          "nDCG@10": 0.5324625538183612,
+          "Recall@50": 0.7956206038805705
+        },
+        "naive_skill": {
+          "nDCG@10": 0.5118763190553112,
+          "Recall@50": 0.7511800950440881
+        },
+        "hyskill": {
+          "nDCG@10": 0.49884567502772137,
+          "Recall@50": 0.8072971747436818
+        },
+        "two_stage": {
+          "nDCG@10": 0.5208416656341616,
+          "Recall@50": 0.8072971747436818
+        },
+        "routed": {
+          "nDCG@10": 0.5675735951914298,
+          "Recall@50": 0.8272763484814208
+        }
+      },
+      "routed_vs_naive_passage_7models": {
+        "nDCG@10": {
+          "mean_a": 0.5675735951914297,
+          "mean_b": 0.532462553818361,
+          "difference": 0.035111041373068655,
+          "ci95": [
+            0.0018724738293108857,
+            0.08444639811437629
+          ],
+          "p_two_sided": 0.0312,
+          "n_models": 7,
+          "n_domains": 5,
+          "n_instances": 22239,
+          "samples": 10000,
+          "seed": 0
+        },
+        "Recall@50": {
+          "mean_a": 0.8272763484814208,
+          "mean_b": 0.7956206038805704,
+          "difference": 0.031655744600850265,
+          "ci95": [
+            -0.010160769893881478,
+            0.09215942835692516
+          ],
+          "p_two_sided": 0.1664,
+          "n_models": 7,
+          "n_domains": 5,
+          "n_instances": 22239,
+          "samples": 10000,
+          "seed": 0
+        }
+      },
+      "routed_vs_bm25_4models": {
+        "nDCG@10": {
+          "mean_a": 0.5847351850772704,
+          "mean_b": 0.35716970501195655,
+          "difference": 0.2275654800653139,
+          "ci95": [
+            0.12999176331165177,
+            0.3272514522065747
+          ],
+          "p_two_sided": 0.0,
+          "n_models": 4,
+          "n_domains": 5,
+          "n_instances": 12708,
+          "samples": 10000,
+          "seed": 0
+        },
+        "Recall@50": {
+          "mean_a": 0.8349992614734163,
+          "mean_b": 0.6323046670241308,
+          "difference": 0.20269459444928536,
+          "ci95": [
+            0.12323458175816394,
+            0.2781591941085807
+          ],
+          "p_two_sided": 0.0,
+          "n_models": 4,
+          "n_domains": 5,
+          "n_instances": 12708,
+          "samples": 10000,
+          "seed": 0
+        }
+      }
+    },
+    "BAAI/bge-large-en-v1.5": {
+      "slug": "bge-large-en-v1.5",
+      "macro_test_means_7models": {
+        "naive_sentence": {
+          "nDCG@10": 0.49165585900043873,
+          "Recall@50": 0.7609582176046883
+        },
+        "naive_passage": {
+          "nDCG@10": 0.5389406883364204,
+          "Recall@50": 0.8077070207615971
+        },
+        "naive_skill": {
+          "nDCG@10": 0.5294765310580555,
+          "Recall@50": 0.7762980659850827
+        },
+        "hyskill": {
+          "nDCG@10": 0.524719512686038,
+          "Recall@50": 0.8257528742576459
+        },
+        "two_stage": {
+          "nDCG@10": 0.5422368168763825,
+          "Recall@50": 0.8257528742576459
+        },
+        "routed": {
+          "nDCG@10": 0.5839979428761997,
+          "Recall@50": 0.848600469240826
+        }
+      },
+      "routed_vs_naive_passage_7models": {
+        "nDCG@10": {
+          "mean_a": 0.5839979428761998,
+          "mean_b": 0.5389406883364204,
+          "difference": 0.0450572545397793,
+          "ci95": [
+            0.011224286665153002,
+            0.0950855350175931
+          ],
+          "p_two_sided": 0.0004,
+          "n_models": 7,
+          "n_domains": 5,
+          "n_instances": 22239,
+          "samples": 10000,
+          "seed": 0
+        },
+        "Recall@50": {
+          "mean_a": 0.8486004692408259,
+          "mean_b": 0.8077070207615972,
+          "difference": 0.04089344847922885,
+          "ci95": [
+            0.002876146464195216,
+            0.09506367554522069
+          ],
+          "p_two_sided": 0.031,
+          "n_models": 7,
+          "n_domains": 5,
+          "n_instances": 22239,
+          "samples": 10000,
+          "seed": 0
+        }
+      },
+      "routed_vs_bm25_4models": {
+        "nDCG@10": {
+          "mean_a": 0.5983961382463805,
+          "mean_b": 0.35716970501195655,
+          "difference": 0.2412264332344239,
+          "ci95": [
+            0.14553520038122683,
+            0.3355250604828506
+          ],
+          "p_two_sided": 0.0,
+          "n_models": 4,
+          "n_domains": 5,
+          "n_instances": 12708,
+          "samples": 10000,
+          "seed": 0
+        },
+        "Recall@50": {
+          "mean_a": 0.8613276818720988,
+          "mean_b": 0.6323046670241308,
+          "difference": 0.22902301484796803,
+          "ci95": [
+            0.14571726686320519,
+            0.3084809799345664
+          ],
+          "p_two_sided": 0.0,
+          "n_models": 4,
+          "n_domains": 5,
+          "n_instances": 12708,
+          "samples": 10000,
+          "seed": 0
+        }
+      }
+    }
+  }
+}

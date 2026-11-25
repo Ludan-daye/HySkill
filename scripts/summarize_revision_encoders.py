@@ -40,11 +40,12 @@ MODELS: tuple[str, ...] = (
     "qwen35-9b",
     "yi15-9b",
 )
+# k4 BM25 for qwen3.5-4b-reference came from SR-Agents BM25Retriever, so BM25
+# contrasts use only the four models whose k4 BM25 is FastBM25.
 FULL_BM25_MODELS: tuple[str, ...] = (
     "glm4-9b",
     "llama31-8b",
     "mistral7b",
-    "qwen3.5-4b-reference",
     "qwen35-9b",
 )
 EXPECTED_TEST_COUNTS: dict[str, int] = {
@@ -227,7 +228,7 @@ def main() -> None:
 
     validate_encoder_inputs(rows_by_encoder)
 
-    # Load BM25 for the 5 full-BM25 models
+    # Load BM25 for the 4 FastBM25 models
     bm25_rows: list[dict[str, object]] = []
     for model in FULL_BM25_MODELS:
         k4_path = community_root / model / "k4" / "retrieval_top50.jsonl.gz"
@@ -268,7 +269,7 @@ def main() -> None:
         "# E4: Retrieval Robustness Across Embedding Encoders",
         "",
         "- **Variant & HyDE comparisons:** 7 models × 5 domains (`3,177` held-out instances/model).",
-        "- **BM25 comparisons:** 5 full-BM25 models × 5 domains (`deepseek7b` and `yi15-9b` store `theoremqa` only in `k4` and are never mixed into 7-model averages).",
+        "- **BM25 comparisons:** 4 FastBM25 models × 5 domains. `deepseek7b` and `yi15-9b` store `theoremqa` only in `k4`; `qwen3.5-4b-reference`'s `k4` BM25 used SR-Agents `BM25Retriever`. None of the three is mixed into BM25 contrasts.",
         "",
     ]
 
@@ -279,7 +280,7 @@ def main() -> None:
         passage_test = [
             r for r in enc_rows if r.get("split") == "test" and r.get("arm") == "naive_passage"
         ]
-        routed_five = [r for r in routed_test if str(r["model"]) in FULL_BM25_MODELS]
+        routed_four = [r for r in routed_test if str(r["model"]) in FULL_BM25_MODELS]
 
         vs_passage = {
             metric: hierarchical_paired_bootstrap(
@@ -290,12 +291,12 @@ def main() -> None:
             )
             for metric in REPORT_METRICS
         }
-        vs_bm25_five = {
+        vs_bm25_four = {
             metric: hierarchical_paired_bootstrap(
-                paired_cells(routed_five, bm25_rows, metric, allow_five_bm25),
+                paired_cells(routed_four, bm25_rows, metric, allow_five_bm25),
                 samples=samples,
                 seed=seed,
-                name=f"e4:{slug}:routed_vs_bm25_5models:{metric}",
+                name=f"e4:{slug}:routed_vs_bm25_4models:{metric}",
             )
             for metric in REPORT_METRICS
         }
@@ -303,7 +304,7 @@ def main() -> None:
             "slug": slug,
             "macro_test_means_7models": table,
             "routed_vs_naive_passage_7models": vs_passage,
-            "routed_vs_bm25_5models": vs_bm25_five,
+            "routed_vs_bm25_4models": vs_bm25_four,
         }
 
         md_lines.extend(
@@ -320,13 +321,13 @@ def main() -> None:
             )
         vp_n = vs_passage["nDCG@10"]
         vp_r = vs_passage["Recall@50"]
-        vb_n = vs_bm25_five["nDCG@10"]
-        vb_r = vs_bm25_five["Recall@50"]
+        vb_n = vs_bm25_four["nDCG@10"]
+        vb_r = vs_bm25_four["Recall@50"]
         md_lines.extend(
             [
                 "",
                 f"- **Routed vs. `naive_passage` (7 models):** nDCG@10 `{vp_n['difference']:+.3f}` `[{vp_n['ci95'][0]:+.3f}, {vp_n['ci95'][1]:+.3f}]` (`p={vp_n['p_two_sided']:.4f}`); Recall@50 `{vp_r['difference']:+.3f}` `[{vp_r['ci95'][0]:+.3f}, {vp_r['ci95'][1]:+.3f}]` (`p={vp_r['p_two_sided']:.4f}`).",
-                f"- **Routed vs. `bm25` (5 full-BM25 models):** nDCG@10 `{vb_n['difference']:+.3f}` `[{vb_n['ci95'][0]:+.3f}, {vb_n['ci95'][1]:+.3f}]` (`p={vb_n['p_two_sided']:.4f}`); Recall@50 `{vb_r['difference']:+.3f}` `[{vb_r['ci95'][0]:+.3f}, {vb_r['ci95'][1]:+.3f}]` (`p={vb_r['p_two_sided']:.4f}`).",
+                f"- **Routed vs. `bm25` (4 FastBM25 models):** nDCG@10 `{vb_n['difference']:+.3f}` `[{vb_n['ci95'][0]:+.3f}, {vb_n['ci95'][1]:+.3f}]` (`p={vb_n['p_two_sided']:.4f}`); Recall@50 `{vb_r['difference']:+.3f}` `[{vb_r['ci95'][0]:+.3f}, {vb_r['ci95'][1]:+.3f}]` (`p={vb_r['p_two_sided']:.4f}`).",
                 "",
             ]
         )

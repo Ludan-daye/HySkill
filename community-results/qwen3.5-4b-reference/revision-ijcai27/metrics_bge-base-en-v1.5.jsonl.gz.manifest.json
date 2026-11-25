@@ -1,0 +1,21 @@
+{
+  "tag": "qwen3.5-4b-reference",
+  "encoder_name": "BAAI/bge-base-en-v1.5",
+  "encoder_revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+  "k": 2,
+  "git_head": "7d3ca0e97b196b51ed2c6ddc6e79883a77e6f7e6",
+  "input_sha256": {
+    "external/SR-Agents/data/bench/corpus/corpus.json": "16ee509ae5bea8c2e17167dffecd89100a7d8dfa31256c3742426758c7169b5e",
+    "community-results/qwen3.5-4b-reference/imagination_full_k2.jsonl.gz": "c6da1e3773e7fea8a420a96621e522a4a15593a0f7c59202757458f40831d9f0",
+    "results/revision-ijcai27/encoders.json": "f5c44464013f13dc0317aca3dc450e415f6af3bc6cbb526d1034c91a5b9ba2a2",
+    "external/SR-Agents/data/bench/instances/theoremqa.json": "c969a7291e23361ba9f377e464be76093804deb628b964fb846c6eff6b28deeb",
+    "external/SR-Agents/data/bench/instances/logicbench.json": "af5055caac041ea08cee47622f5d922b47b2ba0a8e3a60b87349599eeff1bdfe",
+    "external/SR-Agents/data/bench/instances/medcalcbench.json": "814f6b082f56cf89dd9c50be7ab87b5bcb0e41633138951e42b38d6923c3244e",
+    "external/SR-Agents/data/bench/instances/champ.json": "d61346716cede953afb352e739e170b96d2bfb98824edd91b8783dc3526c7cec",
+    "external/SR-Agents/data/bench/instances/bigcodebench.json": "0ed01363e2c93134cf8696fea47b6d640f32f0d7ae9d7b478a05595c3f5ae788"
+  },
+  "artifact": "metrics",
+  "output_path": "community-results/qwen3.5-4b-reference/revision-ijcai27/metrics_bge-base-en-v1.5.jsonl.gz",
+  "output_sha256": "0493a5b204f5421c9940a816e7f1c209b1ef39986248817d6031010a540e43b6",
+  "output_bytes": 233245
+}
