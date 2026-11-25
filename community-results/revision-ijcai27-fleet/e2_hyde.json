@@ -1,0 +1,77 @@
+{
+  "experiment": "E2_hyskill_vs_hyde_passage",
+  "encoder_slug": "all-MiniLM-L6-v2",
+  "n_models": 7,
+  "n_domains": 5,
+  "passage_pick_count": 12,
+  "total_cells": 35,
+  "router_picks": {
+    "deepseek7b:bigcodebench": "hyskill",
+    "deepseek7b:champ": "hyskill",
+    "deepseek7b:logicbench": "hyskill",
+    "deepseek7b:medcalcbench": "hyskill",
+    "deepseek7b:theoremqa": "hyskill",
+    "glm4-9b:bigcodebench": "hyskill",
+    "glm4-9b:champ": "naive_passage",
+    "glm4-9b:logicbench": "hyskill",
+    "glm4-9b:medcalcbench": "two_stage",
+    "glm4-9b:theoremqa": "naive_passage",
+    "llama31-8b:bigcodebench": "hyskill",
+    "llama31-8b:champ": "naive_passage",
+    "llama31-8b:logicbench": "naive_sentence",
+    "llama31-8b:medcalcbench": "naive_passage",
+    "llama31-8b:theoremqa": "naive_passage",
+    "mistral7b:bigcodebench": "hyskill",
+    "mistral7b:champ": "naive_sentence",
+    "mistral7b:logicbench": "hyskill",
+    "mistral7b:medcalcbench": "two_stage",
+    "mistral7b:theoremqa": "naive_passage",
+    "qwen3.5-4b-reference:bigcodebench": "hyskill",
+    "qwen3.5-4b-reference:champ": "hyskill",
+    "qwen3.5-4b-reference:logicbench": "hyskill",
+    "qwen3.5-4b-reference:medcalcbench": "naive_passage",
+    "qwen3.5-4b-reference:theoremqa": "two_stage",
+    "qwen35-9b:bigcodebench": "hyskill",
+    "qwen35-9b:champ": "naive_skill",
+    "qwen35-9b:logicbench": "hyskill",
+    "qwen35-9b:medcalcbench": "naive_passage",
+    "qwen35-9b:theoremqa": "naive_passage",
+    "yi15-9b:bigcodebench": "hyskill",
+    "yi15-9b:champ": "naive_passage",
+    "yi15-9b:logicbench": "hyskill",
+    "yi15-9b:medcalcbench": "naive_passage",
+    "yi15-9b:theoremqa": "naive_passage"
+  },
+  "routed_vs_naive_passage": {
+    "nDCG@10": {
+      "mean_a": 0.5442917808741501,
+      "mean_b": 0.4996717041671346,
+      "difference": 0.04462007670701562,
+      "ci95": [
+        0.010647532472066474,
+        0.0942330484261673
+      ],
+      "p_two_sided": 0.0006,
+      "n_models": 7,
+      "n_domains": 5,
+      "n_instances": 22239,
+      "samples": 10000,
+      "seed": 0
+    },
+    "Recall@50": {
+      "mean_a": 0.8219559236251577,
+      "mean_b": 0.7648764800902279,
+      "difference": 0.05707944353492977,
+      "ci95": [
+        0.014615757457027171,
+        0.11857862409290773
+      ],
+      "p_two_sided": 0.0014,
+      "n_models": 7,
+      "n_domains": 5,
+      "n_instances": 22239,
+      "samples": 10000,
+      "seed": 0
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "git_head": "7d3ca0e97b196b51ed2c6ddc6e79883a77e6f7e6",
+  "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+  "encoder_revision": "modelscope:master (published packs record snapshots/master)",
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 0,
+  "input_sha256": {
+    "external/SR-Agents/data/bench/corpus/corpus.json": "16ee509ae5bea8c2e17167dffecd89100a7d8dfa31256c3742426758c7169b5e",
+    "external/SR-Agents/data/bench/instances/theoremqa.json": "c969a7291e23361ba9f377e464be76093804deb628b964fb846c6eff6b28deeb",
+    "external/SR-Agents/data/bench/instances/logicbench.json": "af5055caac041ea08cee47622f5d922b47b2ba0a8e3a60b87349599eeff1bdfe",
+    "external/SR-Agents/data/bench/instances/medcalcbench.json": "814f6b082f56cf89dd9c50be7ab87b5bcb0e41633138951e42b38d6923c3244e",
+    "external/SR-Agents/data/bench/instances/champ.json": "d61346716cede953afb352e739e170b96d2bfb98824edd91b8783dc3526c7cec",
+    "external/SR-Agents/data/bench/instances/bigcodebench.json": "0ed01363e2c93134cf8696fea47b6d640f32f0d7ae9d7b478a05595c3f5ae788",
+    "community-results/deepseek7b/imagination_full_k2.jsonl.gz": "9b0911f429ed322b45d29470a8b18a83d058ec7a0271448129847b7e08912295",
+    "community-results/deepseek7b/k2/router_decisions.json": "d9c371feb6d8bde01447ed7a160d9f538d6ddb274fedc144edc09e8f428e29e1",
+    "community-results/glm4-9b/imagination_full_k2.jsonl.gz": "90617f8c53960a43c930f990155919cb0fdf81395743e0bf2592f31284a427a2",
+    "community-results/glm4-9b/k2/router_decisions.json": "504d3a425e18b20301508bb3eab2210956376dea83981887fb971d666448fc65",
+    "community-results/llama31-8b/imagination_full_k2.jsonl.gz": "01fd11e3e7b6ef6e7e7117c6f3da23a1eb3dfedb11409bbd5cdadd6f5c3cf7e9",
+    "community-results/llama31-8b/k2/router_decisions.json": "26b95a33408c21cbb2dfb190799608491893b936d771d4d590a001177f7c8351",
+    "community-results/mistral7b/imagination_full_k2.jsonl.gz": "10ca8aea246601deb412a266e7729409776b9342fa7e5e5ea3175342c57156e8",
+    "community-results/mistral7b/k2/router_decisions.json": "75ecde289bd84bafe4eb4f4497a0eabd74a2373ad6e37cab8116233ac2ca7fed",
+    "community-results/qwen3.5-4b-reference/imagination_full_k2.jsonl.gz": "c6da1e3773e7fea8a420a96621e522a4a15593a0f7c59202757458f40831d9f0",
+    "community-results/qwen3.5-4b-reference/k2/router_decisions.json": "8cbee0ea2bd6116f544c6f840ff2e08ce2ad8d3e504b772e2f2dafb2cd0b3238",
+    "community-results/qwen35-9b/imagination_full_k2.jsonl.gz": "bc87eb66b3687bfb03e4a2dfc3bb7c8e10e869f7b150098d7f467cdfa7370618",
+    "community-results/qwen35-9b/k2/router_decisions.json": "7471be17428fb875060b54131bb2f7cec5f346c4699f6bf045a16ee710fbdd29",
+    "community-results/yi15-9b/imagination_full_k2.jsonl.gz": "0ac28ee129e4a72687b44a769550504f422dac60a3004fb15d970a459f4ed412",
+    "community-results/yi15-9b/k2/router_decisions.json": "49a26e4967cac5694bdb16db9735cc05149821f0daccb506e17676459a6d622e"
+  },
+  "output_path": "community-results/revision-ijcai27-fleet/e5_mechanism.md",
+  "output_sha256": "cec3ec449760c438d120b05a6ecdc4793213e54ae9f3232d798b740a6d6ca570",
+  "output_bytes": 1474
+}

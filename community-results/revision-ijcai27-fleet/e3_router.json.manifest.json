@@ -1,0 +1,25 @@
+{
+  "git_head": "a0c6d14e1dde902c9f02697b2e81f692183a2bd0",
+  "encoder_slug": "all-MiniLM-L6-v2",
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 0,
+  "input_sha256": {
+    "community-results/deepseek7b/revision-ijcai27/metrics_all-MiniLM-L6-v2.jsonl.gz": "38d6bf6c586bfb9b166c68d4354bff91d6996d2016497196f375cfa075fee54e",
+    "results/revision-ijcai27/deepseek7b/rankings_all-MiniLM-L6-v2.jsonl.gz": "f1dceec9bf4e28a82632c804cc42370fa9dcc57d5969a7128e44fe705c58fb7c",
+    "community-results/glm4-9b/revision-ijcai27/metrics_all-MiniLM-L6-v2.jsonl.gz": "f0833896d4d0ceabab0f4d71ef4418d81a883961bdbd3abd9fcb432ce2c85beb",
+    "results/revision-ijcai27/glm4-9b/rankings_all-MiniLM-L6-v2.jsonl.gz": "f1f9433ebedd17fa089184cb8f23cec05d5509a95ea98c7d3eebddf5df680fe0",
+    "community-results/llama31-8b/revision-ijcai27/metrics_all-MiniLM-L6-v2.jsonl.gz": "7ef48053b1047025640f45b8cb5f6590280142c6e6cd95b0fbf3b88be9126ee8",
+    "results/revision-ijcai27/llama31-8b/rankings_all-MiniLM-L6-v2.jsonl.gz": "a4257bbc6a70e63bd58bc7c7a52c261c92aab0eda9e96e4720d8c233fe562087",
+    "community-results/mistral7b/revision-ijcai27/metrics_all-MiniLM-L6-v2.jsonl.gz": "e486a43efb41098d0a4dd1acdcc9731d7b179ea9ec73875a637e0a6852d87323",
+    "results/revision-ijcai27/mistral7b/rankings_all-MiniLM-L6-v2.jsonl.gz": "e60d3b353f40263980842f79b5e50b408a5cd48564b509d628d23dd1b7dfdf01",
+    "community-results/qwen3.5-4b-reference/revision-ijcai27/metrics_all-MiniLM-L6-v2.jsonl.gz": "d84b8bc3365850061598406f13df22ffd910ee1eaf32ac3457df7847b062bb7c",
+    "results/revision-ijcai27/qwen3.5-4b-reference/rankings_all-MiniLM-L6-v2.jsonl.gz": "41e6b1689904411b4b60eccde52e69a512bc236ceeaa0b4550dee667ed6b2ab8",
+    "community-results/qwen35-9b/revision-ijcai27/metrics_all-MiniLM-L6-v2.jsonl.gz": "042f61878fb20f203500580fc793cb04b5f90356ee427fecd7ec340641aba9e4",
+    "results/revision-ijcai27/qwen35-9b/rankings_all-MiniLM-L6-v2.jsonl.gz": "c4f4ec9ecc800b6cfa90954d9ffdf995cb2d33b43227458642cbff6e0dffd6cf",
+    "community-results/yi15-9b/revision-ijcai27/metrics_all-MiniLM-L6-v2.jsonl.gz": "675df122ef676bfd5531f539683ae7ab306d714809286e361e006aee60dc39e8",
+    "results/revision-ijcai27/yi15-9b/rankings_all-MiniLM-L6-v2.jsonl.gz": "e0f0c9d6503718bd2d39fbda8f7deeb585726bbb917d8791eb15783f87dcd764"
+  },
+  "output_path": "community-results/revision-ijcai27-fleet/e3_router.json",
+  "output_sha256": "71bb8372bf767a568ddb34cf58eca7db9d865f00f7e346ce8fc5858b6379967e",
+  "output_bytes": 7619
+}
