@@ -1,0 +1,165 @@
+{
+  "encoders": [
+    {
+      "name": "BAAI/bge-base-en-v1.5",
+      "endpoint": "https://hf-mirror.com",
+      "revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+      "local_dir": "/root/hyskill-ijcai27/results/revision-ijcai27/models/bge-base-en-v1.5",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 1519,
+          "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+        },
+        {
+          "path": "1_Pooling/config.json",
+          "bytes": 190,
+          "sha256": "c9bef85e8bbf4b2eab4941b3fb62bd33f88686748b478f2e264d256472d9643b"
+        },
+        {
+          "path": "README.md",
+          "bytes": 94551,
+          "sha256": "fd29e6117a8c2bc83f8eafb73f261d35341702dcd95c9cc0b34f5be75afa8231"
+        },
+        {
+          "path": "config.json",
+          "bytes": 777,
+          "sha256": "bc00af31a4a31b74040d73370aa83b62da34c90b75eb77bfa7db039d90abd591"
+        },
+        {
+          "path": "config_sentence_transformers.json",
+          "bytes": 124,
+          "sha256": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56"
+        },
+        {
+          "path": "model.safetensors",
+          "bytes": 437955512,
+          "sha256": "c7c1988aae201f80cf91a5dbbd5866409503b89dcaba877ca6dba7dd0a5167d7"
+        },
+        {
+          "path": "modules.json",
+          "bytes": 349,
+          "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf"
+        },
+        {
+          "path": "onnx/model.onnx",
+          "bytes": 435811539,
+          "sha256": "9bc579acdba21c253c62a9bf866891355a63ffa3442b52c8a37d75b2ccb91848"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "bytes": 437997357,
+          "sha256": "4b9d4a4b2d7ab06e3861861d5ee370974b31d17c0bb6af6f13d3dc79f33bbdcd"
+        },
+        {
+          "path": "sentence_bert_config.json",
+          "bytes": 52,
+          "sha256": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 125,
+          "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 711396,
+          "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 366,
+          "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3"
+        },
+        {
+          "path": "vocab.txt",
+          "bytes": 231508,
+          "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+        }
+      ]
+    },
+    {
+      "name": "sentence-transformers/all-MiniLM-L6-v2",
+      "endpoint": "https://www.modelscope.cn",
+      "revision": "modelscope:master (published packs record snapshots/master)",
+      "local_dir": "/root/hyskill-ijcai27/results/revision-ijcai27/models/all-MiniLM-L6-v2",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 2060,
+          "sha256": "ad9d04121a6295c7508826f865141c6a831ecf8771b29afeb7f3f95420269bf0"
+        },
+        {
+          "path": "1_Pooling/config.json",
+          "bytes": 190,
+          "sha256": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23"
+        },
+        {
+          "path": "README.md",
+          "bytes": 10502,
+          "sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0"
+        },
+        {
+          "path": "config.json",
+          "bytes": 612,
+          "sha256": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41"
+        },
+        {
+          "path": "config_sentence_transformers.json",
+          "bytes": 116,
+          "sha256": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3"
+        },
+        {
+          "path": "configuration.json",
+          "bytes": 77,
+          "sha256": "007c616ed9187f4f3d6096ed2d55cece33c3f48866dbd7bc6afefcb9645a37c1"
+        },
+        {
+          "path": "data_config.json",
+          "bytes": 39265,
+          "sha256": "32edcb108fc2516b920734a862ae0692bcae1c5d45d5f8d972cb0d53434a4c54"
+        },
+        {
+          "path": "model.safetensors",
+          "bytes": 90868376,
+          "sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db"
+        },
+        {
+          "path": "modules.json",
+          "bytes": 349,
+          "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "bytes": 90888945,
+          "sha256": "c3a85f238711653950f6a79ece63eb0ea93d76f6a6284be04019c53733baf256"
+        },
+        {
+          "path": "sentence_bert_config.json",
+          "bytes": 53,
+          "sha256": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 112,
+          "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 466247,
+          "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 350,
+          "sha256": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b"
+        },
+        {
+          "path": "vocab.txt",
+          "bytes": 231508,
+          "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+        }
+      ]
+    }
+  ]
+}

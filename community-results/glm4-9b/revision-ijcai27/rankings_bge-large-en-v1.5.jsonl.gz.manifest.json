@@ -1,0 +1,21 @@
+{
+  "tag": "glm4-9b",
+  "encoder_name": "BAAI/bge-large-en-v1.5",
+  "encoder_revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+  "k": 2,
+  "git_head": "7d3ca0e97b196b51ed2c6ddc6e79883a77e6f7e6",
+  "input_sha256": {
+    "external/SR-Agents/data/bench/corpus/corpus.json": "16ee509ae5bea8c2e17167dffecd89100a7d8dfa31256c3742426758c7169b5e",
+    "community-results/glm4-9b/imagination_full_k2.jsonl.gz": "90617f8c53960a43c930f990155919cb0fdf81395743e0bf2592f31284a427a2",
+    "results/revision-ijcai27/encoders.json": "f5c44464013f13dc0317aca3dc450e415f6af3bc6cbb526d1034c91a5b9ba2a2",
+    "external/SR-Agents/data/bench/instances/theoremqa.json": "c969a7291e23361ba9f377e464be76093804deb628b964fb846c6eff6b28deeb",
+    "external/SR-Agents/data/bench/instances/logicbench.json": "af5055caac041ea08cee47622f5d922b47b2ba0a8e3a60b87349599eeff1bdfe",
+    "external/SR-Agents/data/bench/instances/medcalcbench.json": "814f6b082f56cf89dd9c50be7ab87b5bcb0e41633138951e42b38d6923c3244e",
+    "external/SR-Agents/data/bench/instances/champ.json": "d61346716cede953afb352e739e170b96d2bfb98824edd91b8783dc3526c7cec",
+    "external/SR-Agents/data/bench/instances/bigcodebench.json": "0ed01363e2c93134cf8696fea47b6d640f32f0d7ae9d7b478a05595c3f5ae788"
+  },
+  "artifact": "rankings",
+  "output_path": "rankings_bge-large-en-v1.5.jsonl.gz",
+  "output_sha256": "08601f1493bb453f416e41f5582228195304908fd12e9daa4970672d1f20ab7d",
+  "output_bytes": 2673394
+}

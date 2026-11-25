@@ -1,0 +1,296 @@
+{
+  "encoders": [
+    {
+      "name": "sentence-transformers/all-MiniLM-L6-v2",
+      "endpoint": "https://www.modelscope.cn",
+      "revision": "modelscope:master (published packs record snapshots/master)",
+      "local_dir": "/root/hyskill-ijcai27/results/revision-ijcai27/models/all-MiniLM-L6-v2",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 2060,
+          "sha256": "ad9d04121a6295c7508826f865141c6a831ecf8771b29afeb7f3f95420269bf0"
+        },
+        {
+          "path": "1_Pooling/config.json",
+          "bytes": 190,
+          "sha256": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23"
+        },
+        {
+          "path": "README.md",
+          "bytes": 10502,
+          "sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0"
+        },
+        {
+          "path": "config.json",
+          "bytes": 612,
+          "sha256": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41"
+        },
+        {
+          "path": "config_sentence_transformers.json",
+          "bytes": 116,
+          "sha256": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3"
+        },
+        {
+          "path": "configuration.json",
+          "bytes": 77,
+          "sha256": "007c616ed9187f4f3d6096ed2d55cece33c3f48866dbd7bc6afefcb9645a37c1"
+        },
+        {
+          "path": "data_config.json",
+          "bytes": 39265,
+          "sha256": "32edcb108fc2516b920734a862ae0692bcae1c5d45d5f8d972cb0d53434a4c54"
+        },
+        {
+          "path": "model.safetensors",
+          "bytes": 90868376,
+          "sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db"
+        },
+        {
+          "path": "modules.json",
+          "bytes": 349,
+          "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "bytes": 90888945,
+          "sha256": "c3a85f238711653950f6a79ece63eb0ea93d76f6a6284be04019c53733baf256"
+        },
+        {
+          "path": "sentence_bert_config.json",
+          "bytes": 53,
+          "sha256": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 112,
+          "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 466247,
+          "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 350,
+          "sha256": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b"
+        },
+        {
+          "path": "vocab.txt",
+          "bytes": 231508,
+          "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+        }
+      ]
+    },
+    {
+      "name": "BAAI/bge-base-en-v1.5",
+      "endpoint": "https://hf-mirror.com",
+      "revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+      "local_dir": "/root/hyskill-ijcai27/results/revision-ijcai27/models/bge-base-en-v1.5",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 1519,
+          "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+        },
+        {
+          "path": "1_Pooling/config.json",
+          "bytes": 190,
+          "sha256": "c9bef85e8bbf4b2eab4941b3fb62bd33f88686748b478f2e264d256472d9643b"
+        },
+        {
+          "path": "README.md",
+          "bytes": 94551,
+          "sha256": "fd29e6117a8c2bc83f8eafb73f261d35341702dcd95c9cc0b34f5be75afa8231"
+        },
+        {
+          "path": "config.json",
+          "bytes": 777,
+          "sha256": "bc00af31a4a31b74040d73370aa83b62da34c90b75eb77bfa7db039d90abd591"
+        },
+        {
+          "path": "config_sentence_transformers.json",
+          "bytes": 124,
+          "sha256": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56"
+        },
+        {
+          "path": "model.safetensors",
+          "bytes": 437955512,
+          "sha256": "c7c1988aae201f80cf91a5dbbd5866409503b89dcaba877ca6dba7dd0a5167d7"
+        },
+        {
+          "path": "modules.json",
+          "bytes": 349,
+          "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf"
+        },
+        {
+          "path": "onnx/model.onnx",
+          "bytes": 435811539,
+          "sha256": "9bc579acdba21c253c62a9bf866891355a63ffa3442b52c8a37d75b2ccb91848"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "bytes": 437997357,
+          "sha256": "4b9d4a4b2d7ab06e3861861d5ee370974b31d17c0bb6af6f13d3dc79f33bbdcd"
+        },
+        {
+          "path": "sentence_bert_config.json",
+          "bytes": 52,
+          "sha256": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 125,
+          "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 711396,
+          "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 366,
+          "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3"
+        },
+        {
+          "path": "vocab.txt",
+          "bytes": 231508,
+          "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+        }
+      ]
+    },
+    {
+      "name": "thenlper/gte-base",
+      "endpoint": "https://hf-mirror.com",
+      "revision": "c078288308d8dee004ab72c6191778064285ec0c",
+      "local_dir": "/data/hyskill-ijcai27/encoders/gte-base",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 1519,
+          "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+        },
+        {
+          "path": "1_Pooling/config.json",
+          "bytes": 190,
+          "sha256": "a37f83ada23e7887be6b88f4998927dbeac0038af301553c7cd5461413bf1a56"
+        },
+        {
+          "path": "README.md",
+          "bytes": 68075,
+          "sha256": "619352e08f50dbb482d4a67a9a865d12a8336a88c2571b5f6f77dc2e863b4773"
+        },
+        {
+          "path": "config.json",
+          "bytes": 618,
+          "sha256": "88bed05d7640945dd2de4b4e81fbe4dd962289c32fc1c0aacfd13deb7ea90155"
+        },
+        {
+          "path": "model.safetensors",
+          "bytes": 218990904,
+          "sha256": "4a9e28bdb13c193da16ae4bdd6ba40ecceb5102b56bf8c1b039054290f644019"
+        },
+        {
+          "path": "modules.json",
+          "bytes": 385,
+          "sha256": "73348a3d8f8ae4cc5f851dc6b98be3ea819390b814e83656d5eebbadf75fe43e"
+        },
+        {
+          "path": "sentence_bert_config.json",
+          "bytes": 57,
+          "sha256": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 125,
+          "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 711661,
+          "sha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 314,
+          "sha256": "ae83fa6ca0333117ff12606020af925d648667ef70d92ff7f27d781ba0ca4544"
+        },
+        {
+          "path": "vocab.txt",
+          "bytes": 231508,
+          "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+        }
+      ]
+    },
+    {
+      "name": "BAAI/bge-large-en-v1.5",
+      "endpoint": "https://www.modelscope.cn",
+      "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+      "local_dir": "/data/hyskill-ijcai27/encoders/bge-large-en-v1.5",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 1679,
+          "sha256": "96859b68ecad51c727a774235337942316d11d986a554b76cf5765bee7cfcfaa"
+        },
+        {
+          "path": "1_Pooling/config.json",
+          "bytes": 191,
+          "sha256": "e54c164a07274f2eb45bb724f54a79d1efcc90c41573887cd9a29aeee0597352"
+        },
+        {
+          "path": "README.md",
+          "bytes": 94607,
+          "sha256": "9ffeb4467f293416c1f7642e64ae0bd44778fa182ce1165196e8a0329a34fd80"
+        },
+        {
+          "path": "config.json",
+          "bytes": 779,
+          "sha256": "446712fac367857b4b1302762fe1cd7bfa8b3c4b77b4dc5d77c4025407660896"
+        },
+        {
+          "path": "config_sentence_transformers.json",
+          "bytes": 124,
+          "sha256": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56"
+        },
+        {
+          "path": "model.safetensors",
+          "bytes": 1340616616,
+          "sha256": "45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7"
+        },
+        {
+          "path": "modules.json",
+          "bytes": 349,
+          "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf"
+        },
+        {
+          "path": "sentence_bert_config.json",
+          "bytes": 52,
+          "sha256": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 125,
+          "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 711396,
+          "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 366,
+          "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3"
+        },
+        {
+          "path": "vocab.txt",
+          "bytes": 231508,
+          "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+        }
+      ]
+    }
+  ]
+}

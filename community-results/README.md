@@ -2,9 +2,16 @@
 
 每个认领模型的运行者把规范化分析包通过 PR 提交到
 `community-results/<TAG>/`。这里接收可直接复核的小型 JSON / gzip JSONL，
-不接收 `results/hyp_cache` 的数万个散文件、原始做题 jsonl 或运行日志。认领表、
+默认不接收 `results/hyp_cache` 的数万个散文件、原始做题 jsonl 或运行日志。认领表、
 导出命令和完整验收步骤见
 [docs/08-multimodel-plan.md](../docs/08-multimodel-plan.md)。
+
+## IJCAI-27 修订实验完整数据
+
+[修订实验数据索引](revision-ijcai27-fleet/README.md)汇集 E0–E7 的逐题指标、
+四套编码器的完整排名，以及 E7 原始答案、重排响应、候选输入、评测和运行证据。
+这一补充包明确包含压缩的原始文件和日志；`SHA256SUMS` 覆盖全部修订实验发布文件，
+`data_manifest.json` 另列归档内各原始文件的哈希。既有 K=2、K=4 和 K 消融目录保持独立。
 
 ## K=2/K=4 主实验目录契约
 
