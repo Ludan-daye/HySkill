@@ -87,12 +87,28 @@ def write_manifest(output_path: Path, manifest: dict[str, object]) -> None:
     """Write ``<output_path>.manifest.json`` next to an output artifact."""
 
     manifest_path: Path = Path(str(output_path) + ".manifest.json")
+    enriched: dict[str, object] = {
+        **manifest,
+        "output_path": _manifest_key(output_path),
+        "output_sha256": sha256_file(output_path),
+        "output_bytes": output_path.stat().st_size,
+    }
     temporary: Path = manifest_path.with_name(f"{manifest_path.name}.tmp")
     temporary.write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+        json.dumps(enriched, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
     temporary.replace(manifest_path)
+
+
+def _manifest_key(path: Path) -> str:
+    """Return a repository-relative path when possible, avoiding host home prefixes."""
+
+    resolved: Path = path.resolve()
+    try:
+        return resolved.relative_to(REPO_ROOT).as_posix()
+    except ValueError:
+        return resolved.name
 
 
 def input_sha256(corpus: Path, cache: Path, instances_dir: Path) -> dict[str, str]:
@@ -109,7 +125,7 @@ def input_sha256(corpus: Path, cache: Path, instances_dir: Path) -> dict[str, st
     for path in paths:
         if not path.is_file():
             raise FileNotFoundError(f"required input does not exist: path={path}")
-        hashes[str(path.resolve())] = sha256_file(path)
+        hashes[_manifest_key(path)] = sha256_file(path)
     return hashes
 
 

@@ -292,3 +292,348 @@ def test_runtime_rerank_missing_omitted_count_raises(tmp_path: Path) -> None:
     )
     with pytest.raises(ValueError, match="omitted_candidate_count"):
         load_runtime_rerank_rankings(tmp_path, "glm4-9b")
+
+
+_PUBLISHED_METRICS: tuple[str, ...] = tuple(
+    f"{family}@{depth}" for depth in (1, 5, 10, 50) for family in ("Recall", "nDCG")
+)
+_GATE_TAG: str = "demo-tag"
+_GATE_DOMAIN: str = "theoremqa"
+_GATE_ENCODER: str = "sentence-transformers/all-MiniLM-L6-v2"
+_GATE_SPLITS: tuple[tuple[str, str], ...] = (
+    ("val-1", "validation"),
+    ("test-1", "test"),
+)
+
+
+def _gate_metric_values(variant: str, recall_at_1: float) -> dict[str, float]:
+    values: dict[str, float] = {name: 0.5 for name in _PUBLISHED_METRICS}
+    values["nDCG@10"] = 0.8 if variant == "naive_passage" else 0.1
+    values["Recall@1"] = recall_at_1
+    values["hit@50"] = 1.0
+    return values
+
+
+def _gate_recomputed_rows(recall_at_1: float) -> list[dict[str, object]]:
+    from hyskill.k_ablation import ALL_VARIANTS
+
+    rows: list[dict[str, object]] = []
+    for variant in ALL_VARIANTS:
+        metrics: dict[str, float] = _gate_metric_values(variant, recall_at_1)
+        for instance_id, split in _GATE_SPLITS:
+            row: dict[str, object] = {
+                "model": _GATE_TAG,
+                "domain": _GATE_DOMAIN,
+                "arm": variant,
+                "instance_id": instance_id,
+                "split": split,
+                "encoder": _GATE_ENCODER,
+                "k_samples": 2,
+            }
+            row.update(metrics)
+            rows.append(row)
+    return rows
+
+
+def _mean_metric(rows: list[dict[str, object]], metric: str) -> float:
+    if not rows:
+        raise AssertionError(f"test fixture has no rows for metric={metric}")
+    return sum(float(row[metric]) for row in rows) / len(rows)
+
+
+def _published_from_recomputed(
+    recomputed: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    """Aggregate the fixture the way the published K=2 table is aggregated."""
+
+    domains: list[str] = sorted({str(row["domain"]) for row in recomputed})
+    variants: list[str] = sorted({str(row["arm"]) for row in recomputed})
+    published: list[dict[str, object]] = [
+        {
+            "schema_version": 1,
+            "tag": _GATE_TAG,
+            "model": _GATE_TAG,
+            "domain": _GATE_DOMAIN,
+            "k_samples": 1,
+            "variant": "naive_passage",
+            "split": "test",
+            "unit": "instances",
+            "n": 1,
+            "metric": "Recall@1",
+            "value": 9.0,
+        }
+    ]
+    for domain in domains:
+        for variant in variants:
+            domain_rows: list[dict[str, object]] = [
+                row
+                for row in recomputed
+                if row["domain"] == domain and row["arm"] == variant
+            ]
+            for split in ("all", "validation", "test"):
+                selected: list[dict[str, object]] = (
+                    domain_rows
+                    if split == "all"
+                    else [row for row in domain_rows if row["split"] == split]
+                )
+                for metric in _PUBLISHED_METRICS:
+                    published.append(
+                        {
+                            "schema_version": 1,
+                            "tag": _GATE_TAG,
+                            "model": _GATE_TAG,
+                            "domain": domain,
+                            "k_samples": 2,
+                            "variant": variant,
+                            "split": split,
+                            "unit": "instances",
+                            "n": len(selected),
+                            "metric": metric,
+                            "value": _mean_metric(selected, metric),
+                        }
+                    )
+    for variant in variants:
+        for split in ("all", "validation", "test"):
+            for metric in _PUBLISHED_METRICS:
+                selected_all: list[dict[str, object]] = []
+                domain_means: list[float] = []
+                for domain in domains:
+                    domain_rows = [
+                        row
+                        for row in recomputed
+                        if row["domain"] == domain and row["arm"] == variant
+                    ]
+                    selected = (
+                        domain_rows
+                        if split == "all"
+                        else [row for row in domain_rows if row["split"] == split]
+                    )
+                    selected_all.extend(selected)
+                    domain_means.append(_mean_metric(selected, metric))
+                published.append(
+                    {
+                        "schema_version": 1,
+                        "tag": _GATE_TAG,
+                        "model": _GATE_TAG,
+                        "domain": "__all_micro__",
+                        "k_samples": 2,
+                        "variant": variant,
+                        "split": split,
+                        "unit": "instances",
+                        "n": len(selected_all),
+                        "metric": metric,
+                        "value": _mean_metric(selected_all, metric),
+                    }
+                )
+                published.append(
+                    {
+                        "schema_version": 1,
+                        "tag": _GATE_TAG,
+                        "model": _GATE_TAG,
+                        "domain": "__all_macro__",
+                        "k_samples": 2,
+                        "variant": variant,
+                        "split": split,
+                        "unit": "domains",
+                        "n": len(domains),
+                        "metric": metric,
+                        "value": sum(domain_means) / len(domain_means),
+                    }
+                )
+    return published
+
+
+def _replace_published_value(
+    published: list[dict[str, object]],
+    *,
+    domain: str,
+    variant: str,
+    split: str,
+    metric: str,
+    value: float,
+) -> None:
+    matches: list[dict[str, object]] = [
+        row
+        for row in published
+        if row["k_samples"] == 2
+        and row["domain"] == domain
+        and row["variant"] == variant
+        and row["split"] == split
+        and row["metric"] == metric
+    ]
+    if len(matches) != 1:
+        raise AssertionError(
+            f"expected one published cell, found {len(matches)}: "
+            f"domain={domain}, variant={variant}, split={split}, metric={metric}"
+        )
+    matches[0]["value"] = value
+
+
+def _routed_rankings(ranked_ids: list[str]) -> list[dict[str, object]]:
+    return [
+        {
+            "model": _GATE_TAG,
+            "domain": _GATE_DOMAIN,
+            "arm": "routed",
+            "instance_id": instance_id,
+            "gold_skill_ids": ["gold"],
+            "ranked_ids": list(ranked_ids),
+            "omitted_count": None,
+        }
+        for instance_id, _split in _GATE_SPLITS
+    ]
+
+
+def _committed_routed(ranked_ids: list[str]) -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = _routed_rankings(ranked_ids)
+    for row in rows:
+        row["arm"] = "routed_k2"
+    return rows
+
+
+def _router() -> dict[str, object]:
+    return {"domains": {_GATE_DOMAIN: {"pick": "naive_passage"}}}
+
+
+def _bm25_ok() -> dict[str, object]:
+    return {"explanation": "unit-test fixture", "models": {}}
+
+
+def _run_gate(
+    recomputed: list[dict[str, object]],
+    published: list[dict[str, object]],
+    recomputed_rankings: list[dict[str, object]],
+    committed_routed: list[dict[str, object]],
+) -> dict[str, object]:
+    from scripts.check_revision_reproduction import reproduction_report
+
+    return reproduction_report(
+        tag=_GATE_TAG,
+        recomputed_metrics=recomputed,
+        published_metrics=published,
+        router_decisions=_router(),
+        recomputed_rankings=recomputed_rankings,
+        committed_routed=committed_routed,
+        bm25_report=_bm25_ok(),
+    )
+
+
+def test_gate_passes_on_equal_metrics() -> None:
+    ranked: list[str] = ["gold", "other"]
+    recomputed: list[dict[str, object]] = _gate_recomputed_rows(0.5)
+    published: list[dict[str, object]] = _published_from_recomputed(recomputed)
+    report: dict[str, object] = _run_gate(
+        recomputed,
+        published,
+        _routed_rankings(ranked),
+        _committed_routed(ranked),
+    )
+    assert report["passed"] is True
+    assert report["metric_mismatches"] == []
+    assert report["router_pick_mismatches"] == []
+    assert report["routed_top50_overlap"] == {_GATE_DOMAIN: 1.0}
+
+
+def test_gate_fails_on_fourth_decimal_only_when_third_differs() -> None:
+    ranked: list[str] = ["gold", "other"]
+    close_rows: list[dict[str, object]] = _gate_recomputed_rows(0.5034)
+    close_published: list[dict[str, object]] = _published_from_recomputed(close_rows)
+    _replace_published_value(
+        close_published,
+        domain=_GATE_DOMAIN,
+        variant="naive_passage",
+        split="test",
+        metric="Recall@1",
+        value=0.5031,
+    )
+    close_report: dict[str, object] = _run_gate(
+        close_rows,
+        close_published,
+        _routed_rankings(ranked),
+        _committed_routed(ranked),
+    )
+    assert close_report["passed"] is True
+    assert close_report["metric_mismatches"] == []
+
+    far_rows: list[dict[str, object]] = _gate_recomputed_rows(0.504)
+    far_published: list[dict[str, object]] = _published_from_recomputed(far_rows)
+    _replace_published_value(
+        far_published,
+        domain=_GATE_DOMAIN,
+        variant="naive_passage",
+        split="test",
+        metric="Recall@1",
+        value=0.503,
+    )
+    far_report: dict[str, object] = _run_gate(
+        far_rows,
+        far_published,
+        _routed_rankings(ranked),
+        _committed_routed(ranked),
+    )
+    assert far_report["passed"] is False
+    mismatches: list[dict[str, object]] = far_report["metric_mismatches"]  # type: ignore[assignment]
+    assert len(mismatches) == 1
+    assert mismatches[0]["domain"] == _GATE_DOMAIN
+    assert mismatches[0]["variant"] == "naive_passage"
+    assert mismatches[0]["split"] == "test"
+    assert mismatches[0]["metric"] == "Recall@1"
+    assert mismatches[0]["recomputed"] == 0.504
+    assert mismatches[0]["published"] == 0.503
+
+
+def test_gate_tolerates_tie_reorder() -> None:
+    from hyskill.revision_rankings import instance_metrics
+
+    original: list[str] = ["gold", "tie_a", "tie_b"]
+    swapped: list[str] = ["gold", "tie_b", "tie_a"]
+    base: dict[str, object] = {
+        "model": _GATE_TAG,
+        "domain": _GATE_DOMAIN,
+        "arm": "routed",
+        "instance_id": "val-1",
+        "gold_skill_ids": ["gold"],
+        "ranked_ids": original,
+        "omitted_count": None,
+    }
+    original_metrics: dict[str, float] = instance_metrics({**base, "ranked_ids": original})
+    swapped_metrics: dict[str, float] = instance_metrics({**base, "ranked_ids": swapped})
+    assert original != swapped
+    assert original_metrics == swapped_metrics
+
+    recomputed: list[dict[str, object]] = _gate_recomputed_rows(0.5)
+    for row in recomputed:
+        if row["arm"] != "routed":
+            continue
+        for metric, value in swapped_metrics.items():
+            row[metric] = value
+    published: list[dict[str, object]] = _published_from_recomputed(recomputed)
+    report: dict[str, object] = _run_gate(
+        recomputed,
+        published,
+        _routed_rankings(swapped),
+        _committed_routed(original),
+    )
+    assert report["passed"] is True
+    assert report["metric_mismatches"] == []
+    assert report["router_pick_mismatches"] == []
+    assert report["routed_top50_overlap"] == {_GATE_DOMAIN: 1.0}
+
+
+def test_gate_rejects_mismatched_encoder() -> None:
+    from scripts.check_revision_reproduction import reproduction_report
+
+    ranked: list[str] = ["gold", "other"]
+    recomputed: list[dict[str, object]] = _gate_recomputed_rows(0.5)
+    published: list[dict[str, object]] = _published_from_recomputed(recomputed)
+    with pytest.raises(ValueError, match="BAAI/bge-base-en-v1.5"):
+        reproduction_report(
+            tag=_GATE_TAG,
+            recomputed_metrics=recomputed,
+            published_metrics=published,
+            router_decisions=_router(),
+            recomputed_rankings=_routed_rankings(ranked),
+            committed_routed=_committed_routed(ranked),
+            bm25_report=_bm25_ok(),
+            expected_encoder="BAAI/bge-base-en-v1.5",
+        )
