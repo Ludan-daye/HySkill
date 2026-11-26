@@ -1,5 +1,14 @@
 # community-results：多模型协作实验回传区
 
+## 第二轮实验入口（IJCAI-27，2026 年 11 月）
+
+第二轮 E0–E7 的数据与完整说明集中在
+[`ijcai27-revision` 分支](https://github.com/Ludan-daye/HySkill/blob/ijcai27-revision/community-results/revision-ijcai27-fleet/README.md)。
+该索引逐项说明新增计算、第一轮数据复用、完整 HySkill 对外部方法的主比较，以及
+按题平均/领域等权统计的差别。下文的 K=2、K=4 和 K 消融目录保持各自原协议；
+早期 `Phase 2` 加载实验不是这轮补充实验，`K=2` 也不是轮次编号。
+
+
 每个认领模型的运行者把规范化分析包通过 PR 提交到
 `community-results/<TAG>/`。这里接收可直接复核的小型 JSON / gzip JSONL，
 不接收 `results/hyp_cache` 的数万个散文件、原始做题 jsonl 或运行日志。认领表、
