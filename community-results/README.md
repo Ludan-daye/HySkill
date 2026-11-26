@@ -6,12 +6,18 @@
 导出命令和完整验收步骤见
 [docs/08-multimodel-plan.md](../docs/08-multimodel-plan.md)。
 
-## IJCAI-27 修订实验完整数据
+## 第二轮：IJCAI-27 修订实验（E0–E7）
 
-[修订实验数据索引](revision-ijcai27-fleet/README.md)汇集 E0–E7 的逐题指标、
+[第二轮统一索引](revision-ijcai27-fleet/README.md)明确列出每项实验的范围、
+新增计算、复用来源及结论边界，并汇集 E0–E7 的逐题指标、
 四套编码器的完整排名，以及 E7 原始答案、重排响应、候选输入、评测和运行证据。
 这一补充包明确包含压缩的原始文件和日志；`SHA256SUMS` 覆盖全部修订实验发布文件，
 `data_manifest.json` 另列归档内各原始文件的哈希。既有 K=2、K=4 和 K 消融目录保持独立。
+
+“第二轮”指 2026 年 11 月的 IJCAI 补充实验，不是早期加载阶段 `Phase 2`，也不是
+想象条数 `K=2`。完整 HySkill（Gated）与外部方法的主比较沿用 `k2/` 与
+`baselines-runtime-matched/`；第二轮只在 E7 新增 Hy+Rerank 答案，其余 2×2
+单元格沿用已发布答案。主表按题平均与显著性检验的模型×领域等权值在索引中分表报告。
 
 ## K=2/K=4 主实验目录契约
 

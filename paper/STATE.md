@@ -1,6 +1,33 @@
 # HySkill Current State and Agent Handoff
 
-> Updated: 2026-11-23, after the evidence-scoping pass on the K=2 manuscript. Read this file before changing experiments, figures, or the paper. It records the current state, not a history log. Do not copy claims from older status paragraphs without checking the sources below.
+> Updated: 2026-11-26 for the second-round evidence index. The manuscript-specific observations below remain the 2026-11-23 snapshot unless stated otherwise. Read the revision section first; evidence publication does not mean the manuscript has incorporated it.
+
+## IJCAI-27 revision experiments — second round
+
+The authoritative round definition, E0–E8 status, artifact sources, claim boundaries,
+and separate accuracy/statistical-estimator tables are in the
+[second-round evidence index](../community-results/revision-ijcai27-fleet/README.md).
+This is the November 2026 E0–E7 revision campaign, not the historical Phase 2
+loading experiment and not the imagination count K=2.
+
+- **Published:** E0–E7 outputs and full source evidence, first complete evidence
+  release `3772e7a` on `ijcai27-revision`. E0 retains the documented Llama/Qwen9
+  accepted exceptions; it is not seven automatic `passed=true` reports.
+- **Inherited main comparison:** published K=2 routed Gated against runtime-matched
+  Bare/Rerank/BM25+Select. These answers were not rerun in the second round.
+- **New computation:** cached-imagination retrieval recomputation and E1–E6 analyses;
+  E7 adds only the Hy+Rerank inference cell. E8 remains optional and unrun.
+- **Documented validation:** the publication manifest records 28 targeted tests,
+  original-file SHA checks, ranking-to-metric recomputation, and E7 raw-to-compact
+  alignment. The original Task 12 full-suite/smoke requirement for both code
+  repositories still needs its own current acceptance evidence.
+- **Manuscript work remains:** integrate the new comparisons, encoder results,
+  mechanism/transfer findings, and limitations into the current Overleaf-derived
+  source, then check bilingual consistency and compilation. Do not mark the
+  manuscript complete merely because the data is on GitHub.
+
+The detailed results and definitions are maintained in the linked index rather than
+copied into this status file. Frozen K=2/K=4/ablation and baseline packs remain separate.
 
 ## Source-of-Truth Order
 

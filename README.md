@@ -1,7 +1,33 @@
 # HySkill：假想技能生成用于技能检索与加载
 
-> 把 HyDE（ACL 2023）的"假想文档嵌入"首次迁移到 LLM 智能体的技能（SKILL.md）检索与加载上：
-> **给定任务，先让模型"想象"出需要的技能，用想象的嵌入去技能库检索真技能，并用想象↔现实的差距做加载门控。**
+给定任务，生成假想技能文本，用其表示检索真实技能，再决定是否加载技能辅助答题。
+
+## 当前实验入口
+
+**第二轮实验是 2026 年 11 月的 IJCAI-27 补充实验 E0–E7。** 完整数据和说明在
+[`ijcai27-revision` 分支的第二轮实验索引](https://github.com/Ludan-daye/HySkill/blob/ijcai27-revision/community-results/revision-ijcai27-fleet/README.md)。
+默认 `main` 首页提供这个入口；查看本轮数据请进入上述分支。
+
+| 要查看的内容 | 入口 | 注意口径 |
+|---|---|---|
+| 第二轮每项实验做了什么、新增了哪些计算 | [E0–E7 范围与来源](https://github.com/Ludan-daye/HySkill/blob/ijcai27-revision/community-results/revision-ijcai27-fleet/README.md) | E0–E6 为缓存重算或已有证据分析；仅 E7 的 Hy+Rerank 新增 LLM 推理 |
+| 完整 HySkill 与外部方法的正式主比较 | [K=2 主实验与 runtime-matched 基线](docs/10-k2-results.md) | 这是第二轮沿用的第一轮基准；主方法是路由检索 + Gated |
+| 按题平均与领域等权统计为何不同 | [第二轮索引中的两张独立主表](https://github.com/Ludan-daye/HySkill/blob/ijcai27-revision/community-results/revision-ijcai27-fleet/README.md) | 48.85% / 45.47% 是同批七模型答案的不同加权，不是两轮性能变化 |
+| 模型结果、原始证据、SHA 清单 | [第二轮数据目录](https://github.com/Ludan-daye/HySkill/tree/ijcai27-revision/community-results/revision-ijcai27-fleet) | 保留既有文件路径及原始数据；文档说明复用关系 |
+| K={1,2,4,8,10} 消融 | [K 消融分析](docs/10-k-ablation-analysis.md) | `K=2` 中的 2 表示想象条数，不表示第二轮 |
+| 早期 Qwen4 探索 | [历史实验记录](docs/05-results.md) | 历史 `Phase 2` 是加载阶段，不是本轮 IJCAI 第二轮 |
+
+第二轮区分完整系统对外部方法的比较、检索基线比较、内部配置分析和候选来源对照。
+`Hy+Rerank` 的补充实验结论不等于完整 HySkill（Gated）的结论。
+主编码器是 **MiniLM**；BGE-base、GTE-base、BGE-large 是第二轮额外编码器。
+原始数据的来源、模型集合、领域集合、split、指标、聚合方式应与每个数值一起引用。
+
+<details>
+<summary>历史 Qwen3.5-4B 探索记录：Phase 1 / Phase 2 / Phase 2c（非本轮 E0–E7）</summary>
+
+以下保留早期记录的原文，仅用于追溯。其“终版”“终局”“规律”和进度均指当时的
+探索阶段，不表示当前多模型 K=2 或第二轮 IJCAI 的结论。当前主比较使用上面的入口，
+不要把这里的原始全量、单模型、不同配置数字与当前 held-out 统计拼接。
 
 ## Phase 1 全量结果（终版：45/45 单元，全部 3,970 实例 + 显著性检验）
 
@@ -68,6 +94,8 @@ SRA-Bench 全量 × 26,262 技能全库，本地 Qwen3.5-4B 生成、MiniLM 编�
 - [ ] 生成器规模、编码器消融 + 外部基线（SkillRouter）+ bigcode Stage 3 + ToolQA
 - [ ] arXiv 占位稿
 
+</details>
+
 ## 仓库结构（阅读顺序即编号顺序）
 
 ```
@@ -91,14 +119,14 @@ scripts/                 warm_cache.py 缓存预热 · gate.py S1/S2 门控 · r
                          analyze.py / summarize_multimodel.py 汇总(含成本审计) ·
                          run_k_ablation.sh / summarize_k_ablation*.py K 消融与严格共同支持汇总 ·
                          run_phase0.sh / run_phase2*.sh / run_multimodel.sh 批跑 · smoke.sh 冒烟
-tests/                   41 个单元测试 + 微型语料
+tests/                   pytest 测试与微型语料
 ```
 
 ## 快速复现
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -e ".[dev]" -e external/SR-Agents sentence-transformers openai
-.venv/bin/pytest -q                # 41 passed
+.venv/bin/pytest -q                # 运行当前仓库测试
 ./scripts/smoke.sh                 # 离线冒烟（mock 生成器，无需端点）
 MODEL=<模型> API_BASE=<OpenAI兼容地址> PILOT=1 ./scripts/run_phase0.sh   # 试点
 ```

@@ -1,5 +1,12 @@
 # IJCAI-27 修改实验 实施计划
 
+> 2026-11-26 实际执行说明：第二轮 E0–E7 的产物与完整证据已发布，实际范围和结论见
+> [第二轮统一索引](../../../community-results/revision-ijcai27-fleet/README.md)。
+> 主编码器实际为 MiniLM；BGE-base、GTE-base、BGE-large 是 E4 的三个额外编码器。
+> E0 的 Llama / Qwen9 接受例外、E1/E4 的共同支持集及公开完整排名的实际安排均已在索引记录。
+> 下文保留原始规划及未回填的步骤框，不能据此重跑已完成推理或将历史预期当作实际结论。
+> E8 未运行；Task 12 的两仓库全量测试与 smoke、论文正文整合仍需分别验收。
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** 在 2026-12-21 前产出 E0–E7（E8 可选）的结果和可提交的证据包，支撑新定位"想象提升候选池质量，路由器按领域选粒度，整体显著优于 HyDE 原版"。
