@@ -109,6 +109,15 @@ RESULT_TAGS: tuple[tuple[str, str], ...] = (
     ("06-yi15-9b", "yi15-9b"),
     ("07-mistral7b", "mistral7b"),
 )
+# The average panel uses one common support: the four models whose BM25 (and
+# hence LLM-rerank pool) is FastBM25 and that have all three methods on all
+# five domains. Qwen3.5-4B's BM25 came from SR-Agents BM25Retriever.
+COMMON_SUPPORT_SLUGS: tuple[str, ...] = (
+    "02-qwen35-9b",
+    "03-glm4-9b",
+    "04-llama31-8b",
+    "07-mistral7b",
+)
 MODEL_LABELS: dict[str, str] = {
     "01-qwen35-4b": "Qwen3.5-4B",
     "02-qwen35-9b": "Qwen3.5-9B",
@@ -317,17 +326,19 @@ def build_model_result(spec: ModelSpec) -> ModelResult:
 def build_average_series(
     model_results: tuple[ModelResult, ...],
 ) -> tuple[dict[str, tuple[float, ...]], dict[str, int]]:
-    """Average each method over the models with a complete series for that method."""
+    """Average every method over the same common-support models."""
     average_series: dict[str, tuple[float, ...]] = {}
     model_counts: dict[str, int] = {}
+    support = tuple(
+        result for result in model_results if result["spec"]["slug"] in COMMON_SUPPORT_SLUGS
+    )
+    if len(support) != len(COMMON_SUPPORT_SLUGS):
+        raise ValueError(f"Common-support models are missing: found={len(support)}")
     for method in METHODS:
-        available_series = tuple(
-            result["series"][method]
-            for result in model_results
-            if method in result["series"]
-        )
-        if not available_series:
-            raise ValueError(f"No complete model series available for method={method}")
+        missing = [result["spec"]["label"] for result in support if method not in result["series"]]
+        if missing:
+            raise ValueError(f"Common-support model lacks method={method}: {missing}")
+        available_series = tuple(result["series"][method] for result in support)
         model_counts[method] = len(available_series)
         average_series[method] = tuple(
             fmean(series[index] for series in available_series)
@@ -466,7 +477,7 @@ def build_manifest(
         "style_mapping": STYLES,
         "models": model_entries,
         "average": {
-            "label": "Available-model average",
+            "label": "Common-support average (four FastBM25 models)",
             "model_counts": average_model_counts,
             "series": average_series,
             "y_axis": average_y_axis,
@@ -494,7 +505,7 @@ def main() -> None:
     average_series, average_model_counts = build_average_series(model_results)
     average_y_axis = calculate_y_axis(average_series)
     average_figure = draw_chart(average_series, average_y_axis)
-    average_files = save_chart(average_figure, "08-available-model-average")
+    average_files = save_chart(average_figure, "08-common-support-average")
     plt.close(average_figure)
 
     manifest = build_manifest(

@@ -366,27 +366,27 @@
     }
   },
   "average": {
-    "label": "Available-model average",
+    "label": "Common-support average (four FastBM25 models)",
     "model_counts": {
-      "routed": 7,
-      "llm_rerank": 5,
-      "bm25": 5
+      "routed": 4,
+      "llm_rerank": 4,
+      "bm25": 4
     },
     "series": {
       "routed": [
-        0.6332532780982728,
-        0.7082154671732424,
-        0.8401353114876804
+        0.6382199832073887,
+        0.712764483627204,
+        0.8446106213266162
       ],
       "llm_rerank": [
-        0.6293196737605065,
-        0.65903833521731,
-        0.7089955526282217
+        0.6038727959697733,
+        0.631580604534005,
+        0.687649034424853
       ],
       "bm25": [
-        0.4285764197322083,
-        0.517730879119901,
-        0.7089955526282217
+        0.41357682619647357,
+        0.495352644836272,
+        0.687649034424853
       ]
     },
     "y_axis": {
@@ -403,7 +403,7 @@
         0.9
       ]
     },
-    "pdf": "paper/figures/retrieval-recall-by-model/08-available-model-average.pdf",
-    "png": "paper/figures/retrieval-recall-by-model/08-available-model-average.png"
+    "pdf": "paper/figures/retrieval-recall-by-model/08-common-support-average.pdf",
+    "png": "paper/figures/retrieval-recall-by-model/08-common-support-average.png"
   }
 }
